@@ -2,7 +2,8 @@
 SQLyog Enterprise v12.09 (64 bit)
 MySQL - 5.7.20 : Database - teamtalk
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -581,21 +582,21 @@ CREATE TABLE `manager_role_info` (
 
 insert  into `manager_role_info`(`id`,`manager_id`,`role_id`) values (13,2,2),(18,5,4),(19,1,1),(20,1,3),(21,1,4);
 
-/*Table structure for table `power_info` */
+/*Table structure for table `menu_info` */
 
-DROP TABLE IF EXISTS `power_info`;
+DROP TABLE IF EXISTS `menu_info`;
 
-CREATE TABLE `power_info` (
-  `power_id` mediumint(6) NOT NULL AUTO_INCREMENT COMMENT '权限ID',
-  `power_name` varchar(40) NOT NULL COMMENT '权限名',
-  `power_url` varchar(100) NOT NULL COMMENT '权限URL',
+CREATE TABLE `menu_info` (
+  `menu_id` mediumint(6) NOT NULL AUTO_INCREMENT COMMENT '权限ID',
+  `menu_name` varchar(40) NOT NULL COMMENT '权限名',
+  `menu_url` varchar(100) NOT NULL COMMENT '权限URL',
   `parent_id` mediumint(6) DEFAULT NULL COMMENT '父权限ID',
-  PRIMARY KEY (`power_id`)
+  PRIMARY KEY (`menu_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COMMENT='权限信息表';
 
-/*Data for the table `power_info` */
+/*Data for the table `menu_info` */
 
-insert  into `power_info`(`power_id`,`power_name`,`power_url`,`parent_id`) values (1,'用户 ','/layout/Layout',0),(2,'部门','/layout/Layout',0),(3,'群组','/layout/Layout',0),(4,'发现','/layout/Layout',0),(5,'管理员权限设置','/layout/Layout',0),(6,'用户管理','/function/Member',1),(7,'部门管理','/function/Depart',2),(8,'群组管理','/function/Group',3),(9,'发现管理','/function/Discovery',4),(10,'管理员设置','/management/Admin',5),(11,'角色设置','/management/Role',5),(12,'权限设置','/management/Power',5);
+insert  into `menu_info`(`menu_id`,`menu_name`,`menu_url`,`parent_id`) values (1,'用户 ','/layout/Layout',0),(2,'部门','/layout/Layout',0),(3,'群组','/layout/Layout',0),(4,'发现','/layout/Layout',0),(5,'管理员权限设置','/layout/Layout',0),(6,'用户管理','/function/Member',1),(7,'部门管理','/function/Depart',2),(8,'群组管理','/function/Group',3),(9,'发现管理','/function/Discovery',4),(10,'管理员设置','/management/Admin',5),(11,'角色设置','/management/Role',5),(12,'权限设置','/management/menu',5);
 
 /*Table structure for table `role_info` */
 
@@ -611,20 +612,20 @@ CREATE TABLE `role_info` (
 
 insert  into `role_info`(`role_id`,`role_name`) values (1,'超级管理员'),(2,'用户管理员'),(3,'部门管理员'),(4,'群组管理员'),(5,'发现管理员'),(6,'权限总管理员'),(7,'管理员设置'),(8,'管理员角色设置'),(9,'管理员权限设置');
 
-/*Table structure for table `role_power_info` */
+/*Table structure for table `role_menu_info` */
 
-DROP TABLE IF EXISTS `role_power_info`;
+DROP TABLE IF EXISTS `role_menu_info`;
 
-CREATE TABLE `role_power_info` (
+CREATE TABLE `role_menu_info` (
   `id` mediumint(6) NOT NULL AUTO_INCREMENT COMMENT '角色-权限关系ID',
   `role_id` mediumint(6) NOT NULL COMMENT '角色ID',
-  `power_id` mediumint(6) NOT NULL COMMENT '权限ID',
+  `menu_id` mediumint(6) NOT NULL COMMENT '权限ID',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COMMENT='角色-权限关系信息表';
 
-/*Data for the table `role_power_info` */
+/*Data for the table `role_menu_info` */
 
-insert  into `role_power_info`(`id`,`role_id`,`power_id`) values (1,1,1),(2,1,2),(3,1,3),(4,1,4),(5,1,5),(6,1,6),(7,1,7),(8,1,8),(9,1,9),(10,1,10),(11,1,11),(12,1,12),(13,2,1),(14,3,2),(15,4,3),(16,4,8),(17,5,4),(18,5,9),(19,2,6),(20,3,7),(21,6,5),(22,6,10),(23,6,11),(24,6,12),(25,7,5),(26,7,10),(27,8,5),(28,8,11),(39,9,5),(40,9,12);
+insert  into `role_menu_info`(`id`,`role_id`,`menu_id`) values (1,1,1),(2,1,2),(3,1,3),(4,1,4),(5,1,5),(6,1,6),(7,1,7),(8,1,8),(9,1,9),(10,1,10),(11,1,11),(12,1,12),(13,2,1),(14,3,2),(15,4,3),(16,4,8),(17,5,4),(18,5,9),(19,2,6),(20,3,7),(21,6,5),(22,6,10),(23,6,11),(24,6,12),(25,7,5),(26,7,10),(27,8,5),(28,8,11),(39,9,5),(40,9,12);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

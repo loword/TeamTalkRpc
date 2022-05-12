@@ -27,10 +27,10 @@ public class BeanContainer {
     public IUserService userService;
 
     @Resource
-    public PowerService powerService;
+    public MenuService menuService;
 
     @Resource
-    public Role_PowerService  role_powerService;
+    public Role_MenuService  role_menuService;
 
     @Resource
     public RoleService roleService;

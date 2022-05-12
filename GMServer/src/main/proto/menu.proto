@@ -1,0 +1,64 @@
+// 显示声明使用proto3, 否则使用默认的proto2
+syntax = "proto3";
+
+// 定义的所有消息、枚举和服务生成对应的多个类文件，而不是以内部类的形式出现
+option java_multiple_files = true;
+
+// 生成类的包名
+package com.menu.grpc;
+
+// 基础消息
+message Menu{
+    int32 menu_id=4;
+
+    string menu_name=1;
+
+    string menu_url=2;
+
+    int32 parent_id=3;
+}
+
+// 方法请求
+message MenuRequest{
+    int32 id=10;
+
+    int32 menu_id=4;
+
+    string menu_name=1;
+
+    string menu_url=2;
+
+    int32 parent_id=3;
+
+    string token=6;
+
+    repeated Menu menu=5;
+}
+
+// 方法响应,包含响应的消息
+message MenuResponse{
+    int32 id=10;
+
+    int32 menu_id=4;
+
+    string menu_name=1;
+
+    string menu_url=2;
+
+    int32 parent_id=3;
+
+    repeated Menu menu=5;
+
+    int32 status_id=6;
+
+}
+
+// Menu服务定义
+service MenuService{
+    rpc listMenu(MenuRequest) returns (MenuResponse);
+    rpc addMenu(MenuRequest) returns (MenuResponse);
+    rpc removeMenu(MenuRequest) returns (MenuResponse);
+    rpc modifyMenu(MenuRequest) returns (MenuResponse);
+    rpc getRoute(MenuRequest) returns (MenuResponse);
+    rpc getMenu(MenuRequest) returns (MenuResponse);
+}

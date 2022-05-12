@@ -9,11 +9,11 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.util.JsonFormat;
-import com.power.grpc.Power;
-import com.power.grpc.PowerRequest;
-import com.power.grpc.PowerResponse;
-import com.power.grpc.PowerServiceGrpc;
-import com.webjava.model.power_info;
+import com.menu.grpc.Menu;
+import com.menu.grpc.MenuRequest;
+import com.menu.grpc.MenuResponse;
+import com.menu.grpc.MenuServiceGrpc;
+import com.webjava.model.menu_info;
 import com.webjava.model.role_info;
 import com.webjava.utils.HttpUtils;
 import com.webjava.utils.ResponseInfo;
@@ -32,38 +32,38 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/users")
-public class PowerRestController {
+public class MenuRestController {
 
     private static final String HOST = "localhost";
     private static final int PORT = 50051;
 
-    @RequestMapping(value="/power/modify", method= RequestMethod.POST)
-    public void modifyPower(HttpServletRequest request, HttpServletResponse response){
+    @RequestMapping(value="/menu/modify", method= RequestMethod.POST)
+    public void modifyMenu(HttpServletRequest request, HttpServletResponse response){
 
         String strData=HttpUtils.getJsonBody(request);
 
         Gson gson = new Gson();
-        power_info power=gson.fromJson(strData,power_info.class);
+        menu_info menu=gson.fromJson(strData,menu_info.class);
 
         ManagedChannel channel = ManagedChannelBuilder.forAddress(HOST, PORT)
                 .usePlaintext(true)
                 .build();
 
         // Create a blocking stub with the channel
-        PowerServiceGrpc.PowerServiceBlockingStub stub =
-                PowerServiceGrpc.newBlockingStub(channel);
+        MenuServiceGrpc.MenuServiceBlockingStub stub =
+                MenuServiceGrpc.newBlockingStub(channel);
 
         // Create a request
-        PowerRequest modifyRequest = PowerRequest.newBuilder()
-                .setPowerId(power.getPowerId())
-                .setPowerUrl(power.getPowerUrl())
-                .setPowerName(power.getPowerName())
-                .setParentId(power.getParentId())
+        MenuRequest modifyRequest = MenuRequest.newBuilder()
+                .setMenuId(menu.getMenuId())
+                .setMenuUrl(menu.getMenuUrl())
+                .setMenuName(menu.getMenuName())
+                .setParentId(menu.getParentId())
                 .build();
 
         // Send the request using the stub
         System.out.println("Client sending request");
-        PowerResponse modifyResponse = stub.modifyPower(modifyRequest);
+        MenuResponse modifyResponse = stub.modifyMenu(modifyRequest);
 
         if(modifyResponse.getStatusId()==0){
             HttpUtils.setJsonBody(response,new ResponseInfo(0,"修改成功!"));
@@ -74,33 +74,33 @@ public class PowerRestController {
 
     }
 
-    @RequestMapping(value = "/power/add",method = RequestMethod.POST)
-    public void addPower(HttpServletRequest request, HttpServletResponse response){
+    @RequestMapping(value = "/menu/add",method = RequestMethod.POST)
+    public void addMenu(HttpServletRequest request, HttpServletResponse response){
 
         String  strJson= HttpUtils.getJsonBody(request);
 
         Gson gson=new Gson();
 
-        power_info power=gson.fromJson(strJson,power_info.class);
+        menu_info menu=gson.fromJson(strJson,menu_info.class);
 
         ManagedChannel channel = ManagedChannelBuilder.forAddress(HOST, PORT)
                 .usePlaintext(true)
                 .build();
 
         // Create a blocking stub with the channel
-        PowerServiceGrpc.PowerServiceBlockingStub stub =
-                PowerServiceGrpc.newBlockingStub(channel);
+        MenuServiceGrpc.MenuServiceBlockingStub stub =
+                MenuServiceGrpc.newBlockingStub(channel);
 
         // Create a request
-        PowerRequest addPowerRequest = PowerRequest.newBuilder()
-                .setParentId(power.getParentId())
-                .setPowerName(power.getPowerName())
-                .setPowerUrl(power.getPowerUrl())
+        MenuRequest addMenuRequest = MenuRequest.newBuilder()
+                .setParentId(menu.getParentId())
+                .setMenuName(menu.getMenuName())
+                .setMenuUrl(menu.getMenuUrl())
                 .build();
 
         // Send the request using the stub
         System.out.println("Client sending request");
-        PowerResponse adminResponse = stub.addPower(addPowerRequest);
+        MenuResponse adminResponse = stub.addMenu(addMenuRequest);
 
         if(adminResponse.getStatusId()==0){
             HttpUtils.setJsonBody(response,new ResponseInfo(0,"添加成功"));
@@ -112,8 +112,8 @@ public class PowerRestController {
 
     }
 
-    @RequestMapping(value = "/power/remove",method = RequestMethod.POST)
-    public void removePower(HttpServletRequest request,HttpServletResponse response ) {
+    @RequestMapping(value = "/menu/remove",method = RequestMethod.POST)
+    public void removeMenu(HttpServletRequest request,HttpServletResponse response ) {
 
         String strjson = HttpUtils.getJsonBody(request);
         List<Integer> list=new ArrayList<Integer>();
@@ -126,23 +126,23 @@ public class PowerRestController {
                 .build();
 
         // Create a blocking stub with the channel
-        PowerServiceGrpc.PowerServiceBlockingStub stub =
-                PowerServiceGrpc.newBlockingStub(channel);
+        MenuServiceGrpc.MenuServiceBlockingStub stub =
+                MenuServiceGrpc.newBlockingStub(channel);
 
-        PowerRequest.Builder builder = PowerRequest.newBuilder();
+        MenuRequest.Builder builder = MenuRequest.newBuilder();
         // Create a request
         for (int i :list) {
-            Power.Builder bu = Power.newBuilder();
-            bu.setPowerId(i);
-            Power user =bu.build();
-            builder.addPower(user);
+            Menu.Builder bu = Menu.newBuilder();
+            bu.setMenuId(i);
+            Menu user =bu.build();
+            builder.addMenu(user);
         }
 
-        PowerRequest removePowerRequest = builder.build();
+        MenuRequest removeMenuRequest = builder.build();
 
         // Send the request using the stub
         System.out.println("Client sending request");
-        PowerResponse userResponse = stub.removePower(removePowerRequest);
+        MenuResponse userResponse = stub.removeMenu(removeMenuRequest);
 
         if (userResponse.getStatusId()==0) {
             HttpUtils.setJsonBody(response, new ResponseInfo(0, "删除成功！"));
@@ -152,28 +152,28 @@ public class PowerRestController {
 
     }
 
-    @RequestMapping(value = "/power/list",method = RequestMethod.GET)
-    public void listPower(HttpServletRequest request, HttpServletResponse response) throws InvalidProtocolBufferException, InvalidProtocolBufferException {
+    @RequestMapping(value = "/menu/list",method = RequestMethod.GET)
+    public void listMenu(HttpServletRequest request, HttpServletResponse response) throws InvalidProtocolBufferException, InvalidProtocolBufferException {
 
         ManagedChannel channel = ManagedChannelBuilder.forAddress(HOST, PORT)
                 .usePlaintext(true)
                 .build();
 
         // Create a blocking stub with the channel
-        PowerServiceGrpc.PowerServiceBlockingStub stub =
-                PowerServiceGrpc.newBlockingStub(channel);
+        MenuServiceGrpc.MenuServiceBlockingStub stub =
+                MenuServiceGrpc.newBlockingStub(channel);
 
         // Create a request
-        PowerRequest listPowerRequest = PowerRequest.newBuilder().build();
+        MenuRequest listMenuRequest = MenuRequest.newBuilder().build();
 
         // Send the request using the stub
         System.out.println("Client sending request");
-        PowerResponse powerResponse = stub.listPower(listPowerRequest);
+        MenuResponse menuResponse = stub.listMenu(listMenuRequest);
 
 
-        if(powerResponse.getStatusId()==0){
+        if(menuResponse.getStatusId()==0){
 
-            String data= JsonFormat.printer().includingDefaultValueFields().preservingProtoFieldNames().print(powerResponse);
+            String data= JsonFormat.printer().includingDefaultValueFields().preservingProtoFieldNames().print(menuResponse);
             HttpUtils.setJsonBody(response,new ResponseInfo(0,"显示所有用户",data));
         }else
         {
@@ -192,15 +192,15 @@ public class PowerRestController {
                 .build();
 
         // Create a blocking stub with the channel
-        PowerServiceGrpc.PowerServiceBlockingStub stub =
-                PowerServiceGrpc.newBlockingStub(channel);
+        MenuServiceGrpc.MenuServiceBlockingStub stub =
+                MenuServiceGrpc.newBlockingStub(channel);
 
-        PowerRequest setRequest =PowerRequest.newBuilder()
+        MenuRequest setRequest =MenuRequest.newBuilder()
                 .setToken(token)
                 .build();
 
 
-        PowerResponse getResponse =stub.getRoute(setRequest);
+        MenuResponse getResponse =stub.getRoute(setRequest);
 
         if(getResponse.getStatusId()==0){
 
@@ -216,8 +216,8 @@ public class PowerRestController {
 
     }
 
-    @RequestMapping(value = "/getPower",method = RequestMethod.POST)
-    public void getPower(HttpServletRequest request,HttpServletResponse response) throws InvalidProtocolBufferException {
+    @RequestMapping(value = "/getMenu",method = RequestMethod.POST)
+    public void getMenu(HttpServletRequest request,HttpServletResponse response) throws InvalidProtocolBufferException {
         String strData = HttpUtils.getJsonBody(request);
         Gson gson=new Gson();
         role_info role=gson.fromJson(strData,role_info.class);
@@ -227,15 +227,15 @@ public class PowerRestController {
                 .build();
 
         // Create a blocking stub with the channel
-        PowerServiceGrpc.PowerServiceBlockingStub stub =
-                PowerServiceGrpc.newBlockingStub(channel);
+        MenuServiceGrpc.MenuServiceBlockingStub stub =
+                MenuServiceGrpc.newBlockingStub(channel);
 
-        PowerRequest setRequest =PowerRequest.newBuilder()
+        MenuRequest setRequest =MenuRequest.newBuilder()
                 .setId(id)
                 .build();
 
 
-        PowerResponse getResponse =stub.getPower(setRequest);
+        MenuResponse getResponse =stub.getMenu(setRequest);
 
         if(getResponse.getStatusId()==0){
 

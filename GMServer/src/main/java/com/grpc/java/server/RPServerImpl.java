@@ -1,10 +1,10 @@
 package com.grpc.java.server;
 
 
-import com.grpc.java.service.Role_PowerService;
-import com.role_power.grpc.RPRequest;
-import com.role_power.grpc.RPResponse;
-import com.role_power.grpc.RPServiceGrpc;
+import com.grpc.java.service.Role_MenuService;
+import com.role_menu.grpc.RPRequest;
+import com.role_menu.grpc.RPResponse;
+import com.role_menu.grpc.RPServiceGrpc;
 import io.grpc.stub.StreamObserver;
 
 
@@ -13,10 +13,10 @@ import io.grpc.stub.StreamObserver;
  */
 
 public class RPServerImpl extends RPServiceGrpc.RPServiceImplBase {
-    private Role_PowerService role_powerService;
+    private Role_MenuService role_menuService;
 
     public RPServerImpl(BeanContainer service) {
-        this.role_powerService= service.role_powerService;
+        this.role_menuService= service.role_menuService;
     }
 
     @Override

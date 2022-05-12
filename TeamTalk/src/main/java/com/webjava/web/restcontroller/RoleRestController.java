@@ -180,8 +180,8 @@ public class RoleRestController {
 
     }
 
-    @RequestMapping(value = "/role/changePower",method = RequestMethod.POST)
-    public void changePower(HttpServletRequest request,HttpServletResponse response) {
+    @RequestMapping(value = "/role/changeMenu",method = RequestMethod.POST)
+    public void changeMenu(HttpServletRequest request,HttpServletResponse response) {
         String strjson = HttpUtils.getJsonBody(request);
         Gson gson = new Gson();
         List<Integer> list=new ArrayList<Integer>();
@@ -200,14 +200,14 @@ public class RoleRestController {
                 RoleServiceGrpc.newBlockingStub(channel);
 
         // Create a request
-        RoleRequest changePowerRequest =RoleRequest.newBuilder()
+        RoleRequest changeMenuRequest =RoleRequest.newBuilder()
                 .setRoleId(id)
                 .addAllId(list)
                 .build();
 
         // Send the request using the stub
         System.out.println("Client sending request");
-        RoleResponse userResponse = stub.changePower(changePowerRequest);
+        RoleResponse userResponse = stub.changeMenu(changeMenuRequest);
 
         if (userResponse.getStatusId()==0) {
             HttpUtils.setJsonBody(response, new ResponseInfo(0, "修改权限成功！"));

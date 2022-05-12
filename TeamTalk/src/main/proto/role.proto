@@ -43,6 +43,6 @@ service RoleService{
     rpc addRole(RoleRequest) returns (RoleResponse);
     rpc removeRole(RoleRequest) returns (RoleResponse);
     rpc modifyRole(RoleRequest) returns (RoleResponse);
-    rpc changePower(RoleRequest) returns (RoleResponse);
+    rpc changeMenu(RoleRequest) returns (RoleResponse);
     rpc getRole(RoleRequest) returns (RoleResponse);
 }

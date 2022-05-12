@@ -3,11 +3,11 @@ package com.grpc.java.server;
 import com.grpc.java.kernel.entity.manager_info;
 import com.grpc.java.kernel.entity.manager_role_info;
 import com.grpc.java.kernel.entity.role_info;
-import com.grpc.java.kernel.entity.role_power_info;
+import com.grpc.java.kernel.entity.role_menu_info;
 import com.grpc.java.service.ManagerService;
 import com.grpc.java.service.Manager_RoleService;
 import com.grpc.java.service.RoleService;
-import com.grpc.java.service.Role_PowerService;
+import com.grpc.java.service.Role_MenuService;
 import com.role.grpc.Role;
 import com.role.grpc.RoleRequest;
 import com.role.grpc.RoleResponse;
@@ -24,13 +24,13 @@ import java.util.List;
 
 public class RoleServerImpl extends RoleServiceGrpc.RoleServiceImplBase {
     private RoleService roleService;
-    private Role_PowerService  role_powerService;
+    private Role_MenuService  role_menuService;
     private ManagerService managerService;
     private Manager_RoleService manager_roleService;
 
     public RoleServerImpl(BeanContainer service) {
         this.roleService=service.roleService;
-        this.role_powerService=service.role_powerService;
+        this.role_menuService=service.role_menuService;
         this.managerService=service.managerService;
         this.manager_roleService=service.manager_roleService;
     }
@@ -108,17 +108,17 @@ public class RoleServerImpl extends RoleServiceGrpc.RoleServiceImplBase {
     @Override
     public void removeRole(RoleRequest request,StreamObserver<RoleResponse> responseStreamObserver){
         List<Role> ids=request.getRoleList();
-        List<role_power_info> list_role=new ArrayList<role_power_info>();
+        List<role_menu_info> list_role=new ArrayList<role_menu_info>();
         int status=-1;
         int conunt=0;
 
         for(Role id : ids){
             role_info role =roleService.getId(id.getRoleId());
             if(role!=null){
-                list_role =role_powerService.getAll();
-                for(role_power_info rp : list_role){
+                list_role =role_menuService.getAll();
+                for(role_menu_info rp : list_role){
                     if(rp.getRoleId()==role.getRoleId()){
-                        role_powerService.delete(rp.getId());
+                        role_menuService.delete(rp.getId());
                     }
                 }
                 roleService.delete(role.getRoleId());
@@ -142,28 +142,28 @@ public class RoleServerImpl extends RoleServiceGrpc.RoleServiceImplBase {
     }
 
     @Override
-    public void changePower(RoleRequest request,StreamObserver<RoleResponse> responseStreamObserver){
+    public void changeMenu(RoleRequest request,StreamObserver<RoleResponse> responseStreamObserver){
         int id=request.getRoleId();
         List<Integer> list=new ArrayList<Integer>();
-        List<role_power_info> list_power =new ArrayList<role_power_info>();
+        List<role_menu_info> list_menu =new ArrayList<role_menu_info>();
         list = request.getIdList();
         int status= -1;
         int count=0;
 
         role_info role =roleService.getId(id);
         if(role!=null) {
-            list_power = role_powerService.getAll();
-            for (role_power_info rp : list_power) {
+            list_menu = role_menuService.getAll();
+            for (role_menu_info rp : list_menu) {
                  if(rp.getRoleId()==role.getRoleId()){
-                    role_powerService.delete(rp.getId());
+                    role_menuService.delete(rp.getId());
                  }
             }
 
             for(int i: list){
-                role_power_info rp=new role_power_info();
+                role_menu_info rp=new role_menu_info();
                 rp.setRoleId(id);
-                rp.setPowerId(i);
-                role_powerService.add(rp);
+                rp.setMenuId(i);
+                role_menuService.add(rp);
                 count++;
             }
         }else {

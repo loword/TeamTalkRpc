@@ -1,20 +1,20 @@
 package com.webjava.model;
 
-public class role_power_info {
+public class role_menu_info {
     private Integer id;
 
     private Integer roleId;
 
-    private Integer powerId;
+    private Integer menuId;
 
-    public role_power_info(){
+    public role_menu_info(){
 
     }
 
-    public role_power_info(Integer id, Integer roleId, Integer powerId) {
+    public role_menu_info(Integer id, Integer roleId, Integer menuId) {
         this.id = id;
         this.roleId = roleId;
-        this.powerId = powerId;
+        this.menuId = menuId;
     }
 
     public Integer getId() {
@@ -25,8 +25,8 @@ public class role_power_info {
         return roleId;
     }
 
-    public Integer getPowerId() {
-        return powerId;
+    public Integer getMenuId() {
+        return menuId;
     }
 
     public void setId(Integer id) {
@@ -37,7 +37,7 @@ public class role_power_info {
         this.roleId = roleId;
     }
 
-    public void setPowerId(Integer powerId) {
-        this.powerId = powerId;
+    public void setMenuId(Integer menuId) {
+        this.menuId = menuId;
     }
 }
