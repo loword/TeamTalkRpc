@@ -27,7 +27,7 @@ var menu =
 
     {"id":"19","pid":"0","name":"管理员权限设置","path":"/layout/Layout"},
     {"id":"20","pid":"19","name":"管理员设置","path":"/management/Admin"},
-    {"id":"21","pid":"19","name":"角色设置","path":"/management/Power"},
+    {"id":"21","pid":"19","name":"角色设置","path":"/management/Menu"},
     {"id":"22","pid":"19","name":"权限设置","path":"/management/Role"}
 
     ]

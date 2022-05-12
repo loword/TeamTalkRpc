@@ -2,7 +2,7 @@ import jsonFormatSidebarTree from '@/utils/jsonFormatSidebarTree'
 import MenuUtils from '@/utils/MenuUtils'
 import { constantRouterMap } from '@/router'
 import { getToken } from '@/utils/auth'
-import { getRoute } from '@/api/power'
+import { getRoute } from '@/api/menu'
 /*import menu from '@/menu'*/
 
 
@@ -25,9 +25,9 @@ const getRoutes = {
             getRoute(token).then(response => {
               let {code, msg, data}=response.data
               if(code==0){
-                 let power_router=JSON.parse(data).power
+                 let menu_router=JSON.parse(data).menu
                  let routes_ex=[]
-                 jsonFormatSidebarTree(routes_ex,power_router)
+                 jsonFormatSidebarTree(routes_ex,menu_router)
                  MenuUtils(routes_ex)
                  commit('SET_ROUTERS', routes_ex)
                  resolve(response)

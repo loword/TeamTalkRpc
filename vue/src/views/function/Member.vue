@@ -25,7 +25,7 @@
 			<el-table-column prop="name" label="姓名" width="100" sortable>
 			</el-table-column> 
 			
-			<el-table-column prop="nick" label="花名" min-width="100" sortable>
+			<el-table-column prop="nick" label="昵称" min-width="100" sortable>
 			</el-table-column>
 
 			<el-table-column prop="sex" label="性别" width="100" :formatter="formatSex" sortable>
@@ -68,7 +68,7 @@
 					<el-input v-model="editForm.name" ></el-input>
 				</el-form-item>
 
-				<el-form-item label="花名" prop="nick">
+				<el-form-item label="昵称" prop="nick">
 					<el-input v-model="editForm.nick" ></el-input>
 				</el-form-item>
 
@@ -112,7 +112,7 @@
 					<el-input v-model="addForm.name" auto-complete="off"></el-input>
 				</el-form-item>
 
-				<el-form-item label="花名">
+				<el-form-item label="昵称">
 					<el-input v-model="addForm.nick" auto-complete="off"></el-input>
 				</el-form-item>
 

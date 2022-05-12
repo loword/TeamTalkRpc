@@ -135,7 +135,7 @@ export default new Router({
     meta: { role: ['admin'] },
     children: [
       { path: 'admin', component: _import('management/Admin'), icon: 'user',name: '管理员设置' },
-      { path: 'power', component: _import('management/Power'), icon: 'user',name: '角色设置' },
+      { path: 'menu', component: _import('management/Menu'), icon: 'user',name: '角色设置' },
       { path: 'role', component: _import('management/Role'), icon: 'user',name: '权限设置' }
     ]
   },

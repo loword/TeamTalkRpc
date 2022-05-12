@@ -32,9 +32,9 @@ export function updateRoleRequest(data) {
   })
 }
 
-export function changePower(data) {
+export function changeMenu(data) {
   return fetch({
-    url: '/role/changePower',
+    url: '/role/changeMenu',
     method: 'post',
     data
   })

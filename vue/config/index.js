@@ -31,7 +31,13 @@ module.exports = {
 			proxyTable: {
 			    '/TeamTalk': {
 			        target: 'http://localhost:8080/',
-			        secure: false
+			        secure: false,
+					changeOrigin: true,   //开启跨域
+					pathRewrite: {
+					  '^/TeamTalk': '/im' //重写路径将'/api'转化为'/'
+						  //"^“这个字符是在中括号”[]“中被使用的话就是表示字符类的否定，如果不是的话就是表示限定开头。
+						//得到正确的请求地址http://localhost:8080/xx
+					}
 			    }
 			},
 			// CSS Sourcemaps off by default because relative paths are "buggy"

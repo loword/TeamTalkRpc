@@ -1,32 +1,32 @@
 import fetch from '@/utils/fetch'
 
-export function listPowerRequest() {
+export function listMenuRequest() {
   
   return fetch({
-    url: '/power/list',
+    url: '/menu/list',
     method: 'get'
   })
 }
 
-export function addPowerRequest(data) {
+export function addMenuRequest(data) {
   return fetch({
-    url: '/power/add',
+    url: '/menu/add',
     method: 'post',
     data
   })
 }
 
-export function removePowerRequest(data) {
+export function removeMenuRequest(data) {
   return fetch({
-    url: '/power/remove',
+    url: '/menu/remove',
     method: 'post',
     data
   })
 }
 
-export function updatePowerRequest(data) {
+export function updateMenuRequest(data) {
   return fetch({
-    url: '/power/modify',
+    url: '/menu/modify',
     method: 'post',
     data
   })
@@ -40,9 +40,9 @@ export function getRoute(token){
   })
 }
 
-export function getPower(data){
+export function getMenu(data){
   return fetch({
-     url: '/getPower',
+     url: '/getMenu',
      method: 'post',
      data
   })

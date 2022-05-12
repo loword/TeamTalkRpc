@@ -5,9 +5,9 @@ export default(tree_ex,tree_data) => {
       let jsonData=[]
       tree_data.forEach(item =>{
               let router_info={
-                  id:item.power_id,
+                  id:item.menu_id,
                   pid:item.parent_id,
-                  label:item.power_name,
+                  label:item.menu_name,
               }
               
               jsonData.push(router_info)

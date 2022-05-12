@@ -23,7 +23,7 @@
             <el-table-column label="操作" min-width="300" >
                 <template slot-scope="scope">
                     <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-                    <el-button size="small" @click="powerEdit(scope.$index, scope.row)">权限管理</el-button>
+                    <el-button size="small" @click="menuEdit(scope.$index, scope.row)">权限管理</el-button>
                     <el-button type="danger" size="small" @click="handleDel(scope.$index, scope.row)">删除</el-button>
                 </template>
             </el-table-column>
@@ -64,7 +64,7 @@
             </div>
         </el-dialog>
 
-        <el-dialog title="修改管理员权限" :visible.sync="powerFormVisible"  :close-on-click-modal="false" >
+        <el-dialog title="修改管理员权限" :visible.sync="menuFormVisible"  :close-on-click-modal="false" >
             <div>
             <el-tree
             :data="tree_date"
@@ -81,8 +81,8 @@
             </div>
 
             <div slot="footer" class="dialog-footer">
-                <el-button @click.native="powerFormVisible = false">取消</el-button>
-                <el-button type="primary" @click.native="powerSubmit" :loading="powerLoading">提交</el-button>
+                <el-button @click.native="menuFormVisible = false">取消</el-button>
+                <el-button type="primary" @click.native="menuSubmit" :loading="menuLoading">提交</el-button>
             </div>
         </el-dialog>
 
@@ -93,9 +93,9 @@
     import util from '@/common/js/util'
     //import md5 from 'js-md5';
     //import NProgress from 'nprogress'
-    import { listRoleRequest,addRoleRequest,removeRoleRequest,updateRoleRequest,changePower} from '@/api/role'
-    import { listPowerRequest,getPower } from '@/api/power'
-    import powerFormatTree from '@/utils/powerFormatTree'
+    import { listRoleRequest,addRoleRequest,removeRoleRequest,updateRoleRequest,changeMenu} from '@/api/role'
+    import { listMenuRequest,getMenu } from '@/api/menu'
+    import menuFormatTree from '@/utils/menuFormatTree'
 
     export default {
         data() {
@@ -109,8 +109,8 @@
                 total: 0,
                 page: 1,
                 
-                powerFormVisible: false, //拥有权限界面是否显示
-                powerLoading: false,
+                menuFormVisible: false, //拥有权限界面是否显示
+                menuLoading: false,
                 defaultProps: {
                           children: 'children',
                           label: 'label'
@@ -181,29 +181,29 @@
                 });
             },
             //显示权限处理界面
-            powerEdit: function (index,row){
+            menuEdit: function (index,row){
                 let para ={}
                 this.role_id=row.role_id
-                listPowerRequest(para).then(res => {
+                listMenuRequest(para).then(res => {
                     if(res.data.code==1){
                        this.tree_date=[]
                     }
                     else if (res.data.code==0)
                     {  
                        this.tree_date=[]
-                       let date_in= JSON.parse(res.data.data).power
-                       powerFormatTree(this.tree_date,date_in)
+                       let date_in= JSON.parse(res.data.data).menu
+                       menuFormatTree(this.tree_date,date_in)
                        let request = {roleId: row.role_id}
-                       getPower(request).then(response => {
+                       getMenu(request).then(response => {
                          let {code, msg, data}=response.data
                          if(code==0){
-                            let my_power=JSON.parse(data).power
-                            let power_ex=[]
-                            my_power.forEach(item =>{
-                                    let info=item.power_id
-                                    power_ex.push(info)
+                            let my_menu=JSON.parse(data).menu
+                            let menu_ex=[]
+                            my_menu.forEach(item =>{
+                                    let info=item.menu_id
+                                    menu_ex.push(info)
                             });
-                            this.$refs.tree.setCheckedKeys(power_ex)                   
+                            this.$refs.tree.setCheckedKeys(menu_ex)                   
                          }
                          else
                          {
@@ -221,36 +221,36 @@
                         });
                     }  
                 });
-                this.powerFormVisible=true
+                this.menuFormVisible=true
             },
-            powerSubmit: function (){
+            menuSubmit: function (){
                 this.$confirm('确认修改权限吗？', '提示', {}).then(() => {
-                    this.powerLoading=true
+                    this.menuLoading=true
                     let para=this.$refs.tree.getCheckedKeys()
                     para.push(this.role_id)
-                    changePower(para).then(res =>  {
+                    changeMenu(para).then(res =>  {
                         if(res.data.code==0){
-                        this.powerLoading=false    
+                        this.menuLoading=false    
                         this.$message({
                             message: '修改权限成功',
                             type: 'success'
                         });
                         }
                         else if(res.data.code==1){
-                        this.powerLoading=false    
+                        this.menuLoading=false    
                         this.$message({
                             message: '修改权限失败',
                             type: 'warning'
                         });
                         }
                         else {
-                        this.powerLoading=false        
+                        this.menuLoading=false        
                         this.$message({
                         message: '服务器或网络错误',
                             type: 'error'
                         });
                         } 
-                        this.powerFormVisible=false
+                        this.menuFormVisible=false
                     });
                 
                 });

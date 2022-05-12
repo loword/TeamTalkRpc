@@ -6,11 +6,11 @@ export default(routers_ex,routers_data) => {
       let jsonData=[]
       routers_data.forEach(item =>{
               let router_info={
-                  id:item.power_id,
+                  id:item.menu_id,
                   pid:item.parent_id,
-                  name:item.power_name,
-                  path:item.power_url,
-                  com:item.power_url,
+                  name:item.menu_name,
+                  path:item.menu_url,
+                  com:item.menu_url,
                   hidden: false,
                   icon:"star",
                   leaf:true,

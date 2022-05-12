@@ -596,7 +596,7 @@ CREATE TABLE `menu_info` (
 
 /*Data for the table `menu_info` */
 
-insert  into `menu_info`(`menu_id`,`menu_name`,`menu_url`,`parent_id`) values (1,'用户 ','/layout/Layout',0),(2,'部门','/layout/Layout',0),(3,'群组','/layout/Layout',0),(4,'发现','/layout/Layout',0),(5,'管理员权限设置','/layout/Layout',0),(6,'用户管理','/function/Member',1),(7,'部门管理','/function/Depart',2),(8,'群组管理','/function/Group',3),(9,'发现管理','/function/Discovery',4),(10,'管理员设置','/management/Admin',5),(11,'角色设置','/management/Role',5),(12,'权限设置','/management/menu',5);
+insert  into `menu_info`(`menu_id`,`menu_name`,`menu_url`,`parent_id`) values (1,'用户 ','/layout/Layout',0),(2,'部门','/layout/Layout',0),(3,'群组','/layout/Layout',0),(4,'发现','/layout/Layout',0),(5,'管理员权限设置','/layout/Layout',0),(6,'用户管理','/function/Member',1),(7,'部门管理','/function/Depart',2),(8,'群组管理','/function/Group',3),(9,'发现管理','/function/Discovery',4),(10,'管理员设置','/management/Admin',5),(11,'角色设置','/management/Role',5),(12,'权限设置','/management/Menu',5);
 
 /*Table structure for table `role_info` */
 

@@ -10,17 +10,17 @@
         </el-col>
 
         <!--列表-->
-        <el-table :data="powers" stripe border fit highlight-current-row v-loading="listLoading" @selection-change="selsChange" class="main-container" >
+        <el-table :data="menus" stripe border fit highlight-current-row v-loading="listLoading" @selection-change="selsChange" class="main-container" >
             <el-table-column type="selection" width="55">
             </el-table-column>
 
-            <el-table-column prop="power_id" label="权限ID" width="90" sortable>
+            <el-table-column prop="menu_id" label="权限ID" width="90" sortable>
             </el-table-column>
 
-            <el-table-column prop="power_name" label="权限名称" min-width="120" sortable>
+            <el-table-column prop="menu_name" label="权限名称" min-width="120" sortable>
             </el-table-column> 
             
-            <el-table-column prop="power_url" label="权限URL" min-width="200" sortable>
+            <el-table-column prop="menu_url" label="权限URL" min-width="200" sortable>
             </el-table-column> 
 
             <el-table-column prop="parent_id" label="父权限ID" min-width="100" sortable>
@@ -44,12 +44,12 @@
         <!--编辑界面-->
         <el-dialog title="编辑" :visible.sync="editFormVisible" :close-on-click-modal="false">
             <el-form :model="editForm" label-width="100px" :rules="editFormRules" ref="editForm">
-                <el-form-item label="权限名称" prop="power_name">
-                    <el-input v-model="editForm.powerName" ></el-input>
+                <el-form-item label="权限名称" prop="menu_name">
+                    <el-input v-model="editForm.menuName" ></el-input>
                 </el-form-item>
 
-                <el-form-item label="权限URL" prop="power_url">
-                    <el-input v-model="editForm.powerUrl" ></el-input>
+                <el-form-item label="权限URL" prop="menu_url">
+                    <el-input v-model="editForm.menuUrl" ></el-input>
                 </el-form-item>
                 
                 <el-form-item label="父权限ID" prop="parent_id">
@@ -66,12 +66,12 @@
         <!--新增界面-->
         <el-dialog title="新增" :visible.sync="addFormVisible"  :close-on-click-modal="false" >
             <el-form :model="addForm" label-width="80px" :rules="addFormRules" ref="addForm">
-                <el-form-item label="权限名称" prop="power_name">
-                    <el-input v-model="addForm.powerName" auto-complete="off"></el-input>
+                <el-form-item label="权限名称" prop="menu_name">
+                    <el-input v-model="addForm.menuName" auto-complete="off"></el-input>
                 </el-form-item>
 
-                <el-form-item  label="权限URL" prop="power_url">
-                    <el-input type="text" v-model="addForm.powerUrl" auto-complete="off"></el-input>
+                <el-form-item  label="权限URL" prop="menu_url">
+                    <el-input type="text" v-model="addForm.menuUrl" auto-complete="off"></el-input>
                 </el-form-item>
 
                 <el-form-item label="父权限ID" prop="parent_id">
@@ -94,16 +94,16 @@
     import util from '@/common/js/util'
     //import md5 from 'js-md5';
     //import NProgress from 'nprogress'
-    import { listPowerRequest,addPowerRequest,removePowerRequest,updatePowerRequest } from '@/api/power'
+    import { listMenuRequest,addMenuRequest,removeMenuRequest,updateMenuRequest } from '@/api/menu'
     
   
     export default {
         data() {
             return {
                 filters: {
-                    power_name: ''
+                    menu_name: ''
                 },
-                powers: [],
+                menus: [],
                 
                 total: 0,
                 page: 1,
@@ -118,10 +118,10 @@
                 editFormVisible: false,//编辑界面是否显示
                 editLoading: false,
                 editFormRules: {
-                    power_name: [
+                    menu_name: [
                         { required: true, message: '请输入权限名称', trigger: 'blur' }
                     ],
-                    power_url: [
+                    menu_url: [
                         { required: true, message: '请输入权限url', trigger: 'blur' }
                     ],
                     parent_id: [
@@ -130,18 +130,18 @@
                 },
                 //编辑界面数据
                 editForm: {
-                    powerName: '',
-                    powerUrl: '',
+                    menuName: '',
+                    menuUrl: '',
                     parentId: 0
                 },
 
                 addFormVisible: false,//新增界面是否显示
                 addLoading: false,
                 addFormRules: {
-                    power_name: [
+                    menu_name: [
                         { required: true, message: '请输入权限名称', trigger: 'blur' }
                     ],
-                    power_url: [
+                    menu_url: [
                         { required: true, message: '请输入权限url', trigger: 'blur' }
                     ],
                     parent_id: [
@@ -150,8 +150,8 @@
                 },
                 //新增界面数据
                 addForm: {
-                    powerName : '',
-                    powerUrl : '',
+                    menuName : '',
+                    menuUrl : '',
                     parentId : 0
                 }
             }
@@ -159,27 +159,27 @@
         methods: {
             handleCurrentChange(val) {
                 this.page = val;
-                this.getPowers();
+                this.getMenus();
             },
             //获取权限列表
-            getPowers() {
+            getMenus() {
                 let para = {
                     page: this.page,
-                    power_name: this.filters.power_name
+                    menu_name: this.filters.menu_name
                 };
                 this.listLoading = true;
                 //NProgress.start();
                 
-                listPowerRequest(para).then(res => {
+                listMenuRequest(para).then(res => {
                     if(res.data.code==1){
-                        this.powers=[];
+                        this.menus=[];
                         this.total=0;
                         this.listLoading = false;
                     }
                     else if (res.data.code==0)
                     {  
-                       this.powers = JSON.parse(res.data.data).power;
-                       this.total = this.powers.length; 
+                       this.menus = JSON.parse(res.data.data).menu;
+                       this.total = this.menus.length; 
                        this.listLoading = false;
                     }
                     else{
@@ -201,9 +201,9 @@
                     //NProgress.start();
                  
                     let para =[];
-                    para.push(row.power_id);   
+                    para.push(row.menu_id);   
 
-                    removePowerRequest(para).then(data => {
+                    removeMenuRequest(para).then(data => {
                         this.listLoading = false;
                         //NProgress.done();
                         if(data.data.code==0){
@@ -225,7 +225,7 @@
                                     type: 'error'
                                 });
                             }
-                        this.getPowers();
+                        this.getMenus();
                     });
                 }).catch(() => {
 
@@ -235,9 +235,9 @@
             handleEdit: function (index, row) {
                 this.editFormVisible = true;
                 this.editForm ={
-                    powerId : row.power_id,
-                    powerName : row.power_name,
-                    powerUrl : row.power_url,
+                    menuId : row.menu_id,
+                    menuName : row.menu_name,
+                    menuUrl : row.menu_url,
                     parentId : row.parent_id
                 };
             },
@@ -245,8 +245,8 @@
             handleAdd: function () {
                 this.addFormVisible = true;
                 this.addForm = {
-                    powerName: '',
-                    powerUrl:'',
+                    menuName: '',
+                    menuUrl:'',
                     parentId:0
                 };
             },
@@ -260,7 +260,7 @@
                             //this.editForm.password=this.md5(this.editForm.password);
                             let para = Object.assign({}, this.editForm);
                             //para.birth = (!para.birth || para.birth == '') ? '' : util.formatDate.format(new Date(para.birth), 'yyyy-MM-dd');
-                            updatePowerRequest(para).then(data => {
+                            updateMenuRequest(para).then(data => {
                                 this.editLoading = false;
                                 //NProgress.done();
                                 if(data.data.code==0){
@@ -284,7 +284,7 @@
                                 }
                                 this.$refs['editForm'].resetFields();
                                 this.editFormVisible = false;
-                                this.getPowers();
+                                this.getMenus();
                             });
                         });
                     }
@@ -299,7 +299,7 @@
                             //NProgress.start();
                             let para = Object.assign({}, this.addForm);
                             //para.birth = (!para.birth || para.birth == '') ? '' : util.formatDate.format(new Date(para.birth), 'yyyy-MM-dd');
-                            addPowerRequest(para).then(data => {
+                            addMenuRequest(para).then(data => {
                                 
                                 this.addLoading = false;
                                 if(data.data.code==0){
@@ -323,7 +323,7 @@
                                 }
                                this.addFormVisible = false;
                                this.$refs['addForm'].resetFields();
-                               this.getPowers(); 
+                               this.getMenus(); 
                             });
                         });
                     }
@@ -338,7 +338,7 @@
                 //var ids = this.sels.map(item => item.id).toString();
                 
                 let idss=[ ];
-                let sss =this.sels.map(item => item.power_id);
+                let sss =this.sels.map(item => item.menu_id);
                 for(var key in sss)  
                 {
                      idss.push(sss[key])  ;  
@@ -352,7 +352,7 @@
                 }).then(() => {
                     this.listLoading = true;
                     //NProgress.start();
-                    removePowerRequest(idss).then(data => {
+                    removeMenuRequest(idss).then(data => {
                         this.listLoading = false;
                         //NProgress.done();
                         if(data.data.code==0){
@@ -374,7 +374,7 @@
                                 type: 'error'
                                 });
                                 }
-                        this.getPowers();
+                        this.getMenus();
                     });
                 }).catch(() => {
 
@@ -382,7 +382,7 @@
             }
         },
         mounted() {
-            this.getPowers();
+            this.getMenus();
         }
     }
 
