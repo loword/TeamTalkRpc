@@ -15,11 +15,17 @@
 	</bean>
 	<!-- 配置数据源，从上面配置文件读取-->
 	<!-- 数据源 -->
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="${jdbc.driverClassName}" />
 		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
+		<property name="minEvictableIdleTimeMillis" value="7200000" /><!-- 最大空闲时间(单位ms) -->
+		<property name="testWhileIdle" value="true" /><!-- 通常是在连接空闲时校验 -->
+		<property name="testOnBorrow" value="false" /><!-- 获取连接时校验 -->
+		<property name="testOnReturn" value="false" /><!-- 归还连接到连接池时校验 -->
+		<property name="validationQuery" value="select 1" /> <!-- 校验的方式：使用待校验的连接在在数据库上执行一下校验的sql -->
+		<property name="validationQueryTimeout" value="10" /> <!-- 检测连接是否有效的超时时间 -->
 	</bean>
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

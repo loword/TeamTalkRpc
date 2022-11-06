@@ -1,6 +1,8 @@
 package com.grpc.java.server;
 
 import com.grpc.java.service.*;
+import com.menu.grpc.MenuServiceGrpc;
+
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

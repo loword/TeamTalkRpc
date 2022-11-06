@@ -4,6 +4,8 @@ package com.grpc.java.service.implement;
 import com.grpc.java.kernel.entity.IMUser;
 import com.grpc.java.kernel.mybatis.mapper.IMUserMapper;
 import com.grpc.java.service.IUserService;
+import com.grpc.java.utils.name.ChineseNameGenerator;
+
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -34,6 +36,8 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public Boolean addUser(IMUser user) {
+		ChineseNameGenerator instance = ChineseNameGenerator.getInstance();
+		user.setNick(instance.generate());
         return userMapper.insertSelective(user) > 0;
     }
 
