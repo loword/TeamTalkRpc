@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.grpc.java.kernel.mybatis.mapper.role_menu_infoMapper">
-  <resultMap id="BaseResultMap" type="com.grpc.java.kernel.entity.role_menu_info">
+<mapper namespace="com.loword.java.kernel.mybatis.mapper.role_menu_infoMapper">
+  <resultMap id="BaseResultMap" type="com.loword.java.kernel.entity.role_menu_info">
     <constructor>
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="role_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
@@ -41,7 +41,7 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
 
-  <insert id="insertSelective" parameterType="com.grpc.java.kernel.entity.role_menu_info">
+  <insert id="insertSelective" parameterType="com.loword.java.kernel.entity.role_menu_info">
     insert into role_menu_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -66,7 +66,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.grpc.java.kernel.entity.role_menu_info">
+  <update id="updateByPrimaryKeySelective" parameterType="com.loword.java.kernel.entity.role_menu_info">
     update role_menu_info
     <set>
       <if test="roleId != null">

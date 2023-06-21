@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option java_multiple_files = true;
 
-package com.manager.grpc;
+package com.grpc.manager;
 
 message Manager{
     int32 id=1;

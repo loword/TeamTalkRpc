@@ -1,31 +1,30 @@
 package com.webjava.web.restcontroller;
 
-/**
- * Created by wx on 2017/10/27.
- */
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.discovery.grpc.Discovery;
-import com.discovery.grpc.DiscoveryRequest;
-import com.discovery.grpc.DiscoveryResponse;
-import com.discovery.grpc.DiscoveryServiceGrpc;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.google.protobuf.InvalidProtocolBufferException;
-import com.google.protobuf.util.JsonFormat;
-import com.webjava.kernel.entity.IMDiscovery;
-import com.webjava.utils.HttpUtils;
-import com.webjava.utils.ResponseInfo;
-import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.util.JsonFormat;
+import com.grpc.discovery.Discovery;
+import com.grpc.discovery.DiscoveryRequest;
+import com.grpc.discovery.DiscoveryResponse;
+import com.grpc.discovery.DiscoveryServiceGrpc;
+import com.webjava.kernel.entity.IMDiscovery;
+import com.webjava.utils.HttpUtils;
+import com.webjava.utils.ResponseInfo;
+
+import io.grpc.ManagedChannel;
+import io.grpc.ManagedChannelBuilder;
 
 
 @RestController

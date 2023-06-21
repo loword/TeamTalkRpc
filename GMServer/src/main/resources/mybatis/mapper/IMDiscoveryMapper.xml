@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.grpc.java.kernel.mybatis.mapper.IMDiscoveryMapper">
-  <resultMap id="BaseResultMap" type="com.grpc.java.kernel.entity.IMDiscovery">
+<mapper namespace="com.loword.java.kernel.mybatis.mapper.IMDiscoveryMapper">
+  <resultMap id="BaseResultMap" type="com.loword.java.kernel.entity.IMDiscovery">
     <constructor>
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="itemName" javaType="java.lang.String" jdbcType="VARCHAR" />
@@ -41,7 +41,7 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
 
-  <insert id="insertSelective" parameterType="com.grpc.java.kernel.entity.IMDiscovery">
+  <insert id="insertSelective" parameterType="com.loword.java.kernel.entity.IMDiscovery">
     insert into IMDiscovery
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -90,7 +90,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.grpc.java.kernel.entity.IMDiscovery">
+  <update id="updateByPrimaryKeySelective" parameterType="com.loword.java.kernel.entity.IMDiscovery">
     update IMDiscovery
     <set>
       <if test="itemname != null">

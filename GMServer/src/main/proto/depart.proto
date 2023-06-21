@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option java_multiple_files = true;
 
-package com.depart.grpc;
+package com.grpc.depart;
 
 message Depart{
     int32 id=1;

@@ -1,33 +1,32 @@
 package com.webjava.web.restcontroller;
 
-/**
- * Created by wx on 2017/10/27.
- */
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.depart.grpc.Depart;
-import com.depart.grpc.DepartRequest;
-import com.depart.grpc.DepartResponse;
-import com.depart.grpc.DepartServiceGrpc;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.google.protobuf.InvalidProtocolBufferException;
-import com.google.protobuf.util.JsonFormat;
-import com.webjava.kernel.entity.IMDepart;
-import com.webjava.utils.HttpUtils;
-import com.webjava.utils.ResponseInfo;
-import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.util.JsonFormat;
+import com.grpc.depart.Depart;
+import com.grpc.depart.DepartRequest;
+import com.grpc.depart.DepartResponse;
+import com.grpc.depart.DepartServiceGrpc;
+import com.webjava.kernel.entity.IMDepart;
+import com.webjava.utils.HttpUtils;
+import com.webjava.utils.ResponseInfo;
+
+import io.grpc.ManagedChannel;
+import io.grpc.ManagedChannelBuilder;
 
 
 @RestController

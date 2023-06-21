@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option java_multiple_files = true;
 
-package com.manager_role.grpc;
+package com.grpc.manager_role;
 
 message MR{
     int32 id=4;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.grpc.java.kernel.mybatis.mapper.manager_infoMapper">
+<mapper namespace="com.loword.java.kernel.mybatis.mapper.manager_infoMapper">
 
-  <resultMap id="BaseResultMap" type="com.grpc.java.kernel.entity.manager_info">
+  <resultMap id="BaseResultMap" type="com.loword.java.kernel.entity.manager_info">
     <constructor>
       <idArg column="manager_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="username" javaType="java.lang.String" jdbcType="VARCHAR" />
@@ -47,7 +47,7 @@
     where manager_id = #{id,jdbcType=INTEGER}
   </delete>
 
-  <update id="updatePasswordSelective" parameterType="com.grpc.java.kernel.entity.manager_info">
+  <update id="updatePasswordSelective" parameterType="com.loword.java.kernel.entity.manager_info">
     update manager_info
     <set>
       <if test="password!= null">
@@ -57,7 +57,7 @@
     where username = #{username,jdbcType=VARCHAR}
   </update>
 
-  <insert id="insertSelective" parameterType="com.grpc.java.kernel.entity.manager_info">
+  <insert id="insertSelective" parameterType="com.loword.java.kernel.entity.manager_info">
     insert into manager_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="managerId != null">
@@ -101,7 +101,7 @@
     </trim>
   </insert>
 
-  <update id="updateByPrimaryKeySelective" parameterType="com.grpc.java.kernel.entity.manager_info">
+  <update id="updateByPrimaryKeySelective" parameterType="com.loword.java.kernel.entity.manager_info">
     update manager_info
     <set>
       <if test="username != null">

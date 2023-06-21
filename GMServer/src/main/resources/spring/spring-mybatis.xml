@@ -33,7 +33,7 @@
 		<!-- 配置mybatis配置文件的位置 -->
 		<property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
 		<!-- 配置扫描Domain的包路径 -->
-		<property name="typeAliasesPackage" value="com.grpc.java.kernel.entity"/>
+		<property name="typeAliasesPackage" value="com.loword.java.kernel.entity"/>
 		<!-- 配置扫描Mapper XML的位置 -->
 		<property name="mapperLocations">
 			<array>
@@ -44,7 +44,7 @@
 
 	<!-- 配置扫描Mapper接口的包路径 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.grpc.java.kernel.mybatis.mapper"/>
+		<property name="basePackage" value="com.loword.java.kernel.mybatis.mapper"/>
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
 	</bean>
 

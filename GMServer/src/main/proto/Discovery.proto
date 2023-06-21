@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option java_multiple_files = true;
 
-package com.discovery.grpc;
+package com.grpc.discovery;
 
 message Discovery {
     int32 id=1;

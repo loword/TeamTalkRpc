@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.grpc.java.kernel.mybatis.mapper.IMGroupMapper">
-  <resultMap id="BaseResultMap" type="com.grpc.java.kernel.entity.IMGroup">
+<mapper namespace="com.loword.java.kernel.mybatis.mapper.IMGroupMapper">
+  <resultMap id="BaseResultMap" type="com.loword.java.kernel.entity.IMGroup">
     <constructor>
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
@@ -46,7 +46,7 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
 
-  <insert id="insertSelective" parameterType="com.grpc.java.kernel.entity.IMGroup">
+  <insert id="insertSelective" parameterType="com.loword.java.kernel.entity.IMGroup">
     insert into IMGroup
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -119,7 +119,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.grpc.java.kernel.entity.IMGroup">
+  <update id="updateByPrimaryKeySelective" parameterType="com.loword.java.kernel.entity.IMGroup">
     update IMGroup
     <set>
       <if test="name != null">

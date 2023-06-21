@@ -49,7 +49,7 @@
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.grpc.java.kernel.mybatis.mapper" targetProject="src/main/java" type="MIXEDMAPPER">
+        <javaClientGenerator targetPackage="com.loword.java.kernel.mybatis.mapper" targetProject="src/main/java" type="MIXEDMAPPER">
             <property name="enableSubPackages" value=""/>
             <!--
                     定义Maper.java 源代码中的ByExample() 方法的可视性，可选的值有：
