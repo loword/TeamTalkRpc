@@ -4,7 +4,7 @@
 package com.grpc.manager;
 
 public interface ManagerOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.manager.grpc.Manager)
+    // @@protoc_insertion_point(interface_extends:com.grpc.manager.Manager)
     com.google.protobuf.MessageOrBuilder {
 
   /**

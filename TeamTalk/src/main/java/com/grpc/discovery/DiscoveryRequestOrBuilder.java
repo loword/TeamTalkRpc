@@ -4,7 +4,7 @@
 package com.grpc.discovery;
 
 public interface DiscoveryRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.discovery.grpc.DiscoveryRequest)
+    // @@protoc_insertion_point(interface_extends:com.grpc.discovery.DiscoveryRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -38,25 +38,25 @@ public interface DiscoveryRequestOrBuilder extends
   int getItempriority();
 
   /**
-   * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 5;</code>
+   * <code>repeated .com.grpc.discovery.Discovery discovery = 5;</code>
    */
   java.util.List<com.grpc.discovery.Discovery> 
       getDiscoveryList();
   /**
-   * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 5;</code>
+   * <code>repeated .com.grpc.discovery.Discovery discovery = 5;</code>
    */
   com.grpc.discovery.Discovery getDiscovery(int index);
   /**
-   * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 5;</code>
+   * <code>repeated .com.grpc.discovery.Discovery discovery = 5;</code>
    */
   int getDiscoveryCount();
   /**
-   * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 5;</code>
+   * <code>repeated .com.grpc.discovery.Discovery discovery = 5;</code>
    */
   java.util.List<? extends com.grpc.discovery.DiscoveryOrBuilder> 
       getDiscoveryOrBuilderList();
   /**
-   * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 5;</code>
+   * <code>repeated .com.grpc.discovery.Discovery discovery = 5;</code>
    */
   com.grpc.discovery.DiscoveryOrBuilder getDiscoveryOrBuilder(
       int index);

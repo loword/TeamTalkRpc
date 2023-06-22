@@ -24,7 +24,7 @@ public final class ManagerServiceGrpc {
 
   private ManagerServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "com.proto.manager.grpc.ManagerService";
+  public static final String SERVICE_NAME = "com.grpc.manager.ManagerService";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -33,7 +33,7 @@ public final class ManagerServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.manager.grpc.ManagerService", "login"))
+              "com.grpc.manager.ManagerService", "login"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.manager.ManagerRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -45,7 +45,7 @@ public final class ManagerServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.manager.grpc.ManagerService", "addManager"))
+              "com.grpc.manager.ManagerService", "addManager"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.manager.ManagerRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -57,7 +57,7 @@ public final class ManagerServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.manager.grpc.ManagerService", "modifyPassword"))
+              "com.grpc.manager.ManagerService", "modifyPassword"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.manager.ManagerRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -69,7 +69,7 @@ public final class ManagerServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.manager.grpc.ManagerService", "removeManager"))
+              "com.grpc.manager.ManagerService", "removeManager"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.manager.ManagerRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -81,7 +81,7 @@ public final class ManagerServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.manager.grpc.ManagerService", "listManager"))
+              "com.grpc.manager.ManagerService", "listManager"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.manager.ManagerRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -93,7 +93,7 @@ public final class ManagerServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.manager.grpc.ManagerService", "getInfo"))
+              "com.grpc.manager.ManagerService", "getInfo"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.manager.ManagerRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -105,7 +105,7 @@ public final class ManagerServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.manager.grpc.ManagerService", "changeRole"))
+              "com.grpc.manager.ManagerService", "changeRole"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.manager.ManagerRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -117,7 +117,7 @@ public final class ManagerServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.manager.grpc.ManagerService", "modify"))
+              "com.grpc.manager.ManagerService", "modify"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.manager.ManagerRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

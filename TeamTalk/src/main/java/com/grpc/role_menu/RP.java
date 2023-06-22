@@ -4,11 +4,11 @@
 package com.grpc.role_menu;
 
 /**
- * Protobuf type {@code com.proto.role_menu.grpc.RP}
+ * Protobuf type {@code com.grpc.role_menu.RP}
  */
 public  final class RP extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.role_menu.grpc.RP)
+    // @@protoc_insertion_point(message_implements:com.grpc.role_menu.RP)
     RPOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use RP.newBuilder() to construct.
@@ -81,13 +81,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.role_menu.RoleMenu.internal_static_com_proto_role_menu_grpc_RP_descriptor;
+    return com.grpc.role_menu.RoleMenu.internal_static_com_grpc_role_menu_RP_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.role_menu.RoleMenu.internal_static_com_proto_role_menu_grpc_RP_fieldAccessorTable
+    return com.grpc.role_menu.RoleMenu.internal_static_com_grpc_role_menu_RP_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.role_menu.RP.class, com.grpc.role_menu.RP.Builder.class);
   }
@@ -298,26 +298,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.role_menu.grpc.RP}
+   * Protobuf type {@code com.grpc.role_menu.RP}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.role_menu.grpc.RP)
+      // @@protoc_insertion_point(builder_implements:com.grpc.role_menu.RP)
       com.grpc.role_menu.RPOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.role_menu.RoleMenu.internal_static_com_proto_role_menu_grpc_RP_descriptor;
+      return com.grpc.role_menu.RoleMenu.internal_static_com_grpc_role_menu_RP_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.role_menu.RoleMenu.internal_static_com_proto_role_menu_grpc_RP_fieldAccessorTable
+      return com.grpc.role_menu.RoleMenu.internal_static_com_grpc_role_menu_RP_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.role_menu.RP.class, com.grpc.role_menu.RP.Builder.class);
     }
 
-    // Construct using com.proto.role_menu.grpc.RP.newBuilder()
+    // Construct using com.grpc.role_menu.RP.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -347,7 +347,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.role_menu.RoleMenu.internal_static_com_proto_role_menu_grpc_RP_descriptor;
+      return com.grpc.role_menu.RoleMenu.internal_static_com_grpc_role_menu_RP_descriptor;
     }
 
     @java.lang.Override
@@ -546,10 +546,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.role_menu.grpc.RP)
+    // @@protoc_insertion_point(builder_scope:com.grpc.role_menu.RP)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.role_menu.grpc.RP)
+  // @@protoc_insertion_point(class_scope:com.grpc.role_menu.RP)
   private static final com.grpc.role_menu.RP DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.role_menu.RP();

@@ -4,11 +4,11 @@
 package com.grpc.discovery;
 
 /**
- * Protobuf type {@code com.proto.discovery.grpc.Discovery}
+ * Protobuf type {@code com.grpc.discovery.Discovery}
  */
 public  final class Discovery extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.discovery.grpc.Discovery)
+    // @@protoc_insertion_point(message_implements:com.grpc.discovery.Discovery)
     DiscoveryOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Discovery.newBuilder() to construct.
@@ -107,13 +107,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_proto_discovery_grpc_Discovery_descriptor;
+    return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_grpc_discovery_Discovery_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_proto_discovery_grpc_Discovery_fieldAccessorTable
+    return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_grpc_discovery_Discovery_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.discovery.Discovery.class, com.grpc.discovery.Discovery.Builder.class);
   }
@@ -452,26 +452,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.discovery.grpc.Discovery}
+   * Protobuf type {@code com.grpc.discovery.Discovery}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.discovery.grpc.Discovery)
+      // @@protoc_insertion_point(builder_implements:com.grpc.discovery.Discovery)
       com.grpc.discovery.DiscoveryOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_proto_discovery_grpc_Discovery_descriptor;
+      return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_grpc_discovery_Discovery_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_proto_discovery_grpc_Discovery_fieldAccessorTable
+      return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_grpc_discovery_Discovery_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.discovery.Discovery.class, com.grpc.discovery.Discovery.Builder.class);
     }
 
-    // Construct using com.proto.discovery.grpc.Discovery.newBuilder()
+    // Construct using com.grpc.discovery.Discovery.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -509,7 +509,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_proto_discovery_grpc_Discovery_descriptor;
+      return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_grpc_discovery_Discovery_descriptor;
     }
 
     @java.lang.Override
@@ -916,10 +916,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.discovery.grpc.Discovery)
+    // @@protoc_insertion_point(builder_scope:com.grpc.discovery.Discovery)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.discovery.grpc.Discovery)
+  // @@protoc_insertion_point(class_scope:com.grpc.discovery.Discovery)
   private static final com.grpc.discovery.Discovery DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.discovery.Discovery();

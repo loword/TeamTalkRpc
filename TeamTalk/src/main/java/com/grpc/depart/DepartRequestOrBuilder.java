@@ -4,7 +4,7 @@
 package com.grpc.depart;
 
 public interface DepartRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.depart.grpc.DepartRequest)
+    // @@protoc_insertion_point(interface_extends:com.grpc.depart.DepartRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -33,25 +33,25 @@ public interface DepartRequestOrBuilder extends
   int getParentid();
 
   /**
-   * <code>repeated .com.proto.depart.grpc.Depart depart = 5;</code>
+   * <code>repeated .com.grpc.depart.Depart depart = 5;</code>
    */
   java.util.List<com.grpc.depart.Depart> 
       getDepartList();
   /**
-   * <code>repeated .com.proto.depart.grpc.Depart depart = 5;</code>
+   * <code>repeated .com.grpc.depart.Depart depart = 5;</code>
    */
   com.grpc.depart.Depart getDepart(int index);
   /**
-   * <code>repeated .com.proto.depart.grpc.Depart depart = 5;</code>
+   * <code>repeated .com.grpc.depart.Depart depart = 5;</code>
    */
   int getDepartCount();
   /**
-   * <code>repeated .com.proto.depart.grpc.Depart depart = 5;</code>
+   * <code>repeated .com.grpc.depart.Depart depart = 5;</code>
    */
   java.util.List<? extends com.grpc.depart.DepartOrBuilder> 
       getDepartOrBuilderList();
   /**
-   * <code>repeated .com.proto.depart.grpc.Depart depart = 5;</code>
+   * <code>repeated .com.grpc.depart.Depart depart = 5;</code>
    */
   com.grpc.depart.DepartOrBuilder getDepartOrBuilder(
       int index);

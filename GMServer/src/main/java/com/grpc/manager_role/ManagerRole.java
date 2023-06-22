@@ -15,20 +15,20 @@ public final class ManagerRole {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_proto_manager_role_grpc_MR_descriptor;
+    internal_static_com_grpc_manager_role_MR_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_proto_manager_role_grpc_MR_fieldAccessorTable;
+      internal_static_com_grpc_manager_role_MR_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_proto_manager_role_grpc_MRRequest_descriptor;
+    internal_static_com_grpc_manager_role_MRRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_proto_manager_role_grpc_MRRequest_fieldAccessorTable;
+      internal_static_com_grpc_manager_role_MRRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_proto_manager_role_grpc_MRResponse_descriptor;
+    internal_static_com_grpc_manager_role_MRResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_proto_manager_role_grpc_MRResponse_fieldAccessorTable;
+      internal_static_com_grpc_manager_role_MRResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,25 +38,23 @@ public final class ManagerRole {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022manager_role.proto\022\033com.proto.manager_" +
-      "role.grpc\"5\n\002MR\022\n\n\002id\030\004 \001(\005\022\017\n\007role_id\030\001" +
-      " \001(\005\022\022\n\nmanager_id\030\002 \001(\005\"i\n\tMRRequest\022\n\n" +
-      "\002id\030\004 \001(\005\022\017\n\007role_id\030\001 \001(\005\022\022\n\nmanager_id" +
-      "\030\002 \001(\005\022+\n\002mr\030\005 \003(\0132\037.com.proto.manager_r" +
-      "ole.grpc.MR\"}\n\nMRResponse\022\n\n\002id\030\004 \001(\005\022\017\n" +
-      "\007role_id\030\001 \001(\005\022\022\n\nmanager_id\030\002 \001(\005\022+\n\002mr" +
-      "\030\005 \003(\0132\037.com.proto.manager_role.grpc.MR\022" +
-      "\021\n\tstatus_id\030\006 \001(\0052\372\002\n\tMRService\022Y\n\006list" +
-      "MR\022&.com.proto.manager_role.grpc.MRReque" +
-      "st\032\'.com.proto.manager_role.grpc.MRRespo" +
-      "nse\022X\n\005addMR\022&.com.proto.manager_role.gr" +
-      "pc.MRRequest\032\'.com.proto.manager_role.gr" +
-      "pc.MRResponse\022[\n\010removeMR\022&.com.proto.ma" +
-      "nager_role.grpc.MRRequest\032\'.com.proto.ma" +
-      "nager_role.grpc.MRResponse\022[\n\010modifyMR\022&" +
-      ".com.proto.manager_role.grpc.MRRequest\032\'" +
-      ".com.proto.manager_role.grpc.MRResponseB" +
-      "\002P\001b\006proto3"
+      "\n\022manager_role.proto\022\025com.grpc.manager_r" +
+      "ole\"5\n\002MR\022\n\n\002id\030\004 \001(\005\022\017\n\007role_id\030\001 \001(\005\022\022" +
+      "\n\nmanager_id\030\002 \001(\005\"c\n\tMRRequest\022\n\n\002id\030\004 " +
+      "\001(\005\022\017\n\007role_id\030\001 \001(\005\022\022\n\nmanager_id\030\002 \001(\005" +
+      "\022%\n\002mr\030\005 \003(\0132\031.com.grpc.manager_role.MR\"" +
+      "w\n\nMRResponse\022\n\n\002id\030\004 \001(\005\022\017\n\007role_id\030\001 \001" +
+      "(\005\022\022\n\nmanager_id\030\002 \001(\005\022%\n\002mr\030\005 \003(\0132\031.com" +
+      ".grpc.manager_role.MR\022\021\n\tstatus_id\030\006 \001(\005" +
+      "2\312\002\n\tMRService\022M\n\006listMR\022 .com.grpc.mana" +
+      "ger_role.MRRequest\032!.com.grpc.manager_ro" +
+      "le.MRResponse\022L\n\005addMR\022 .com.grpc.manage" +
+      "r_role.MRRequest\032!.com.grpc.manager_role" +
+      ".MRResponse\022O\n\010removeMR\022 .com.grpc.manag" +
+      "er_role.MRRequest\032!.com.grpc.manager_rol" +
+      "e.MRResponse\022O\n\010modifyMR\022 .com.grpc.mana" +
+      "ger_role.MRRequest\032!.com.grpc.manager_ro" +
+      "le.MRResponseB\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -70,23 +68,23 @@ public final class ManagerRole {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_proto_manager_role_grpc_MR_descriptor =
+    internal_static_com_grpc_manager_role_MR_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_proto_manager_role_grpc_MR_fieldAccessorTable = new
+    internal_static_com_grpc_manager_role_MR_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_proto_manager_role_grpc_MR_descriptor,
+        internal_static_com_grpc_manager_role_MR_descriptor,
         new java.lang.String[] { "Id", "RoleId", "ManagerId", });
-    internal_static_com_proto_manager_role_grpc_MRRequest_descriptor =
+    internal_static_com_grpc_manager_role_MRRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_proto_manager_role_grpc_MRRequest_fieldAccessorTable = new
+    internal_static_com_grpc_manager_role_MRRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_proto_manager_role_grpc_MRRequest_descriptor,
+        internal_static_com_grpc_manager_role_MRRequest_descriptor,
         new java.lang.String[] { "Id", "RoleId", "ManagerId", "Mr", });
-    internal_static_com_proto_manager_role_grpc_MRResponse_descriptor =
+    internal_static_com_grpc_manager_role_MRResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_proto_manager_role_grpc_MRResponse_fieldAccessorTable = new
+    internal_static_com_grpc_manager_role_MRResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_proto_manager_role_grpc_MRResponse_descriptor,
+        internal_static_com_grpc_manager_role_MRResponse_descriptor,
         new java.lang.String[] { "Id", "RoleId", "ManagerId", "Mr", "StatusId", });
   }
 

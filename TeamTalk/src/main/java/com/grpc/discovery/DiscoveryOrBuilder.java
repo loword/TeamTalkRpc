@@ -4,7 +4,7 @@
 package com.grpc.discovery;
 
 public interface DiscoveryOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.discovery.grpc.Discovery)
+    // @@protoc_insertion_point(interface_extends:com.grpc.discovery.Discovery)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -4,11 +4,11 @@
 package com.grpc.depart;
 
 /**
- * Protobuf type {@code com.proto.depart.grpc.DepartResponse}
+ * Protobuf type {@code com.grpc.depart.DepartResponse}
  */
 public  final class DepartResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.depart.grpc.DepartResponse)
+    // @@protoc_insertion_point(message_implements:com.grpc.depart.DepartResponse)
     DepartResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use DepartResponse.newBuilder() to construct.
@@ -107,13 +107,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.depart.DepartOuterClass.internal_static_com_proto_depart_grpc_DepartResponse_descriptor;
+    return com.grpc.depart.DepartOuterClass.internal_static_com_grpc_depart_DepartResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.depart.DepartOuterClass.internal_static_com_proto_depart_grpc_DepartResponse_fieldAccessorTable
+    return com.grpc.depart.DepartOuterClass.internal_static_com_grpc_depart_DepartResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.depart.DepartResponse.class, com.grpc.depart.DepartResponse.Builder.class);
   }
@@ -192,32 +192,32 @@ private static final long serialVersionUID = 0L;
   public static final int DEPART_FIELD_NUMBER = 6;
   private java.util.List<com.grpc.depart.Depart> depart_;
   /**
-   * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+   * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
    */
   public java.util.List<com.grpc.depart.Depart> getDepartList() {
     return depart_;
   }
   /**
-   * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+   * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
    */
   public java.util.List<? extends com.grpc.depart.DepartOrBuilder> 
       getDepartOrBuilderList() {
     return depart_;
   }
   /**
-   * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+   * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
    */
   public int getDepartCount() {
     return depart_.size();
   }
   /**
-   * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+   * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
    */
   public com.grpc.depart.Depart getDepart(int index) {
     return depart_.get(index);
   }
   /**
-   * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+   * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
    */
   public com.grpc.depart.DepartOrBuilder getDepartOrBuilder(
       int index) {
@@ -437,26 +437,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.depart.grpc.DepartResponse}
+   * Protobuf type {@code com.grpc.depart.DepartResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.depart.grpc.DepartResponse)
+      // @@protoc_insertion_point(builder_implements:com.grpc.depart.DepartResponse)
       com.grpc.depart.DepartResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.depart.DepartOuterClass.internal_static_com_proto_depart_grpc_DepartResponse_descriptor;
+      return com.grpc.depart.DepartOuterClass.internal_static_com_grpc_depart_DepartResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.depart.DepartOuterClass.internal_static_com_proto_depart_grpc_DepartResponse_fieldAccessorTable
+      return com.grpc.depart.DepartOuterClass.internal_static_com_grpc_depart_DepartResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.depart.DepartResponse.class, com.grpc.depart.DepartResponse.Builder.class);
     }
 
-    // Construct using com.proto.depart.grpc.DepartResponse.newBuilder()
+    // Construct using com.grpc.depart.DepartResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -497,7 +497,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.depart.DepartOuterClass.internal_static_com_proto_depart_grpc_DepartResponse_descriptor;
+      return com.grpc.depart.DepartOuterClass.internal_static_com_grpc_depart_DepartResponse_descriptor;
     }
 
     @java.lang.Override
@@ -840,7 +840,7 @@ private static final long serialVersionUID = 0L;
         com.grpc.depart.Depart, com.grpc.depart.Depart.Builder, com.grpc.depart.DepartOrBuilder> departBuilder_;
 
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public java.util.List<com.grpc.depart.Depart> getDepartList() {
       if (departBuilder_ == null) {
@@ -850,7 +850,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public int getDepartCount() {
       if (departBuilder_ == null) {
@@ -860,7 +860,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public com.grpc.depart.Depart getDepart(int index) {
       if (departBuilder_ == null) {
@@ -870,7 +870,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public Builder setDepart(
         int index, com.grpc.depart.Depart value) {
@@ -887,7 +887,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public Builder setDepart(
         int index, com.grpc.depart.Depart.Builder builderForValue) {
@@ -901,7 +901,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public Builder addDepart(com.grpc.depart.Depart value) {
       if (departBuilder_ == null) {
@@ -917,7 +917,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public Builder addDepart(
         int index, com.grpc.depart.Depart value) {
@@ -934,7 +934,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public Builder addDepart(
         com.grpc.depart.Depart.Builder builderForValue) {
@@ -948,7 +948,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public Builder addDepart(
         int index, com.grpc.depart.Depart.Builder builderForValue) {
@@ -962,7 +962,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public Builder addAllDepart(
         java.lang.Iterable<? extends com.grpc.depart.Depart> values) {
@@ -977,7 +977,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public Builder clearDepart() {
       if (departBuilder_ == null) {
@@ -990,7 +990,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public Builder removeDepart(int index) {
       if (departBuilder_ == null) {
@@ -1003,14 +1003,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public com.grpc.depart.Depart.Builder getDepartBuilder(
         int index) {
       return getDepartFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public com.grpc.depart.DepartOrBuilder getDepartOrBuilder(
         int index) {
@@ -1020,7 +1020,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public java.util.List<? extends com.grpc.depart.DepartOrBuilder> 
          getDepartOrBuilderList() {
@@ -1031,14 +1031,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public com.grpc.depart.Depart.Builder addDepartBuilder() {
       return getDepartFieldBuilder().addBuilder(
           com.grpc.depart.Depart.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public com.grpc.depart.Depart.Builder addDepartBuilder(
         int index) {
@@ -1046,7 +1046,7 @@ private static final long serialVersionUID = 0L;
           index, com.grpc.depart.Depart.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.depart.grpc.Depart depart = 6;</code>
+     * <code>repeated .com.grpc.depart.Depart depart = 6;</code>
      */
     public java.util.List<com.grpc.depart.Depart.Builder> 
          getDepartBuilderList() {
@@ -1079,10 +1079,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.depart.grpc.DepartResponse)
+    // @@protoc_insertion_point(builder_scope:com.grpc.depart.DepartResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.depart.grpc.DepartResponse)
+  // @@protoc_insertion_point(class_scope:com.grpc.depart.DepartResponse)
   private static final com.grpc.depart.DepartResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.depart.DepartResponse();

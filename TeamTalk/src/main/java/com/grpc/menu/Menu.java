@@ -4,11 +4,11 @@
 package com.grpc.menu;
 
 /**
- * Protobuf type {@code com.proto.menu.grpc.Menu}
+ * Protobuf type {@code com.grpc.menu.Menu}
  */
 public  final class Menu extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.menu.grpc.Menu)
+    // @@protoc_insertion_point(message_implements:com.grpc.menu.Menu)
     MenuOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Menu.newBuilder() to construct.
@@ -89,13 +89,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.menu.MenuOuterClass.internal_static_com_proto_menu_grpc_Menu_descriptor;
+    return com.grpc.menu.MenuOuterClass.internal_static_com_grpc_menu_Menu_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.menu.MenuOuterClass.internal_static_com_proto_menu_grpc_Menu_fieldAccessorTable
+    return com.grpc.menu.MenuOuterClass.internal_static_com_grpc_menu_Menu_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.menu.Menu.class, com.grpc.menu.Menu.Builder.class);
   }
@@ -374,26 +374,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.menu.grpc.Menu}
+   * Protobuf type {@code com.grpc.menu.Menu}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.menu.grpc.Menu)
+      // @@protoc_insertion_point(builder_implements:com.grpc.menu.Menu)
       com.grpc.menu.MenuOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.menu.MenuOuterClass.internal_static_com_proto_menu_grpc_Menu_descriptor;
+      return com.grpc.menu.MenuOuterClass.internal_static_com_grpc_menu_Menu_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.menu.MenuOuterClass.internal_static_com_proto_menu_grpc_Menu_fieldAccessorTable
+      return com.grpc.menu.MenuOuterClass.internal_static_com_grpc_menu_Menu_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.menu.Menu.class, com.grpc.menu.Menu.Builder.class);
     }
 
-    // Construct using com.proto.menu.grpc.Menu.newBuilder()
+    // Construct using com.grpc.menu.Menu.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -425,7 +425,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.menu.MenuOuterClass.internal_static_com_proto_menu_grpc_Menu_descriptor;
+      return com.grpc.menu.MenuOuterClass.internal_static_com_grpc_menu_Menu_descriptor;
     }
 
     @java.lang.Override
@@ -742,10 +742,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.menu.grpc.Menu)
+    // @@protoc_insertion_point(builder_scope:com.grpc.menu.Menu)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.menu.grpc.Menu)
+  // @@protoc_insertion_point(class_scope:com.grpc.menu.Menu)
   private static final com.grpc.menu.Menu DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.menu.Menu();

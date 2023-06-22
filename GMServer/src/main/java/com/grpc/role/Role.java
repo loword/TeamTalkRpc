@@ -4,11 +4,11 @@
 package com.grpc.role;
 
 /**
- * Protobuf type {@code com.proto.role.grpc.Role}
+ * Protobuf type {@code com.grpc.role.Role}
  */
 public  final class Role extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.role.grpc.Role)
+    // @@protoc_insertion_point(message_implements:com.grpc.role.Role)
     RoleOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Role.newBuilder() to construct.
@@ -76,13 +76,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.role.RoleOuterClass.internal_static_com_proto_role_grpc_Role_descriptor;
+    return com.grpc.role.RoleOuterClass.internal_static_com_grpc_role_Role_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.role.RoleOuterClass.internal_static_com_proto_role_grpc_Role_fieldAccessorTable
+    return com.grpc.role.RoleOuterClass.internal_static_com_grpc_role_Role_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.role.Role.class, com.grpc.role.Role.Builder.class);
   }
@@ -297,26 +297,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.role.grpc.Role}
+   * Protobuf type {@code com.grpc.role.Role}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.role.grpc.Role)
+      // @@protoc_insertion_point(builder_implements:com.grpc.role.Role)
       com.grpc.role.RoleOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.role.RoleOuterClass.internal_static_com_proto_role_grpc_Role_descriptor;
+      return com.grpc.role.RoleOuterClass.internal_static_com_grpc_role_Role_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.role.RoleOuterClass.internal_static_com_proto_role_grpc_Role_fieldAccessorTable
+      return com.grpc.role.RoleOuterClass.internal_static_com_grpc_role_Role_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.role.Role.class, com.grpc.role.Role.Builder.class);
     }
 
-    // Construct using com.proto.role.grpc.Role.newBuilder()
+    // Construct using com.grpc.role.Role.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -344,7 +344,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.role.RoleOuterClass.internal_static_com_proto_role_grpc_Role_descriptor;
+      return com.grpc.role.RoleOuterClass.internal_static_com_grpc_role_Role_descriptor;
     }
 
     @java.lang.Override
@@ -557,10 +557,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.role.grpc.Role)
+    // @@protoc_insertion_point(builder_scope:com.grpc.role.Role)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.role.grpc.Role)
+  // @@protoc_insertion_point(class_scope:com.grpc.role.Role)
   private static final com.grpc.role.Role DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.role.Role();

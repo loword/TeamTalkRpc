@@ -4,11 +4,11 @@
 package com.grpc.discovery;
 
 /**
- * Protobuf type {@code com.proto.discovery.grpc.DiscoveryResponse}
+ * Protobuf type {@code com.grpc.discovery.DiscoveryResponse}
  */
 public  final class DiscoveryResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.discovery.grpc.DiscoveryResponse)
+    // @@protoc_insertion_point(message_implements:com.grpc.discovery.DiscoveryResponse)
     DiscoveryResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use DiscoveryResponse.newBuilder() to construct.
@@ -108,13 +108,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_proto_discovery_grpc_DiscoveryResponse_descriptor;
+    return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_grpc_discovery_DiscoveryResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_proto_discovery_grpc_DiscoveryResponse_fieldAccessorTable
+    return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_grpc_discovery_DiscoveryResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.discovery.DiscoveryResponse.class, com.grpc.discovery.DiscoveryResponse.Builder.class);
   }
@@ -218,32 +218,32 @@ private static final long serialVersionUID = 0L;
   public static final int DISCOVERY_FIELD_NUMBER = 6;
   private java.util.List<com.grpc.discovery.Discovery> discovery_;
   /**
-   * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+   * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
    */
   public java.util.List<com.grpc.discovery.Discovery> getDiscoveryList() {
     return discovery_;
   }
   /**
-   * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+   * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
    */
   public java.util.List<? extends com.grpc.discovery.DiscoveryOrBuilder> 
       getDiscoveryOrBuilderList() {
     return discovery_;
   }
   /**
-   * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+   * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
    */
   public int getDiscoveryCount() {
     return discovery_.size();
   }
   /**
-   * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+   * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
    */
   public com.grpc.discovery.Discovery getDiscovery(int index) {
     return discovery_.get(index);
   }
   /**
-   * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+   * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
    */
   public com.grpc.discovery.DiscoveryOrBuilder getDiscoveryOrBuilder(
       int index) {
@@ -462,26 +462,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.discovery.grpc.DiscoveryResponse}
+   * Protobuf type {@code com.grpc.discovery.DiscoveryResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.discovery.grpc.DiscoveryResponse)
+      // @@protoc_insertion_point(builder_implements:com.grpc.discovery.DiscoveryResponse)
       com.grpc.discovery.DiscoveryResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_proto_discovery_grpc_DiscoveryResponse_descriptor;
+      return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_grpc_discovery_DiscoveryResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_proto_discovery_grpc_DiscoveryResponse_fieldAccessorTable
+      return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_grpc_discovery_DiscoveryResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.discovery.DiscoveryResponse.class, com.grpc.discovery.DiscoveryResponse.Builder.class);
     }
 
-    // Construct using com.proto.discovery.grpc.DiscoveryResponse.newBuilder()
+    // Construct using com.grpc.discovery.DiscoveryResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -522,7 +522,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_proto_discovery_grpc_DiscoveryResponse_descriptor;
+      return com.grpc.discovery.DiscoveryOuterClass.internal_static_com_grpc_discovery_DiscoveryResponse_descriptor;
     }
 
     @java.lang.Override
@@ -909,7 +909,7 @@ private static final long serialVersionUID = 0L;
         com.grpc.discovery.Discovery, com.grpc.discovery.Discovery.Builder, com.grpc.discovery.DiscoveryOrBuilder> discoveryBuilder_;
 
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public java.util.List<com.grpc.discovery.Discovery> getDiscoveryList() {
       if (discoveryBuilder_ == null) {
@@ -919,7 +919,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public int getDiscoveryCount() {
       if (discoveryBuilder_ == null) {
@@ -929,7 +929,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public com.grpc.discovery.Discovery getDiscovery(int index) {
       if (discoveryBuilder_ == null) {
@@ -939,7 +939,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public Builder setDiscovery(
         int index, com.grpc.discovery.Discovery value) {
@@ -956,7 +956,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public Builder setDiscovery(
         int index, com.grpc.discovery.Discovery.Builder builderForValue) {
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public Builder addDiscovery(com.grpc.discovery.Discovery value) {
       if (discoveryBuilder_ == null) {
@@ -986,7 +986,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public Builder addDiscovery(
         int index, com.grpc.discovery.Discovery value) {
@@ -1003,7 +1003,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public Builder addDiscovery(
         com.grpc.discovery.Discovery.Builder builderForValue) {
@@ -1017,7 +1017,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public Builder addDiscovery(
         int index, com.grpc.discovery.Discovery.Builder builderForValue) {
@@ -1031,7 +1031,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public Builder addAllDiscovery(
         java.lang.Iterable<? extends com.grpc.discovery.Discovery> values) {
@@ -1046,7 +1046,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public Builder clearDiscovery() {
       if (discoveryBuilder_ == null) {
@@ -1059,7 +1059,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public Builder removeDiscovery(int index) {
       if (discoveryBuilder_ == null) {
@@ -1072,14 +1072,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public com.grpc.discovery.Discovery.Builder getDiscoveryBuilder(
         int index) {
       return getDiscoveryFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public com.grpc.discovery.DiscoveryOrBuilder getDiscoveryOrBuilder(
         int index) {
@@ -1089,7 +1089,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public java.util.List<? extends com.grpc.discovery.DiscoveryOrBuilder> 
          getDiscoveryOrBuilderList() {
@@ -1100,14 +1100,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public com.grpc.discovery.Discovery.Builder addDiscoveryBuilder() {
       return getDiscoveryFieldBuilder().addBuilder(
           com.grpc.discovery.Discovery.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public com.grpc.discovery.Discovery.Builder addDiscoveryBuilder(
         int index) {
@@ -1115,7 +1115,7 @@ private static final long serialVersionUID = 0L;
           index, com.grpc.discovery.Discovery.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.discovery.grpc.Discovery discovery = 6;</code>
+     * <code>repeated .com.grpc.discovery.Discovery discovery = 6;</code>
      */
     public java.util.List<com.grpc.discovery.Discovery.Builder> 
          getDiscoveryBuilderList() {
@@ -1148,10 +1148,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.discovery.grpc.DiscoveryResponse)
+    // @@protoc_insertion_point(builder_scope:com.grpc.discovery.DiscoveryResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.discovery.grpc.DiscoveryResponse)
+  // @@protoc_insertion_point(class_scope:com.grpc.discovery.DiscoveryResponse)
   private static final com.grpc.discovery.DiscoveryResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.discovery.DiscoveryResponse();

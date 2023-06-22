@@ -4,7 +4,7 @@
 package com.grpc.user;
 
 public interface UserResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.user.grpc.UserResponse)
+    // @@protoc_insertion_point(interface_extends:com.grpc.user.UserResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -88,25 +88,25 @@ public interface UserResponseOrBuilder extends
   int getStatusId();
 
   /**
-   * <code>repeated .com.proto.user.grpc.User user = 11;</code>
+   * <code>repeated .com.grpc.user.User user = 11;</code>
    */
   java.util.List<com.grpc.user.User> 
       getUserList();
   /**
-   * <code>repeated .com.proto.user.grpc.User user = 11;</code>
+   * <code>repeated .com.grpc.user.User user = 11;</code>
    */
   com.grpc.user.User getUser(int index);
   /**
-   * <code>repeated .com.proto.user.grpc.User user = 11;</code>
+   * <code>repeated .com.grpc.user.User user = 11;</code>
    */
   int getUserCount();
   /**
-   * <code>repeated .com.proto.user.grpc.User user = 11;</code>
+   * <code>repeated .com.grpc.user.User user = 11;</code>
    */
   java.util.List<? extends com.grpc.user.UserOrBuilder> 
       getUserOrBuilderList();
   /**
-   * <code>repeated .com.proto.user.grpc.User user = 11;</code>
+   * <code>repeated .com.grpc.user.User user = 11;</code>
    */
   com.grpc.user.UserOrBuilder getUserOrBuilder(
       int index);

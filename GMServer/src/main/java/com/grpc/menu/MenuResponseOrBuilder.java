@@ -4,7 +4,7 @@
 package com.grpc.menu;
 
 public interface MenuResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.menu.grpc.MenuResponse)
+    // @@protoc_insertion_point(interface_extends:com.grpc.menu.MenuResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -43,25 +43,25 @@ public interface MenuResponseOrBuilder extends
   int getParentId();
 
   /**
-   * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+   * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
    */
   java.util.List<com.grpc.menu.Menu> 
       getMenuList();
   /**
-   * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+   * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
    */
   com.grpc.menu.Menu getMenu(int index);
   /**
-   * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+   * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
    */
   int getMenuCount();
   /**
-   * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+   * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
    */
   java.util.List<? extends com.grpc.menu.MenuOrBuilder> 
       getMenuOrBuilderList();
   /**
-   * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+   * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
    */
   com.grpc.menu.MenuOrBuilder getMenuOrBuilder(
       int index);

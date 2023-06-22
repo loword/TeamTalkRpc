@@ -4,11 +4,11 @@
 package com.grpc.group;
 
 /**
- * Protobuf type {@code com.proto.group.grpc.Group}
+ * Protobuf type {@code com.grpc.group.Group}
  */
 public  final class Group extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.group.grpc.Group)
+    // @@protoc_insertion_point(message_implements:com.grpc.group.Group)
     GroupOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Group.newBuilder() to construct.
@@ -106,13 +106,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.group.GroupOuterClass.internal_static_com_proto_group_grpc_Group_descriptor;
+    return com.grpc.group.GroupOuterClass.internal_static_com_grpc_group_Group_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.group.GroupOuterClass.internal_static_com_proto_group_grpc_Group_fieldAccessorTable
+    return com.grpc.group.GroupOuterClass.internal_static_com_grpc_group_Group_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.group.Group.class, com.grpc.group.Group.Builder.class);
   }
@@ -427,26 +427,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.group.grpc.Group}
+   * Protobuf type {@code com.grpc.group.Group}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.group.grpc.Group)
+      // @@protoc_insertion_point(builder_implements:com.grpc.group.Group)
       com.grpc.group.GroupOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.group.GroupOuterClass.internal_static_com_proto_group_grpc_Group_descriptor;
+      return com.grpc.group.GroupOuterClass.internal_static_com_grpc_group_Group_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.group.GroupOuterClass.internal_static_com_proto_group_grpc_Group_fieldAccessorTable
+      return com.grpc.group.GroupOuterClass.internal_static_com_grpc_group_Group_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.group.Group.class, com.grpc.group.Group.Builder.class);
     }
 
-    // Construct using com.proto.group.grpc.Group.newBuilder()
+    // Construct using com.grpc.group.Group.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -484,7 +484,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.group.GroupOuterClass.internal_static_com_proto_group_grpc_Group_descriptor;
+      return com.grpc.group.GroupOuterClass.internal_static_com_grpc_group_Group_descriptor;
     }
 
     @java.lang.Override
@@ -847,10 +847,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.group.grpc.Group)
+    // @@protoc_insertion_point(builder_scope:com.grpc.group.Group)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.group.grpc.Group)
+  // @@protoc_insertion_point(class_scope:com.grpc.group.Group)
   private static final com.grpc.group.Group DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.group.Group();

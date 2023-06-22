@@ -4,11 +4,11 @@
 package com.grpc.menu;
 
 /**
- * Protobuf type {@code com.proto.menu.grpc.MenuRequest}
+ * Protobuf type {@code com.grpc.menu.MenuRequest}
  */
 public  final class MenuRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.menu.grpc.MenuRequest)
+    // @@protoc_insertion_point(message_implements:com.grpc.menu.MenuRequest)
     MenuRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use MenuRequest.newBuilder() to construct.
@@ -115,13 +115,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.menu.MenuOuterClass.internal_static_com_proto_menu_grpc_MenuRequest_descriptor;
+    return com.grpc.menu.MenuOuterClass.internal_static_com_grpc_menu_MenuRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.menu.MenuOuterClass.internal_static_com_proto_menu_grpc_MenuRequest_fieldAccessorTable
+    return com.grpc.menu.MenuOuterClass.internal_static_com_grpc_menu_MenuRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.menu.MenuRequest.class, com.grpc.menu.MenuRequest.Builder.class);
   }
@@ -259,32 +259,32 @@ private static final long serialVersionUID = 0L;
   public static final int MENU_FIELD_NUMBER = 5;
   private java.util.List<com.grpc.menu.Menu> menu_;
   /**
-   * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+   * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
    */
   public java.util.List<com.grpc.menu.Menu> getMenuList() {
     return menu_;
   }
   /**
-   * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+   * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
    */
   public java.util.List<? extends com.grpc.menu.MenuOrBuilder> 
       getMenuOrBuilderList() {
     return menu_;
   }
   /**
-   * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+   * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
    */
   public int getMenuCount() {
     return menu_.size();
   }
   /**
-   * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+   * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
    */
   public com.grpc.menu.Menu getMenu(int index) {
     return menu_.get(index);
   }
   /**
-   * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+   * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
    */
   public com.grpc.menu.MenuOrBuilder getMenuOrBuilder(
       int index) {
@@ -513,26 +513,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.menu.grpc.MenuRequest}
+   * Protobuf type {@code com.grpc.menu.MenuRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.menu.grpc.MenuRequest)
+      // @@protoc_insertion_point(builder_implements:com.grpc.menu.MenuRequest)
       com.grpc.menu.MenuRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.menu.MenuOuterClass.internal_static_com_proto_menu_grpc_MenuRequest_descriptor;
+      return com.grpc.menu.MenuOuterClass.internal_static_com_grpc_menu_MenuRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.menu.MenuOuterClass.internal_static_com_proto_menu_grpc_MenuRequest_fieldAccessorTable
+      return com.grpc.menu.MenuOuterClass.internal_static_com_grpc_menu_MenuRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.menu.MenuRequest.class, com.grpc.menu.MenuRequest.Builder.class);
     }
 
-    // Construct using com.proto.menu.grpc.MenuRequest.newBuilder()
+    // Construct using com.grpc.menu.MenuRequest.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -575,7 +575,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.menu.MenuOuterClass.internal_static_com_proto_menu_grpc_MenuRequest_descriptor;
+      return com.grpc.menu.MenuOuterClass.internal_static_com_grpc_menu_MenuRequest_descriptor;
     }
 
     @java.lang.Override
@@ -1036,7 +1036,7 @@ private static final long serialVersionUID = 0L;
         com.grpc.menu.Menu, com.grpc.menu.Menu.Builder, com.grpc.menu.MenuOrBuilder> menuBuilder_;
 
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public java.util.List<com.grpc.menu.Menu> getMenuList() {
       if (menuBuilder_ == null) {
@@ -1046,7 +1046,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public int getMenuCount() {
       if (menuBuilder_ == null) {
@@ -1056,7 +1056,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public com.grpc.menu.Menu getMenu(int index) {
       if (menuBuilder_ == null) {
@@ -1066,7 +1066,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public Builder setMenu(
         int index, com.grpc.menu.Menu value) {
@@ -1083,7 +1083,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public Builder setMenu(
         int index, com.grpc.menu.Menu.Builder builderForValue) {
@@ -1097,7 +1097,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public Builder addMenu(com.grpc.menu.Menu value) {
       if (menuBuilder_ == null) {
@@ -1113,7 +1113,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public Builder addMenu(
         int index, com.grpc.menu.Menu value) {
@@ -1130,7 +1130,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public Builder addMenu(
         com.grpc.menu.Menu.Builder builderForValue) {
@@ -1144,7 +1144,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public Builder addMenu(
         int index, com.grpc.menu.Menu.Builder builderForValue) {
@@ -1158,7 +1158,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public Builder addAllMenu(
         java.lang.Iterable<? extends com.grpc.menu.Menu> values) {
@@ -1173,7 +1173,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public Builder clearMenu() {
       if (menuBuilder_ == null) {
@@ -1186,7 +1186,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public Builder removeMenu(int index) {
       if (menuBuilder_ == null) {
@@ -1199,14 +1199,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public com.grpc.menu.Menu.Builder getMenuBuilder(
         int index) {
       return getMenuFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public com.grpc.menu.MenuOrBuilder getMenuOrBuilder(
         int index) {
@@ -1216,7 +1216,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public java.util.List<? extends com.grpc.menu.MenuOrBuilder> 
          getMenuOrBuilderList() {
@@ -1227,14 +1227,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public com.grpc.menu.Menu.Builder addMenuBuilder() {
       return getMenuFieldBuilder().addBuilder(
           com.grpc.menu.Menu.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public com.grpc.menu.Menu.Builder addMenuBuilder(
         int index) {
@@ -1242,7 +1242,7 @@ private static final long serialVersionUID = 0L;
           index, com.grpc.menu.Menu.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.menu.grpc.Menu menu = 5;</code>
+     * <code>repeated .com.grpc.menu.Menu menu = 5;</code>
      */
     public java.util.List<com.grpc.menu.Menu.Builder> 
          getMenuBuilderList() {
@@ -1275,10 +1275,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.menu.grpc.MenuRequest)
+    // @@protoc_insertion_point(builder_scope:com.grpc.menu.MenuRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.menu.grpc.MenuRequest)
+  // @@protoc_insertion_point(class_scope:com.grpc.menu.MenuRequest)
   private static final com.grpc.menu.MenuRequest DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.menu.MenuRequest();

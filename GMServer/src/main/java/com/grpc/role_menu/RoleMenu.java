@@ -15,20 +15,20 @@ public final class RoleMenu {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_proto_role_menu_grpc_RP_descriptor;
+    internal_static_com_grpc_role_menu_RP_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_proto_role_menu_grpc_RP_fieldAccessorTable;
+      internal_static_com_grpc_role_menu_RP_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_proto_role_menu_grpc_RPRequest_descriptor;
+    internal_static_com_grpc_role_menu_RPRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_proto_role_menu_grpc_RPRequest_fieldAccessorTable;
+      internal_static_com_grpc_role_menu_RPRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_proto_role_menu_grpc_RPResponse_descriptor;
+    internal_static_com_grpc_role_menu_RPResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_proto_role_menu_grpc_RPResponse_fieldAccessorTable;
+      internal_static_com_grpc_role_menu_RPResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,24 +38,22 @@ public final class RoleMenu {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017role_menu.proto\022\030com.proto.role_menu.g" +
-      "rpc\"2\n\002RP\022\n\n\002id\030\004 \001(\005\022\017\n\007role_id\030\001 \001(\005\022\017" +
-      "\n\007menu_id\030\002 \001(\005\"c\n\tRPRequest\022\n\n\002id\030\004 \001(\005" +
-      "\022\017\n\007role_id\030\001 \001(\005\022\017\n\007menu_id\030\002 \001(\005\022(\n\002rp" +
-      "\030\005 \003(\0132\034.com.proto.role_menu.grpc.RP\"w\n\n" +
-      "RPResponse\022\n\n\002id\030\004 \001(\005\022\017\n\007role_id\030\001 \001(\005\022" +
-      "\017\n\007menu_id\030\002 \001(\005\022(\n\002rp\030\005 \003(\0132\034.com.proto" +
-      ".role_menu.grpc.RP\022\021\n\tstatus_id\030\006 \001(\0052\342\002" +
-      "\n\tRPService\022S\n\006listRP\022#.com.proto.role_m" +
-      "enu.grpc.RPRequest\032$.com.proto.role_menu" +
-      ".grpc.RPResponse\022R\n\005addRP\022#.com.proto.ro" +
-      "le_menu.grpc.RPRequest\032$.com.proto.role_" +
-      "menu.grpc.RPResponse\022U\n\010removeRP\022#.com.p" +
-      "roto.role_menu.grpc.RPRequest\032$.com.prot" +
-      "o.role_menu.grpc.RPResponse\022U\n\010modifyRP\022" +
-      "#.com.proto.role_menu.grpc.RPRequest\032$.c" +
-      "om.proto.role_menu.grpc.RPResponseB\002P\001b\006" +
-      "proto3"
+      "\n\017role_menu.proto\022\022com.grpc.role_menu\"2\n" +
+      "\002RP\022\n\n\002id\030\004 \001(\005\022\017\n\007role_id\030\001 \001(\005\022\017\n\007menu" +
+      "_id\030\002 \001(\005\"]\n\tRPRequest\022\n\n\002id\030\004 \001(\005\022\017\n\007ro" +
+      "le_id\030\001 \001(\005\022\017\n\007menu_id\030\002 \001(\005\022\"\n\002rp\030\005 \003(\013" +
+      "2\026.com.grpc.role_menu.RP\"q\n\nRPResponse\022\n" +
+      "\n\002id\030\004 \001(\005\022\017\n\007role_id\030\001 \001(\005\022\017\n\007menu_id\030\002" +
+      " \001(\005\022\"\n\002rp\030\005 \003(\0132\026.com.grpc.role_menu.RP" +
+      "\022\021\n\tstatus_id\030\006 \001(\0052\262\002\n\tRPService\022G\n\006lis" +
+      "tRP\022\035.com.grpc.role_menu.RPRequest\032\036.com" +
+      ".grpc.role_menu.RPResponse\022F\n\005addRP\022\035.co" +
+      "m.grpc.role_menu.RPRequest\032\036.com.grpc.ro" +
+      "le_menu.RPResponse\022I\n\010removeRP\022\035.com.grp" +
+      "c.role_menu.RPRequest\032\036.com.grpc.role_me" +
+      "nu.RPResponse\022I\n\010modifyRP\022\035.com.grpc.rol" +
+      "e_menu.RPRequest\032\036.com.grpc.role_menu.RP" +
+      "ResponseB\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -69,23 +67,23 @@ public final class RoleMenu {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_proto_role_menu_grpc_RP_descriptor =
+    internal_static_com_grpc_role_menu_RP_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_proto_role_menu_grpc_RP_fieldAccessorTable = new
+    internal_static_com_grpc_role_menu_RP_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_proto_role_menu_grpc_RP_descriptor,
+        internal_static_com_grpc_role_menu_RP_descriptor,
         new java.lang.String[] { "Id", "RoleId", "MenuId", });
-    internal_static_com_proto_role_menu_grpc_RPRequest_descriptor =
+    internal_static_com_grpc_role_menu_RPRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_proto_role_menu_grpc_RPRequest_fieldAccessorTable = new
+    internal_static_com_grpc_role_menu_RPRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_proto_role_menu_grpc_RPRequest_descriptor,
+        internal_static_com_grpc_role_menu_RPRequest_descriptor,
         new java.lang.String[] { "Id", "RoleId", "MenuId", "Rp", });
-    internal_static_com_proto_role_menu_grpc_RPResponse_descriptor =
+    internal_static_com_grpc_role_menu_RPResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_proto_role_menu_grpc_RPResponse_fieldAccessorTable = new
+    internal_static_com_grpc_role_menu_RPResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_proto_role_menu_grpc_RPResponse_descriptor,
+        internal_static_com_grpc_role_menu_RPResponse_descriptor,
         new java.lang.String[] { "Id", "RoleId", "MenuId", "Rp", "StatusId", });
   }
 

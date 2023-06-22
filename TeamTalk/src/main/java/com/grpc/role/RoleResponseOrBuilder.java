@@ -4,7 +4,7 @@
 package com.grpc.role;
 
 public interface RoleResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.role.grpc.RoleResponse)
+    // @@protoc_insertion_point(interface_extends:com.grpc.role.RoleResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -41,25 +41,25 @@ public interface RoleResponseOrBuilder extends
       getRoleNameBytes();
 
   /**
-   * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+   * <code>repeated .com.grpc.role.Role role = 5;</code>
    */
   java.util.List<com.grpc.role.Role> 
       getRoleList();
   /**
-   * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+   * <code>repeated .com.grpc.role.Role role = 5;</code>
    */
   com.grpc.role.Role getRole(int index);
   /**
-   * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+   * <code>repeated .com.grpc.role.Role role = 5;</code>
    */
   int getRoleCount();
   /**
-   * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+   * <code>repeated .com.grpc.role.Role role = 5;</code>
    */
   java.util.List<? extends com.grpc.role.RoleOrBuilder> 
       getRoleOrBuilderList();
   /**
-   * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+   * <code>repeated .com.grpc.role.Role role = 5;</code>
    */
   com.grpc.role.RoleOrBuilder getRoleOrBuilder(
       int index);

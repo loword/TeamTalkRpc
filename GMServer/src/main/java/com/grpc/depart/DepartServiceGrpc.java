@@ -24,7 +24,7 @@ public final class DepartServiceGrpc {
 
   private DepartServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "com.proto.depart.grpc.DepartService";
+  public static final String SERVICE_NAME = "com.grpc.depart.DepartService";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -33,7 +33,7 @@ public final class DepartServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.depart.grpc.DepartService", "listDepart"))
+              "com.grpc.depart.DepartService", "listDepart"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.depart.DepartRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -45,7 +45,7 @@ public final class DepartServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.depart.grpc.DepartService", "addDepart"))
+              "com.grpc.depart.DepartService", "addDepart"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.depart.DepartRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -57,7 +57,7 @@ public final class DepartServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.depart.grpc.DepartService", "removeDepart"))
+              "com.grpc.depart.DepartService", "removeDepart"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.depart.DepartRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -69,7 +69,7 @@ public final class DepartServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.depart.grpc.DepartService", "modifyDepart"))
+              "com.grpc.depart.DepartService", "modifyDepart"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.depart.DepartRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

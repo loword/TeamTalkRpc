@@ -4,7 +4,7 @@
 package com.grpc.role_menu;
 
 public interface RPOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.role_menu.grpc.RP)
+    // @@protoc_insertion_point(interface_extends:com.grpc.role_menu.RP)
     com.google.protobuf.MessageOrBuilder {
 
   /**

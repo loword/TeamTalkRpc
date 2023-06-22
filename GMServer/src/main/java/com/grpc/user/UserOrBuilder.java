@@ -4,7 +4,7 @@
 package com.grpc.user;
 
 public interface UserOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.user.grpc.User)
+    // @@protoc_insertion_point(interface_extends:com.grpc.user.User)
     com.google.protobuf.MessageOrBuilder {
 
   /**

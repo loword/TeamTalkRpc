@@ -4,7 +4,7 @@
 package com.grpc.group;
 
 public interface GroupOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.group.grpc.Group)
+    // @@protoc_insertion_point(interface_extends:com.grpc.group.Group)
     com.google.protobuf.MessageOrBuilder {
 
   /**

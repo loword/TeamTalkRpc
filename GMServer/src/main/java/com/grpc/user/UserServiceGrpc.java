@@ -24,7 +24,7 @@ public final class UserServiceGrpc {
 
   private UserServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "com.proto.user.grpc.UserService";
+  public static final String SERVICE_NAME = "com.grpc.user.UserService";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -33,7 +33,7 @@ public final class UserServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.user.grpc.UserService", "listUser"))
+              "com.grpc.user.UserService", "listUser"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.user.UserRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -45,7 +45,7 @@ public final class UserServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.user.grpc.UserService", "addUser"))
+              "com.grpc.user.UserService", "addUser"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.user.UserRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -57,7 +57,7 @@ public final class UserServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.user.grpc.UserService", "modifyPassword"))
+              "com.grpc.user.UserService", "modifyPassword"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.user.UserRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -69,7 +69,7 @@ public final class UserServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.user.grpc.UserService", "removeUser"))
+              "com.grpc.user.UserService", "removeUser"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.user.UserRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -81,7 +81,7 @@ public final class UserServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.user.grpc.UserService", "modifyUser"))
+              "com.grpc.user.UserService", "modifyUser"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.user.UserRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

@@ -4,11 +4,11 @@
 package com.grpc.role;
 
 /**
- * Protobuf type {@code com.proto.role.grpc.RoleRequest}
+ * Protobuf type {@code com.grpc.role.RoleRequest}
  */
 public  final class RoleRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.role.grpc.RoleRequest)
+    // @@protoc_insertion_point(message_implements:com.grpc.role.RoleRequest)
     RoleRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use RoleRequest.newBuilder() to construct.
@@ -120,13 +120,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.role.RoleOuterClass.internal_static_com_proto_role_grpc_RoleRequest_descriptor;
+    return com.grpc.role.RoleOuterClass.internal_static_com_grpc_role_RoleRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.role.RoleOuterClass.internal_static_com_proto_role_grpc_RoleRequest_fieldAccessorTable
+    return com.grpc.role.RoleOuterClass.internal_static_com_grpc_role_RoleRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.role.RoleRequest.class, com.grpc.role.RoleRequest.Builder.class);
   }
@@ -210,32 +210,32 @@ private static final long serialVersionUID = 0L;
   public static final int ROLE_FIELD_NUMBER = 5;
   private java.util.List<com.grpc.role.Role> role_;
   /**
-   * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+   * <code>repeated .com.grpc.role.Role role = 5;</code>
    */
   public java.util.List<com.grpc.role.Role> getRoleList() {
     return role_;
   }
   /**
-   * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+   * <code>repeated .com.grpc.role.Role role = 5;</code>
    */
   public java.util.List<? extends com.grpc.role.RoleOrBuilder> 
       getRoleOrBuilderList() {
     return role_;
   }
   /**
-   * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+   * <code>repeated .com.grpc.role.Role role = 5;</code>
    */
   public int getRoleCount() {
     return role_.size();
   }
   /**
-   * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+   * <code>repeated .com.grpc.role.Role role = 5;</code>
    */
   public com.grpc.role.Role getRole(int index) {
     return role_.get(index);
   }
   /**
-   * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+   * <code>repeated .com.grpc.role.Role role = 5;</code>
    */
   public com.grpc.role.RoleOrBuilder getRoleOrBuilder(
       int index) {
@@ -461,26 +461,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.role.grpc.RoleRequest}
+   * Protobuf type {@code com.grpc.role.RoleRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.role.grpc.RoleRequest)
+      // @@protoc_insertion_point(builder_implements:com.grpc.role.RoleRequest)
       com.grpc.role.RoleRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.role.RoleOuterClass.internal_static_com_proto_role_grpc_RoleRequest_descriptor;
+      return com.grpc.role.RoleOuterClass.internal_static_com_grpc_role_RoleRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.role.RoleOuterClass.internal_static_com_proto_role_grpc_RoleRequest_fieldAccessorTable
+      return com.grpc.role.RoleOuterClass.internal_static_com_grpc_role_RoleRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.role.RoleRequest.class, com.grpc.role.RoleRequest.Builder.class);
     }
 
-    // Construct using com.proto.role.grpc.RoleRequest.newBuilder()
+    // Construct using com.grpc.role.RoleRequest.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -519,7 +519,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.role.RoleOuterClass.internal_static_com_proto_role_grpc_RoleRequest_descriptor;
+      return com.grpc.role.RoleOuterClass.internal_static_com_grpc_role_RoleRequest_descriptor;
     }
 
     @java.lang.Override
@@ -883,7 +883,7 @@ private static final long serialVersionUID = 0L;
         com.grpc.role.Role, com.grpc.role.Role.Builder, com.grpc.role.RoleOrBuilder> roleBuilder_;
 
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public java.util.List<com.grpc.role.Role> getRoleList() {
       if (roleBuilder_ == null) {
@@ -893,7 +893,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public int getRoleCount() {
       if (roleBuilder_ == null) {
@@ -903,7 +903,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public com.grpc.role.Role getRole(int index) {
       if (roleBuilder_ == null) {
@@ -913,7 +913,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public Builder setRole(
         int index, com.grpc.role.Role value) {
@@ -930,7 +930,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public Builder setRole(
         int index, com.grpc.role.Role.Builder builderForValue) {
@@ -944,7 +944,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public Builder addRole(com.grpc.role.Role value) {
       if (roleBuilder_ == null) {
@@ -960,7 +960,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public Builder addRole(
         int index, com.grpc.role.Role value) {
@@ -977,7 +977,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public Builder addRole(
         com.grpc.role.Role.Builder builderForValue) {
@@ -991,7 +991,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public Builder addRole(
         int index, com.grpc.role.Role.Builder builderForValue) {
@@ -1005,7 +1005,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public Builder addAllRole(
         java.lang.Iterable<? extends com.grpc.role.Role> values) {
@@ -1020,7 +1020,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public Builder clearRole() {
       if (roleBuilder_ == null) {
@@ -1033,7 +1033,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public Builder removeRole(int index) {
       if (roleBuilder_ == null) {
@@ -1046,14 +1046,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public com.grpc.role.Role.Builder getRoleBuilder(
         int index) {
       return getRoleFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public com.grpc.role.RoleOrBuilder getRoleOrBuilder(
         int index) {
@@ -1063,7 +1063,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public java.util.List<? extends com.grpc.role.RoleOrBuilder> 
          getRoleOrBuilderList() {
@@ -1074,14 +1074,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public com.grpc.role.Role.Builder addRoleBuilder() {
       return getRoleFieldBuilder().addBuilder(
           com.grpc.role.Role.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public com.grpc.role.Role.Builder addRoleBuilder(
         int index) {
@@ -1089,7 +1089,7 @@ private static final long serialVersionUID = 0L;
           index, com.grpc.role.Role.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.role.grpc.Role role = 5;</code>
+     * <code>repeated .com.grpc.role.Role role = 5;</code>
      */
     public java.util.List<com.grpc.role.Role.Builder> 
          getRoleBuilderList() {
@@ -1122,10 +1122,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.role.grpc.RoleRequest)
+    // @@protoc_insertion_point(builder_scope:com.grpc.role.RoleRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.role.grpc.RoleRequest)
+  // @@protoc_insertion_point(class_scope:com.grpc.role.RoleRequest)
   private static final com.grpc.role.RoleRequest DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.role.RoleRequest();

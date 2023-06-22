@@ -4,11 +4,11 @@
 package com.grpc.manager_role;
 
 /**
- * Protobuf type {@code com.proto.manager_role.grpc.MRResponse}
+ * Protobuf type {@code com.grpc.manager_role.MRResponse}
  */
 public  final class MRResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.manager_role.grpc.MRResponse)
+    // @@protoc_insertion_point(message_implements:com.grpc.manager_role.MRResponse)
     MRResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use MRResponse.newBuilder() to construct.
@@ -100,13 +100,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.manager_role.ManagerRole.internal_static_com_proto_manager_role_grpc_MRResponse_descriptor;
+    return com.grpc.manager_role.ManagerRole.internal_static_com_grpc_manager_role_MRResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.manager_role.ManagerRole.internal_static_com_proto_manager_role_grpc_MRResponse_fieldAccessorTable
+    return com.grpc.manager_role.ManagerRole.internal_static_com_grpc_manager_role_MRResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.manager_role.MRResponse.class, com.grpc.manager_role.MRResponse.Builder.class);
   }
@@ -142,32 +142,32 @@ private static final long serialVersionUID = 0L;
   public static final int MR_FIELD_NUMBER = 5;
   private java.util.List<com.grpc.manager_role.MR> mr_;
   /**
-   * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+   * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
    */
   public java.util.List<com.grpc.manager_role.MR> getMrList() {
     return mr_;
   }
   /**
-   * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+   * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
    */
   public java.util.List<? extends com.grpc.manager_role.MROrBuilder> 
       getMrOrBuilderList() {
     return mr_;
   }
   /**
-   * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+   * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
    */
   public int getMrCount() {
     return mr_.size();
   }
   /**
-   * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+   * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
    */
   public com.grpc.manager_role.MR getMr(int index) {
     return mr_.get(index);
   }
   /**
-   * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+   * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
    */
   public com.grpc.manager_role.MROrBuilder getMrOrBuilder(
       int index) {
@@ -386,26 +386,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.manager_role.grpc.MRResponse}
+   * Protobuf type {@code com.grpc.manager_role.MRResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.manager_role.grpc.MRResponse)
+      // @@protoc_insertion_point(builder_implements:com.grpc.manager_role.MRResponse)
       com.grpc.manager_role.MRResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.manager_role.ManagerRole.internal_static_com_proto_manager_role_grpc_MRResponse_descriptor;
+      return com.grpc.manager_role.ManagerRole.internal_static_com_grpc_manager_role_MRResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.manager_role.ManagerRole.internal_static_com_proto_manager_role_grpc_MRResponse_fieldAccessorTable
+      return com.grpc.manager_role.ManagerRole.internal_static_com_grpc_manager_role_MRResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.manager_role.MRResponse.class, com.grpc.manager_role.MRResponse.Builder.class);
     }
 
-    // Construct using com.proto.manager_role.grpc.MRResponse.newBuilder()
+    // Construct using com.grpc.manager_role.MRResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -444,7 +444,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.manager_role.ManagerRole.internal_static_com_proto_manager_role_grpc_MRResponse_descriptor;
+      return com.grpc.manager_role.ManagerRole.internal_static_com_grpc_manager_role_MRResponse_descriptor;
     }
 
     @java.lang.Override
@@ -687,7 +687,7 @@ private static final long serialVersionUID = 0L;
         com.grpc.manager_role.MR, com.grpc.manager_role.MR.Builder, com.grpc.manager_role.MROrBuilder> mrBuilder_;
 
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public java.util.List<com.grpc.manager_role.MR> getMrList() {
       if (mrBuilder_ == null) {
@@ -697,7 +697,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public int getMrCount() {
       if (mrBuilder_ == null) {
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public com.grpc.manager_role.MR getMr(int index) {
       if (mrBuilder_ == null) {
@@ -717,7 +717,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public Builder setMr(
         int index, com.grpc.manager_role.MR value) {
@@ -734,7 +734,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public Builder setMr(
         int index, com.grpc.manager_role.MR.Builder builderForValue) {
@@ -748,7 +748,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public Builder addMr(com.grpc.manager_role.MR value) {
       if (mrBuilder_ == null) {
@@ -764,7 +764,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public Builder addMr(
         int index, com.grpc.manager_role.MR value) {
@@ -781,7 +781,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public Builder addMr(
         com.grpc.manager_role.MR.Builder builderForValue) {
@@ -795,7 +795,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public Builder addMr(
         int index, com.grpc.manager_role.MR.Builder builderForValue) {
@@ -809,7 +809,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public Builder addAllMr(
         java.lang.Iterable<? extends com.grpc.manager_role.MR> values) {
@@ -824,7 +824,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public Builder clearMr() {
       if (mrBuilder_ == null) {
@@ -837,7 +837,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public Builder removeMr(int index) {
       if (mrBuilder_ == null) {
@@ -850,14 +850,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public com.grpc.manager_role.MR.Builder getMrBuilder(
         int index) {
       return getMrFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public com.grpc.manager_role.MROrBuilder getMrOrBuilder(
         int index) {
@@ -867,7 +867,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public java.util.List<? extends com.grpc.manager_role.MROrBuilder> 
          getMrOrBuilderList() {
@@ -878,14 +878,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public com.grpc.manager_role.MR.Builder addMrBuilder() {
       return getMrFieldBuilder().addBuilder(
           com.grpc.manager_role.MR.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public com.grpc.manager_role.MR.Builder addMrBuilder(
         int index) {
@@ -893,7 +893,7 @@ private static final long serialVersionUID = 0L;
           index, com.grpc.manager_role.MR.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+     * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
      */
     public java.util.List<com.grpc.manager_role.MR.Builder> 
          getMrBuilderList() {
@@ -952,10 +952,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.manager_role.grpc.MRResponse)
+    // @@protoc_insertion_point(builder_scope:com.grpc.manager_role.MRResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.manager_role.grpc.MRResponse)
+  // @@protoc_insertion_point(class_scope:com.grpc.manager_role.MRResponse)
   private static final com.grpc.manager_role.MRResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.manager_role.MRResponse();

@@ -24,7 +24,7 @@ public final class RPServiceGrpc {
 
   private RPServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "com.proto.role_menu.grpc.RPService";
+  public static final String SERVICE_NAME = "com.grpc.role_menu.RPService";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -33,7 +33,7 @@ public final class RPServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.role_menu.RPRequest, com.grpc.role_menu.RPResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.role_menu.grpc.RPService", "listRP"))
+              "com.grpc.role_menu.RPService", "listRP"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.role_menu.RPRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -45,7 +45,7 @@ public final class RPServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.role_menu.RPRequest, com.grpc.role_menu.RPResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.role_menu.grpc.RPService", "addRP"))
+              "com.grpc.role_menu.RPService", "addRP"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.role_menu.RPRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -57,7 +57,7 @@ public final class RPServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.role_menu.RPRequest, com.grpc.role_menu.RPResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.role_menu.grpc.RPService", "removeRP"))
+              "com.grpc.role_menu.RPService", "removeRP"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.role_menu.RPRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -69,7 +69,7 @@ public final class RPServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.role_menu.RPRequest, com.grpc.role_menu.RPResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.role_menu.grpc.RPService", "modifyRP"))
+              "com.grpc.role_menu.RPService", "modifyRP"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.role_menu.RPRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

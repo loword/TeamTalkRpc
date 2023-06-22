@@ -4,7 +4,7 @@
 package com.grpc.menu;
 
 public interface MenuOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.menu.grpc.Menu)
+    // @@protoc_insertion_point(interface_extends:com.grpc.menu.Menu)
     com.google.protobuf.MessageOrBuilder {
 
   /**

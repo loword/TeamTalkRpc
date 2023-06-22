@@ -4,11 +4,11 @@
 package com.grpc.user;
 
 /**
- * Protobuf type {@code com.proto.user.grpc.User}
+ * Protobuf type {@code com.grpc.user.User}
  */
 public  final class User extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.user.grpc.User)
+    // @@protoc_insertion_point(message_implements:com.grpc.user.User)
     UserOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use User.newBuilder() to construct.
@@ -168,13 +168,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.user.UserOuterClass.internal_static_com_proto_user_grpc_User_descriptor;
+    return com.grpc.user.UserOuterClass.internal_static_com_grpc_user_User_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.user.UserOuterClass.internal_static_com_proto_user_grpc_User_fieldAccessorTable
+    return com.grpc.user.UserOuterClass.internal_static_com_grpc_user_User_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.user.User.class, com.grpc.user.User.Builder.class);
   }
@@ -861,26 +861,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.user.grpc.User}
+   * Protobuf type {@code com.grpc.user.User}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.user.grpc.User)
+      // @@protoc_insertion_point(builder_implements:com.grpc.user.User)
       com.grpc.user.UserOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.user.UserOuterClass.internal_static_com_proto_user_grpc_User_descriptor;
+      return com.grpc.user.UserOuterClass.internal_static_com_grpc_user_User_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.user.UserOuterClass.internal_static_com_proto_user_grpc_User_fieldAccessorTable
+      return com.grpc.user.UserOuterClass.internal_static_com_grpc_user_User_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.user.User.class, com.grpc.user.User.Builder.class);
     }
 
-    // Construct using com.proto.user.grpc.User.newBuilder()
+    // Construct using com.grpc.user.User.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -936,7 +936,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.user.UserOuterClass.internal_static_com_proto_user_grpc_User_descriptor;
+      return com.grpc.user.UserOuterClass.internal_static_com_grpc_user_User_descriptor;
     }
 
     @java.lang.Override
@@ -1921,10 +1921,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.user.grpc.User)
+    // @@protoc_insertion_point(builder_scope:com.grpc.user.User)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.user.grpc.User)
+  // @@protoc_insertion_point(class_scope:com.grpc.user.User)
   private static final com.grpc.user.User DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.user.User();

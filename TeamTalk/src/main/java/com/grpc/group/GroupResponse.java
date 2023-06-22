@@ -4,11 +4,11 @@
 package com.grpc.group;
 
 /**
- * Protobuf type {@code com.proto.group.grpc.GroupResponse}
+ * Protobuf type {@code com.grpc.group.GroupResponse}
  */
 public  final class GroupResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.group.grpc.GroupResponse)
+    // @@protoc_insertion_point(message_implements:com.grpc.group.GroupResponse)
     GroupResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use GroupResponse.newBuilder() to construct.
@@ -107,13 +107,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.group.GroupOuterClass.internal_static_com_proto_group_grpc_GroupResponse_descriptor;
+    return com.grpc.group.GroupOuterClass.internal_static_com_grpc_group_GroupResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.group.GroupOuterClass.internal_static_com_proto_group_grpc_GroupResponse_fieldAccessorTable
+    return com.grpc.group.GroupOuterClass.internal_static_com_grpc_group_GroupResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.group.GroupResponse.class, com.grpc.group.GroupResponse.Builder.class);
   }
@@ -192,32 +192,32 @@ private static final long serialVersionUID = 0L;
   public static final int GROUP_FIELD_NUMBER = 6;
   private java.util.List<com.grpc.group.Group> group_;
   /**
-   * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+   * <code>repeated .com.grpc.group.Group group = 6;</code>
    */
   public java.util.List<com.grpc.group.Group> getGroupList() {
     return group_;
   }
   /**
-   * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+   * <code>repeated .com.grpc.group.Group group = 6;</code>
    */
   public java.util.List<? extends com.grpc.group.GroupOrBuilder> 
       getGroupOrBuilderList() {
     return group_;
   }
   /**
-   * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+   * <code>repeated .com.grpc.group.Group group = 6;</code>
    */
   public int getGroupCount() {
     return group_.size();
   }
   /**
-   * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+   * <code>repeated .com.grpc.group.Group group = 6;</code>
    */
   public com.grpc.group.Group getGroup(int index) {
     return group_.get(index);
   }
   /**
-   * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+   * <code>repeated .com.grpc.group.Group group = 6;</code>
    */
   public com.grpc.group.GroupOrBuilder getGroupOrBuilder(
       int index) {
@@ -437,26 +437,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.group.grpc.GroupResponse}
+   * Protobuf type {@code com.grpc.group.GroupResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.group.grpc.GroupResponse)
+      // @@protoc_insertion_point(builder_implements:com.grpc.group.GroupResponse)
       com.grpc.group.GroupResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.group.GroupOuterClass.internal_static_com_proto_group_grpc_GroupResponse_descriptor;
+      return com.grpc.group.GroupOuterClass.internal_static_com_grpc_group_GroupResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.group.GroupOuterClass.internal_static_com_proto_group_grpc_GroupResponse_fieldAccessorTable
+      return com.grpc.group.GroupOuterClass.internal_static_com_grpc_group_GroupResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.group.GroupResponse.class, com.grpc.group.GroupResponse.Builder.class);
     }
 
-    // Construct using com.proto.group.grpc.GroupResponse.newBuilder()
+    // Construct using com.grpc.group.GroupResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -497,7 +497,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.group.GroupOuterClass.internal_static_com_proto_group_grpc_GroupResponse_descriptor;
+      return com.grpc.group.GroupOuterClass.internal_static_com_grpc_group_GroupResponse_descriptor;
     }
 
     @java.lang.Override
@@ -840,7 +840,7 @@ private static final long serialVersionUID = 0L;
         com.grpc.group.Group, com.grpc.group.Group.Builder, com.grpc.group.GroupOrBuilder> groupBuilder_;
 
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public java.util.List<com.grpc.group.Group> getGroupList() {
       if (groupBuilder_ == null) {
@@ -850,7 +850,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public int getGroupCount() {
       if (groupBuilder_ == null) {
@@ -860,7 +860,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public com.grpc.group.Group getGroup(int index) {
       if (groupBuilder_ == null) {
@@ -870,7 +870,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public Builder setGroup(
         int index, com.grpc.group.Group value) {
@@ -887,7 +887,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public Builder setGroup(
         int index, com.grpc.group.Group.Builder builderForValue) {
@@ -901,7 +901,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public Builder addGroup(com.grpc.group.Group value) {
       if (groupBuilder_ == null) {
@@ -917,7 +917,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public Builder addGroup(
         int index, com.grpc.group.Group value) {
@@ -934,7 +934,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public Builder addGroup(
         com.grpc.group.Group.Builder builderForValue) {
@@ -948,7 +948,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public Builder addGroup(
         int index, com.grpc.group.Group.Builder builderForValue) {
@@ -962,7 +962,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public Builder addAllGroup(
         java.lang.Iterable<? extends com.grpc.group.Group> values) {
@@ -977,7 +977,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public Builder clearGroup() {
       if (groupBuilder_ == null) {
@@ -990,7 +990,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public Builder removeGroup(int index) {
       if (groupBuilder_ == null) {
@@ -1003,14 +1003,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public com.grpc.group.Group.Builder getGroupBuilder(
         int index) {
       return getGroupFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public com.grpc.group.GroupOrBuilder getGroupOrBuilder(
         int index) {
@@ -1020,7 +1020,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public java.util.List<? extends com.grpc.group.GroupOrBuilder> 
          getGroupOrBuilderList() {
@@ -1031,14 +1031,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public com.grpc.group.Group.Builder addGroupBuilder() {
       return getGroupFieldBuilder().addBuilder(
           com.grpc.group.Group.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public com.grpc.group.Group.Builder addGroupBuilder(
         int index) {
@@ -1046,7 +1046,7 @@ private static final long serialVersionUID = 0L;
           index, com.grpc.group.Group.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.group.grpc.Group group = 6;</code>
+     * <code>repeated .com.grpc.group.Group group = 6;</code>
      */
     public java.util.List<com.grpc.group.Group.Builder> 
          getGroupBuilderList() {
@@ -1079,10 +1079,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.group.grpc.GroupResponse)
+    // @@protoc_insertion_point(builder_scope:com.grpc.group.GroupResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.group.grpc.GroupResponse)
+  // @@protoc_insertion_point(class_scope:com.grpc.group.GroupResponse)
   private static final com.grpc.group.GroupResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.group.GroupResponse();

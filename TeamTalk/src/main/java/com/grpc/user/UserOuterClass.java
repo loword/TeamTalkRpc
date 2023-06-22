@@ -15,20 +15,20 @@ public final class UserOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_proto_user_grpc_User_descriptor;
+    internal_static_com_grpc_user_User_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_proto_user_grpc_User_fieldAccessorTable;
+      internal_static_com_grpc_user_User_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_proto_user_grpc_UserRequest_descriptor;
+    internal_static_com_grpc_user_UserRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_proto_user_grpc_UserRequest_fieldAccessorTable;
+      internal_static_com_grpc_user_UserRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_proto_user_grpc_UserResponse_descriptor;
+    internal_static_com_grpc_user_UserResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_proto_user_grpc_UserResponse_fieldAccessorTable;
+      internal_static_com_grpc_user_UserResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,35 +38,33 @@ public final class UserOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\nuser.proto\022\023com.proto.user.grpc\"\214\002\n\004Us" +
-      "er\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\013\n\003sex\030\003 \001(" +
-      "\005\022\016\n\006domain\030\004 \001(\t\022\014\n\004nick\030\005 \001(\t\022\020\n\010passw" +
-      "ord\030\006 \001(\t\022\014\n\004salt\030\007 \001(\t\022\r\n\005phone\030\010 \001(\t\022\r" +
-      "\n\005email\030\t \001(\t\022\020\n\010departid\030\n \001(\005\022\016\n\006avata" +
-      "r\030\013 \001(\t\022\016\n\006status\030\014 \001(\005\022\017\n\007created\030\r \001(\005" +
-      "\022\017\n\007updated\030\016 \001(\005\022\032\n\022push_shield_status\030" +
-      "\017 \001(\005\022\021\n\tsign_info\030\020 \001(\t\"\273\001\n\013UserRequest" +
-      "\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\013\n\003sex\030\t \001(\005\022" +
-      "\014\n\004nick\030\003 \001(\t\022\020\n\010password\030\004 \001(\t\022\014\n\004salt\030" +
-      "\005 \001(\t\022\r\n\005phone\030\006 \001(\t\022\r\n\005email\030\007 \001(\t\022\020\n\010d" +
-      "epartid\030\010 \001(\005\022\'\n\004user\030\n \003(\0132\031.com.proto." +
-      "user.grpc.User\"\312\001\n\014UserResponse\022\n\n\002id\030\001 " +
-      "\001(\005\022\014\n\004name\030\002 \001(\t\022\013\n\003sex\030\n \001(\005\022\014\n\004nick\030\003" +
-      " \001(\t\022\013\n\003pwd\030\004 \001(\t\022\014\n\004salt\030\005 \001(\t\022\r\n\005phone" +
-      "\030\006 \001(\t\022\r\n\005email\030\007 \001(\t\022\020\n\010departid\030\010 \001(\005\022" +
-      "\021\n\tstatus_id\030\t \001(\005\022\'\n\004user\030\013 \003(\0132\031.com.p" +
-      "roto.user.grpc.User2\253\003\n\013UserService\022O\n\010l" +
-      "istUser\022 .com.proto.user.grpc.UserReques" +
-      "t\032!.com.proto.user.grpc.UserResponse\022N\n\007" +
-      "addUser\022 .com.proto.user.grpc.UserReques" +
-      "t\032!.com.proto.user.grpc.UserResponse\022U\n\016" +
-      "modifyPassword\022 .com.proto.user.grpc.Use" +
-      "rRequest\032!.com.proto.user.grpc.UserRespo" +
-      "nse\022Q\n\nremoveUser\022 .com.proto.user.grpc." +
-      "UserRequest\032!.com.proto.user.grpc.UserRe" +
-      "sponse\022Q\n\nmodifyUser\022 .com.proto.user.gr" +
-      "pc.UserRequest\032!.com.proto.user.grpc.Use" +
-      "rResponseB\002P\001b\006proto3"
+      "\n\nuser.proto\022\rcom.grpc.user\"\214\002\n\004User\022\n\n\002" +
+      "id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\013\n\003sex\030\003 \001(\005\022\016\n\006d" +
+      "omain\030\004 \001(\t\022\014\n\004nick\030\005 \001(\t\022\020\n\010password\030\006 " +
+      "\001(\t\022\014\n\004salt\030\007 \001(\t\022\r\n\005phone\030\010 \001(\t\022\r\n\005emai" +
+      "l\030\t \001(\t\022\020\n\010departid\030\n \001(\005\022\016\n\006avatar\030\013 \001(" +
+      "\t\022\016\n\006status\030\014 \001(\005\022\017\n\007created\030\r \001(\005\022\017\n\007up" +
+      "dated\030\016 \001(\005\022\032\n\022push_shield_status\030\017 \001(\005\022" +
+      "\021\n\tsign_info\030\020 \001(\t\"\265\001\n\013UserRequest\022\n\n\002id" +
+      "\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\013\n\003sex\030\t \001(\005\022\014\n\004nic" +
+      "k\030\003 \001(\t\022\020\n\010password\030\004 \001(\t\022\014\n\004salt\030\005 \001(\t\022" +
+      "\r\n\005phone\030\006 \001(\t\022\r\n\005email\030\007 \001(\t\022\020\n\010departi" +
+      "d\030\010 \001(\005\022!\n\004user\030\n \003(\0132\023.com.grpc.user.Us" +
+      "er\"\304\001\n\014UserResponse\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030" +
+      "\002 \001(\t\022\013\n\003sex\030\n \001(\005\022\014\n\004nick\030\003 \001(\t\022\013\n\003pwd\030" +
+      "\004 \001(\t\022\014\n\004salt\030\005 \001(\t\022\r\n\005phone\030\006 \001(\t\022\r\n\005em" +
+      "ail\030\007 \001(\t\022\020\n\010departid\030\010 \001(\005\022\021\n\tstatus_id" +
+      "\030\t \001(\005\022!\n\004user\030\013 \003(\0132\023.com.grpc.user.Use" +
+      "r2\357\002\n\013UserService\022C\n\010listUser\022\032.com.grpc" +
+      ".user.UserRequest\032\033.com.grpc.user.UserRe" +
+      "sponse\022B\n\007addUser\022\032.com.grpc.user.UserRe" +
+      "quest\032\033.com.grpc.user.UserResponse\022I\n\016mo" +
+      "difyPassword\022\032.com.grpc.user.UserRequest" +
+      "\032\033.com.grpc.user.UserResponse\022E\n\nremoveU" +
+      "ser\022\032.com.grpc.user.UserRequest\032\033.com.gr" +
+      "pc.user.UserResponse\022E\n\nmodifyUser\022\032.com" +
+      ".grpc.user.UserRequest\032\033.com.grpc.user.U" +
+      "serResponseB\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -80,23 +78,23 @@ public final class UserOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_proto_user_grpc_User_descriptor =
+    internal_static_com_grpc_user_User_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_proto_user_grpc_User_fieldAccessorTable = new
+    internal_static_com_grpc_user_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_proto_user_grpc_User_descriptor,
+        internal_static_com_grpc_user_User_descriptor,
         new java.lang.String[] { "Id", "Name", "Sex", "Domain", "Nick", "Password", "Salt", "Phone", "Email", "Departid", "Avatar", "Status", "Created", "Updated", "PushShieldStatus", "SignInfo", });
-    internal_static_com_proto_user_grpc_UserRequest_descriptor =
+    internal_static_com_grpc_user_UserRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_proto_user_grpc_UserRequest_fieldAccessorTable = new
+    internal_static_com_grpc_user_UserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_proto_user_grpc_UserRequest_descriptor,
+        internal_static_com_grpc_user_UserRequest_descriptor,
         new java.lang.String[] { "Id", "Name", "Sex", "Nick", "Password", "Salt", "Phone", "Email", "Departid", "User", });
-    internal_static_com_proto_user_grpc_UserResponse_descriptor =
+    internal_static_com_grpc_user_UserResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_proto_user_grpc_UserResponse_fieldAccessorTable = new
+    internal_static_com_grpc_user_UserResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_proto_user_grpc_UserResponse_descriptor,
+        internal_static_com_grpc_user_UserResponse_descriptor,
         new java.lang.String[] { "Id", "Name", "Sex", "Nick", "Pwd", "Salt", "Phone", "Email", "Departid", "StatusId", "User", });
   }
 

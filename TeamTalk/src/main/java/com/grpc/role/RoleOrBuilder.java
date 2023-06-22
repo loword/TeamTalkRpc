@@ -4,7 +4,7 @@
 package com.grpc.role;
 
 public interface RoleOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.role.grpc.Role)
+    // @@protoc_insertion_point(interface_extends:com.grpc.role.Role)
     com.google.protobuf.MessageOrBuilder {
 
   /**

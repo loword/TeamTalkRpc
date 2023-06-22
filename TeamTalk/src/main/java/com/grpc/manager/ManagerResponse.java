@@ -4,11 +4,11 @@
 package com.grpc.manager;
 
 /**
- * Protobuf type {@code com.proto.manager.grpc.ManagerResponse}
+ * Protobuf type {@code com.grpc.manager.ManagerResponse}
  */
 public  final class ManagerResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.manager.grpc.ManagerResponse)
+    // @@protoc_insertion_point(message_implements:com.grpc.manager.ManagerResponse)
     ManagerResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ManagerResponse.newBuilder() to construct.
@@ -148,13 +148,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.manager.ManagerOuterClass.internal_static_com_proto_manager_grpc_ManagerResponse_descriptor;
+    return com.grpc.manager.ManagerOuterClass.internal_static_com_grpc_manager_ManagerResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.manager.ManagerOuterClass.internal_static_com_proto_manager_grpc_ManagerResponse_fieldAccessorTable
+    return com.grpc.manager.ManagerOuterClass.internal_static_com_grpc_manager_ManagerResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.manager.ManagerResponse.class, com.grpc.manager.ManagerResponse.Builder.class);
   }
@@ -374,32 +374,32 @@ private static final long serialVersionUID = 0L;
   public static final int MANAGER_FIELD_NUMBER = 5;
   private java.util.List<com.grpc.manager.Manager> manager_;
   /**
-   * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+   * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
    */
   public java.util.List<com.grpc.manager.Manager> getManagerList() {
     return manager_;
   }
   /**
-   * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+   * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
    */
   public java.util.List<? extends com.grpc.manager.ManagerOrBuilder> 
       getManagerOrBuilderList() {
     return manager_;
   }
   /**
-   * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+   * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
    */
   public int getManagerCount() {
     return manager_.size();
   }
   /**
-   * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+   * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
    */
   public com.grpc.manager.Manager getManager(int index) {
     return manager_.get(index);
   }
   /**
-   * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+   * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
    */
   public com.grpc.manager.ManagerOrBuilder getManagerOrBuilder(
       int index) {
@@ -665,26 +665,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.manager.grpc.ManagerResponse}
+   * Protobuf type {@code com.grpc.manager.ManagerResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.manager.grpc.ManagerResponse)
+      // @@protoc_insertion_point(builder_implements:com.grpc.manager.ManagerResponse)
       com.grpc.manager.ManagerResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.manager.ManagerOuterClass.internal_static_com_proto_manager_grpc_ManagerResponse_descriptor;
+      return com.grpc.manager.ManagerOuterClass.internal_static_com_grpc_manager_ManagerResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.manager.ManagerOuterClass.internal_static_com_proto_manager_grpc_ManagerResponse_fieldAccessorTable
+      return com.grpc.manager.ManagerOuterClass.internal_static_com_grpc_manager_ManagerResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.manager.ManagerResponse.class, com.grpc.manager.ManagerResponse.Builder.class);
     }
 
-    // Construct using com.proto.manager.grpc.ManagerResponse.newBuilder()
+    // Construct using com.grpc.manager.ManagerResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -731,7 +731,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.manager.ManagerOuterClass.internal_static_com_proto_manager_grpc_ManagerResponse_descriptor;
+      return com.grpc.manager.ManagerOuterClass.internal_static_com_grpc_manager_ManagerResponse_descriptor;
     }
 
     @java.lang.Override
@@ -1391,7 +1391,7 @@ private static final long serialVersionUID = 0L;
         com.grpc.manager.Manager, com.grpc.manager.Manager.Builder, com.grpc.manager.ManagerOrBuilder> managerBuilder_;
 
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public java.util.List<com.grpc.manager.Manager> getManagerList() {
       if (managerBuilder_ == null) {
@@ -1401,7 +1401,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public int getManagerCount() {
       if (managerBuilder_ == null) {
@@ -1411,7 +1411,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public com.grpc.manager.Manager getManager(int index) {
       if (managerBuilder_ == null) {
@@ -1421,7 +1421,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public Builder setManager(
         int index, com.grpc.manager.Manager value) {
@@ -1438,7 +1438,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public Builder setManager(
         int index, com.grpc.manager.Manager.Builder builderForValue) {
@@ -1452,7 +1452,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public Builder addManager(com.grpc.manager.Manager value) {
       if (managerBuilder_ == null) {
@@ -1468,7 +1468,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public Builder addManager(
         int index, com.grpc.manager.Manager value) {
@@ -1485,7 +1485,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public Builder addManager(
         com.grpc.manager.Manager.Builder builderForValue) {
@@ -1499,7 +1499,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public Builder addManager(
         int index, com.grpc.manager.Manager.Builder builderForValue) {
@@ -1513,7 +1513,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public Builder addAllManager(
         java.lang.Iterable<? extends com.grpc.manager.Manager> values) {
@@ -1528,7 +1528,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public Builder clearManager() {
       if (managerBuilder_ == null) {
@@ -1541,7 +1541,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public Builder removeManager(int index) {
       if (managerBuilder_ == null) {
@@ -1554,14 +1554,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public com.grpc.manager.Manager.Builder getManagerBuilder(
         int index) {
       return getManagerFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public com.grpc.manager.ManagerOrBuilder getManagerOrBuilder(
         int index) {
@@ -1571,7 +1571,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public java.util.List<? extends com.grpc.manager.ManagerOrBuilder> 
          getManagerOrBuilderList() {
@@ -1582,14 +1582,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public com.grpc.manager.Manager.Builder addManagerBuilder() {
       return getManagerFieldBuilder().addBuilder(
           com.grpc.manager.Manager.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public com.grpc.manager.Manager.Builder addManagerBuilder(
         int index) {
@@ -1597,7 +1597,7 @@ private static final long serialVersionUID = 0L;
           index, com.grpc.manager.Manager.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+     * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
      */
     public java.util.List<com.grpc.manager.Manager.Builder> 
          getManagerBuilderList() {
@@ -1630,10 +1630,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.manager.grpc.ManagerResponse)
+    // @@protoc_insertion_point(builder_scope:com.grpc.manager.ManagerResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.manager.grpc.ManagerResponse)
+  // @@protoc_insertion_point(class_scope:com.grpc.manager.ManagerResponse)
   private static final com.grpc.manager.ManagerResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.manager.ManagerResponse();

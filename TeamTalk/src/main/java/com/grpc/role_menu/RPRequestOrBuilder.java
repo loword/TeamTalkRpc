@@ -4,7 +4,7 @@
 package com.grpc.role_menu;
 
 public interface RPRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.role_menu.grpc.RPRequest)
+    // @@protoc_insertion_point(interface_extends:com.grpc.role_menu.RPRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -23,25 +23,25 @@ public interface RPRequestOrBuilder extends
   int getMenuId();
 
   /**
-   * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+   * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
    */
   java.util.List<com.grpc.role_menu.RP> 
       getRpList();
   /**
-   * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+   * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
    */
   com.grpc.role_menu.RP getRp(int index);
   /**
-   * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+   * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
    */
   int getRpCount();
   /**
-   * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+   * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
    */
   java.util.List<? extends com.grpc.role_menu.RPOrBuilder> 
       getRpOrBuilderList();
   /**
-   * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+   * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
    */
   com.grpc.role_menu.RPOrBuilder getRpOrBuilder(
       int index);

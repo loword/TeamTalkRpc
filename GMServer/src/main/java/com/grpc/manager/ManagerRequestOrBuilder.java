@@ -4,7 +4,7 @@
 package com.grpc.manager;
 
 public interface ManagerRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.manager.grpc.ManagerRequest)
+    // @@protoc_insertion_point(interface_extends:com.grpc.manager.ManagerRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -76,25 +76,25 @@ public interface ManagerRequestOrBuilder extends
       getAvatarBytes();
 
   /**
-   * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+   * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
    */
   java.util.List<com.grpc.manager.Manager> 
       getManagerList();
   /**
-   * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+   * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
    */
   com.grpc.manager.Manager getManager(int index);
   /**
-   * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+   * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
    */
   int getManagerCount();
   /**
-   * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+   * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
    */
   java.util.List<? extends com.grpc.manager.ManagerOrBuilder> 
       getManagerOrBuilderList();
   /**
-   * <code>repeated .com.proto.manager.grpc.Manager manager = 5;</code>
+   * <code>repeated .com.grpc.manager.Manager manager = 5;</code>
    */
   com.grpc.manager.ManagerOrBuilder getManagerOrBuilder(
       int index);

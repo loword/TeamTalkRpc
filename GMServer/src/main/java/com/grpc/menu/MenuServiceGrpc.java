@@ -24,7 +24,7 @@ public final class MenuServiceGrpc {
 
   private MenuServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "com.proto.menu.grpc.MenuService";
+  public static final String SERVICE_NAME = "com.grpc.menu.MenuService";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -33,7 +33,7 @@ public final class MenuServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.menu.grpc.MenuService", "listMenu"))
+              "com.grpc.menu.MenuService", "listMenu"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.menu.MenuRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -45,7 +45,7 @@ public final class MenuServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.menu.grpc.MenuService", "addMenu"))
+              "com.grpc.menu.MenuService", "addMenu"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.menu.MenuRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -57,7 +57,7 @@ public final class MenuServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.menu.grpc.MenuService", "removeMenu"))
+              "com.grpc.menu.MenuService", "removeMenu"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.menu.MenuRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -69,7 +69,7 @@ public final class MenuServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.menu.grpc.MenuService", "modifyMenu"))
+              "com.grpc.menu.MenuService", "modifyMenu"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.menu.MenuRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -81,7 +81,7 @@ public final class MenuServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.menu.grpc.MenuService", "getRoute"))
+              "com.grpc.menu.MenuService", "getRoute"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.menu.MenuRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -93,7 +93,7 @@ public final class MenuServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.menu.grpc.MenuService", "getMenu"))
+              "com.grpc.menu.MenuService", "getMenu"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.menu.MenuRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

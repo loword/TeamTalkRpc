@@ -24,7 +24,7 @@ public final class MRServiceGrpc {
 
   private MRServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "com.proto.manager_role.grpc.MRService";
+  public static final String SERVICE_NAME = "com.grpc.manager_role.MRService";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -33,7 +33,7 @@ public final class MRServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.manager_role.MRRequest, com.grpc.manager_role.MRResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.manager_role.grpc.MRService", "listMR"))
+              "com.grpc.manager_role.MRService", "listMR"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.manager_role.MRRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -45,7 +45,7 @@ public final class MRServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.manager_role.MRRequest, com.grpc.manager_role.MRResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.manager_role.grpc.MRService", "addMR"))
+              "com.grpc.manager_role.MRService", "addMR"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.manager_role.MRRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -57,7 +57,7 @@ public final class MRServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.manager_role.MRRequest, com.grpc.manager_role.MRResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.manager_role.grpc.MRService", "removeMR"))
+              "com.grpc.manager_role.MRService", "removeMR"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.manager_role.MRRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -69,7 +69,7 @@ public final class MRServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.manager_role.MRRequest, com.grpc.manager_role.MRResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.manager_role.grpc.MRService", "modifyMR"))
+              "com.grpc.manager_role.MRService", "modifyMR"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.manager_role.MRRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

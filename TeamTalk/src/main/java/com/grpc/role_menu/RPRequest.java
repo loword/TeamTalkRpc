@@ -4,11 +4,11 @@
 package com.grpc.role_menu;
 
 /**
- * Protobuf type {@code com.proto.role_menu.grpc.RPRequest}
+ * Protobuf type {@code com.grpc.role_menu.RPRequest}
  */
 public  final class RPRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.role_menu.grpc.RPRequest)
+    // @@protoc_insertion_point(message_implements:com.grpc.role_menu.RPRequest)
     RPRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use RPRequest.newBuilder() to construct.
@@ -94,13 +94,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.role_menu.RoleMenu.internal_static_com_proto_role_menu_grpc_RPRequest_descriptor;
+    return com.grpc.role_menu.RoleMenu.internal_static_com_grpc_role_menu_RPRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.role_menu.RoleMenu.internal_static_com_proto_role_menu_grpc_RPRequest_fieldAccessorTable
+    return com.grpc.role_menu.RoleMenu.internal_static_com_grpc_role_menu_RPRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.role_menu.RPRequest.class, com.grpc.role_menu.RPRequest.Builder.class);
   }
@@ -136,32 +136,32 @@ private static final long serialVersionUID = 0L;
   public static final int RP_FIELD_NUMBER = 5;
   private java.util.List<com.grpc.role_menu.RP> rp_;
   /**
-   * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+   * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
    */
   public java.util.List<com.grpc.role_menu.RP> getRpList() {
     return rp_;
   }
   /**
-   * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+   * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
    */
   public java.util.List<? extends com.grpc.role_menu.RPOrBuilder> 
       getRpOrBuilderList() {
     return rp_;
   }
   /**
-   * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+   * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
    */
   public int getRpCount() {
     return rp_.size();
   }
   /**
-   * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+   * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
    */
   public com.grpc.role_menu.RP getRp(int index) {
     return rp_.get(index);
   }
   /**
-   * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+   * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
    */
   public com.grpc.role_menu.RPOrBuilder getRpOrBuilder(
       int index) {
@@ -360,26 +360,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.role_menu.grpc.RPRequest}
+   * Protobuf type {@code com.grpc.role_menu.RPRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.role_menu.grpc.RPRequest)
+      // @@protoc_insertion_point(builder_implements:com.grpc.role_menu.RPRequest)
       com.grpc.role_menu.RPRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.role_menu.RoleMenu.internal_static_com_proto_role_menu_grpc_RPRequest_descriptor;
+      return com.grpc.role_menu.RoleMenu.internal_static_com_grpc_role_menu_RPRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.role_menu.RoleMenu.internal_static_com_proto_role_menu_grpc_RPRequest_fieldAccessorTable
+      return com.grpc.role_menu.RoleMenu.internal_static_com_grpc_role_menu_RPRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.role_menu.RPRequest.class, com.grpc.role_menu.RPRequest.Builder.class);
     }
 
-    // Construct using com.proto.role_menu.grpc.RPRequest.newBuilder()
+    // Construct using com.grpc.role_menu.RPRequest.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -416,7 +416,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.role_menu.RoleMenu.internal_static_com_proto_role_menu_grpc_RPRequest_descriptor;
+      return com.grpc.role_menu.RoleMenu.internal_static_com_grpc_role_menu_RPRequest_descriptor;
     }
 
     @java.lang.Override
@@ -655,7 +655,7 @@ private static final long serialVersionUID = 0L;
         com.grpc.role_menu.RP, com.grpc.role_menu.RP.Builder, com.grpc.role_menu.RPOrBuilder> rpBuilder_;
 
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public java.util.List<com.grpc.role_menu.RP> getRpList() {
       if (rpBuilder_ == null) {
@@ -665,7 +665,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public int getRpCount() {
       if (rpBuilder_ == null) {
@@ -675,7 +675,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public com.grpc.role_menu.RP getRp(int index) {
       if (rpBuilder_ == null) {
@@ -685,7 +685,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public Builder setRp(
         int index, com.grpc.role_menu.RP value) {
@@ -702,7 +702,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public Builder setRp(
         int index, com.grpc.role_menu.RP.Builder builderForValue) {
@@ -716,7 +716,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public Builder addRp(com.grpc.role_menu.RP value) {
       if (rpBuilder_ == null) {
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public Builder addRp(
         int index, com.grpc.role_menu.RP value) {
@@ -749,7 +749,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public Builder addRp(
         com.grpc.role_menu.RP.Builder builderForValue) {
@@ -763,7 +763,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public Builder addRp(
         int index, com.grpc.role_menu.RP.Builder builderForValue) {
@@ -777,7 +777,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public Builder addAllRp(
         java.lang.Iterable<? extends com.grpc.role_menu.RP> values) {
@@ -792,7 +792,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public Builder clearRp() {
       if (rpBuilder_ == null) {
@@ -805,7 +805,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public Builder removeRp(int index) {
       if (rpBuilder_ == null) {
@@ -818,14 +818,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public com.grpc.role_menu.RP.Builder getRpBuilder(
         int index) {
       return getRpFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public com.grpc.role_menu.RPOrBuilder getRpOrBuilder(
         int index) {
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public java.util.List<? extends com.grpc.role_menu.RPOrBuilder> 
          getRpOrBuilderList() {
@@ -846,14 +846,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public com.grpc.role_menu.RP.Builder addRpBuilder() {
       return getRpFieldBuilder().addBuilder(
           com.grpc.role_menu.RP.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public com.grpc.role_menu.RP.Builder addRpBuilder(
         int index) {
@@ -861,7 +861,7 @@ private static final long serialVersionUID = 0L;
           index, com.grpc.role_menu.RP.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.role_menu.grpc.RP rp = 5;</code>
+     * <code>repeated .com.grpc.role_menu.RP rp = 5;</code>
      */
     public java.util.List<com.grpc.role_menu.RP.Builder> 
          getRpBuilderList() {
@@ -894,10 +894,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.role_menu.grpc.RPRequest)
+    // @@protoc_insertion_point(builder_scope:com.grpc.role_menu.RPRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.role_menu.grpc.RPRequest)
+  // @@protoc_insertion_point(class_scope:com.grpc.role_menu.RPRequest)
   private static final com.grpc.role_menu.RPRequest DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.role_menu.RPRequest();

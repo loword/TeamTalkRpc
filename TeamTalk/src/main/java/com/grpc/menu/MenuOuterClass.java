@@ -15,20 +15,20 @@ public final class MenuOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_proto_menu_grpc_Menu_descriptor;
+    internal_static_com_grpc_menu_Menu_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_proto_menu_grpc_Menu_fieldAccessorTable;
+      internal_static_com_grpc_menu_Menu_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_proto_menu_grpc_MenuRequest_descriptor;
+    internal_static_com_grpc_menu_MenuRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_proto_menu_grpc_MenuRequest_fieldAccessorTable;
+      internal_static_com_grpc_menu_MenuRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_proto_menu_grpc_MenuResponse_descriptor;
+    internal_static_com_grpc_menu_MenuResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_proto_menu_grpc_MenuResponse_fieldAccessorTable;
+      internal_static_com_grpc_menu_MenuResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,30 +38,28 @@ public final class MenuOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\nmenu.proto\022\023com.proto.menu.grpc\"O\n\004Men" +
-      "u\022\017\n\007menu_id\030\004 \001(\005\022\021\n\tmenu_name\030\001 \001(\t\022\020\n" +
-      "\010menu_url\030\002 \001(\t\022\021\n\tparent_id\030\003 \001(\005\"\232\001\n\013M" +
-      "enuRequest\022\n\n\002id\030\n \001(\005\022\017\n\007menu_id\030\004 \001(\005\022" +
-      "\021\n\tmenu_name\030\001 \001(\t\022\020\n\010menu_url\030\002 \001(\t\022\021\n\t" +
-      "parent_id\030\003 \001(\005\022\r\n\005token\030\006 \001(\t\022\'\n\004menu\030\005" +
-      " \003(\0132\031.com.proto.menu.grpc.Menu\"\237\001\n\014Menu" +
-      "Response\022\n\n\002id\030\n \001(\005\022\017\n\007menu_id\030\004 \001(\005\022\021\n" +
-      "\tmenu_name\030\001 \001(\t\022\020\n\010menu_url\030\002 \001(\t\022\021\n\tpa" +
-      "rent_id\030\003 \001(\005\022\'\n\004menu\030\005 \003(\0132\031.com.proto." +
-      "menu.grpc.Menu\022\021\n\tstatus_id\030\006 \001(\0052\365\003\n\013Me" +
-      "nuService\022O\n\010listMenu\022 .com.proto.menu.g" +
-      "rpc.MenuRequest\032!.com.proto.menu.grpc.Me" +
-      "nuResponse\022N\n\007addMenu\022 .com.proto.menu.g" +
-      "rpc.MenuRequest\032!.com.proto.menu.grpc.Me" +
-      "nuResponse\022Q\n\nremoveMenu\022 .com.proto.men" +
-      "u.grpc.MenuRequest\032!.com.proto.menu.grpc" +
-      ".MenuResponse\022Q\n\nmodifyMenu\022 .com.proto." +
-      "menu.grpc.MenuRequest\032!.com.proto.menu.g" +
-      "rpc.MenuResponse\022O\n\010getRoute\022 .com.proto" +
-      ".menu.grpc.MenuRequest\032!.com.proto.menu." +
-      "grpc.MenuResponse\022N\n\007getMenu\022 .com.proto" +
-      ".menu.grpc.MenuRequest\032!.com.proto.menu." +
-      "grpc.MenuResponseB\002P\001b\006proto3"
+      "\n\nmenu.proto\022\rcom.grpc.menu\"O\n\004Menu\022\017\n\007m" +
+      "enu_id\030\004 \001(\005\022\021\n\tmenu_name\030\001 \001(\t\022\020\n\010menu_" +
+      "url\030\002 \001(\t\022\021\n\tparent_id\030\003 \001(\005\"\224\001\n\013MenuReq" +
+      "uest\022\n\n\002id\030\n \001(\005\022\017\n\007menu_id\030\004 \001(\005\022\021\n\tmen" +
+      "u_name\030\001 \001(\t\022\020\n\010menu_url\030\002 \001(\t\022\021\n\tparent" +
+      "_id\030\003 \001(\005\022\r\n\005token\030\006 \001(\t\022!\n\004menu\030\005 \003(\0132\023" +
+      ".com.grpc.menu.Menu\"\231\001\n\014MenuResponse\022\n\n\002" +
+      "id\030\n \001(\005\022\017\n\007menu_id\030\004 \001(\005\022\021\n\tmenu_name\030\001" +
+      " \001(\t\022\020\n\010menu_url\030\002 \001(\t\022\021\n\tparent_id\030\003 \001(" +
+      "\005\022!\n\004menu\030\005 \003(\0132\023.com.grpc.menu.Menu\022\021\n\t" +
+      "status_id\030\006 \001(\0052\255\003\n\013MenuService\022C\n\010listM" +
+      "enu\022\032.com.grpc.menu.MenuRequest\032\033.com.gr" +
+      "pc.menu.MenuResponse\022B\n\007addMenu\022\032.com.gr" +
+      "pc.menu.MenuRequest\032\033.com.grpc.menu.Menu" +
+      "Response\022E\n\nremoveMenu\022\032.com.grpc.menu.M" +
+      "enuRequest\032\033.com.grpc.menu.MenuResponse\022" +
+      "E\n\nmodifyMenu\022\032.com.grpc.menu.MenuReques" +
+      "t\032\033.com.grpc.menu.MenuResponse\022C\n\010getRou" +
+      "te\022\032.com.grpc.menu.MenuRequest\032\033.com.grp" +
+      "c.menu.MenuResponse\022B\n\007getMenu\022\032.com.grp" +
+      "c.menu.MenuRequest\032\033.com.grpc.menu.MenuR" +
+      "esponseB\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -75,23 +73,23 @@ public final class MenuOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_proto_menu_grpc_Menu_descriptor =
+    internal_static_com_grpc_menu_Menu_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_proto_menu_grpc_Menu_fieldAccessorTable = new
+    internal_static_com_grpc_menu_Menu_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_proto_menu_grpc_Menu_descriptor,
+        internal_static_com_grpc_menu_Menu_descriptor,
         new java.lang.String[] { "MenuId", "MenuName", "MenuUrl", "ParentId", });
-    internal_static_com_proto_menu_grpc_MenuRequest_descriptor =
+    internal_static_com_grpc_menu_MenuRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_com_proto_menu_grpc_MenuRequest_fieldAccessorTable = new
+    internal_static_com_grpc_menu_MenuRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_proto_menu_grpc_MenuRequest_descriptor,
+        internal_static_com_grpc_menu_MenuRequest_descriptor,
         new java.lang.String[] { "Id", "MenuId", "MenuName", "MenuUrl", "ParentId", "Token", "Menu", });
-    internal_static_com_proto_menu_grpc_MenuResponse_descriptor =
+    internal_static_com_grpc_menu_MenuResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_com_proto_menu_grpc_MenuResponse_fieldAccessorTable = new
+    internal_static_com_grpc_menu_MenuResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_proto_menu_grpc_MenuResponse_descriptor,
+        internal_static_com_grpc_menu_MenuResponse_descriptor,
         new java.lang.String[] { "Id", "MenuId", "MenuName", "MenuUrl", "ParentId", "Menu", "StatusId", });
   }
 

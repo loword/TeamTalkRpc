@@ -24,7 +24,7 @@ public final class DiscoveryServiceGrpc {
 
   private DiscoveryServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "com.proto.discovery.grpc.DiscoveryService";
+  public static final String SERVICE_NAME = "com.grpc.discovery.DiscoveryService";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -33,7 +33,7 @@ public final class DiscoveryServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.discovery.grpc.DiscoveryService", "listDiscovery"))
+              "com.grpc.discovery.DiscoveryService", "listDiscovery"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.discovery.DiscoveryRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -45,7 +45,7 @@ public final class DiscoveryServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.discovery.grpc.DiscoveryService", "addDiscovery"))
+              "com.grpc.discovery.DiscoveryService", "addDiscovery"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.discovery.DiscoveryRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -57,7 +57,7 @@ public final class DiscoveryServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.discovery.grpc.DiscoveryService", "removeDiscovery"))
+              "com.grpc.discovery.DiscoveryService", "removeDiscovery"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.discovery.DiscoveryRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -69,7 +69,7 @@ public final class DiscoveryServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.discovery.grpc.DiscoveryService", "modifyDiscovery"))
+              "com.grpc.discovery.DiscoveryService", "modifyDiscovery"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.discovery.DiscoveryRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

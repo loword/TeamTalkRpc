@@ -4,7 +4,7 @@
 package com.grpc.manager_role;
 
 public interface MROrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.manager_role.grpc.MR)
+    // @@protoc_insertion_point(interface_extends:com.grpc.manager_role.MR)
     com.google.protobuf.MessageOrBuilder {
 
   /**

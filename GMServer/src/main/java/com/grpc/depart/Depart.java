@@ -4,11 +4,11 @@
 package com.grpc.depart;
 
 /**
- * Protobuf type {@code com.proto.depart.grpc.Depart}
+ * Protobuf type {@code com.grpc.depart.Depart}
  */
 public  final class Depart extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.depart.grpc.Depart)
+    // @@protoc_insertion_point(message_implements:com.grpc.depart.Depart)
     DepartOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Depart.newBuilder() to construct.
@@ -106,13 +106,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.depart.DepartOuterClass.internal_static_com_proto_depart_grpc_Depart_descriptor;
+    return com.grpc.depart.DepartOuterClass.internal_static_com_grpc_depart_Depart_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.depart.DepartOuterClass.internal_static_com_proto_depart_grpc_Depart_fieldAccessorTable
+    return com.grpc.depart.DepartOuterClass.internal_static_com_grpc_depart_Depart_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.depart.Depart.class, com.grpc.depart.Depart.Builder.class);
   }
@@ -427,26 +427,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.depart.grpc.Depart}
+   * Protobuf type {@code com.grpc.depart.Depart}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.depart.grpc.Depart)
+      // @@protoc_insertion_point(builder_implements:com.grpc.depart.Depart)
       com.grpc.depart.DepartOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.depart.DepartOuterClass.internal_static_com_proto_depart_grpc_Depart_descriptor;
+      return com.grpc.depart.DepartOuterClass.internal_static_com_grpc_depart_Depart_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.depart.DepartOuterClass.internal_static_com_proto_depart_grpc_Depart_fieldAccessorTable
+      return com.grpc.depart.DepartOuterClass.internal_static_com_grpc_depart_Depart_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.depart.Depart.class, com.grpc.depart.Depart.Builder.class);
     }
 
-    // Construct using com.proto.depart.grpc.Depart.newBuilder()
+    // Construct using com.grpc.depart.Depart.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -484,7 +484,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.depart.DepartOuterClass.internal_static_com_proto_depart_grpc_Depart_descriptor;
+      return com.grpc.depart.DepartOuterClass.internal_static_com_grpc_depart_Depart_descriptor;
     }
 
     @java.lang.Override
@@ -847,10 +847,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.depart.grpc.Depart)
+    // @@protoc_insertion_point(builder_scope:com.grpc.depart.Depart)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.depart.grpc.Depart)
+  // @@protoc_insertion_point(class_scope:com.grpc.depart.Depart)
   private static final com.grpc.depart.Depart DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.depart.Depart();

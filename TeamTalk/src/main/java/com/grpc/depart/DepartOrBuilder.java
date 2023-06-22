@@ -4,7 +4,7 @@
 package com.grpc.depart;
 
 public interface DepartOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.depart.grpc.Depart)
+    // @@protoc_insertion_point(interface_extends:com.grpc.depart.Depart)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -4,7 +4,7 @@
 package com.grpc.manager_role;
 
 public interface MRRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.manager_role.grpc.MRRequest)
+    // @@protoc_insertion_point(interface_extends:com.grpc.manager_role.MRRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -23,25 +23,25 @@ public interface MRRequestOrBuilder extends
   int getManagerId();
 
   /**
-   * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+   * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
    */
   java.util.List<com.grpc.manager_role.MR> 
       getMrList();
   /**
-   * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+   * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
    */
   com.grpc.manager_role.MR getMr(int index);
   /**
-   * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+   * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
    */
   int getMrCount();
   /**
-   * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+   * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
    */
   java.util.List<? extends com.grpc.manager_role.MROrBuilder> 
       getMrOrBuilderList();
   /**
-   * <code>repeated .com.proto.manager_role.grpc.MR mr = 5;</code>
+   * <code>repeated .com.grpc.manager_role.MR mr = 5;</code>
    */
   com.grpc.manager_role.MROrBuilder getMrOrBuilder(
       int index);

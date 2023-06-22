@@ -4,11 +4,11 @@
 package com.grpc.user;
 
 /**
- * Protobuf type {@code com.proto.user.grpc.UserRequest}
+ * Protobuf type {@code com.grpc.user.UserRequest}
  */
 public  final class UserRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.user.grpc.UserRequest)
+    // @@protoc_insertion_point(message_implements:com.grpc.user.UserRequest)
     UserRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use UserRequest.newBuilder() to construct.
@@ -136,13 +136,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.user.UserOuterClass.internal_static_com_proto_user_grpc_UserRequest_descriptor;
+    return com.grpc.user.UserOuterClass.internal_static_com_grpc_user_UserRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.user.UserOuterClass.internal_static_com_proto_user_grpc_UserRequest_fieldAccessorTable
+    return com.grpc.user.UserOuterClass.internal_static_com_grpc_user_UserRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.user.UserRequest.class, com.grpc.user.UserRequest.Builder.class);
   }
@@ -382,32 +382,32 @@ private static final long serialVersionUID = 0L;
   public static final int USER_FIELD_NUMBER = 10;
   private java.util.List<com.grpc.user.User> user_;
   /**
-   * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+   * <code>repeated .com.grpc.user.User user = 10;</code>
    */
   public java.util.List<com.grpc.user.User> getUserList() {
     return user_;
   }
   /**
-   * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+   * <code>repeated .com.grpc.user.User user = 10;</code>
    */
   public java.util.List<? extends com.grpc.user.UserOrBuilder> 
       getUserOrBuilderList() {
     return user_;
   }
   /**
-   * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+   * <code>repeated .com.grpc.user.User user = 10;</code>
    */
   public int getUserCount() {
     return user_.size();
   }
   /**
-   * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+   * <code>repeated .com.grpc.user.User user = 10;</code>
    */
   public com.grpc.user.User getUser(int index) {
     return user_.get(index);
   }
   /**
-   * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+   * <code>repeated .com.grpc.user.User user = 10;</code>
    */
   public com.grpc.user.UserOrBuilder getUserOrBuilder(
       int index) {
@@ -666,26 +666,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.user.grpc.UserRequest}
+   * Protobuf type {@code com.grpc.user.UserRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.user.grpc.UserRequest)
+      // @@protoc_insertion_point(builder_implements:com.grpc.user.UserRequest)
       com.grpc.user.UserRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.user.UserOuterClass.internal_static_com_proto_user_grpc_UserRequest_descriptor;
+      return com.grpc.user.UserOuterClass.internal_static_com_grpc_user_UserRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.user.UserOuterClass.internal_static_com_proto_user_grpc_UserRequest_fieldAccessorTable
+      return com.grpc.user.UserOuterClass.internal_static_com_grpc_user_UserRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.user.UserRequest.class, com.grpc.user.UserRequest.Builder.class);
     }
 
-    // Construct using com.proto.user.grpc.UserRequest.newBuilder()
+    // Construct using com.grpc.user.UserRequest.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -734,7 +734,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.user.UserOuterClass.internal_static_com_proto_user_grpc_UserRequest_descriptor;
+      return com.grpc.user.UserOuterClass.internal_static_com_grpc_user_UserRequest_descriptor;
     }
 
     @java.lang.Override
@@ -1417,7 +1417,7 @@ private static final long serialVersionUID = 0L;
         com.grpc.user.User, com.grpc.user.User.Builder, com.grpc.user.UserOrBuilder> userBuilder_;
 
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public java.util.List<com.grpc.user.User> getUserList() {
       if (userBuilder_ == null) {
@@ -1427,7 +1427,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public int getUserCount() {
       if (userBuilder_ == null) {
@@ -1437,7 +1437,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public com.grpc.user.User getUser(int index) {
       if (userBuilder_ == null) {
@@ -1447,7 +1447,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public Builder setUser(
         int index, com.grpc.user.User value) {
@@ -1464,7 +1464,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public Builder setUser(
         int index, com.grpc.user.User.Builder builderForValue) {
@@ -1478,7 +1478,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public Builder addUser(com.grpc.user.User value) {
       if (userBuilder_ == null) {
@@ -1494,7 +1494,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public Builder addUser(
         int index, com.grpc.user.User value) {
@@ -1511,7 +1511,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public Builder addUser(
         com.grpc.user.User.Builder builderForValue) {
@@ -1525,7 +1525,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public Builder addUser(
         int index, com.grpc.user.User.Builder builderForValue) {
@@ -1539,7 +1539,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public Builder addAllUser(
         java.lang.Iterable<? extends com.grpc.user.User> values) {
@@ -1554,7 +1554,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public Builder clearUser() {
       if (userBuilder_ == null) {
@@ -1567,7 +1567,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public Builder removeUser(int index) {
       if (userBuilder_ == null) {
@@ -1580,14 +1580,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public com.grpc.user.User.Builder getUserBuilder(
         int index) {
       return getUserFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public com.grpc.user.UserOrBuilder getUserOrBuilder(
         int index) {
@@ -1597,7 +1597,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public java.util.List<? extends com.grpc.user.UserOrBuilder> 
          getUserOrBuilderList() {
@@ -1608,14 +1608,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public com.grpc.user.User.Builder addUserBuilder() {
       return getUserFieldBuilder().addBuilder(
           com.grpc.user.User.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public com.grpc.user.User.Builder addUserBuilder(
         int index) {
@@ -1623,7 +1623,7 @@ private static final long serialVersionUID = 0L;
           index, com.grpc.user.User.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.proto.user.grpc.User user = 10;</code>
+     * <code>repeated .com.grpc.user.User user = 10;</code>
      */
     public java.util.List<com.grpc.user.User.Builder> 
          getUserBuilderList() {
@@ -1656,10 +1656,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.user.grpc.UserRequest)
+    // @@protoc_insertion_point(builder_scope:com.grpc.user.UserRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.user.grpc.UserRequest)
+  // @@protoc_insertion_point(class_scope:com.grpc.user.UserRequest)
   private static final com.grpc.user.UserRequest DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.user.UserRequest();

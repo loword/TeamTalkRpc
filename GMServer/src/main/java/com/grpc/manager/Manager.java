@@ -4,11 +4,11 @@
 package com.grpc.manager;
 
 /**
- * Protobuf type {@code com.proto.manager.grpc.Manager}
+ * Protobuf type {@code com.grpc.manager.Manager}
  */
 public  final class Manager extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.proto.manager.grpc.Manager)
+    // @@protoc_insertion_point(message_implements:com.grpc.manager.Manager)
     ManagerOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Manager.newBuilder() to construct.
@@ -104,13 +104,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.manager.ManagerOuterClass.internal_static_com_proto_manager_grpc_Manager_descriptor;
+    return com.grpc.manager.ManagerOuterClass.internal_static_com_grpc_manager_Manager_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.manager.ManagerOuterClass.internal_static_com_proto_manager_grpc_Manager_fieldAccessorTable
+    return com.grpc.manager.ManagerOuterClass.internal_static_com_grpc_manager_Manager_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.grpc.manager.Manager.class, com.grpc.manager.Manager.Builder.class);
   }
@@ -501,26 +501,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.proto.manager.grpc.Manager}
+   * Protobuf type {@code com.grpc.manager.Manager}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.proto.manager.grpc.Manager)
+      // @@protoc_insertion_point(builder_implements:com.grpc.manager.Manager)
       com.grpc.manager.ManagerOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.manager.ManagerOuterClass.internal_static_com_proto_manager_grpc_Manager_descriptor;
+      return com.grpc.manager.ManagerOuterClass.internal_static_com_grpc_manager_Manager_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.manager.ManagerOuterClass.internal_static_com_proto_manager_grpc_Manager_fieldAccessorTable
+      return com.grpc.manager.ManagerOuterClass.internal_static_com_grpc_manager_Manager_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.grpc.manager.Manager.class, com.grpc.manager.Manager.Builder.class);
     }
 
-    // Construct using com.proto.manager.grpc.Manager.newBuilder()
+    // Construct using com.grpc.manager.Manager.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -556,7 +556,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.manager.ManagerOuterClass.internal_static_com_proto_manager_grpc_Manager_descriptor;
+      return com.grpc.manager.ManagerOuterClass.internal_static_com_grpc_manager_Manager_descriptor;
     }
 
     @java.lang.Override
@@ -1065,10 +1065,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.proto.manager.grpc.Manager)
+    // @@protoc_insertion_point(builder_scope:com.grpc.manager.Manager)
   }
 
-  // @@protoc_insertion_point(class_scope:com.proto.manager.grpc.Manager)
+  // @@protoc_insertion_point(class_scope:com.grpc.manager.Manager)
   private static final com.grpc.manager.Manager DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.grpc.manager.Manager();

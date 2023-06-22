@@ -4,7 +4,7 @@
 package com.grpc.group;
 
 public interface GroupRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.proto.group.grpc.GroupRequest)
+    // @@protoc_insertion_point(interface_extends:com.grpc.group.GroupRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -33,25 +33,25 @@ public interface GroupRequestOrBuilder extends
   int getUserCnt();
 
   /**
-   * <code>repeated .com.proto.group.grpc.Group group = 5;</code>
+   * <code>repeated .com.grpc.group.Group group = 5;</code>
    */
   java.util.List<com.grpc.group.Group> 
       getGroupList();
   /**
-   * <code>repeated .com.proto.group.grpc.Group group = 5;</code>
+   * <code>repeated .com.grpc.group.Group group = 5;</code>
    */
   com.grpc.group.Group getGroup(int index);
   /**
-   * <code>repeated .com.proto.group.grpc.Group group = 5;</code>
+   * <code>repeated .com.grpc.group.Group group = 5;</code>
    */
   int getGroupCount();
   /**
-   * <code>repeated .com.proto.group.grpc.Group group = 5;</code>
+   * <code>repeated .com.grpc.group.Group group = 5;</code>
    */
   java.util.List<? extends com.grpc.group.GroupOrBuilder> 
       getGroupOrBuilderList();
   /**
-   * <code>repeated .com.proto.group.grpc.Group group = 5;</code>
+   * <code>repeated .com.grpc.group.Group group = 5;</code>
    */
   com.grpc.group.GroupOrBuilder getGroupOrBuilder(
       int index);

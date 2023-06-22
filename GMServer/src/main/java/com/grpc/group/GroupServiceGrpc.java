@@ -24,7 +24,7 @@ public final class GroupServiceGrpc {
 
   private GroupServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "com.proto.group.grpc.GroupService";
+  public static final String SERVICE_NAME = "com.grpc.group.GroupService";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -33,7 +33,7 @@ public final class GroupServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.group.grpc.GroupService", "listGroup"))
+              "com.grpc.group.GroupService", "listGroup"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.group.GroupRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -45,7 +45,7 @@ public final class GroupServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.group.grpc.GroupService", "addGroup"))
+              "com.grpc.group.GroupService", "addGroup"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.group.GroupRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -57,7 +57,7 @@ public final class GroupServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.group.grpc.GroupService", "removeGroup"))
+              "com.grpc.group.GroupService", "removeGroup"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.group.GroupRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -69,7 +69,7 @@ public final class GroupServiceGrpc {
       io.grpc.MethodDescriptor.<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "com.proto.group.grpc.GroupService", "modifyGroup"))
+              "com.grpc.group.GroupService", "modifyGroup"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.grpc.group.GroupRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
