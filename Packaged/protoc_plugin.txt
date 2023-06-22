@@ -1,0 +1,8 @@
+protoc -I=E:\grpc\protoc\bin --plugin=protoc-gen-grpc-java=protoc-gen-grpc-java-1.46.0-windows-x86_32.exe --grpc-java_out=E:\grpc\protoc\bin E:\grpc\protoc\bin\helloworld.proto
+
+protoc -I=/home/loword/program/TeamTalkOverwrite/TeamTalk/src/main/proto/ --plugin=protoc-gen-grpc-java=/data/home/loword/program/TeamTalkOverwrite/TeamTalk/target/protoc-plugins/protoc-gen-grpc-java-1.5.0-linux-x86_64.exe --grpc-java_out=/home/loword/program/TeamTalkOverwrite/Packaged/autoproto /home/loword/program/TeamTalkOverwrite/TeamTalk/src/main/proto/*.proto
+
+
+protoc --plugin=protoc-gen-grpc-java=[刚下载的路径.exe] --grpc-java_out=输出全路径 -I=[proto文件路径] 文件名
+
+protoc -I=/home/loword/program/TeamTalkOverwrite/TeamTalk/src/main/proto/  --java_out=/home/loword/program/TeamTalkOverwrite/Packaged/autoproto /home/loword/program/TeamTalkOverwrite/TeamTalk/src/main/proto/*.proto
