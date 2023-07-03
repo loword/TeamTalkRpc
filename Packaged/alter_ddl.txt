@@ -1,0 +1,12 @@
+-- 用户编码 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
+ALTER TABLE `sys_area`
+    ADD COLUMN  `status` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '状态' AFTER `lat`,
+    ADD COLUMN   `remark` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '备注',
+    ADD COLUMN   `create_time` datetime(0) NULL DEFAULT '2021-12-04 12:00:00' COMMENT '创建时间' ,
+    ADD COLUMN   `create_user` INT(11) NULL DEFAULT 1 COMMENT '创建人',
+    ADD COLUMN   `update_time` datetime(0) NULL DEFAULT NULL COMMENT '修改时间',
+    ADD COLUMN   `update_user` INT(11) NULL DEFAULT NULL COMMENT '修改人';
+ALTER TABLE `sys_area`
+	ADD INDEX `idx_area_cre_te_time` (`create_time`) USING BTREE,
+	ADD INDEX `idx_area_create_user` (`create_user`) USING BTREE;
+

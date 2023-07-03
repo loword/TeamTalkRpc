@@ -4,6 +4,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import com.loword.java.service.AreaService;
 import com.loword.java.service.IDepartService;
 import com.loword.java.service.IDiscoveryService;
 import com.loword.java.service.IGroupService;
@@ -46,5 +47,8 @@ public class BeanContainer {
 
     @Resource
     public Manager_RoleService manager_roleService;
+    
+    @Resource
+    public AreaService areaService;
 
 }

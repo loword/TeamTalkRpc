@@ -1,30 +1,99 @@
 package com.loword.java.kernel.entity;
 
+import java.time.LocalDateTime;
+
 public class sys_area {
+
+    /**
+     * 主键
+     */
     private Integer id;
-    
+
+    /**
+     * 层级
+     */
     private Integer levelCode;
 
+    /**
+     * 父级行政代码
+     */
     private String parentCode;
 
+    /**
+     * 行政代码
+     */
     private String areaCode;
 
+    /**
+     * 邮政编码
+     */
     private String zipCode;
 
+    /**
+     * 区号
+     */
     private String cityCode;
 
+    /**
+     * 名称
+     */
     private String name;
 
+    /**
+     * 简称
+     */
     private String shortName;
 
+    /**
+     * 组合名
+     */
     private String mergerName;
-    
+
+    /**
+     * 拼音
+     */
     private String pinyin;
-    
+
+    /**
+     * 经度
+     */
     private Float lng;
-    
+
+    /**
+     * 纬度
+     */
     private Float lat;
 
+    /**
+     * 纬度
+     */
+    private Integer status;
+
+    /**
+     * 备注
+     */
+    private Integer remark;
+    
+    /**
+     * 创建时间
+     */
+    private LocalDateTime createTime;
+    
+    /**
+     * 创建人
+     */
+    private Integer createUser;
+
+    /**
+     * 修改时间
+     */
+    private LocalDateTime updateTime;
+    
+    /**
+     * 修改人
+     */
+    private Integer updateUser;
+    
 	public Integer getId() {
 		return id;
 	}
@@ -120,6 +189,53 @@ public class sys_area {
 	public void setLat(Float lat) {
 		this.lat = lat;
 	}
-    
-    
+
+	public Integer getStatus() {
+		return status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+
+	public Integer getRemark() {
+		return remark;
+	}
+
+	public void setRemark(Integer remark) {
+		this.remark = remark;
+	}
+
+	public LocalDateTime getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(LocalDateTime createTime) {
+		this.createTime = createTime;
+	}
+
+	public Integer getCreateUser() {
+		return createUser;
+	}
+
+	public void setCreateUser(Integer createUser) {
+		this.createUser = createUser;
+	}
+
+	public LocalDateTime getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(LocalDateTime updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	public Integer getUpdateUser() {
+		return updateUser;
+	}
+
+	public void setUpdateUser(Integer updateUser) {
+		this.updateUser = updateUser;
+	}
+
 }
