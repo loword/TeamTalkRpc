@@ -174,10 +174,10 @@
 						{ required: true, message: '请输入部门名称', trigger: 'blur' }
 					],
 					priority: [
-						{ required: true, message: '请选择优先级', trigger: 'blur' }
+						{ required: true, message: '请选择优先级'}
 					],
 					parentid: [
-						{ required: true, message: '请选择父部门', trigger: 'blur' }
+						{ required: true, message: '请选择父部门'}
 					]
 				},
 				//新增界面数据
