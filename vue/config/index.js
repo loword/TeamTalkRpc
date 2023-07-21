@@ -30,7 +30,7 @@ module.exports = {
 			assetsPublicPath: '/',
 			proxyTable: {
 			    '/TeamTalk': {
-			        target: 'http://localhost:8080/',
+			        target: 'http://localhost:8090/',
 			        secure: false,
 					changeOrigin: true,   //开启跨域
 					pathRewrite: {

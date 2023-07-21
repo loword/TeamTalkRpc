@@ -1,24 +1,24 @@
 package com.grpc.depart;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.5.0)",
+    value = "by gRPC proto compiler (version 1.13.2)",
     comments = "Source: depart.proto")
 public final class DepartServiceGrpc {
 
@@ -27,54 +27,113 @@ public final class DepartServiceGrpc {
   public static final String SERVICE_NAME = "com.grpc.depart.DepartService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest,
-      com.grpc.depart.DepartResponse> METHOD_LIST_DEPART =
-      io.grpc.MethodDescriptor.<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.depart.DepartService", "listDepart"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.depart.DepartRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.depart.DepartResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest,
-      com.grpc.depart.DepartResponse> METHOD_ADD_DEPART =
-      io.grpc.MethodDescriptor.<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.depart.DepartService", "addDepart"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.depart.DepartRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.depart.DepartResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest,
-      com.grpc.depart.DepartResponse> METHOD_REMOVE_DEPART =
-      io.grpc.MethodDescriptor.<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.depart.DepartService", "removeDepart"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.depart.DepartRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.depart.DepartResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest,
-      com.grpc.depart.DepartResponse> METHOD_MODIFY_DEPART =
-      io.grpc.MethodDescriptor.<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.depart.DepartService", "modifyDepart"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.depart.DepartRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.depart.DepartResponse.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest,
+      com.grpc.depart.DepartResponse> getListDepartMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest,
+      com.grpc.depart.DepartResponse> getListDepartMethod() {
+    io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse> getListDepartMethod;
+    if ((getListDepartMethod = DepartServiceGrpc.getListDepartMethod) == null) {
+      synchronized (DepartServiceGrpc.class) {
+        if ((getListDepartMethod = DepartServiceGrpc.getListDepartMethod) == null) {
+          DepartServiceGrpc.getListDepartMethod = getListDepartMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.depart.DepartService", "listDepart"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.depart.DepartRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.depart.DepartResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new DepartServiceMethodDescriptorSupplier("listDepart"))
+                  .build();
+          }
+        }
+     }
+     return getListDepartMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest,
+      com.grpc.depart.DepartResponse> getAddDepartMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest,
+      com.grpc.depart.DepartResponse> getAddDepartMethod() {
+    io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse> getAddDepartMethod;
+    if ((getAddDepartMethod = DepartServiceGrpc.getAddDepartMethod) == null) {
+      synchronized (DepartServiceGrpc.class) {
+        if ((getAddDepartMethod = DepartServiceGrpc.getAddDepartMethod) == null) {
+          DepartServiceGrpc.getAddDepartMethod = getAddDepartMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.depart.DepartService", "addDepart"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.depart.DepartRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.depart.DepartResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new DepartServiceMethodDescriptorSupplier("addDepart"))
+                  .build();
+          }
+        }
+     }
+     return getAddDepartMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest,
+      com.grpc.depart.DepartResponse> getRemoveDepartMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest,
+      com.grpc.depart.DepartResponse> getRemoveDepartMethod() {
+    io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse> getRemoveDepartMethod;
+    if ((getRemoveDepartMethod = DepartServiceGrpc.getRemoveDepartMethod) == null) {
+      synchronized (DepartServiceGrpc.class) {
+        if ((getRemoveDepartMethod = DepartServiceGrpc.getRemoveDepartMethod) == null) {
+          DepartServiceGrpc.getRemoveDepartMethod = getRemoveDepartMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.depart.DepartService", "removeDepart"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.depart.DepartRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.depart.DepartResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new DepartServiceMethodDescriptorSupplier("removeDepart"))
+                  .build();
+          }
+        }
+     }
+     return getRemoveDepartMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest,
+      com.grpc.depart.DepartResponse> getModifyDepartMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest,
+      com.grpc.depart.DepartResponse> getModifyDepartMethod() {
+    io.grpc.MethodDescriptor<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse> getModifyDepartMethod;
+    if ((getModifyDepartMethod = DepartServiceGrpc.getModifyDepartMethod) == null) {
+      synchronized (DepartServiceGrpc.class) {
+        if ((getModifyDepartMethod = DepartServiceGrpc.getModifyDepartMethod) == null) {
+          DepartServiceGrpc.getModifyDepartMethod = getModifyDepartMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.depart.DepartRequest, com.grpc.depart.DepartResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.depart.DepartService", "modifyDepart"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.depart.DepartRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.depart.DepartResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new DepartServiceMethodDescriptorSupplier("modifyDepart"))
+                  .build();
+          }
+        }
+     }
+     return getModifyDepartMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -107,55 +166,55 @@ public final class DepartServiceGrpc {
      */
     public void listDepart(com.grpc.depart.DepartRequest request,
         io.grpc.stub.StreamObserver<com.grpc.depart.DepartResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LIST_DEPART, responseObserver);
+      asyncUnimplementedUnaryCall(getListDepartMethod(), responseObserver);
     }
 
     /**
      */
     public void addDepart(com.grpc.depart.DepartRequest request,
         io.grpc.stub.StreamObserver<com.grpc.depart.DepartResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ADD_DEPART, responseObserver);
+      asyncUnimplementedUnaryCall(getAddDepartMethod(), responseObserver);
     }
 
     /**
      */
     public void removeDepart(com.grpc.depart.DepartRequest request,
         io.grpc.stub.StreamObserver<com.grpc.depart.DepartResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_REMOVE_DEPART, responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveDepartMethod(), responseObserver);
     }
 
     /**
      */
     public void modifyDepart(com.grpc.depart.DepartRequest request,
         io.grpc.stub.StreamObserver<com.grpc.depart.DepartResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_MODIFY_DEPART, responseObserver);
+      asyncUnimplementedUnaryCall(getModifyDepartMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_LIST_DEPART,
+            getListDepartMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.depart.DepartRequest,
                 com.grpc.depart.DepartResponse>(
                   this, METHODID_LIST_DEPART)))
           .addMethod(
-            METHOD_ADD_DEPART,
+            getAddDepartMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.depart.DepartRequest,
                 com.grpc.depart.DepartResponse>(
                   this, METHODID_ADD_DEPART)))
           .addMethod(
-            METHOD_REMOVE_DEPART,
+            getRemoveDepartMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.depart.DepartRequest,
                 com.grpc.depart.DepartResponse>(
                   this, METHODID_REMOVE_DEPART)))
           .addMethod(
-            METHOD_MODIFY_DEPART,
+            getModifyDepartMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.depart.DepartRequest,
@@ -188,7 +247,7 @@ public final class DepartServiceGrpc {
     public void listDepart(com.grpc.depart.DepartRequest request,
         io.grpc.stub.StreamObserver<com.grpc.depart.DepartResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LIST_DEPART, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListDepartMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -196,7 +255,7 @@ public final class DepartServiceGrpc {
     public void addDepart(com.grpc.depart.DepartRequest request,
         io.grpc.stub.StreamObserver<com.grpc.depart.DepartResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ADD_DEPART, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddDepartMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -204,7 +263,7 @@ public final class DepartServiceGrpc {
     public void removeDepart(com.grpc.depart.DepartRequest request,
         io.grpc.stub.StreamObserver<com.grpc.depart.DepartResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_REMOVE_DEPART, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRemoveDepartMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -212,7 +271,7 @@ public final class DepartServiceGrpc {
     public void modifyDepart(com.grpc.depart.DepartRequest request,
         io.grpc.stub.StreamObserver<com.grpc.depart.DepartResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_DEPART, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getModifyDepartMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -238,28 +297,28 @@ public final class DepartServiceGrpc {
      */
     public com.grpc.depart.DepartResponse listDepart(com.grpc.depart.DepartRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LIST_DEPART, getCallOptions(), request);
+          getChannel(), getListDepartMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.depart.DepartResponse addDepart(com.grpc.depart.DepartRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ADD_DEPART, getCallOptions(), request);
+          getChannel(), getAddDepartMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.depart.DepartResponse removeDepart(com.grpc.depart.DepartRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_REMOVE_DEPART, getCallOptions(), request);
+          getChannel(), getRemoveDepartMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.depart.DepartResponse modifyDepart(com.grpc.depart.DepartRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_MODIFY_DEPART, getCallOptions(), request);
+          getChannel(), getModifyDepartMethod(), getCallOptions(), request);
     }
   }
 
@@ -286,7 +345,7 @@ public final class DepartServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.depart.DepartResponse> listDepart(
         com.grpc.depart.DepartRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LIST_DEPART, getCallOptions()), request);
+          getChannel().newCall(getListDepartMethod(), getCallOptions()), request);
     }
 
     /**
@@ -294,7 +353,7 @@ public final class DepartServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.depart.DepartResponse> addDepart(
         com.grpc.depart.DepartRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ADD_DEPART, getCallOptions()), request);
+          getChannel().newCall(getAddDepartMethod(), getCallOptions()), request);
     }
 
     /**
@@ -302,7 +361,7 @@ public final class DepartServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.depart.DepartResponse> removeDepart(
         com.grpc.depart.DepartRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_REMOVE_DEPART, getCallOptions()), request);
+          getChannel().newCall(getRemoveDepartMethod(), getCallOptions()), request);
     }
 
     /**
@@ -310,7 +369,7 @@ public final class DepartServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.depart.DepartResponse> modifyDepart(
         com.grpc.depart.DepartRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_DEPART, getCallOptions()), request);
+          getChannel().newCall(getModifyDepartMethod(), getCallOptions()), request);
     }
   }
 
@@ -368,10 +427,38 @@ public final class DepartServiceGrpc {
     }
   }
 
-  private static final class DepartServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class DepartServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    DepartServiceBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.grpc.depart.DepartOuterClass.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("DepartService");
+    }
+  }
+
+  private static final class DepartServiceFileDescriptorSupplier
+      extends DepartServiceBaseDescriptorSupplier {
+    DepartServiceFileDescriptorSupplier() {}
+  }
+
+  private static final class DepartServiceMethodDescriptorSupplier
+      extends DepartServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    DepartServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -384,11 +471,11 @@ public final class DepartServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new DepartServiceDescriptorSupplier())
-              .addMethod(METHOD_LIST_DEPART)
-              .addMethod(METHOD_ADD_DEPART)
-              .addMethod(METHOD_REMOVE_DEPART)
-              .addMethod(METHOD_MODIFY_DEPART)
+              .setSchemaDescriptor(new DepartServiceFileDescriptorSupplier())
+              .addMethod(getListDepartMethod())
+              .addMethod(getAddDepartMethod())
+              .addMethod(getRemoveDepartMethod())
+              .addMethod(getModifyDepartMethod())
               .build();
         }
       }

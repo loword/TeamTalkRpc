@@ -7,7 +7,7 @@ public class IMGroupMember {
 
     private Integer userid;
 
-    private Byte status;
+    private Integer status;
 
     private Integer created;
 
@@ -17,7 +17,7 @@ public class IMGroupMember {
 
     }
 
-    public IMGroupMember(Integer id, Integer groupid, Integer userid, Byte status, Integer created, Integer updated) {
+    public IMGroupMember(Integer id, Integer groupid, Integer userid, Integer status, Integer created, Integer updated) {
         this.id = id;
         this.groupid = groupid;
         this.userid = userid;
@@ -38,7 +38,7 @@ public class IMGroupMember {
         this.userid = userid;
     }
 
-    public void setStatus(Byte status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
@@ -62,7 +62,7 @@ public class IMGroupMember {
         return userid;
     }
 
-    public Byte getStatus() {
+    public Integer getStatus() {
         return status;
     }
 

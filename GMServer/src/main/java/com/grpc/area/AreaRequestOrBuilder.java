@@ -62,6 +62,26 @@ public interface AreaRequestOrBuilder extends
       int index);
 
   /**
+   * <code>string zip_code = 6;</code>
+   */
+  java.lang.String getZipCode();
+  /**
+   * <code>string zip_code = 6;</code>
+   */
+  com.google.protobuf.ByteString
+      getZipCodeBytes();
+
+  /**
+   * <code>string city_code = 7;</code>
+   */
+  java.lang.String getCityCode();
+  /**
+   * <code>string city_code = 7;</code>
+   */
+  com.google.protobuf.ByteString
+      getCityCodeBytes();
+
+  /**
    * <code>string name = 8;</code>
    */
   java.lang.String getName();
@@ -80,6 +100,16 @@ public interface AreaRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getShortNameBytes();
+
+  /**
+   * <code>string merger_name = 10;</code>
+   */
+  java.lang.String getMergerName();
+  /**
+   * <code>string merger_name = 10;</code>
+   */
+  com.google.protobuf.ByteString
+      getMergerNameBytes();
 
   /**
    * <code>string pinyin = 11;</code>

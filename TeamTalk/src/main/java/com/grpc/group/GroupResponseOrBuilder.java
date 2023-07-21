@@ -23,41 +23,51 @@ public interface GroupResponseOrBuilder extends
       getNameBytes();
 
   /**
-   * <code>int32 creator = 3;</code>
+   * <code>string avatar = 3;</code>
+   */
+  java.lang.String getAvatar();
+  /**
+   * <code>string avatar = 3;</code>
+   */
+  com.google.protobuf.ByteString
+      getAvatarBytes();
+
+  /**
+   * <code>int32 creator = 4;</code>
    */
   int getCreator();
 
   /**
-   * <code>int32 userCnt = 4;</code>
-   */
-  int getUserCnt();
-
-  /**
-   * <code>int32 status_id = 5;</code>
-   */
-  int getStatusId();
-
-  /**
-   * <code>repeated .com.grpc.group.Group group = 6;</code>
+   * <code>repeated .com.grpc.group.Group group = 5;</code>
    */
   java.util.List<com.grpc.group.Group> 
       getGroupList();
   /**
-   * <code>repeated .com.grpc.group.Group group = 6;</code>
+   * <code>repeated .com.grpc.group.Group group = 5;</code>
    */
   com.grpc.group.Group getGroup(int index);
   /**
-   * <code>repeated .com.grpc.group.Group group = 6;</code>
+   * <code>repeated .com.grpc.group.Group group = 5;</code>
    */
   int getGroupCount();
   /**
-   * <code>repeated .com.grpc.group.Group group = 6;</code>
+   * <code>repeated .com.grpc.group.Group group = 5;</code>
    */
   java.util.List<? extends com.grpc.group.GroupOrBuilder> 
       getGroupOrBuilderList();
   /**
-   * <code>repeated .com.grpc.group.Group group = 6;</code>
+   * <code>repeated .com.grpc.group.Group group = 5;</code>
    */
   com.grpc.group.GroupOrBuilder getGroupOrBuilder(
       int index);
+
+  /**
+   * <code>int32 status_id = 6;</code>
+   */
+  int getStatusId();
+
+  /**
+   * <code>int32 userCnt = 7;</code>
+   */
+  int getUserCnt();
 }

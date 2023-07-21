@@ -11,13 +11,13 @@ public class IMGroup {
 
     private Byte type=0;
 
-    private Integer usercnt;
+    private Integer userCnt;
 
     private Byte status=0;
 
     private Integer version=0;
 
-    private Integer lastchated=0;
+    private Integer lastChated=0;
 
     private Integer updated=0;
 
@@ -27,16 +27,16 @@ public class IMGroup {
 
     }
 
-    public IMGroup(Integer id, String name, String avatar, Integer creator, Byte type, Integer usercnt, Byte status, Integer version, Integer lastchated, Integer updated, Integer created) {
+    public IMGroup(Integer id, String name, String avatar, Integer creator, Byte type, Integer userCnt, Byte status, Integer version, Integer lastChated, Integer updated, Integer created) {
         this.id = id;
         this.name = name;
         this.avatar = avatar;
         this.creator = creator;
         this.type = type;
-        this.usercnt = usercnt;
+        this.userCnt = userCnt;
         this.status = status;
         this.version = version;
-        this.lastchated = lastchated;
+        this.lastChated = lastChated;
         this.updated = updated;
         this.created = created;
     }
@@ -61,8 +61,8 @@ public class IMGroup {
         this.type = type;
     }
 
-    public void setUsercnt(Integer usercnt) {
-        this.usercnt = usercnt;
+    public void setuserCnt(Integer userCnt) {
+        this.userCnt = userCnt;
     }
 
     public void setStatus(Byte status) {
@@ -73,8 +73,8 @@ public class IMGroup {
         this.version = version;
     }
 
-    public void setLastchated(Integer lastchated) {
-        this.lastchated = lastchated;
+    public void setlastChated(Integer lastChated) {
+        this.lastChated = lastChated;
     }
 
     public void setUpdated(Integer updated) {
@@ -105,8 +105,8 @@ public class IMGroup {
         return type;
     }
 
-    public Integer getUsercnt() {
-        return usercnt;
+    public Integer getUserCnt() {
+        return userCnt;
     }
 
     public Byte getStatus() {
@@ -117,8 +117,8 @@ public class IMGroup {
         return version;
     }
 
-    public Integer getLastchated() {
-        return lastchated;
+    public Integer getlastChated() {
+        return lastChated;
     }
 
     public Integer getUpdated() {

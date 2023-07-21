@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import com.loword.java.model.vo.AreaVo;
 import org.springframework.stereotype.Service;
 
 import com.loword.java.kernel.entity.sys_area;
@@ -40,18 +41,28 @@ public class AreaServiceImpl implements AreaService {
 	@Override
 	public int addArea(sys_area area) {
 		area.setStatus(0);
-		area.setCreateTime(LocalDateTime.now());
+		int timeNow = (int) (System.currentTimeMillis()/1000);
+		area.setCreateTime(timeNow);
 		return areaMapper.insertSysArea(area);
 	}
 
 	@Override
 	public List<sys_area> listArea(sys_area area) {
+		if(area.getLevelCode() == null) {
+			area.setLevelCode(0);
+		}
 		return areaMapper.selectAll(area);
 	}
 
 	@Override
+	public List<AreaVo> listAreaTree(sys_area area) {
+		return areaMapper.selectAreaTree(area);
+	}
+
+	@Override
 	public int updateArea(sys_area area) {
-		area.setUpdateTime(LocalDateTime.now());
+		int timeNow = (int) (System.currentTimeMillis()/1000);
+		area.setUpdateTime(timeNow);
 		return areaMapper.updateSysArea(area);
 	}
 

@@ -1,8 +1,8 @@
-package com.loword.java.kernel.entity;
+package com.webjava.kernel.entity;
 
 import java.time.LocalDateTime;
 
-public class sys_area {
+public class SysArea {
 
     /**
      * 主键

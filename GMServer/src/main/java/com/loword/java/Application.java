@@ -27,6 +27,7 @@ public class Application {
                 .addService(new DepartServerImpl(service))
                 .addService(new MenuServerImpl(service))
                 .addService(new RoleServerImpl(service))
+                .addService(new AreaServerImpl(service))
                 .build();
 
         // Start server

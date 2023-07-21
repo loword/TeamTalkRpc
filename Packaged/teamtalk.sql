@@ -627,6 +627,42 @@ CREATE TABLE `role_menu_info` (
 
 insert  into `role_menu_info`(`id`,`role_id`,`menu_id`) values (1,1,1),(2,1,2),(3,1,3),(4,1,4),(5,1,5),(6,1,6),(7,1,7),(8,1,8),(9,1,9),(10,1,10),(11,1,11),(12,1,12),(13,2,1),(14,3,2),(15,4,3),(16,4,8),(17,5,4),(18,5,9),(19,2,6),(20,3,7),(21,6,5),(22,6,10),(23,6,11),(24,6,12),(25,7,5),(26,7,10),(27,8,5),(28,8,11),(39,9,5),(40,9,12);
 
+
+
+CREATE TABLE `im_user_area`  (
+  `id` bigint(0) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户id',
+  `level_code` tinyint(0) UNSIGNED COMMENT '层级',
+  `province_code` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '省级行政代码',
+  `city_code` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '市行政代码',
+  `county_code` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '区县行政代码',
+  `county` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '区县',
+  `town_code` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '乡镇行政代码',
+  `town` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '乡镇',
+  `village_code` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '村行政代码',
+  `zip_code` varchar(6) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '邮政编码',
+  `telphone_code` varchar(6) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '区号',
+  `name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '名称',
+  `short_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '简称',
+  `merger_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '组合名',
+  `pinyin` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '拼音',
+  `lng` decimal(10, 6) COMMENT '经度',
+  `lat` decimal(10, 6) COMMENT '纬度',
+  `is_default` tinyint(0) UNSIGNED NOT NULL DEFAULT '0' COMMENT '是否默认',
+  `status` tinyint(0) UNSIGNED NOT NULL DEFAULT '0' COMMENT '状态',
+  `remark` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '备注',
+  `create_time` datetime(0) NULL DEFAULT '2021-12-04 12:00:00' COMMENT '创建时间' ,
+  `create_user` INT(11) NULL DEFAULT 1 COMMENT '创建人',
+  `update_time` datetime(0) NULL DEFAULT NULL COMMENT '修改时间',
+  `update_user` INT(11) NULL DEFAULT NULL COMMENT '修改人',
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `idx_uarea_user_id`(`user_id`) USING BTREE,
+  INDEX `idx_uarea_short_name`(`short_name`) USING BTREE,
+  INDEX `idx_uarea_name`(`name`) USING BTREE,
+  INDEX `idx_uarea_village_code`(`village_code`) USING BTREE,
+  INDEX `idx_uarea_pinyin`(`pinyin`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 783563 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '用户行政地区关联表' ROW_FORMAT = Dynamic;
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;

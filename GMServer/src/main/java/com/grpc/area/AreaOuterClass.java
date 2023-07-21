@@ -20,6 +20,11 @@ public final class AreaOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_grpc_area_Area_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_grpc_area_AreaTree_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_grpc_area_AreaTree_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_grpc_area_AreaRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -46,33 +51,35 @@ public final class AreaOuterClass {
       "\022\016\n\006pinyin\030\n \001(\t\022\013\n\003lng\030\014 \001(\002\022\013\n\003lat\030\r \001" +
       "(\002\022\016\n\006remark\030\016 \001(\t\022\023\n\013create_time\030\017 \001(\005\022" +
       "\023\n\013create_user\030\020 \001(\005\022\023\n\013update_time\030\021 \001(" +
-      "\005\022\023\n\013update_user\030\022 \001(\005\"\250\002\n\013AreaRequest\022\n" +
-      "\n\002id\030\001 \001(\005\022\022\n\nlevel_code\030\002 \001(\005\022\023\n\013parent" +
-      "_code\030\003 \001(\t\022\021\n\tarea_code\030\004 \001(\t\022!\n\004area\030\005" +
-      " \003(\0132\023.com.grpc.area.Area\022\014\n\004name\030\010 \001(\t\022" +
-      "\022\n\nshort_name\030\t \001(\t\022\016\n\006pinyin\030\013 \001(\t\022\013\n\003l" +
-      "ng\030\014 \001(\002\022\013\n\003lat\030\r \001(\002\022\016\n\006remark\030\016 \001(\t\022\023\n" +
-      "\013create_time\030\017 \001(\005\022\023\n\013create_user\030\020 \001(\005\022" +
-      "\023\n\013update_time\030\021 \001(\005\022\023\n\013update_user\030\022 \001(" +
-      "\005\"\343\002\n\014AreaResponse\022\n\n\002id\030\001 \001(\005\022\022\n\nlevel_" +
-      "code\030\002 \001(\005\022\023\n\013parent_code\030\003 \001(\t\022\021\n\tarea_" +
-      "code\030\004 \001(\t\022!\n\004area\030\005 \003(\0132\023.com.grpc.area" +
-      ".Area\022\020\n\010zip_code\030\006 \001(\t\022\021\n\tcity_code\030\007 \001" +
-      "(\t\022\014\n\004name\030\010 \001(\t\022\022\n\nshort_name\030\t \001(\t\022\023\n\013" +
-      "merger_name\030\n \001(\t\022\016\n\006pinyin\030\013 \001(\t\022\013\n\003lng" +
-      "\030\014 \001(\002\022\013\n\003lat\030\r \001(\002\022\016\n\006remark\030\016 \001(\t\022\023\n\013c" +
-      "reate_time\030\017 \001(\005\022\023\n\013create_user\030\020 \001(\005\022\023\n" +
-      "\013update_time\030\021 \001(\005\022\023\n\013update_user\030\022 \001(\0052" +
-      "\351\002\n\013AreaService\022C\n\010listArea\022\032.com.grpc.a" +
-      "rea.AreaRequest\032\033.com.grpc.area.AreaResp" +
-      "onse\022B\n\007addArea\022\032.com.grpc.area.AreaRequ" +
-      "est\032\033.com.grpc.area.AreaResponse\022E\n\nmodi" +
-      "fyArea\022\032.com.grpc.area.AreaRequest\032\033.com" +
-      ".grpc.area.AreaResponse\022F\n\013getAreaTree\022\032" +
-      ".com.grpc.area.AreaRequest\032\033.com.grpc.ar" +
-      "ea.AreaResponse\022B\n\007getArea\022\032.com.grpc.ar" +
-      "ea.AreaRequest\032\033.com.grpc.area.AreaRespo" +
-      "nseB\002P\001b\006proto3"
+      "\005\022\023\n\013update_user\030\022 \001(\005\"M\n\010AreaTree\022\014\n\004co" +
+      "de\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022%\n\004tree\030\005 \003(\0132\027.c" +
+      "om.grpc.area.AreaTree\"\342\002\n\013AreaRequest\022\n\n" +
+      "\002id\030\001 \001(\005\022\022\n\nlevel_code\030\002 \001(\005\022\023\n\013parent_" +
+      "code\030\003 \001(\t\022\021\n\tarea_code\030\004 \001(\t\022!\n\004area\030\005 " +
+      "\003(\0132\023.com.grpc.area.Area\022\020\n\010zip_code\030\006 \001" +
+      "(\t\022\021\n\tcity_code\030\007 \001(\t\022\014\n\004name\030\010 \001(\t\022\022\n\ns" +
+      "hort_name\030\t \001(\t\022\023\n\013merger_name\030\n \001(\t\022\016\n\006" +
+      "pinyin\030\013 \001(\t\022\013\n\003lng\030\014 \001(\002\022\013\n\003lat\030\r \001(\002\022\016" +
+      "\n\006remark\030\016 \001(\t\022\023\n\013create_time\030\017 \001(\005\022\023\n\013c" +
+      "reate_user\030\020 \001(\005\022\023\n\013update_time\030\021 \001(\005\022\023\n" +
+      "\013update_user\030\022 \001(\005\"\246\002\n\014AreaResponse\022\n\n\002i" +
+      "d\030\001 \001(\005\022\022\n\nlevel_code\030\002 \001(\005\022\023\n\013parent_co" +
+      "de\030\003 \001(\t\022\021\n\tarea_code\030\004 \001(\t\022!\n\004area\030\005 \003(" +
+      "\0132\023.com.grpc.area.Area\022\020\n\010zip_code\030\006 \001(\t" +
+      "\022\021\n\tcity_code\030\007 \001(\t\022\014\n\004name\030\010 \001(\t\022\022\n\nsho" +
+      "rt_name\030\t \001(\t\022\023\n\013merger_name\030\n \001(\t\022\016\n\006pi" +
+      "nyin\030\013 \001(\t\022\013\n\003lng\030\014 \001(\002\022\013\n\003lat\030\r \001(\002\022%\n\004" +
+      "tree\030\024 \003(\0132\027.com.grpc.area.AreaTree2\351\002\n\013" +
+      "AreaService\022C\n\010listArea\022\032.com.grpc.area." +
+      "AreaRequest\032\033.com.grpc.area.AreaResponse" +
+      "\022B\n\007addArea\022\032.com.grpc.area.AreaRequest\032" +
+      "\033.com.grpc.area.AreaResponse\022E\n\nmodifyAr" +
+      "ea\022\032.com.grpc.area.AreaRequest\032\033.com.grp" +
+      "c.area.AreaResponse\022F\n\013getAreaTree\022\032.com" +
+      ".grpc.area.AreaRequest\032\033.com.grpc.area.A" +
+      "reaResponse\022B\n\007getArea\022\032.com.grpc.area.A" +
+      "reaRequest\032\033.com.grpc.area.AreaResponseB" +
+      "\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -92,18 +99,24 @@ public final class AreaOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_grpc_area_Area_descriptor,
         new java.lang.String[] { "Id", "LevelCode", "ParentCode", "AreaCode", "ZipCode", "CityCode", "Name", "ShortName", "MergerName", "Pinyin", "Lng", "Lat", "Remark", "CreateTime", "CreateUser", "UpdateTime", "UpdateUser", });
-    internal_static_com_grpc_area_AreaRequest_descriptor =
+    internal_static_com_grpc_area_AreaTree_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_com_grpc_area_AreaTree_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_grpc_area_AreaTree_descriptor,
+        new java.lang.String[] { "Code", "Name", "Tree", });
+    internal_static_com_grpc_area_AreaRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_com_grpc_area_AreaRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_grpc_area_AreaRequest_descriptor,
-        new java.lang.String[] { "Id", "LevelCode", "ParentCode", "AreaCode", "Area", "Name", "ShortName", "Pinyin", "Lng", "Lat", "Remark", "CreateTime", "CreateUser", "UpdateTime", "UpdateUser", });
+        new java.lang.String[] { "Id", "LevelCode", "ParentCode", "AreaCode", "Area", "ZipCode", "CityCode", "Name", "ShortName", "MergerName", "Pinyin", "Lng", "Lat", "Remark", "CreateTime", "CreateUser", "UpdateTime", "UpdateUser", });
     internal_static_com_grpc_area_AreaResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_com_grpc_area_AreaResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_grpc_area_AreaResponse_descriptor,
-        new java.lang.String[] { "Id", "LevelCode", "ParentCode", "AreaCode", "Area", "ZipCode", "CityCode", "Name", "ShortName", "MergerName", "Pinyin", "Lng", "Lat", "Remark", "CreateTime", "CreateUser", "UpdateTime", "UpdateUser", });
+        new java.lang.String[] { "Id", "LevelCode", "ParentCode", "AreaCode", "Area", "ZipCode", "CityCode", "Name", "ShortName", "MergerName", "Pinyin", "Lng", "Lat", "Tree", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

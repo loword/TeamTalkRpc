@@ -58,8 +58,7 @@ const user = {
             setToken(jsondata.token)
             commit('SET_TOKEN', jsondata.token)
             resolve()
-          }else
-          {   
+          } else {   
              reject(msg)
           }
           
@@ -82,8 +81,7 @@ const user = {
           commit('SET_INTRODUCTION', dataJson.introduction)
           commit('SET_ID', dataJson.id)
           resolve(response)
-         }else
-         {
+         } else {
           reject(msg)
          }
         }).catch(error => {

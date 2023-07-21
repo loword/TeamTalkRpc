@@ -1,24 +1,24 @@
 package com.grpc.group;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.5.0)",
+    value = "by gRPC proto compiler (version 1.13.2)",
     comments = "Source: group.proto")
 public final class GroupServiceGrpc {
 
@@ -27,54 +27,113 @@ public final class GroupServiceGrpc {
   public static final String SERVICE_NAME = "com.grpc.group.GroupService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.group.GroupRequest,
-      com.grpc.group.GroupResponse> METHOD_LIST_GROUP =
-      io.grpc.MethodDescriptor.<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.group.GroupService", "listGroup"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.group.GroupRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.group.GroupResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.group.GroupRequest,
-      com.grpc.group.GroupResponse> METHOD_ADD_GROUP =
-      io.grpc.MethodDescriptor.<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.group.GroupService", "addGroup"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.group.GroupRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.group.GroupResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.group.GroupRequest,
-      com.grpc.group.GroupResponse> METHOD_REMOVE_GROUP =
-      io.grpc.MethodDescriptor.<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.group.GroupService", "removeGroup"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.group.GroupRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.group.GroupResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.group.GroupRequest,
-      com.grpc.group.GroupResponse> METHOD_MODIFY_GROUP =
-      io.grpc.MethodDescriptor.<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.group.GroupService", "modifyGroup"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.group.GroupRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.group.GroupResponse.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<com.grpc.group.GroupRequest,
+      com.grpc.group.GroupResponse> getListGroupMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.group.GroupRequest,
+      com.grpc.group.GroupResponse> getListGroupMethod() {
+    io.grpc.MethodDescriptor<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse> getListGroupMethod;
+    if ((getListGroupMethod = GroupServiceGrpc.getListGroupMethod) == null) {
+      synchronized (GroupServiceGrpc.class) {
+        if ((getListGroupMethod = GroupServiceGrpc.getListGroupMethod) == null) {
+          GroupServiceGrpc.getListGroupMethod = getListGroupMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.group.GroupService", "listGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.group.GroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.group.GroupResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new GroupServiceMethodDescriptorSupplier("listGroup"))
+                  .build();
+          }
+        }
+     }
+     return getListGroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.group.GroupRequest,
+      com.grpc.group.GroupResponse> getAddGroupMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.group.GroupRequest,
+      com.grpc.group.GroupResponse> getAddGroupMethod() {
+    io.grpc.MethodDescriptor<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse> getAddGroupMethod;
+    if ((getAddGroupMethod = GroupServiceGrpc.getAddGroupMethod) == null) {
+      synchronized (GroupServiceGrpc.class) {
+        if ((getAddGroupMethod = GroupServiceGrpc.getAddGroupMethod) == null) {
+          GroupServiceGrpc.getAddGroupMethod = getAddGroupMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.group.GroupService", "addGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.group.GroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.group.GroupResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new GroupServiceMethodDescriptorSupplier("addGroup"))
+                  .build();
+          }
+        }
+     }
+     return getAddGroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.group.GroupRequest,
+      com.grpc.group.GroupResponse> getRemoveGroupMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.group.GroupRequest,
+      com.grpc.group.GroupResponse> getRemoveGroupMethod() {
+    io.grpc.MethodDescriptor<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse> getRemoveGroupMethod;
+    if ((getRemoveGroupMethod = GroupServiceGrpc.getRemoveGroupMethod) == null) {
+      synchronized (GroupServiceGrpc.class) {
+        if ((getRemoveGroupMethod = GroupServiceGrpc.getRemoveGroupMethod) == null) {
+          GroupServiceGrpc.getRemoveGroupMethod = getRemoveGroupMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.group.GroupService", "removeGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.group.GroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.group.GroupResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new GroupServiceMethodDescriptorSupplier("removeGroup"))
+                  .build();
+          }
+        }
+     }
+     return getRemoveGroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.group.GroupRequest,
+      com.grpc.group.GroupResponse> getModifyGroupMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.group.GroupRequest,
+      com.grpc.group.GroupResponse> getModifyGroupMethod() {
+    io.grpc.MethodDescriptor<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse> getModifyGroupMethod;
+    if ((getModifyGroupMethod = GroupServiceGrpc.getModifyGroupMethod) == null) {
+      synchronized (GroupServiceGrpc.class) {
+        if ((getModifyGroupMethod = GroupServiceGrpc.getModifyGroupMethod) == null) {
+          GroupServiceGrpc.getModifyGroupMethod = getModifyGroupMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.group.GroupRequest, com.grpc.group.GroupResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.group.GroupService", "modifyGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.group.GroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.group.GroupResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new GroupServiceMethodDescriptorSupplier("modifyGroup"))
+                  .build();
+          }
+        }
+     }
+     return getModifyGroupMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -107,55 +166,55 @@ public final class GroupServiceGrpc {
      */
     public void listGroup(com.grpc.group.GroupRequest request,
         io.grpc.stub.StreamObserver<com.grpc.group.GroupResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LIST_GROUP, responseObserver);
+      asyncUnimplementedUnaryCall(getListGroupMethod(), responseObserver);
     }
 
     /**
      */
     public void addGroup(com.grpc.group.GroupRequest request,
         io.grpc.stub.StreamObserver<com.grpc.group.GroupResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ADD_GROUP, responseObserver);
+      asyncUnimplementedUnaryCall(getAddGroupMethod(), responseObserver);
     }
 
     /**
      */
     public void removeGroup(com.grpc.group.GroupRequest request,
         io.grpc.stub.StreamObserver<com.grpc.group.GroupResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_REMOVE_GROUP, responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveGroupMethod(), responseObserver);
     }
 
     /**
      */
     public void modifyGroup(com.grpc.group.GroupRequest request,
         io.grpc.stub.StreamObserver<com.grpc.group.GroupResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_MODIFY_GROUP, responseObserver);
+      asyncUnimplementedUnaryCall(getModifyGroupMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_LIST_GROUP,
+            getListGroupMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.group.GroupRequest,
                 com.grpc.group.GroupResponse>(
                   this, METHODID_LIST_GROUP)))
           .addMethod(
-            METHOD_ADD_GROUP,
+            getAddGroupMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.group.GroupRequest,
                 com.grpc.group.GroupResponse>(
                   this, METHODID_ADD_GROUP)))
           .addMethod(
-            METHOD_REMOVE_GROUP,
+            getRemoveGroupMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.group.GroupRequest,
                 com.grpc.group.GroupResponse>(
                   this, METHODID_REMOVE_GROUP)))
           .addMethod(
-            METHOD_MODIFY_GROUP,
+            getModifyGroupMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.group.GroupRequest,
@@ -188,7 +247,7 @@ public final class GroupServiceGrpc {
     public void listGroup(com.grpc.group.GroupRequest request,
         io.grpc.stub.StreamObserver<com.grpc.group.GroupResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LIST_GROUP, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -196,7 +255,7 @@ public final class GroupServiceGrpc {
     public void addGroup(com.grpc.group.GroupRequest request,
         io.grpc.stub.StreamObserver<com.grpc.group.GroupResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ADD_GROUP, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -204,7 +263,7 @@ public final class GroupServiceGrpc {
     public void removeGroup(com.grpc.group.GroupRequest request,
         io.grpc.stub.StreamObserver<com.grpc.group.GroupResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_REMOVE_GROUP, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRemoveGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -212,7 +271,7 @@ public final class GroupServiceGrpc {
     public void modifyGroup(com.grpc.group.GroupRequest request,
         io.grpc.stub.StreamObserver<com.grpc.group.GroupResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_GROUP, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getModifyGroupMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -238,28 +297,28 @@ public final class GroupServiceGrpc {
      */
     public com.grpc.group.GroupResponse listGroup(com.grpc.group.GroupRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LIST_GROUP, getCallOptions(), request);
+          getChannel(), getListGroupMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.group.GroupResponse addGroup(com.grpc.group.GroupRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ADD_GROUP, getCallOptions(), request);
+          getChannel(), getAddGroupMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.group.GroupResponse removeGroup(com.grpc.group.GroupRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_REMOVE_GROUP, getCallOptions(), request);
+          getChannel(), getRemoveGroupMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.group.GroupResponse modifyGroup(com.grpc.group.GroupRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_MODIFY_GROUP, getCallOptions(), request);
+          getChannel(), getModifyGroupMethod(), getCallOptions(), request);
     }
   }
 
@@ -286,7 +345,7 @@ public final class GroupServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.group.GroupResponse> listGroup(
         com.grpc.group.GroupRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LIST_GROUP, getCallOptions()), request);
+          getChannel().newCall(getListGroupMethod(), getCallOptions()), request);
     }
 
     /**
@@ -294,7 +353,7 @@ public final class GroupServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.group.GroupResponse> addGroup(
         com.grpc.group.GroupRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ADD_GROUP, getCallOptions()), request);
+          getChannel().newCall(getAddGroupMethod(), getCallOptions()), request);
     }
 
     /**
@@ -302,7 +361,7 @@ public final class GroupServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.group.GroupResponse> removeGroup(
         com.grpc.group.GroupRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_REMOVE_GROUP, getCallOptions()), request);
+          getChannel().newCall(getRemoveGroupMethod(), getCallOptions()), request);
     }
 
     /**
@@ -310,7 +369,7 @@ public final class GroupServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.group.GroupResponse> modifyGroup(
         com.grpc.group.GroupRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_GROUP, getCallOptions()), request);
+          getChannel().newCall(getModifyGroupMethod(), getCallOptions()), request);
     }
   }
 
@@ -368,10 +427,38 @@ public final class GroupServiceGrpc {
     }
   }
 
-  private static final class GroupServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class GroupServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    GroupServiceBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.grpc.group.GroupOuterClass.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("GroupService");
+    }
+  }
+
+  private static final class GroupServiceFileDescriptorSupplier
+      extends GroupServiceBaseDescriptorSupplier {
+    GroupServiceFileDescriptorSupplier() {}
+  }
+
+  private static final class GroupServiceMethodDescriptorSupplier
+      extends GroupServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    GroupServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -384,11 +471,11 @@ public final class GroupServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new GroupServiceDescriptorSupplier())
-              .addMethod(METHOD_LIST_GROUP)
-              .addMethod(METHOD_ADD_GROUP)
-              .addMethod(METHOD_REMOVE_GROUP)
-              .addMethod(METHOD_MODIFY_GROUP)
+              .setSchemaDescriptor(new GroupServiceFileDescriptorSupplier())
+              .addMethod(getListGroupMethod())
+              .addMethod(getAddGroupMethod())
+              .addMethod(getRemoveGroupMethod())
+              .addMethod(getModifyGroupMethod())
               .build();
         }
       }

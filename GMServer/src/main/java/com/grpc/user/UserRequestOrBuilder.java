@@ -105,4 +105,44 @@ public interface UserRequestOrBuilder extends
    */
   com.grpc.user.UserOrBuilder getUserOrBuilder(
       int index);
+
+  /**
+   * <code>string cityCode = 11;</code>
+   */
+  java.lang.String getCityCode();
+  /**
+   * <code>string cityCode = 11;</code>
+   */
+  com.google.protobuf.ByteString
+      getCityCodeBytes();
+
+  /**
+   * <code>string countyCode = 12;</code>
+   */
+  java.lang.String getCountyCode();
+  /**
+   * <code>string countyCode = 12;</code>
+   */
+  com.google.protobuf.ByteString
+      getCountyCodeBytes();
+
+  /**
+   * <code>string townCode = 13;</code>
+   */
+  java.lang.String getTownCode();
+  /**
+   * <code>string townCode = 13;</code>
+   */
+  com.google.protobuf.ByteString
+      getTownCodeBytes();
+
+  /**
+   * <code>string villageCode = 14;</code>
+   */
+  java.lang.String getVillageCode();
+  /**
+   * <code>string villageCode = 14;</code>
+   */
+  com.google.protobuf.ByteString
+      getVillageCodeBytes();
 }

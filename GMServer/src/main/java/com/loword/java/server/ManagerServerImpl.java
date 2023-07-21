@@ -41,7 +41,7 @@ public class ManagerServerImpl extends ManagerServiceGrpc.ManagerServiceImplBase
         manager_info manager = this.managerService.getName(username);
         if (manager != null && manager.getPassword().equals(password))
         {
-            System.out.print("okok");
+            System.out.print("登录成功");
             Manager.Builder aa=Manager.newBuilder();
             aa.setId(manager.getManagerId());
             aa.setUsername(manager.getUsername());

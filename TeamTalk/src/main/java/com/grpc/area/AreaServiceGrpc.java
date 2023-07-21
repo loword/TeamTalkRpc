@@ -1,24 +1,24 @@
 package com.grpc.area;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.5.0)",
+    value = "by gRPC proto compiler (version 1.13.2)",
     comments = "Source: area.proto")
 public final class AreaServiceGrpc {
 
@@ -27,66 +27,140 @@ public final class AreaServiceGrpc {
   public static final String SERVICE_NAME = "com.grpc.area.AreaService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
-      com.grpc.area.AreaResponse> METHOD_LIST_AREA =
-      io.grpc.MethodDescriptor.<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.area.AreaService", "listArea"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.area.AreaRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.area.AreaResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
-      com.grpc.area.AreaResponse> METHOD_ADD_AREA =
-      io.grpc.MethodDescriptor.<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.area.AreaService", "addArea"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.area.AreaRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.area.AreaResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
-      com.grpc.area.AreaResponse> METHOD_MODIFY_AREA =
-      io.grpc.MethodDescriptor.<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.area.AreaService", "modifyArea"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.area.AreaRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.area.AreaResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
-      com.grpc.area.AreaResponse> METHOD_GET_AREA_TREE =
-      io.grpc.MethodDescriptor.<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.area.AreaService", "getAreaTree"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.area.AreaRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.area.AreaResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
-      com.grpc.area.AreaResponse> METHOD_GET_AREA =
-      io.grpc.MethodDescriptor.<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.area.AreaService", "getArea"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.area.AreaRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.area.AreaResponse.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
+      com.grpc.area.AreaResponse> getListAreaMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
+      com.grpc.area.AreaResponse> getListAreaMethod() {
+    io.grpc.MethodDescriptor<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse> getListAreaMethod;
+    if ((getListAreaMethod = AreaServiceGrpc.getListAreaMethod) == null) {
+      synchronized (AreaServiceGrpc.class) {
+        if ((getListAreaMethod = AreaServiceGrpc.getListAreaMethod) == null) {
+          AreaServiceGrpc.getListAreaMethod = getListAreaMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.area.AreaService", "listArea"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.area.AreaRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.area.AreaResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new AreaServiceMethodDescriptorSupplier("listArea"))
+                  .build();
+          }
+        }
+     }
+     return getListAreaMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
+      com.grpc.area.AreaResponse> getAddAreaMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
+      com.grpc.area.AreaResponse> getAddAreaMethod() {
+    io.grpc.MethodDescriptor<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse> getAddAreaMethod;
+    if ((getAddAreaMethod = AreaServiceGrpc.getAddAreaMethod) == null) {
+      synchronized (AreaServiceGrpc.class) {
+        if ((getAddAreaMethod = AreaServiceGrpc.getAddAreaMethod) == null) {
+          AreaServiceGrpc.getAddAreaMethod = getAddAreaMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.area.AreaService", "addArea"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.area.AreaRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.area.AreaResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new AreaServiceMethodDescriptorSupplier("addArea"))
+                  .build();
+          }
+        }
+     }
+     return getAddAreaMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
+      com.grpc.area.AreaResponse> getModifyAreaMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
+      com.grpc.area.AreaResponse> getModifyAreaMethod() {
+    io.grpc.MethodDescriptor<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse> getModifyAreaMethod;
+    if ((getModifyAreaMethod = AreaServiceGrpc.getModifyAreaMethod) == null) {
+      synchronized (AreaServiceGrpc.class) {
+        if ((getModifyAreaMethod = AreaServiceGrpc.getModifyAreaMethod) == null) {
+          AreaServiceGrpc.getModifyAreaMethod = getModifyAreaMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.area.AreaService", "modifyArea"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.area.AreaRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.area.AreaResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new AreaServiceMethodDescriptorSupplier("modifyArea"))
+                  .build();
+          }
+        }
+     }
+     return getModifyAreaMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
+      com.grpc.area.AreaResponse> getGetAreaTreeMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
+      com.grpc.area.AreaResponse> getGetAreaTreeMethod() {
+    io.grpc.MethodDescriptor<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse> getGetAreaTreeMethod;
+    if ((getGetAreaTreeMethod = AreaServiceGrpc.getGetAreaTreeMethod) == null) {
+      synchronized (AreaServiceGrpc.class) {
+        if ((getGetAreaTreeMethod = AreaServiceGrpc.getGetAreaTreeMethod) == null) {
+          AreaServiceGrpc.getGetAreaTreeMethod = getGetAreaTreeMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.area.AreaService", "getAreaTree"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.area.AreaRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.area.AreaResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new AreaServiceMethodDescriptorSupplier("getAreaTree"))
+                  .build();
+          }
+        }
+     }
+     return getGetAreaTreeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
+      com.grpc.area.AreaResponse> getGetAreaMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
+      com.grpc.area.AreaResponse> getGetAreaMethod() {
+    io.grpc.MethodDescriptor<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse> getGetAreaMethod;
+    if ((getGetAreaMethod = AreaServiceGrpc.getGetAreaMethod) == null) {
+      synchronized (AreaServiceGrpc.class) {
+        if ((getGetAreaMethod = AreaServiceGrpc.getGetAreaMethod) == null) {
+          AreaServiceGrpc.getGetAreaMethod = getGetAreaMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.area.AreaService", "getArea"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.area.AreaRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.area.AreaResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new AreaServiceMethodDescriptorSupplier("getArea"))
+                  .build();
+          }
+        }
+     }
+     return getGetAreaMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -119,69 +193,69 @@ public final class AreaServiceGrpc {
      */
     public void listArea(com.grpc.area.AreaRequest request,
         io.grpc.stub.StreamObserver<com.grpc.area.AreaResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LIST_AREA, responseObserver);
+      asyncUnimplementedUnaryCall(getListAreaMethod(), responseObserver);
     }
 
     /**
      */
     public void addArea(com.grpc.area.AreaRequest request,
         io.grpc.stub.StreamObserver<com.grpc.area.AreaResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ADD_AREA, responseObserver);
+      asyncUnimplementedUnaryCall(getAddAreaMethod(), responseObserver);
     }
 
     /**
      */
     public void modifyArea(com.grpc.area.AreaRequest request,
         io.grpc.stub.StreamObserver<com.grpc.area.AreaResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_MODIFY_AREA, responseObserver);
+      asyncUnimplementedUnaryCall(getModifyAreaMethod(), responseObserver);
     }
 
     /**
      */
     public void getAreaTree(com.grpc.area.AreaRequest request,
         io.grpc.stub.StreamObserver<com.grpc.area.AreaResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_AREA_TREE, responseObserver);
+      asyncUnimplementedUnaryCall(getGetAreaTreeMethod(), responseObserver);
     }
 
     /**
      */
     public void getArea(com.grpc.area.AreaRequest request,
         io.grpc.stub.StreamObserver<com.grpc.area.AreaResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_AREA, responseObserver);
+      asyncUnimplementedUnaryCall(getGetAreaMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_LIST_AREA,
+            getListAreaMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.area.AreaRequest,
                 com.grpc.area.AreaResponse>(
                   this, METHODID_LIST_AREA)))
           .addMethod(
-            METHOD_ADD_AREA,
+            getAddAreaMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.area.AreaRequest,
                 com.grpc.area.AreaResponse>(
                   this, METHODID_ADD_AREA)))
           .addMethod(
-            METHOD_MODIFY_AREA,
+            getModifyAreaMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.area.AreaRequest,
                 com.grpc.area.AreaResponse>(
                   this, METHODID_MODIFY_AREA)))
           .addMethod(
-            METHOD_GET_AREA_TREE,
+            getGetAreaTreeMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.area.AreaRequest,
                 com.grpc.area.AreaResponse>(
                   this, METHODID_GET_AREA_TREE)))
           .addMethod(
-            METHOD_GET_AREA,
+            getGetAreaMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.area.AreaRequest,
@@ -214,7 +288,7 @@ public final class AreaServiceGrpc {
     public void listArea(com.grpc.area.AreaRequest request,
         io.grpc.stub.StreamObserver<com.grpc.area.AreaResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LIST_AREA, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListAreaMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -222,7 +296,7 @@ public final class AreaServiceGrpc {
     public void addArea(com.grpc.area.AreaRequest request,
         io.grpc.stub.StreamObserver<com.grpc.area.AreaResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ADD_AREA, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddAreaMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -230,7 +304,7 @@ public final class AreaServiceGrpc {
     public void modifyArea(com.grpc.area.AreaRequest request,
         io.grpc.stub.StreamObserver<com.grpc.area.AreaResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_AREA, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getModifyAreaMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -238,7 +312,7 @@ public final class AreaServiceGrpc {
     public void getAreaTree(com.grpc.area.AreaRequest request,
         io.grpc.stub.StreamObserver<com.grpc.area.AreaResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_AREA_TREE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAreaTreeMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -246,7 +320,7 @@ public final class AreaServiceGrpc {
     public void getArea(com.grpc.area.AreaRequest request,
         io.grpc.stub.StreamObserver<com.grpc.area.AreaResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_AREA, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAreaMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -272,35 +346,35 @@ public final class AreaServiceGrpc {
      */
     public com.grpc.area.AreaResponse listArea(com.grpc.area.AreaRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LIST_AREA, getCallOptions(), request);
+          getChannel(), getListAreaMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.area.AreaResponse addArea(com.grpc.area.AreaRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ADD_AREA, getCallOptions(), request);
+          getChannel(), getAddAreaMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.area.AreaResponse modifyArea(com.grpc.area.AreaRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_MODIFY_AREA, getCallOptions(), request);
+          getChannel(), getModifyAreaMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.area.AreaResponse getAreaTree(com.grpc.area.AreaRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_AREA_TREE, getCallOptions(), request);
+          getChannel(), getGetAreaTreeMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.area.AreaResponse getArea(com.grpc.area.AreaRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_AREA, getCallOptions(), request);
+          getChannel(), getGetAreaMethod(), getCallOptions(), request);
     }
   }
 
@@ -327,7 +401,7 @@ public final class AreaServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.area.AreaResponse> listArea(
         com.grpc.area.AreaRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LIST_AREA, getCallOptions()), request);
+          getChannel().newCall(getListAreaMethod(), getCallOptions()), request);
     }
 
     /**
@@ -335,7 +409,7 @@ public final class AreaServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.area.AreaResponse> addArea(
         com.grpc.area.AreaRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ADD_AREA, getCallOptions()), request);
+          getChannel().newCall(getAddAreaMethod(), getCallOptions()), request);
     }
 
     /**
@@ -343,7 +417,7 @@ public final class AreaServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.area.AreaResponse> modifyArea(
         com.grpc.area.AreaRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_AREA, getCallOptions()), request);
+          getChannel().newCall(getModifyAreaMethod(), getCallOptions()), request);
     }
 
     /**
@@ -351,7 +425,7 @@ public final class AreaServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.area.AreaResponse> getAreaTree(
         com.grpc.area.AreaRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_AREA_TREE, getCallOptions()), request);
+          getChannel().newCall(getGetAreaTreeMethod(), getCallOptions()), request);
     }
 
     /**
@@ -359,7 +433,7 @@ public final class AreaServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.area.AreaResponse> getArea(
         com.grpc.area.AreaRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_AREA, getCallOptions()), request);
+          getChannel().newCall(getGetAreaMethod(), getCallOptions()), request);
     }
   }
 
@@ -422,10 +496,38 @@ public final class AreaServiceGrpc {
     }
   }
 
-  private static final class AreaServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class AreaServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    AreaServiceBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.grpc.area.AreaOuterClass.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("AreaService");
+    }
+  }
+
+  private static final class AreaServiceFileDescriptorSupplier
+      extends AreaServiceBaseDescriptorSupplier {
+    AreaServiceFileDescriptorSupplier() {}
+  }
+
+  private static final class AreaServiceMethodDescriptorSupplier
+      extends AreaServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    AreaServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -438,12 +540,12 @@ public final class AreaServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new AreaServiceDescriptorSupplier())
-              .addMethod(METHOD_LIST_AREA)
-              .addMethod(METHOD_ADD_AREA)
-              .addMethod(METHOD_MODIFY_AREA)
-              .addMethod(METHOD_GET_AREA_TREE)
-              .addMethod(METHOD_GET_AREA)
+              .setSchemaDescriptor(new AreaServiceFileDescriptorSupplier())
+              .addMethod(getListAreaMethod())
+              .addMethod(getAddAreaMethod())
+              .addMethod(getModifyAreaMethod())
+              .addMethod(getGetAreaTreeMethod())
+              .addMethod(getGetAreaMethod())
               .build();
         }
       }

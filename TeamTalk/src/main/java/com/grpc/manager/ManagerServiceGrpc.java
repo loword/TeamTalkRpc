@@ -1,24 +1,24 @@
 package com.grpc.manager;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.5.0)",
+    value = "by gRPC proto compiler (version 1.13.2)",
     comments = "Source: manager.proto")
 public final class ManagerServiceGrpc {
 
@@ -27,102 +27,221 @@ public final class ManagerServiceGrpc {
   public static final String SERVICE_NAME = "com.grpc.manager.ManagerService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
-      com.grpc.manager.ManagerResponse> METHOD_LOGIN =
-      io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.manager.ManagerService", "login"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
-      com.grpc.manager.ManagerResponse> METHOD_ADD_MANAGER =
-      io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.manager.ManagerService", "addManager"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
-      com.grpc.manager.ManagerResponse> METHOD_MODIFY_PASSWORD =
-      io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.manager.ManagerService", "modifyPassword"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
-      com.grpc.manager.ManagerResponse> METHOD_REMOVE_MANAGER =
-      io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.manager.ManagerService", "removeManager"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
-      com.grpc.manager.ManagerResponse> METHOD_LIST_MANAGER =
-      io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.manager.ManagerService", "listManager"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
-      com.grpc.manager.ManagerResponse> METHOD_GET_INFO =
-      io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.manager.ManagerService", "getInfo"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
-      com.grpc.manager.ManagerResponse> METHOD_CHANGE_ROLE =
-      io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.manager.ManagerService", "changeRole"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
-      com.grpc.manager.ManagerResponse> METHOD_MODIFY =
-      io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.manager.ManagerService", "modify"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.manager.ManagerResponse.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getLoginMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getLoginMethod() {
+    io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse> getLoginMethod;
+    if ((getLoginMethod = ManagerServiceGrpc.getLoginMethod) == null) {
+      synchronized (ManagerServiceGrpc.class) {
+        if ((getLoginMethod = ManagerServiceGrpc.getLoginMethod) == null) {
+          ManagerServiceGrpc.getLoginMethod = getLoginMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.manager.ManagerService", "login"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ManagerServiceMethodDescriptorSupplier("login"))
+                  .build();
+          }
+        }
+     }
+     return getLoginMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getAddManagerMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getAddManagerMethod() {
+    io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse> getAddManagerMethod;
+    if ((getAddManagerMethod = ManagerServiceGrpc.getAddManagerMethod) == null) {
+      synchronized (ManagerServiceGrpc.class) {
+        if ((getAddManagerMethod = ManagerServiceGrpc.getAddManagerMethod) == null) {
+          ManagerServiceGrpc.getAddManagerMethod = getAddManagerMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.manager.ManagerService", "addManager"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ManagerServiceMethodDescriptorSupplier("addManager"))
+                  .build();
+          }
+        }
+     }
+     return getAddManagerMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getModifyPasswordMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getModifyPasswordMethod() {
+    io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse> getModifyPasswordMethod;
+    if ((getModifyPasswordMethod = ManagerServiceGrpc.getModifyPasswordMethod) == null) {
+      synchronized (ManagerServiceGrpc.class) {
+        if ((getModifyPasswordMethod = ManagerServiceGrpc.getModifyPasswordMethod) == null) {
+          ManagerServiceGrpc.getModifyPasswordMethod = getModifyPasswordMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.manager.ManagerService", "modifyPassword"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ManagerServiceMethodDescriptorSupplier("modifyPassword"))
+                  .build();
+          }
+        }
+     }
+     return getModifyPasswordMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getRemoveManagerMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getRemoveManagerMethod() {
+    io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse> getRemoveManagerMethod;
+    if ((getRemoveManagerMethod = ManagerServiceGrpc.getRemoveManagerMethod) == null) {
+      synchronized (ManagerServiceGrpc.class) {
+        if ((getRemoveManagerMethod = ManagerServiceGrpc.getRemoveManagerMethod) == null) {
+          ManagerServiceGrpc.getRemoveManagerMethod = getRemoveManagerMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.manager.ManagerService", "removeManager"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ManagerServiceMethodDescriptorSupplier("removeManager"))
+                  .build();
+          }
+        }
+     }
+     return getRemoveManagerMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getListManagerMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getListManagerMethod() {
+    io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse> getListManagerMethod;
+    if ((getListManagerMethod = ManagerServiceGrpc.getListManagerMethod) == null) {
+      synchronized (ManagerServiceGrpc.class) {
+        if ((getListManagerMethod = ManagerServiceGrpc.getListManagerMethod) == null) {
+          ManagerServiceGrpc.getListManagerMethod = getListManagerMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.manager.ManagerService", "listManager"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ManagerServiceMethodDescriptorSupplier("listManager"))
+                  .build();
+          }
+        }
+     }
+     return getListManagerMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getGetInfoMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getGetInfoMethod() {
+    io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse> getGetInfoMethod;
+    if ((getGetInfoMethod = ManagerServiceGrpc.getGetInfoMethod) == null) {
+      synchronized (ManagerServiceGrpc.class) {
+        if ((getGetInfoMethod = ManagerServiceGrpc.getGetInfoMethod) == null) {
+          ManagerServiceGrpc.getGetInfoMethod = getGetInfoMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.manager.ManagerService", "getInfo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ManagerServiceMethodDescriptorSupplier("getInfo"))
+                  .build();
+          }
+        }
+     }
+     return getGetInfoMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getChangeRoleMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getChangeRoleMethod() {
+    io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse> getChangeRoleMethod;
+    if ((getChangeRoleMethod = ManagerServiceGrpc.getChangeRoleMethod) == null) {
+      synchronized (ManagerServiceGrpc.class) {
+        if ((getChangeRoleMethod = ManagerServiceGrpc.getChangeRoleMethod) == null) {
+          ManagerServiceGrpc.getChangeRoleMethod = getChangeRoleMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.manager.ManagerService", "changeRole"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ManagerServiceMethodDescriptorSupplier("changeRole"))
+                  .build();
+          }
+        }
+     }
+     return getChangeRoleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getModifyMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest,
+      com.grpc.manager.ManagerResponse> getModifyMethod() {
+    io.grpc.MethodDescriptor<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse> getModifyMethod;
+    if ((getModifyMethod = ManagerServiceGrpc.getModifyMethod) == null) {
+      synchronized (ManagerServiceGrpc.class) {
+        if ((getModifyMethod = ManagerServiceGrpc.getModifyMethod) == null) {
+          ManagerServiceGrpc.getModifyMethod = getModifyMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.manager.ManagerRequest, com.grpc.manager.ManagerResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.manager.ManagerService", "modify"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.manager.ManagerResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ManagerServiceMethodDescriptorSupplier("modify"))
+                  .build();
+          }
+        }
+     }
+     return getModifyMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -155,111 +274,111 @@ public final class ManagerServiceGrpc {
      */
     public void login(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LOGIN, responseObserver);
+      asyncUnimplementedUnaryCall(getLoginMethod(), responseObserver);
     }
 
     /**
      */
     public void addManager(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ADD_MANAGER, responseObserver);
+      asyncUnimplementedUnaryCall(getAddManagerMethod(), responseObserver);
     }
 
     /**
      */
     public void modifyPassword(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_MODIFY_PASSWORD, responseObserver);
+      asyncUnimplementedUnaryCall(getModifyPasswordMethod(), responseObserver);
     }
 
     /**
      */
     public void removeManager(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_REMOVE_MANAGER, responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveManagerMethod(), responseObserver);
     }
 
     /**
      */
     public void listManager(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LIST_MANAGER, responseObserver);
+      asyncUnimplementedUnaryCall(getListManagerMethod(), responseObserver);
     }
 
     /**
      */
     public void getInfo(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_INFO, responseObserver);
+      asyncUnimplementedUnaryCall(getGetInfoMethod(), responseObserver);
     }
 
     /**
      */
     public void changeRole(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_CHANGE_ROLE, responseObserver);
+      asyncUnimplementedUnaryCall(getChangeRoleMethod(), responseObserver);
     }
 
     /**
      */
     public void modify(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_MODIFY, responseObserver);
+      asyncUnimplementedUnaryCall(getModifyMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_LOGIN,
+            getLoginMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.manager.ManagerRequest,
                 com.grpc.manager.ManagerResponse>(
                   this, METHODID_LOGIN)))
           .addMethod(
-            METHOD_ADD_MANAGER,
+            getAddManagerMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.manager.ManagerRequest,
                 com.grpc.manager.ManagerResponse>(
                   this, METHODID_ADD_MANAGER)))
           .addMethod(
-            METHOD_MODIFY_PASSWORD,
+            getModifyPasswordMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.manager.ManagerRequest,
                 com.grpc.manager.ManagerResponse>(
                   this, METHODID_MODIFY_PASSWORD)))
           .addMethod(
-            METHOD_REMOVE_MANAGER,
+            getRemoveManagerMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.manager.ManagerRequest,
                 com.grpc.manager.ManagerResponse>(
                   this, METHODID_REMOVE_MANAGER)))
           .addMethod(
-            METHOD_LIST_MANAGER,
+            getListManagerMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.manager.ManagerRequest,
                 com.grpc.manager.ManagerResponse>(
                   this, METHODID_LIST_MANAGER)))
           .addMethod(
-            METHOD_GET_INFO,
+            getGetInfoMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.manager.ManagerRequest,
                 com.grpc.manager.ManagerResponse>(
                   this, METHODID_GET_INFO)))
           .addMethod(
-            METHOD_CHANGE_ROLE,
+            getChangeRoleMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.manager.ManagerRequest,
                 com.grpc.manager.ManagerResponse>(
                   this, METHODID_CHANGE_ROLE)))
           .addMethod(
-            METHOD_MODIFY,
+            getModifyMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.manager.ManagerRequest,
@@ -292,7 +411,7 @@ public final class ManagerServiceGrpc {
     public void login(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LOGIN, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getLoginMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -300,7 +419,7 @@ public final class ManagerServiceGrpc {
     public void addManager(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ADD_MANAGER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddManagerMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -308,7 +427,7 @@ public final class ManagerServiceGrpc {
     public void modifyPassword(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_PASSWORD, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getModifyPasswordMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -316,7 +435,7 @@ public final class ManagerServiceGrpc {
     public void removeManager(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_REMOVE_MANAGER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRemoveManagerMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -324,7 +443,7 @@ public final class ManagerServiceGrpc {
     public void listManager(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LIST_MANAGER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListManagerMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -332,7 +451,7 @@ public final class ManagerServiceGrpc {
     public void getInfo(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_INFO, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetInfoMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -340,7 +459,7 @@ public final class ManagerServiceGrpc {
     public void changeRole(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_CHANGE_ROLE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getChangeRoleMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -348,7 +467,7 @@ public final class ManagerServiceGrpc {
     public void modify(com.grpc.manager.ManagerRequest request,
         io.grpc.stub.StreamObserver<com.grpc.manager.ManagerResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_MODIFY, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getModifyMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -374,56 +493,56 @@ public final class ManagerServiceGrpc {
      */
     public com.grpc.manager.ManagerResponse login(com.grpc.manager.ManagerRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LOGIN, getCallOptions(), request);
+          getChannel(), getLoginMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.manager.ManagerResponse addManager(com.grpc.manager.ManagerRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ADD_MANAGER, getCallOptions(), request);
+          getChannel(), getAddManagerMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.manager.ManagerResponse modifyPassword(com.grpc.manager.ManagerRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_MODIFY_PASSWORD, getCallOptions(), request);
+          getChannel(), getModifyPasswordMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.manager.ManagerResponse removeManager(com.grpc.manager.ManagerRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_REMOVE_MANAGER, getCallOptions(), request);
+          getChannel(), getRemoveManagerMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.manager.ManagerResponse listManager(com.grpc.manager.ManagerRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LIST_MANAGER, getCallOptions(), request);
+          getChannel(), getListManagerMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.manager.ManagerResponse getInfo(com.grpc.manager.ManagerRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_INFO, getCallOptions(), request);
+          getChannel(), getGetInfoMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.manager.ManagerResponse changeRole(com.grpc.manager.ManagerRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_CHANGE_ROLE, getCallOptions(), request);
+          getChannel(), getChangeRoleMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.manager.ManagerResponse modify(com.grpc.manager.ManagerRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_MODIFY, getCallOptions(), request);
+          getChannel(), getModifyMethod(), getCallOptions(), request);
     }
   }
 
@@ -450,7 +569,7 @@ public final class ManagerServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.manager.ManagerResponse> login(
         com.grpc.manager.ManagerRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LOGIN, getCallOptions()), request);
+          getChannel().newCall(getLoginMethod(), getCallOptions()), request);
     }
 
     /**
@@ -458,7 +577,7 @@ public final class ManagerServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.manager.ManagerResponse> addManager(
         com.grpc.manager.ManagerRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ADD_MANAGER, getCallOptions()), request);
+          getChannel().newCall(getAddManagerMethod(), getCallOptions()), request);
     }
 
     /**
@@ -466,7 +585,7 @@ public final class ManagerServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.manager.ManagerResponse> modifyPassword(
         com.grpc.manager.ManagerRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_PASSWORD, getCallOptions()), request);
+          getChannel().newCall(getModifyPasswordMethod(), getCallOptions()), request);
     }
 
     /**
@@ -474,7 +593,7 @@ public final class ManagerServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.manager.ManagerResponse> removeManager(
         com.grpc.manager.ManagerRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_REMOVE_MANAGER, getCallOptions()), request);
+          getChannel().newCall(getRemoveManagerMethod(), getCallOptions()), request);
     }
 
     /**
@@ -482,7 +601,7 @@ public final class ManagerServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.manager.ManagerResponse> listManager(
         com.grpc.manager.ManagerRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LIST_MANAGER, getCallOptions()), request);
+          getChannel().newCall(getListManagerMethod(), getCallOptions()), request);
     }
 
     /**
@@ -490,7 +609,7 @@ public final class ManagerServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.manager.ManagerResponse> getInfo(
         com.grpc.manager.ManagerRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_INFO, getCallOptions()), request);
+          getChannel().newCall(getGetInfoMethod(), getCallOptions()), request);
     }
 
     /**
@@ -498,7 +617,7 @@ public final class ManagerServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.manager.ManagerResponse> changeRole(
         com.grpc.manager.ManagerRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_CHANGE_ROLE, getCallOptions()), request);
+          getChannel().newCall(getChangeRoleMethod(), getCallOptions()), request);
     }
 
     /**
@@ -506,7 +625,7 @@ public final class ManagerServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.manager.ManagerResponse> modify(
         com.grpc.manager.ManagerRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_MODIFY, getCallOptions()), request);
+          getChannel().newCall(getModifyMethod(), getCallOptions()), request);
     }
   }
 
@@ -584,10 +703,38 @@ public final class ManagerServiceGrpc {
     }
   }
 
-  private static final class ManagerServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class ManagerServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    ManagerServiceBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.grpc.manager.ManagerOuterClass.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("ManagerService");
+    }
+  }
+
+  private static final class ManagerServiceFileDescriptorSupplier
+      extends ManagerServiceBaseDescriptorSupplier {
+    ManagerServiceFileDescriptorSupplier() {}
+  }
+
+  private static final class ManagerServiceMethodDescriptorSupplier
+      extends ManagerServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    ManagerServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -600,15 +747,15 @@ public final class ManagerServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new ManagerServiceDescriptorSupplier())
-              .addMethod(METHOD_LOGIN)
-              .addMethod(METHOD_ADD_MANAGER)
-              .addMethod(METHOD_MODIFY_PASSWORD)
-              .addMethod(METHOD_REMOVE_MANAGER)
-              .addMethod(METHOD_LIST_MANAGER)
-              .addMethod(METHOD_GET_INFO)
-              .addMethod(METHOD_CHANGE_ROLE)
-              .addMethod(METHOD_MODIFY)
+              .setSchemaDescriptor(new ManagerServiceFileDescriptorSupplier())
+              .addMethod(getLoginMethod())
+              .addMethod(getAddManagerMethod())
+              .addMethod(getModifyPasswordMethod())
+              .addMethod(getRemoveManagerMethod())
+              .addMethod(getListManagerMethod())
+              .addMethod(getGetInfoMethod())
+              .addMethod(getChangeRoleMethod())
+              .addMethod(getModifyMethod())
               .build();
         }
       }

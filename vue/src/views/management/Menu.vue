@@ -118,13 +118,13 @@
                 editFormVisible: false,//编辑界面是否显示
                 editLoading: false,
                 editFormRules: {
-                    menu_name: [
+                    menuName: [
                         { required: true, message: '请输入权限名称', trigger: 'blur' }
                     ],
-                    menu_url: [
+                    menuUrl: [
                         { required: true, message: '请输入权限url', trigger: 'blur' }
                     ],
-                    parent_id: [
+                    parentId: [
                         { required: true, message: '请输入父权限Id', trigger: 'blur' }
                     ],
                 },
@@ -138,13 +138,13 @@
                 addFormVisible: false,//新增界面是否显示
                 addLoading: false,
                 addFormRules: {
-                    menu_name: [
+                    menuName: [
                         { required: true, message: '请输入权限名称', trigger: 'blur' }
                     ],
-                    menu_url: [
+                    menuUrl: [
                         { required: true, message: '请输入权限url', trigger: 'blur' }
                     ],
-                    parent_id: [
+                    parentId: [
                         { required: true, message: '请输入父权限Id', trigger: 'blur' }
                     ],
                 },

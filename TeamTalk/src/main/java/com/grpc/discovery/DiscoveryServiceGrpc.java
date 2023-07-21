@@ -1,24 +1,24 @@
 package com.grpc.discovery;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.5.0)",
+    value = "by gRPC proto compiler (version 1.13.2)",
     comments = "Source: Discovery.proto")
 public final class DiscoveryServiceGrpc {
 
@@ -27,54 +27,113 @@ public final class DiscoveryServiceGrpc {
   public static final String SERVICE_NAME = "com.grpc.discovery.DiscoveryService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest,
-      com.grpc.discovery.DiscoveryResponse> METHOD_LIST_DISCOVERY =
-      io.grpc.MethodDescriptor.<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.discovery.DiscoveryService", "listDiscovery"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.discovery.DiscoveryRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.discovery.DiscoveryResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest,
-      com.grpc.discovery.DiscoveryResponse> METHOD_ADD_DISCOVERY =
-      io.grpc.MethodDescriptor.<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.discovery.DiscoveryService", "addDiscovery"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.discovery.DiscoveryRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.discovery.DiscoveryResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest,
-      com.grpc.discovery.DiscoveryResponse> METHOD_REMOVE_DISCOVERY =
-      io.grpc.MethodDescriptor.<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.discovery.DiscoveryService", "removeDiscovery"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.discovery.DiscoveryRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.discovery.DiscoveryResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest,
-      com.grpc.discovery.DiscoveryResponse> METHOD_MODIFY_DISCOVERY =
-      io.grpc.MethodDescriptor.<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.discovery.DiscoveryService", "modifyDiscovery"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.discovery.DiscoveryRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.discovery.DiscoveryResponse.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest,
+      com.grpc.discovery.DiscoveryResponse> getListDiscoveryMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest,
+      com.grpc.discovery.DiscoveryResponse> getListDiscoveryMethod() {
+    io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse> getListDiscoveryMethod;
+    if ((getListDiscoveryMethod = DiscoveryServiceGrpc.getListDiscoveryMethod) == null) {
+      synchronized (DiscoveryServiceGrpc.class) {
+        if ((getListDiscoveryMethod = DiscoveryServiceGrpc.getListDiscoveryMethod) == null) {
+          DiscoveryServiceGrpc.getListDiscoveryMethod = getListDiscoveryMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.discovery.DiscoveryService", "listDiscovery"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.discovery.DiscoveryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.discovery.DiscoveryResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new DiscoveryServiceMethodDescriptorSupplier("listDiscovery"))
+                  .build();
+          }
+        }
+     }
+     return getListDiscoveryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest,
+      com.grpc.discovery.DiscoveryResponse> getAddDiscoveryMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest,
+      com.grpc.discovery.DiscoveryResponse> getAddDiscoveryMethod() {
+    io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse> getAddDiscoveryMethod;
+    if ((getAddDiscoveryMethod = DiscoveryServiceGrpc.getAddDiscoveryMethod) == null) {
+      synchronized (DiscoveryServiceGrpc.class) {
+        if ((getAddDiscoveryMethod = DiscoveryServiceGrpc.getAddDiscoveryMethod) == null) {
+          DiscoveryServiceGrpc.getAddDiscoveryMethod = getAddDiscoveryMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.discovery.DiscoveryService", "addDiscovery"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.discovery.DiscoveryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.discovery.DiscoveryResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new DiscoveryServiceMethodDescriptorSupplier("addDiscovery"))
+                  .build();
+          }
+        }
+     }
+     return getAddDiscoveryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest,
+      com.grpc.discovery.DiscoveryResponse> getRemoveDiscoveryMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest,
+      com.grpc.discovery.DiscoveryResponse> getRemoveDiscoveryMethod() {
+    io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse> getRemoveDiscoveryMethod;
+    if ((getRemoveDiscoveryMethod = DiscoveryServiceGrpc.getRemoveDiscoveryMethod) == null) {
+      synchronized (DiscoveryServiceGrpc.class) {
+        if ((getRemoveDiscoveryMethod = DiscoveryServiceGrpc.getRemoveDiscoveryMethod) == null) {
+          DiscoveryServiceGrpc.getRemoveDiscoveryMethod = getRemoveDiscoveryMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.discovery.DiscoveryService", "removeDiscovery"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.discovery.DiscoveryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.discovery.DiscoveryResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new DiscoveryServiceMethodDescriptorSupplier("removeDiscovery"))
+                  .build();
+          }
+        }
+     }
+     return getRemoveDiscoveryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest,
+      com.grpc.discovery.DiscoveryResponse> getModifyDiscoveryMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest,
+      com.grpc.discovery.DiscoveryResponse> getModifyDiscoveryMethod() {
+    io.grpc.MethodDescriptor<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse> getModifyDiscoveryMethod;
+    if ((getModifyDiscoveryMethod = DiscoveryServiceGrpc.getModifyDiscoveryMethod) == null) {
+      synchronized (DiscoveryServiceGrpc.class) {
+        if ((getModifyDiscoveryMethod = DiscoveryServiceGrpc.getModifyDiscoveryMethod) == null) {
+          DiscoveryServiceGrpc.getModifyDiscoveryMethod = getModifyDiscoveryMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.discovery.DiscoveryRequest, com.grpc.discovery.DiscoveryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.discovery.DiscoveryService", "modifyDiscovery"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.discovery.DiscoveryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.discovery.DiscoveryResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new DiscoveryServiceMethodDescriptorSupplier("modifyDiscovery"))
+                  .build();
+          }
+        }
+     }
+     return getModifyDiscoveryMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -107,55 +166,55 @@ public final class DiscoveryServiceGrpc {
      */
     public void listDiscovery(com.grpc.discovery.DiscoveryRequest request,
         io.grpc.stub.StreamObserver<com.grpc.discovery.DiscoveryResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LIST_DISCOVERY, responseObserver);
+      asyncUnimplementedUnaryCall(getListDiscoveryMethod(), responseObserver);
     }
 
     /**
      */
     public void addDiscovery(com.grpc.discovery.DiscoveryRequest request,
         io.grpc.stub.StreamObserver<com.grpc.discovery.DiscoveryResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ADD_DISCOVERY, responseObserver);
+      asyncUnimplementedUnaryCall(getAddDiscoveryMethod(), responseObserver);
     }
 
     /**
      */
     public void removeDiscovery(com.grpc.discovery.DiscoveryRequest request,
         io.grpc.stub.StreamObserver<com.grpc.discovery.DiscoveryResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_REMOVE_DISCOVERY, responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveDiscoveryMethod(), responseObserver);
     }
 
     /**
      */
     public void modifyDiscovery(com.grpc.discovery.DiscoveryRequest request,
         io.grpc.stub.StreamObserver<com.grpc.discovery.DiscoveryResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_MODIFY_DISCOVERY, responseObserver);
+      asyncUnimplementedUnaryCall(getModifyDiscoveryMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_LIST_DISCOVERY,
+            getListDiscoveryMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.discovery.DiscoveryRequest,
                 com.grpc.discovery.DiscoveryResponse>(
                   this, METHODID_LIST_DISCOVERY)))
           .addMethod(
-            METHOD_ADD_DISCOVERY,
+            getAddDiscoveryMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.discovery.DiscoveryRequest,
                 com.grpc.discovery.DiscoveryResponse>(
                   this, METHODID_ADD_DISCOVERY)))
           .addMethod(
-            METHOD_REMOVE_DISCOVERY,
+            getRemoveDiscoveryMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.discovery.DiscoveryRequest,
                 com.grpc.discovery.DiscoveryResponse>(
                   this, METHODID_REMOVE_DISCOVERY)))
           .addMethod(
-            METHOD_MODIFY_DISCOVERY,
+            getModifyDiscoveryMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.discovery.DiscoveryRequest,
@@ -188,7 +247,7 @@ public final class DiscoveryServiceGrpc {
     public void listDiscovery(com.grpc.discovery.DiscoveryRequest request,
         io.grpc.stub.StreamObserver<com.grpc.discovery.DiscoveryResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LIST_DISCOVERY, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListDiscoveryMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -196,7 +255,7 @@ public final class DiscoveryServiceGrpc {
     public void addDiscovery(com.grpc.discovery.DiscoveryRequest request,
         io.grpc.stub.StreamObserver<com.grpc.discovery.DiscoveryResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ADD_DISCOVERY, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddDiscoveryMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -204,7 +263,7 @@ public final class DiscoveryServiceGrpc {
     public void removeDiscovery(com.grpc.discovery.DiscoveryRequest request,
         io.grpc.stub.StreamObserver<com.grpc.discovery.DiscoveryResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_REMOVE_DISCOVERY, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRemoveDiscoveryMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -212,7 +271,7 @@ public final class DiscoveryServiceGrpc {
     public void modifyDiscovery(com.grpc.discovery.DiscoveryRequest request,
         io.grpc.stub.StreamObserver<com.grpc.discovery.DiscoveryResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_DISCOVERY, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getModifyDiscoveryMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -238,28 +297,28 @@ public final class DiscoveryServiceGrpc {
      */
     public com.grpc.discovery.DiscoveryResponse listDiscovery(com.grpc.discovery.DiscoveryRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LIST_DISCOVERY, getCallOptions(), request);
+          getChannel(), getListDiscoveryMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.discovery.DiscoveryResponse addDiscovery(com.grpc.discovery.DiscoveryRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ADD_DISCOVERY, getCallOptions(), request);
+          getChannel(), getAddDiscoveryMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.discovery.DiscoveryResponse removeDiscovery(com.grpc.discovery.DiscoveryRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_REMOVE_DISCOVERY, getCallOptions(), request);
+          getChannel(), getRemoveDiscoveryMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.discovery.DiscoveryResponse modifyDiscovery(com.grpc.discovery.DiscoveryRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_MODIFY_DISCOVERY, getCallOptions(), request);
+          getChannel(), getModifyDiscoveryMethod(), getCallOptions(), request);
     }
   }
 
@@ -286,7 +345,7 @@ public final class DiscoveryServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.discovery.DiscoveryResponse> listDiscovery(
         com.grpc.discovery.DiscoveryRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LIST_DISCOVERY, getCallOptions()), request);
+          getChannel().newCall(getListDiscoveryMethod(), getCallOptions()), request);
     }
 
     /**
@@ -294,7 +353,7 @@ public final class DiscoveryServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.discovery.DiscoveryResponse> addDiscovery(
         com.grpc.discovery.DiscoveryRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ADD_DISCOVERY, getCallOptions()), request);
+          getChannel().newCall(getAddDiscoveryMethod(), getCallOptions()), request);
     }
 
     /**
@@ -302,7 +361,7 @@ public final class DiscoveryServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.discovery.DiscoveryResponse> removeDiscovery(
         com.grpc.discovery.DiscoveryRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_REMOVE_DISCOVERY, getCallOptions()), request);
+          getChannel().newCall(getRemoveDiscoveryMethod(), getCallOptions()), request);
     }
 
     /**
@@ -310,7 +369,7 @@ public final class DiscoveryServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.discovery.DiscoveryResponse> modifyDiscovery(
         com.grpc.discovery.DiscoveryRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_DISCOVERY, getCallOptions()), request);
+          getChannel().newCall(getModifyDiscoveryMethod(), getCallOptions()), request);
     }
   }
 
@@ -368,10 +427,38 @@ public final class DiscoveryServiceGrpc {
     }
   }
 
-  private static final class DiscoveryServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class DiscoveryServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    DiscoveryServiceBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.grpc.discovery.DiscoveryOuterClass.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("DiscoveryService");
+    }
+  }
+
+  private static final class DiscoveryServiceFileDescriptorSupplier
+      extends DiscoveryServiceBaseDescriptorSupplier {
+    DiscoveryServiceFileDescriptorSupplier() {}
+  }
+
+  private static final class DiscoveryServiceMethodDescriptorSupplier
+      extends DiscoveryServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    DiscoveryServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -384,11 +471,11 @@ public final class DiscoveryServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new DiscoveryServiceDescriptorSupplier())
-              .addMethod(METHOD_LIST_DISCOVERY)
-              .addMethod(METHOD_ADD_DISCOVERY)
-              .addMethod(METHOD_REMOVE_DISCOVERY)
-              .addMethod(METHOD_MODIFY_DISCOVERY)
+              .setSchemaDescriptor(new DiscoveryServiceFileDescriptorSupplier())
+              .addMethod(getListDiscoveryMethod())
+              .addMethod(getAddDiscoveryMethod())
+              .addMethod(getRemoveDiscoveryMethod())
+              .addMethod(getModifyDiscoveryMethod())
               .build();
         }
       }

@@ -20,7 +20,7 @@
 			<el-table-column prop="name" label="群名称" width="100" sortable>
 			</el-table-column> 
 			
-			<el-table-column prop="usercnt" label="成员人数" min-width="130" sortable>
+			<el-table-column prop="userCnt" label="成员人数" min-width="130" sortable>
 			</el-table-column>
 
 			
@@ -46,8 +46,8 @@
 					<el-input v-model="editForm.name" ></el-input>
 				</el-form-item>
 
-				<el-form-item label="成员人数" prop="usercnt">
-					<el-input v-model="editForm.usercnt" ></el-input>
+				<el-form-item label="成员人数" prop="userCnt">
+					<el-input v-model="editForm.userCnt" type="number"></el-input>
 				</el-form-item>
 
 			</el-form>
@@ -64,11 +64,9 @@
 					<el-input v-model="addForm.name" auto-complete="off"></el-input>
 				</el-form-item>
 
-				<el-form-item label="成员人数" prop="usercnt">
-					<el-input v-model="addForm.usercnt" auto-complete="off"></el-input>
+				<el-form-item label="成员人数" prop="userCnt">
+					<el-input v-model="addForm.userCnt" auto-complete="off" type="number"></el-input>
 				</el-form-item>
-
-
 			</el-form>
 			<div slot="footer" class="dialog-footer">
 				<el-button @click.native="addFormVisible = false">取消</el-button>
@@ -83,7 +81,7 @@
 
 	//import NProgress from 'nprogress'
 	import {listGroupRequest, removeGroupRequest, addGroupRequest,updateGroupRequest } from '@/api/group';
- 
+	import store from '@/store/index';
   
 	export default {
 		data() {
@@ -104,15 +102,16 @@
 					name: [
 						{ required: true, message: '请输入群名称', trigger: 'blur' }
 					],
-					usercnt: [
-						{ required: true, message: '请输入群成员人数', trigger: 'blur' }
+					userCnt: [
+						{ required: true, message: '请输入群成员人数' }
 					]
 				},
 				//编辑界面数据
 				editForm: {
 					id: 0,
 					name: '',
-					usercnt:0
+					userCnt:0,
+					updated:null
 				},
 
 				addFormVisible: false,//新增界面是否显示
@@ -121,14 +120,15 @@
 					name: [
 						{ required: true, message: '请输入群名称', trigger: 'blur' }
 					],
-					usercnt: [
-						{ required: true, message: '请输入群成员人数', trigger: 'blur' }
+					userCnt: [
+						{ required: true, message: '请输入群成员人数'}
 					]
 				},
 				//新增界面数据
 				addForm: {
+					creator:null,
 					name: '',
-					usercnt:0
+					userCnt:0
 				}
 
 			}
@@ -151,16 +151,15 @@
 				this.listLoading = true;
 				//NProgress.start();
 				//console.log(para);
-				listGroupRequest(para).then(data => {
-					if(data.data.code==1){
+				listGroupRequest(para).then(res => {
+					if(res.data.code==1){
 						this.users=[];
 						this.total =0;
 						this.listLoading = false;
 					}
-					else if(data.data.code==0)
+					else if(res.data.code==0)
 					{  
-                       this.users =  JSON.parse(data.data.data)
-                       
+                       this.users =  JSON.parse(res.data.data).group
 					   this.total = this.users.length; 
 					  
 					   this.listLoading = false;
@@ -182,7 +181,7 @@
 					this.listLoading = true;
 					//NProgress.start();
 					let para =[];
-					para.push(row.id);   
+					para.push(row.id);
 
 					removeGroupRequest(para).then(data => {
 						this.listLoading = false;
@@ -228,8 +227,9 @@
 			handleAdd: function () {
 				this.addFormVisible = true;
 				this.addForm = {
+					creator:null,
 					name: '',
-					usercnt:0
+					userCnt:0
 				};
 			},
 			//编辑
@@ -239,6 +239,7 @@
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true;
 							//NProgress.start();
+							this.editForm.updated = this.$store.getters.manager_id;
 							let para = Object.assign({}, this.editForm);
 							//para.birth = (!para.birth || para.birth == '') ? '' : util.formatDate.format(new Date(para.birth), 'yyyy-MM-dd');
 							updateGroupRequest(para).then(data => {
@@ -277,6 +278,7 @@
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.addLoading = true;
 							//NProgress.start();
+							this.addForm.creator = this.$store.getters.manager_id;
 							let para = Object.assign({}, this.addForm);
 							//console.log("你好"+para);
 							//para.birth = (!para.birth || para.birth == '') ? '' : util.formatDate.format(new Date(para.birth), 'yyyy-MM-dd');

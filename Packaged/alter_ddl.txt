@@ -7,6 +7,12 @@ ALTER TABLE `sys_area`
     ADD COLUMN   `update_time` datetime(0) NULL DEFAULT NULL COMMENT '修改时间',
     ADD COLUMN   `update_user` INT(11) NULL DEFAULT NULL COMMENT '修改人';
 ALTER TABLE `sys_area`
-	ADD INDEX `idx_area_cre_te_time` (`create_time`) USING BTREE,
+	ADD INDEX `idx_area_level_code` (`level_code`) USING BTREE,
+	ADD INDEX `idx_area_name` (`name`) USING BTREE,
+	ADD INDEX `idx_area_create_time` (`create_time`) USING BTREE,
 	ADD INDEX `idx_area_create_user` (`create_user`) USING BTREE;
+
+
+ALTER TABLE `IMUser`
+	CHANGE COLUMN `departId` `departId` INT(11) UNSIGNED NULL COMMENT '所属部门Id' AFTER `avatar`;
 

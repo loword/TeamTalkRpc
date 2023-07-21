@@ -1,24 +1,24 @@
 package com.grpc.user;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.5.0)",
+    value = "by gRPC proto compiler (version 1.13.2)",
     comments = "Source: user.proto")
 public final class UserServiceGrpc {
 
@@ -27,66 +27,140 @@ public final class UserServiceGrpc {
   public static final String SERVICE_NAME = "com.grpc.user.UserService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
-      com.grpc.user.UserResponse> METHOD_LIST_USER =
-      io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.user.UserService", "listUser"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.user.UserRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.user.UserResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
-      com.grpc.user.UserResponse> METHOD_ADD_USER =
-      io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.user.UserService", "addUser"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.user.UserRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.user.UserResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
-      com.grpc.user.UserResponse> METHOD_MODIFY_PASSWORD =
-      io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.user.UserService", "modifyPassword"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.user.UserRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.user.UserResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
-      com.grpc.user.UserResponse> METHOD_REMOVE_USER =
-      io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.user.UserService", "removeUser"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.user.UserRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.user.UserResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
-      com.grpc.user.UserResponse> METHOD_MODIFY_USER =
-      io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.user.UserService", "modifyUser"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.user.UserRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.user.UserResponse.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
+      com.grpc.user.UserResponse> getListUserMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
+      com.grpc.user.UserResponse> getListUserMethod() {
+    io.grpc.MethodDescriptor<com.grpc.user.UserRequest, com.grpc.user.UserResponse> getListUserMethod;
+    if ((getListUserMethod = UserServiceGrpc.getListUserMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getListUserMethod = UserServiceGrpc.getListUserMethod) == null) {
+          UserServiceGrpc.getListUserMethod = getListUserMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.user.UserService", "listUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.user.UserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.user.UserResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("listUser"))
+                  .build();
+          }
+        }
+     }
+     return getListUserMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
+      com.grpc.user.UserResponse> getAddUserMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
+      com.grpc.user.UserResponse> getAddUserMethod() {
+    io.grpc.MethodDescriptor<com.grpc.user.UserRequest, com.grpc.user.UserResponse> getAddUserMethod;
+    if ((getAddUserMethod = UserServiceGrpc.getAddUserMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getAddUserMethod = UserServiceGrpc.getAddUserMethod) == null) {
+          UserServiceGrpc.getAddUserMethod = getAddUserMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.user.UserService", "addUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.user.UserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.user.UserResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("addUser"))
+                  .build();
+          }
+        }
+     }
+     return getAddUserMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
+      com.grpc.user.UserResponse> getModifyPasswordMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
+      com.grpc.user.UserResponse> getModifyPasswordMethod() {
+    io.grpc.MethodDescriptor<com.grpc.user.UserRequest, com.grpc.user.UserResponse> getModifyPasswordMethod;
+    if ((getModifyPasswordMethod = UserServiceGrpc.getModifyPasswordMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getModifyPasswordMethod = UserServiceGrpc.getModifyPasswordMethod) == null) {
+          UserServiceGrpc.getModifyPasswordMethod = getModifyPasswordMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.user.UserService", "modifyPassword"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.user.UserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.user.UserResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("modifyPassword"))
+                  .build();
+          }
+        }
+     }
+     return getModifyPasswordMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
+      com.grpc.user.UserResponse> getRemoveUserMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
+      com.grpc.user.UserResponse> getRemoveUserMethod() {
+    io.grpc.MethodDescriptor<com.grpc.user.UserRequest, com.grpc.user.UserResponse> getRemoveUserMethod;
+    if ((getRemoveUserMethod = UserServiceGrpc.getRemoveUserMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getRemoveUserMethod = UserServiceGrpc.getRemoveUserMethod) == null) {
+          UserServiceGrpc.getRemoveUserMethod = getRemoveUserMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.user.UserService", "removeUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.user.UserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.user.UserResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("removeUser"))
+                  .build();
+          }
+        }
+     }
+     return getRemoveUserMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
+      com.grpc.user.UserResponse> getModifyUserMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.user.UserRequest,
+      com.grpc.user.UserResponse> getModifyUserMethod() {
+    io.grpc.MethodDescriptor<com.grpc.user.UserRequest, com.grpc.user.UserResponse> getModifyUserMethod;
+    if ((getModifyUserMethod = UserServiceGrpc.getModifyUserMethod) == null) {
+      synchronized (UserServiceGrpc.class) {
+        if ((getModifyUserMethod = UserServiceGrpc.getModifyUserMethod) == null) {
+          UserServiceGrpc.getModifyUserMethod = getModifyUserMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.user.UserRequest, com.grpc.user.UserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.user.UserService", "modifyUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.user.UserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.user.UserResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("modifyUser"))
+                  .build();
+          }
+        }
+     }
+     return getModifyUserMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -119,69 +193,69 @@ public final class UserServiceGrpc {
      */
     public void listUser(com.grpc.user.UserRequest request,
         io.grpc.stub.StreamObserver<com.grpc.user.UserResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LIST_USER, responseObserver);
+      asyncUnimplementedUnaryCall(getListUserMethod(), responseObserver);
     }
 
     /**
      */
     public void addUser(com.grpc.user.UserRequest request,
         io.grpc.stub.StreamObserver<com.grpc.user.UserResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ADD_USER, responseObserver);
+      asyncUnimplementedUnaryCall(getAddUserMethod(), responseObserver);
     }
 
     /**
      */
     public void modifyPassword(com.grpc.user.UserRequest request,
         io.grpc.stub.StreamObserver<com.grpc.user.UserResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_MODIFY_PASSWORD, responseObserver);
+      asyncUnimplementedUnaryCall(getModifyPasswordMethod(), responseObserver);
     }
 
     /**
      */
     public void removeUser(com.grpc.user.UserRequest request,
         io.grpc.stub.StreamObserver<com.grpc.user.UserResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_REMOVE_USER, responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveUserMethod(), responseObserver);
     }
 
     /**
      */
     public void modifyUser(com.grpc.user.UserRequest request,
         io.grpc.stub.StreamObserver<com.grpc.user.UserResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_MODIFY_USER, responseObserver);
+      asyncUnimplementedUnaryCall(getModifyUserMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_LIST_USER,
+            getListUserMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.user.UserRequest,
                 com.grpc.user.UserResponse>(
                   this, METHODID_LIST_USER)))
           .addMethod(
-            METHOD_ADD_USER,
+            getAddUserMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.user.UserRequest,
                 com.grpc.user.UserResponse>(
                   this, METHODID_ADD_USER)))
           .addMethod(
-            METHOD_MODIFY_PASSWORD,
+            getModifyPasswordMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.user.UserRequest,
                 com.grpc.user.UserResponse>(
                   this, METHODID_MODIFY_PASSWORD)))
           .addMethod(
-            METHOD_REMOVE_USER,
+            getRemoveUserMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.user.UserRequest,
                 com.grpc.user.UserResponse>(
                   this, METHODID_REMOVE_USER)))
           .addMethod(
-            METHOD_MODIFY_USER,
+            getModifyUserMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.user.UserRequest,
@@ -214,7 +288,7 @@ public final class UserServiceGrpc {
     public void listUser(com.grpc.user.UserRequest request,
         io.grpc.stub.StreamObserver<com.grpc.user.UserResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LIST_USER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListUserMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -222,7 +296,7 @@ public final class UserServiceGrpc {
     public void addUser(com.grpc.user.UserRequest request,
         io.grpc.stub.StreamObserver<com.grpc.user.UserResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ADD_USER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddUserMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -230,7 +304,7 @@ public final class UserServiceGrpc {
     public void modifyPassword(com.grpc.user.UserRequest request,
         io.grpc.stub.StreamObserver<com.grpc.user.UserResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_PASSWORD, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getModifyPasswordMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -238,7 +312,7 @@ public final class UserServiceGrpc {
     public void removeUser(com.grpc.user.UserRequest request,
         io.grpc.stub.StreamObserver<com.grpc.user.UserResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_REMOVE_USER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRemoveUserMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -246,7 +320,7 @@ public final class UserServiceGrpc {
     public void modifyUser(com.grpc.user.UserRequest request,
         io.grpc.stub.StreamObserver<com.grpc.user.UserResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_USER, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getModifyUserMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -272,35 +346,35 @@ public final class UserServiceGrpc {
      */
     public com.grpc.user.UserResponse listUser(com.grpc.user.UserRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LIST_USER, getCallOptions(), request);
+          getChannel(), getListUserMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.user.UserResponse addUser(com.grpc.user.UserRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ADD_USER, getCallOptions(), request);
+          getChannel(), getAddUserMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.user.UserResponse modifyPassword(com.grpc.user.UserRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_MODIFY_PASSWORD, getCallOptions(), request);
+          getChannel(), getModifyPasswordMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.user.UserResponse removeUser(com.grpc.user.UserRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_REMOVE_USER, getCallOptions(), request);
+          getChannel(), getRemoveUserMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.user.UserResponse modifyUser(com.grpc.user.UserRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_MODIFY_USER, getCallOptions(), request);
+          getChannel(), getModifyUserMethod(), getCallOptions(), request);
     }
   }
 
@@ -327,7 +401,7 @@ public final class UserServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.user.UserResponse> listUser(
         com.grpc.user.UserRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LIST_USER, getCallOptions()), request);
+          getChannel().newCall(getListUserMethod(), getCallOptions()), request);
     }
 
     /**
@@ -335,7 +409,7 @@ public final class UserServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.user.UserResponse> addUser(
         com.grpc.user.UserRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ADD_USER, getCallOptions()), request);
+          getChannel().newCall(getAddUserMethod(), getCallOptions()), request);
     }
 
     /**
@@ -343,7 +417,7 @@ public final class UserServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.user.UserResponse> modifyPassword(
         com.grpc.user.UserRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_PASSWORD, getCallOptions()), request);
+          getChannel().newCall(getModifyPasswordMethod(), getCallOptions()), request);
     }
 
     /**
@@ -351,7 +425,7 @@ public final class UserServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.user.UserResponse> removeUser(
         com.grpc.user.UserRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_REMOVE_USER, getCallOptions()), request);
+          getChannel().newCall(getRemoveUserMethod(), getCallOptions()), request);
     }
 
     /**
@@ -359,7 +433,7 @@ public final class UserServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.user.UserResponse> modifyUser(
         com.grpc.user.UserRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_USER, getCallOptions()), request);
+          getChannel().newCall(getModifyUserMethod(), getCallOptions()), request);
     }
   }
 
@@ -422,10 +496,38 @@ public final class UserServiceGrpc {
     }
   }
 
-  private static final class UserServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class UserServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    UserServiceBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.grpc.user.UserOuterClass.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("UserService");
+    }
+  }
+
+  private static final class UserServiceFileDescriptorSupplier
+      extends UserServiceBaseDescriptorSupplier {
+    UserServiceFileDescriptorSupplier() {}
+  }
+
+  private static final class UserServiceMethodDescriptorSupplier
+      extends UserServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    UserServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -438,12 +540,12 @@ public final class UserServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new UserServiceDescriptorSupplier())
-              .addMethod(METHOD_LIST_USER)
-              .addMethod(METHOD_ADD_USER)
-              .addMethod(METHOD_MODIFY_PASSWORD)
-              .addMethod(METHOD_REMOVE_USER)
-              .addMethod(METHOD_MODIFY_USER)
+              .setSchemaDescriptor(new UserServiceFileDescriptorSupplier())
+              .addMethod(getListUserMethod())
+              .addMethod(getAddUserMethod())
+              .addMethod(getModifyPasswordMethod())
+              .addMethod(getRemoveUserMethod())
+              .addMethod(getModifyUserMethod())
               .build();
         }
       }

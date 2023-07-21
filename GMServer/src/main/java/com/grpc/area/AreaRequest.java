@@ -21,8 +21,11 @@ private static final long serialVersionUID = 0L;
     parentCode_ = "";
     areaCode_ = "";
     area_ = java.util.Collections.emptyList();
+    zipCode_ = "";
+    cityCode_ = "";
     name_ = "";
     shortName_ = "";
+    mergerName_ = "";
     pinyin_ = "";
     lng_ = 0F;
     lat_ = 0F;
@@ -88,6 +91,18 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(com.grpc.area.Area.parser(), extensionRegistry));
             break;
           }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            zipCode_ = s;
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            cityCode_ = s;
+            break;
+          }
           case 66: {
             java.lang.String s = input.readStringRequireUtf8();
 
@@ -98,6 +113,12 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             shortName_ = s;
+            break;
+          }
+          case 82: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            mergerName_ = s;
             break;
           }
           case 90: {
@@ -143,7 +164,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -299,6 +320,74 @@ private static final long serialVersionUID = 0L;
     return area_.get(index);
   }
 
+  public static final int ZIP_CODE_FIELD_NUMBER = 6;
+  private volatile java.lang.Object zipCode_;
+  /**
+   * <code>string zip_code = 6;</code>
+   */
+  public java.lang.String getZipCode() {
+    java.lang.Object ref = zipCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      zipCode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string zip_code = 6;</code>
+   */
+  public com.google.protobuf.ByteString
+      getZipCodeBytes() {
+    java.lang.Object ref = zipCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      zipCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CITY_CODE_FIELD_NUMBER = 7;
+  private volatile java.lang.Object cityCode_;
+  /**
+   * <code>string city_code = 7;</code>
+   */
+  public java.lang.String getCityCode() {
+    java.lang.Object ref = cityCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      cityCode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string city_code = 7;</code>
+   */
+  public com.google.protobuf.ByteString
+      getCityCodeBytes() {
+    java.lang.Object ref = cityCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      cityCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int NAME_FIELD_NUMBER = 8;
   private volatile java.lang.Object name_;
   /**
@@ -361,6 +450,40 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       shortName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int MERGER_NAME_FIELD_NUMBER = 10;
+  private volatile java.lang.Object mergerName_;
+  /**
+   * <code>string merger_name = 10;</code>
+   */
+  public java.lang.String getMergerName() {
+    java.lang.Object ref = mergerName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      mergerName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string merger_name = 10;</code>
+   */
+  public com.google.protobuf.ByteString
+      getMergerNameBytes() {
+    java.lang.Object ref = mergerName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      mergerName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -518,11 +641,20 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < area_.size(); i++) {
       output.writeMessage(5, area_.get(i));
     }
+    if (!getZipCodeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, zipCode_);
+    }
+    if (!getCityCodeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, cityCode_);
+    }
     if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, name_);
     }
     if (!getShortNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, shortName_);
+    }
+    if (!getMergerNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, mergerName_);
     }
     if (!getPinyinBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, pinyin_);
@@ -575,11 +707,20 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, area_.get(i));
     }
+    if (!getZipCodeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, zipCode_);
+    }
+    if (!getCityCodeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, cityCode_);
+    }
     if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, name_);
     }
     if (!getShortNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, shortName_);
+    }
+    if (!getMergerNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, mergerName_);
     }
     if (!getPinyinBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, pinyin_);
@@ -637,10 +778,16 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAreaCode());
     result = result && getAreaList()
         .equals(other.getAreaList());
+    result = result && getZipCode()
+        .equals(other.getZipCode());
+    result = result && getCityCode()
+        .equals(other.getCityCode());
     result = result && getName()
         .equals(other.getName());
     result = result && getShortName()
         .equals(other.getShortName());
+    result = result && getMergerName()
+        .equals(other.getMergerName());
     result = result && getPinyin()
         .equals(other.getPinyin());
     result = result && (
@@ -684,10 +831,16 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AREA_FIELD_NUMBER;
       hash = (53 * hash) + getAreaList().hashCode();
     }
+    hash = (37 * hash) + ZIP_CODE_FIELD_NUMBER;
+    hash = (53 * hash) + getZipCode().hashCode();
+    hash = (37 * hash) + CITY_CODE_FIELD_NUMBER;
+    hash = (53 * hash) + getCityCode().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + SHORT_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getShortName().hashCode();
+    hash = (37 * hash) + MERGER_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getMergerName().hashCode();
     hash = (37 * hash) + PINYIN_FIELD_NUMBER;
     hash = (53 * hash) + getPinyin().hashCode();
     hash = (37 * hash) + LNG_FIELD_NUMBER;
@@ -854,9 +1007,15 @@ private static final long serialVersionUID = 0L;
       } else {
         areaBuilder_.clear();
       }
+      zipCode_ = "";
+
+      cityCode_ = "";
+
       name_ = "";
 
       shortName_ = "";
+
+      mergerName_ = "";
 
       pinyin_ = "";
 
@@ -915,8 +1074,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.area_ = areaBuilder_.build();
       }
+      result.zipCode_ = zipCode_;
+      result.cityCode_ = cityCode_;
       result.name_ = name_;
       result.shortName_ = shortName_;
+      result.mergerName_ = mergerName_;
       result.pinyin_ = pinyin_;
       result.lng_ = lng_;
       result.lat_ = lat_;
@@ -1014,12 +1176,24 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.getZipCode().isEmpty()) {
+        zipCode_ = other.zipCode_;
+        onChanged();
+      }
+      if (!other.getCityCode().isEmpty()) {
+        cityCode_ = other.cityCode_;
+        onChanged();
+      }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
         onChanged();
       }
       if (!other.getShortName().isEmpty()) {
         shortName_ = other.shortName_;
+        onChanged();
+      }
+      if (!other.getMergerName().isEmpty()) {
+        mergerName_ = other.mergerName_;
         onChanged();
       }
       if (!other.getPinyin().isEmpty()) {
@@ -1508,6 +1682,144 @@ private static final long serialVersionUID = 0L;
       return areaBuilder_;
     }
 
+    private java.lang.Object zipCode_ = "";
+    /**
+     * <code>string zip_code = 6;</code>
+     */
+    public java.lang.String getZipCode() {
+      java.lang.Object ref = zipCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        zipCode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string zip_code = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getZipCodeBytes() {
+      java.lang.Object ref = zipCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        zipCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string zip_code = 6;</code>
+     */
+    public Builder setZipCode(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      zipCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string zip_code = 6;</code>
+     */
+    public Builder clearZipCode() {
+      
+      zipCode_ = getDefaultInstance().getZipCode();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string zip_code = 6;</code>
+     */
+    public Builder setZipCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      zipCode_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object cityCode_ = "";
+    /**
+     * <code>string city_code = 7;</code>
+     */
+    public java.lang.String getCityCode() {
+      java.lang.Object ref = cityCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cityCode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string city_code = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCityCodeBytes() {
+      java.lang.Object ref = cityCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cityCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string city_code = 7;</code>
+     */
+    public Builder setCityCode(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      cityCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string city_code = 7;</code>
+     */
+    public Builder clearCityCode() {
+      
+      cityCode_ = getDefaultInstance().getCityCode();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string city_code = 7;</code>
+     */
+    public Builder setCityCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      cityCode_ = value;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object name_ = "";
     /**
      * <code>string name = 8;</code>
@@ -1642,6 +1954,75 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       shortName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object mergerName_ = "";
+    /**
+     * <code>string merger_name = 10;</code>
+     */
+    public java.lang.String getMergerName() {
+      java.lang.Object ref = mergerName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mergerName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string merger_name = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMergerNameBytes() {
+      java.lang.Object ref = mergerName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mergerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string merger_name = 10;</code>
+     */
+    public Builder setMergerName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      mergerName_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string merger_name = 10;</code>
+     */
+    public Builder clearMergerName() {
+      
+      mergerName_ = getDefaultInstance().getMergerName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string merger_name = 10;</code>
+     */
+    public Builder setMergerNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      mergerName_ = value;
       onChanged();
       return this;
     }
@@ -1942,7 +2323,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

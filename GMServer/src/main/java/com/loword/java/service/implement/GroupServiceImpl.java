@@ -1,7 +1,9 @@
 package com.loword.java.service.implement;
 
 import com.loword.java.kernel.entity.IMGroup;
+import com.loword.java.kernel.entity.IMGroupMember;
 import com.loword.java.kernel.mybatis.mapper.IMGroupMapper;
+import com.loword.java.kernel.mybatis.mapper.IMGroupMemberMapper;
 import com.loword.java.service.IGroupService;
 
 import org.springframework.stereotype.Service;
@@ -14,9 +16,10 @@ import java.util.List;
  */
 @Service("groupService")
 public class GroupServiceImpl implements IGroupService {
-
     @Resource
     private IMGroupMapper groupMapper;
+    @Resource
+    private IMGroupMemberMapper groupMemberMapper;
 
     @Override
     public IMGroup getGroupById(Integer userId) {
@@ -40,6 +43,10 @@ public class GroupServiceImpl implements IGroupService {
 
     @Override
     public Boolean deleteGroup(Integer id) {
+        IMGroupMember groupMember = new IMGroupMember();
+        groupMember.setGroupid(id);
+        groupMember.setStatus(1);
+        groupMemberMapper.updateByPrimaryKeySelective(groupMember);
         return groupMapper.deleteByPrimaryKey(id) > 0;
     }
 

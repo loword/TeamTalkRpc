@@ -38,25 +38,26 @@ public final class GroupOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\013group.proto\022\016com.grpc.group\"u\n\005Group\022\n" +
-      "\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\017\n\007creator\030\003 \001(" +
-      "\005\022\017\n\007userCnt\030\004 \001(\005\022\016\n\006status\030\005 \001(\005\022\017\n\007up" +
-      "dated\030\006 \001(\005\022\017\n\007created\030\007 \001(\005\"p\n\014GroupReq" +
-      "uest\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\017\n\007creato" +
-      "r\030\003 \001(\005\022\017\n\007userCnt\030\004 \001(\005\022$\n\005group\030\005 \003(\0132" +
-      "\025.com.grpc.group.Group\"\204\001\n\rGroupResponse" +
-      "\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\017\n\007creator\030\003 " +
-      "\001(\005\022\017\n\007userCnt\030\004 \001(\005\022\021\n\tstatus_id\030\005 \001(\005\022" +
-      "$\n\005group\030\006 \003(\0132\025.com.grpc.group.Group2\271\002" +
-      "\n\014GroupService\022H\n\tlistGroup\022\034.com.grpc.g" +
-      "roup.GroupRequest\032\035.com.grpc.group.Group" +
-      "Response\022G\n\010addGroup\022\034.com.grpc.group.Gr" +
-      "oupRequest\032\035.com.grpc.group.GroupRespons" +
-      "e\022J\n\013removeGroup\022\034.com.grpc.group.GroupR" +
-      "equest\032\035.com.grpc.group.GroupResponse\022J\n" +
-      "\013modifyGroup\022\034.com.grpc.group.GroupReque" +
-      "st\032\035.com.grpc.group.GroupResponseB\002P\001b\006p" +
-      "roto3"
+      "\n\013group.proto\022\016com.grpc.group\"\205\001\n\005Group\022" +
+      "\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\016\n\006avatar\030\003 \001(" +
+      "\t\022\017\n\007creator\030\004 \001(\005\022\017\n\007userCnt\030\005 \001(\005\022\016\n\006s" +
+      "tatus\030\006 \001(\005\022\017\n\007updated\030\007 \001(\005\022\017\n\007created\030" +
+      "\010 \001(\005\"\221\001\n\014GroupRequest\022\n\n\002id\030\001 \001(\005\022\014\n\004na" +
+      "me\030\002 \001(\t\022\016\n\006avatar\030\003 \001(\t\022\017\n\007creator\030\004 \001(" +
+      "\005\022$\n\005group\030\005 \003(\0132\025.com.grpc.group.Group\022" +
+      "\017\n\007userCnt\030\006 \001(\005\022\017\n\007updated\030\007 \001(\005\"\224\001\n\rGr" +
+      "oupResponse\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\016\n" +
+      "\006avatar\030\003 \001(\t\022\017\n\007creator\030\004 \001(\005\022$\n\005group\030" +
+      "\005 \003(\0132\025.com.grpc.group.Group\022\021\n\tstatus_i" +
+      "d\030\006 \001(\005\022\017\n\007userCnt\030\007 \001(\0052\271\002\n\014GroupServic" +
+      "e\022H\n\tlistGroup\022\034.com.grpc.group.GroupReq" +
+      "uest\032\035.com.grpc.group.GroupResponse\022G\n\010a" +
+      "ddGroup\022\034.com.grpc.group.GroupRequest\032\035." +
+      "com.grpc.group.GroupResponse\022J\n\013removeGr" +
+      "oup\022\034.com.grpc.group.GroupRequest\032\035.com." +
+      "grpc.group.GroupResponse\022J\n\013modifyGroup\022" +
+      "\034.com.grpc.group.GroupRequest\032\035.com.grpc" +
+      ".group.GroupResponseB\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -75,19 +76,19 @@ public final class GroupOuterClass {
     internal_static_com_grpc_group_Group_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_grpc_group_Group_descriptor,
-        new java.lang.String[] { "Id", "Name", "Creator", "UserCnt", "Status", "Updated", "Created", });
+        new java.lang.String[] { "Id", "Name", "Avatar", "Creator", "UserCnt", "Status", "Updated", "Created", });
     internal_static_com_grpc_group_GroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_grpc_group_GroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_grpc_group_GroupRequest_descriptor,
-        new java.lang.String[] { "Id", "Name", "Creator", "UserCnt", "Group", });
+        new java.lang.String[] { "Id", "Name", "Avatar", "Creator", "Group", "UserCnt", "Updated", });
     internal_static_com_grpc_group_GroupResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_grpc_group_GroupResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_grpc_group_GroupResponse_descriptor,
-        new java.lang.String[] { "Id", "Name", "Creator", "UserCnt", "StatusId", "Group", });
+        new java.lang.String[] { "Id", "Name", "Avatar", "Creator", "Group", "StatusId", "UserCnt", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

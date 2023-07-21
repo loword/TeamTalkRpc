@@ -23,14 +23,19 @@ public interface GroupRequestOrBuilder extends
       getNameBytes();
 
   /**
-   * <code>int32 creator = 3;</code>
+   * <code>string avatar = 3;</code>
    */
-  int getCreator();
+  java.lang.String getAvatar();
+  /**
+   * <code>string avatar = 3;</code>
+   */
+  com.google.protobuf.ByteString
+      getAvatarBytes();
 
   /**
-   * <code>int32 userCnt = 4;</code>
+   * <code>int32 creator = 4;</code>
    */
-  int getUserCnt();
+  int getCreator();
 
   /**
    * <code>repeated .com.grpc.group.Group group = 5;</code>
@@ -55,4 +60,14 @@ public interface GroupRequestOrBuilder extends
    */
   com.grpc.group.GroupOrBuilder getGroupOrBuilder(
       int index);
+
+  /**
+   * <code>int32 userCnt = 6;</code>
+   */
+  int getUserCnt();
+
+  /**
+   * <code>int32 updated = 7;</code>
+   */
+  int getUpdated();
 }

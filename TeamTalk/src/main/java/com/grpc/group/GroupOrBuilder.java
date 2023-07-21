@@ -23,27 +23,37 @@ public interface GroupOrBuilder extends
       getNameBytes();
 
   /**
-   * <code>int32 creator = 3;</code>
+   * <code>string avatar = 3;</code>
+   */
+  java.lang.String getAvatar();
+  /**
+   * <code>string avatar = 3;</code>
+   */
+  com.google.protobuf.ByteString
+      getAvatarBytes();
+
+  /**
+   * <code>int32 creator = 4;</code>
    */
   int getCreator();
 
   /**
-   * <code>int32 userCnt = 4;</code>
+   * <code>int32 userCnt = 5;</code>
    */
   int getUserCnt();
 
   /**
-   * <code>int32 status = 5;</code>
+   * <code>int32 status = 6;</code>
    */
   int getStatus();
 
   /**
-   * <code>int32 updated = 6;</code>
+   * <code>int32 updated = 7;</code>
    */
   int getUpdated();
 
   /**
-   * <code>int32 created = 7;</code>
+   * <code>int32 created = 8;</code>
    */
   int getCreated();
 }

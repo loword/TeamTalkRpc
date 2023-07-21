@@ -58,6 +58,8 @@ message UserRequest {
     int32 departid=8;
 
     repeated User user=10;
+
+
 }
 
 message UserResponse {

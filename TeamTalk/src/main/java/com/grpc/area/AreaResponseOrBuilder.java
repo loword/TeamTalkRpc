@@ -132,32 +132,26 @@ public interface AreaResponseOrBuilder extends
   float getLat();
 
   /**
-   * <code>string remark = 14;</code>
+   * <code>repeated .com.grpc.area.AreaTree tree = 20;</code>
    */
-  java.lang.String getRemark();
+  java.util.List<com.grpc.area.AreaTree> 
+      getTreeList();
   /**
-   * <code>string remark = 14;</code>
+   * <code>repeated .com.grpc.area.AreaTree tree = 20;</code>
    */
-  com.google.protobuf.ByteString
-      getRemarkBytes();
-
+  com.grpc.area.AreaTree getTree(int index);
   /**
-   * <code>int32 create_time = 15;</code>
+   * <code>repeated .com.grpc.area.AreaTree tree = 20;</code>
    */
-  int getCreateTime();
-
+  int getTreeCount();
   /**
-   * <code>int32 create_user = 16;</code>
+   * <code>repeated .com.grpc.area.AreaTree tree = 20;</code>
    */
-  int getCreateUser();
-
+  java.util.List<? extends com.grpc.area.AreaTreeOrBuilder> 
+      getTreeOrBuilderList();
   /**
-   * <code>int32 update_time = 17;</code>
+   * <code>repeated .com.grpc.area.AreaTree tree = 20;</code>
    */
-  int getUpdateTime();
-
-  /**
-   * <code>int32 update_user = 18;</code>
-   */
-  int getUpdateUser();
+  com.grpc.area.AreaTreeOrBuilder getTreeOrBuilder(
+      int index);
 }

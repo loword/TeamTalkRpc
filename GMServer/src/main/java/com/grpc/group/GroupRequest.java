@@ -18,9 +18,11 @@ private static final long serialVersionUID = 0L;
   private GroupRequest() {
     id_ = 0;
     name_ = "";
+    avatar_ = "";
     creator_ = 0;
-    userCnt_ = 0;
     group_ = java.util.Collections.emptyList();
+    userCnt_ = 0;
+    updated_ = 0;
   }
 
   @java.lang.Override
@@ -58,14 +60,15 @@ private static final long serialVersionUID = 0L;
             name_ = s;
             break;
           }
-          case 24: {
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            creator_ = input.readInt32();
+            avatar_ = s;
             break;
           }
           case 32: {
 
-            userCnt_ = input.readInt32();
+            creator_ = input.readInt32();
             break;
           }
           case 42: {
@@ -77,8 +80,18 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(com.grpc.group.Group.parser(), extensionRegistry));
             break;
           }
+          case 48: {
+
+            userCnt_ = input.readInt32();
+            break;
+          }
+          case 56: {
+
+            updated_ = input.readInt32();
+            break;
+          }
           default: {
-            if (!parseUnknownField(
+            if (!parseUnknownFieldProto3(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -156,22 +169,47 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CREATOR_FIELD_NUMBER = 3;
+  public static final int AVATAR_FIELD_NUMBER = 3;
+  private volatile java.lang.Object avatar_;
+  /**
+   * <code>string avatar = 3;</code>
+   */
+  public java.lang.String getAvatar() {
+    java.lang.Object ref = avatar_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      avatar_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string avatar = 3;</code>
+   */
+  public com.google.protobuf.ByteString
+      getAvatarBytes() {
+    java.lang.Object ref = avatar_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      avatar_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CREATOR_FIELD_NUMBER = 4;
   private int creator_;
   /**
-   * <code>int32 creator = 3;</code>
+   * <code>int32 creator = 4;</code>
    */
   public int getCreator() {
     return creator_;
-  }
-
-  public static final int USERCNT_FIELD_NUMBER = 4;
-  private int userCnt_;
-  /**
-   * <code>int32 userCnt = 4;</code>
-   */
-  public int getUserCnt() {
-    return userCnt_;
   }
 
   public static final int GROUP_FIELD_NUMBER = 5;
@@ -209,6 +247,24 @@ private static final long serialVersionUID = 0L;
     return group_.get(index);
   }
 
+  public static final int USERCNT_FIELD_NUMBER = 6;
+  private int userCnt_;
+  /**
+   * <code>int32 userCnt = 6;</code>
+   */
+  public int getUserCnt() {
+    return userCnt_;
+  }
+
+  public static final int UPDATED_FIELD_NUMBER = 7;
+  private int updated_;
+  /**
+   * <code>int32 updated = 7;</code>
+   */
+  public int getUpdated() {
+    return updated_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -229,14 +285,20 @@ private static final long serialVersionUID = 0L;
     if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
-    if (creator_ != 0) {
-      output.writeInt32(3, creator_);
+    if (!getAvatarBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, avatar_);
     }
-    if (userCnt_ != 0) {
-      output.writeInt32(4, userCnt_);
+    if (creator_ != 0) {
+      output.writeInt32(4, creator_);
     }
     for (int i = 0; i < group_.size(); i++) {
       output.writeMessage(5, group_.get(i));
+    }
+    if (userCnt_ != 0) {
+      output.writeInt32(6, userCnt_);
+    }
+    if (updated_ != 0) {
+      output.writeInt32(7, updated_);
     }
     unknownFields.writeTo(output);
   }
@@ -254,17 +316,24 @@ private static final long serialVersionUID = 0L;
     if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
+    if (!getAvatarBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, avatar_);
+    }
     if (creator_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(3, creator_);
-    }
-    if (userCnt_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(4, userCnt_);
+        .computeInt32Size(4, creator_);
     }
     for (int i = 0; i < group_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, group_.get(i));
+    }
+    if (userCnt_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(6, userCnt_);
+    }
+    if (updated_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(7, updated_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -286,12 +355,16 @@ private static final long serialVersionUID = 0L;
         == other.getId());
     result = result && getName()
         .equals(other.getName());
+    result = result && getAvatar()
+        .equals(other.getAvatar());
     result = result && (getCreator()
         == other.getCreator());
-    result = result && (getUserCnt()
-        == other.getUserCnt());
     result = result && getGroupList()
         .equals(other.getGroupList());
+    result = result && (getUserCnt()
+        == other.getUserCnt());
+    result = result && (getUpdated()
+        == other.getUpdated());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -307,14 +380,18 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getId();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
+    hash = (37 * hash) + AVATAR_FIELD_NUMBER;
+    hash = (53 * hash) + getAvatar().hashCode();
     hash = (37 * hash) + CREATOR_FIELD_NUMBER;
     hash = (53 * hash) + getCreator();
-    hash = (37 * hash) + USERCNT_FIELD_NUMBER;
-    hash = (53 * hash) + getUserCnt();
     if (getGroupCount() > 0) {
       hash = (37 * hash) + GROUP_FIELD_NUMBER;
       hash = (53 * hash) + getGroupList().hashCode();
     }
+    hash = (37 * hash) + USERCNT_FIELD_NUMBER;
+    hash = (53 * hash) + getUserCnt();
+    hash = (37 * hash) + UPDATED_FIELD_NUMBER;
+    hash = (53 * hash) + getUpdated();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -453,9 +530,9 @@ private static final long serialVersionUID = 0L;
 
       name_ = "";
 
-      creator_ = 0;
+      avatar_ = "";
 
-      userCnt_ = 0;
+      creator_ = 0;
 
       if (groupBuilder_ == null) {
         group_ = java.util.Collections.emptyList();
@@ -463,6 +540,10 @@ private static final long serialVersionUID = 0L;
       } else {
         groupBuilder_.clear();
       }
+      userCnt_ = 0;
+
+      updated_ = 0;
+
       return this;
     }
 
@@ -493,8 +574,8 @@ private static final long serialVersionUID = 0L;
       int to_bitField0_ = 0;
       result.id_ = id_;
       result.name_ = name_;
+      result.avatar_ = avatar_;
       result.creator_ = creator_;
-      result.userCnt_ = userCnt_;
       if (groupBuilder_ == null) {
         if (((bitField0_ & 0x00000010) == 0x00000010)) {
           group_ = java.util.Collections.unmodifiableList(group_);
@@ -504,6 +585,8 @@ private static final long serialVersionUID = 0L;
       } else {
         result.group_ = groupBuilder_.build();
       }
+      result.userCnt_ = userCnt_;
+      result.updated_ = updated_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -560,11 +643,12 @@ private static final long serialVersionUID = 0L;
         name_ = other.name_;
         onChanged();
       }
+      if (!other.getAvatar().isEmpty()) {
+        avatar_ = other.avatar_;
+        onChanged();
+      }
       if (other.getCreator() != 0) {
         setCreator(other.getCreator());
-      }
-      if (other.getUserCnt() != 0) {
-        setUserCnt(other.getUserCnt());
       }
       if (groupBuilder_ == null) {
         if (!other.group_.isEmpty()) {
@@ -591,6 +675,12 @@ private static final long serialVersionUID = 0L;
             groupBuilder_.addAllMessages(other.group_);
           }
         }
+      }
+      if (other.getUserCnt() != 0) {
+        setUserCnt(other.getUserCnt());
+      }
+      if (other.getUpdated() != 0) {
+        setUpdated(other.getUpdated());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -717,15 +807,84 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object avatar_ = "";
+    /**
+     * <code>string avatar = 3;</code>
+     */
+    public java.lang.String getAvatar() {
+      java.lang.Object ref = avatar_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        avatar_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string avatar = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAvatarBytes() {
+      java.lang.Object ref = avatar_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        avatar_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string avatar = 3;</code>
+     */
+    public Builder setAvatar(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      avatar_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string avatar = 3;</code>
+     */
+    public Builder clearAvatar() {
+      
+      avatar_ = getDefaultInstance().getAvatar();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string avatar = 3;</code>
+     */
+    public Builder setAvatarBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      avatar_ = value;
+      onChanged();
+      return this;
+    }
+
     private int creator_ ;
     /**
-     * <code>int32 creator = 3;</code>
+     * <code>int32 creator = 4;</code>
      */
     public int getCreator() {
       return creator_;
     }
     /**
-     * <code>int32 creator = 3;</code>
+     * <code>int32 creator = 4;</code>
      */
     public Builder setCreator(int value) {
       
@@ -734,37 +893,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 creator = 3;</code>
+     * <code>int32 creator = 4;</code>
      */
     public Builder clearCreator() {
       
       creator_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int userCnt_ ;
-    /**
-     * <code>int32 userCnt = 4;</code>
-     */
-    public int getUserCnt() {
-      return userCnt_;
-    }
-    /**
-     * <code>int32 userCnt = 4;</code>
-     */
-    public Builder setUserCnt(int value) {
-      
-      userCnt_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int32 userCnt = 4;</code>
-     */
-    public Builder clearUserCnt() {
-      
-      userCnt_ = 0;
       onChanged();
       return this;
     }
@@ -1008,10 +1141,62 @@ private static final long serialVersionUID = 0L;
       }
       return groupBuilder_;
     }
+
+    private int userCnt_ ;
+    /**
+     * <code>int32 userCnt = 6;</code>
+     */
+    public int getUserCnt() {
+      return userCnt_;
+    }
+    /**
+     * <code>int32 userCnt = 6;</code>
+     */
+    public Builder setUserCnt(int value) {
+      
+      userCnt_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 userCnt = 6;</code>
+     */
+    public Builder clearUserCnt() {
+      
+      userCnt_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int updated_ ;
+    /**
+     * <code>int32 updated = 7;</code>
+     */
+    public int getUpdated() {
+      return updated_;
+    }
+    /**
+     * <code>int32 updated = 7;</code>
+     */
+    public Builder setUpdated(int value) {
+      
+      updated_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 updated = 7;</code>
+     */
+    public Builder clearUpdated() {
+      
+      updated_ = 0;
+      onChanged();
+      return this;
+    }
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFields(unknownFields);
+      return super.setUnknownFieldsProto3(unknownFields);
     }
 
     @java.lang.Override

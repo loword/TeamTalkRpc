@@ -58,6 +58,14 @@ message UserRequest {
     int32 departid=8;
 
     repeated User user=10;
+
+    string cityCode = 11;
+
+    string countyCode = 12;
+
+    string townCode = 13;
+
+    string villageCode = 14;
 }
 
 message UserResponse {

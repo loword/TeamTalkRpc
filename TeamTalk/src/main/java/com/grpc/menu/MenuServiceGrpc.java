@@ -1,24 +1,24 @@
 package com.grpc.menu;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.5.0)",
+    value = "by gRPC proto compiler (version 1.13.2)",
     comments = "Source: menu.proto")
 public final class MenuServiceGrpc {
 
@@ -27,78 +27,167 @@ public final class MenuServiceGrpc {
   public static final String SERVICE_NAME = "com.grpc.menu.MenuService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
-      com.grpc.menu.MenuResponse> METHOD_LIST_MENU =
-      io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.menu.MenuService", "listMenu"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.menu.MenuRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.menu.MenuResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
-      com.grpc.menu.MenuResponse> METHOD_ADD_MENU =
-      io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.menu.MenuService", "addMenu"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.menu.MenuRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.menu.MenuResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
-      com.grpc.menu.MenuResponse> METHOD_REMOVE_MENU =
-      io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.menu.MenuService", "removeMenu"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.menu.MenuRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.menu.MenuResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
-      com.grpc.menu.MenuResponse> METHOD_MODIFY_MENU =
-      io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.menu.MenuService", "modifyMenu"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.menu.MenuRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.menu.MenuResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
-      com.grpc.menu.MenuResponse> METHOD_GET_ROUTE =
-      io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.menu.MenuService", "getRoute"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.menu.MenuRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.menu.MenuResponse.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
-      com.grpc.menu.MenuResponse> METHOD_GET_MENU =
-      io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "com.grpc.menu.MenuService", "getMenu"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.menu.MenuRequest.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              com.grpc.menu.MenuResponse.getDefaultInstance()))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
+      com.grpc.menu.MenuResponse> getListMenuMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
+      com.grpc.menu.MenuResponse> getListMenuMethod() {
+    io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse> getListMenuMethod;
+    if ((getListMenuMethod = MenuServiceGrpc.getListMenuMethod) == null) {
+      synchronized (MenuServiceGrpc.class) {
+        if ((getListMenuMethod = MenuServiceGrpc.getListMenuMethod) == null) {
+          MenuServiceGrpc.getListMenuMethod = getListMenuMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.menu.MenuService", "listMenu"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.menu.MenuRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.menu.MenuResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuServiceMethodDescriptorSupplier("listMenu"))
+                  .build();
+          }
+        }
+     }
+     return getListMenuMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
+      com.grpc.menu.MenuResponse> getAddMenuMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
+      com.grpc.menu.MenuResponse> getAddMenuMethod() {
+    io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse> getAddMenuMethod;
+    if ((getAddMenuMethod = MenuServiceGrpc.getAddMenuMethod) == null) {
+      synchronized (MenuServiceGrpc.class) {
+        if ((getAddMenuMethod = MenuServiceGrpc.getAddMenuMethod) == null) {
+          MenuServiceGrpc.getAddMenuMethod = getAddMenuMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.menu.MenuService", "addMenu"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.menu.MenuRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.menu.MenuResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuServiceMethodDescriptorSupplier("addMenu"))
+                  .build();
+          }
+        }
+     }
+     return getAddMenuMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
+      com.grpc.menu.MenuResponse> getRemoveMenuMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
+      com.grpc.menu.MenuResponse> getRemoveMenuMethod() {
+    io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse> getRemoveMenuMethod;
+    if ((getRemoveMenuMethod = MenuServiceGrpc.getRemoveMenuMethod) == null) {
+      synchronized (MenuServiceGrpc.class) {
+        if ((getRemoveMenuMethod = MenuServiceGrpc.getRemoveMenuMethod) == null) {
+          MenuServiceGrpc.getRemoveMenuMethod = getRemoveMenuMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.menu.MenuService", "removeMenu"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.menu.MenuRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.menu.MenuResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuServiceMethodDescriptorSupplier("removeMenu"))
+                  .build();
+          }
+        }
+     }
+     return getRemoveMenuMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
+      com.grpc.menu.MenuResponse> getModifyMenuMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
+      com.grpc.menu.MenuResponse> getModifyMenuMethod() {
+    io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse> getModifyMenuMethod;
+    if ((getModifyMenuMethod = MenuServiceGrpc.getModifyMenuMethod) == null) {
+      synchronized (MenuServiceGrpc.class) {
+        if ((getModifyMenuMethod = MenuServiceGrpc.getModifyMenuMethod) == null) {
+          MenuServiceGrpc.getModifyMenuMethod = getModifyMenuMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.menu.MenuService", "modifyMenu"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.menu.MenuRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.menu.MenuResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuServiceMethodDescriptorSupplier("modifyMenu"))
+                  .build();
+          }
+        }
+     }
+     return getModifyMenuMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
+      com.grpc.menu.MenuResponse> getGetRouteMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
+      com.grpc.menu.MenuResponse> getGetRouteMethod() {
+    io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse> getGetRouteMethod;
+    if ((getGetRouteMethod = MenuServiceGrpc.getGetRouteMethod) == null) {
+      synchronized (MenuServiceGrpc.class) {
+        if ((getGetRouteMethod = MenuServiceGrpc.getGetRouteMethod) == null) {
+          MenuServiceGrpc.getGetRouteMethod = getGetRouteMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.menu.MenuService", "getRoute"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.menu.MenuRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.menu.MenuResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuServiceMethodDescriptorSupplier("getRoute"))
+                  .build();
+          }
+        }
+     }
+     return getGetRouteMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
+      com.grpc.menu.MenuResponse> getGetMenuMethod;
+
+  public static io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest,
+      com.grpc.menu.MenuResponse> getGetMenuMethod() {
+    io.grpc.MethodDescriptor<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse> getGetMenuMethod;
+    if ((getGetMenuMethod = MenuServiceGrpc.getGetMenuMethod) == null) {
+      synchronized (MenuServiceGrpc.class) {
+        if ((getGetMenuMethod = MenuServiceGrpc.getGetMenuMethod) == null) {
+          MenuServiceGrpc.getGetMenuMethod = getGetMenuMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.menu.MenuRequest, com.grpc.menu.MenuResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.grpc.menu.MenuService", "getMenu"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.menu.MenuRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.menu.MenuResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new MenuServiceMethodDescriptorSupplier("getMenu"))
+                  .build();
+          }
+        }
+     }
+     return getGetMenuMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -131,83 +220,83 @@ public final class MenuServiceGrpc {
      */
     public void listMenu(com.grpc.menu.MenuRequest request,
         io.grpc.stub.StreamObserver<com.grpc.menu.MenuResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LIST_MENU, responseObserver);
+      asyncUnimplementedUnaryCall(getListMenuMethod(), responseObserver);
     }
 
     /**
      */
     public void addMenu(com.grpc.menu.MenuRequest request,
         io.grpc.stub.StreamObserver<com.grpc.menu.MenuResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_ADD_MENU, responseObserver);
+      asyncUnimplementedUnaryCall(getAddMenuMethod(), responseObserver);
     }
 
     /**
      */
     public void removeMenu(com.grpc.menu.MenuRequest request,
         io.grpc.stub.StreamObserver<com.grpc.menu.MenuResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_REMOVE_MENU, responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveMenuMethod(), responseObserver);
     }
 
     /**
      */
     public void modifyMenu(com.grpc.menu.MenuRequest request,
         io.grpc.stub.StreamObserver<com.grpc.menu.MenuResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_MODIFY_MENU, responseObserver);
+      asyncUnimplementedUnaryCall(getModifyMenuMethod(), responseObserver);
     }
 
     /**
      */
     public void getRoute(com.grpc.menu.MenuRequest request,
         io.grpc.stub.StreamObserver<com.grpc.menu.MenuResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_ROUTE, responseObserver);
+      asyncUnimplementedUnaryCall(getGetRouteMethod(), responseObserver);
     }
 
     /**
      */
     public void getMenu(com.grpc.menu.MenuRequest request,
         io.grpc.stub.StreamObserver<com.grpc.menu.MenuResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_GET_MENU, responseObserver);
+      asyncUnimplementedUnaryCall(getGetMenuMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_LIST_MENU,
+            getListMenuMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.menu.MenuRequest,
                 com.grpc.menu.MenuResponse>(
                   this, METHODID_LIST_MENU)))
           .addMethod(
-            METHOD_ADD_MENU,
+            getAddMenuMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.menu.MenuRequest,
                 com.grpc.menu.MenuResponse>(
                   this, METHODID_ADD_MENU)))
           .addMethod(
-            METHOD_REMOVE_MENU,
+            getRemoveMenuMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.menu.MenuRequest,
                 com.grpc.menu.MenuResponse>(
                   this, METHODID_REMOVE_MENU)))
           .addMethod(
-            METHOD_MODIFY_MENU,
+            getModifyMenuMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.menu.MenuRequest,
                 com.grpc.menu.MenuResponse>(
                   this, METHODID_MODIFY_MENU)))
           .addMethod(
-            METHOD_GET_ROUTE,
+            getGetRouteMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.menu.MenuRequest,
                 com.grpc.menu.MenuResponse>(
                   this, METHODID_GET_ROUTE)))
           .addMethod(
-            METHOD_GET_MENU,
+            getGetMenuMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.menu.MenuRequest,
@@ -240,7 +329,7 @@ public final class MenuServiceGrpc {
     public void listMenu(com.grpc.menu.MenuRequest request,
         io.grpc.stub.StreamObserver<com.grpc.menu.MenuResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LIST_MENU, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListMenuMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -248,7 +337,7 @@ public final class MenuServiceGrpc {
     public void addMenu(com.grpc.menu.MenuRequest request,
         io.grpc.stub.StreamObserver<com.grpc.menu.MenuResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_ADD_MENU, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddMenuMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -256,7 +345,7 @@ public final class MenuServiceGrpc {
     public void removeMenu(com.grpc.menu.MenuRequest request,
         io.grpc.stub.StreamObserver<com.grpc.menu.MenuResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_REMOVE_MENU, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRemoveMenuMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -264,7 +353,7 @@ public final class MenuServiceGrpc {
     public void modifyMenu(com.grpc.menu.MenuRequest request,
         io.grpc.stub.StreamObserver<com.grpc.menu.MenuResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_MENU, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getModifyMenuMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -272,7 +361,7 @@ public final class MenuServiceGrpc {
     public void getRoute(com.grpc.menu.MenuRequest request,
         io.grpc.stub.StreamObserver<com.grpc.menu.MenuResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_ROUTE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetRouteMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -280,7 +369,7 @@ public final class MenuServiceGrpc {
     public void getMenu(com.grpc.menu.MenuRequest request,
         io.grpc.stub.StreamObserver<com.grpc.menu.MenuResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_GET_MENU, getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetMenuMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -306,42 +395,42 @@ public final class MenuServiceGrpc {
      */
     public com.grpc.menu.MenuResponse listMenu(com.grpc.menu.MenuRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LIST_MENU, getCallOptions(), request);
+          getChannel(), getListMenuMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.menu.MenuResponse addMenu(com.grpc.menu.MenuRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_ADD_MENU, getCallOptions(), request);
+          getChannel(), getAddMenuMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.menu.MenuResponse removeMenu(com.grpc.menu.MenuRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_REMOVE_MENU, getCallOptions(), request);
+          getChannel(), getRemoveMenuMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.menu.MenuResponse modifyMenu(com.grpc.menu.MenuRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_MODIFY_MENU, getCallOptions(), request);
+          getChannel(), getModifyMenuMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.menu.MenuResponse getRoute(com.grpc.menu.MenuRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_ROUTE, getCallOptions(), request);
+          getChannel(), getGetRouteMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.grpc.menu.MenuResponse getMenu(com.grpc.menu.MenuRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_GET_MENU, getCallOptions(), request);
+          getChannel(), getGetMenuMethod(), getCallOptions(), request);
     }
   }
 
@@ -368,7 +457,7 @@ public final class MenuServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.menu.MenuResponse> listMenu(
         com.grpc.menu.MenuRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LIST_MENU, getCallOptions()), request);
+          getChannel().newCall(getListMenuMethod(), getCallOptions()), request);
     }
 
     /**
@@ -376,7 +465,7 @@ public final class MenuServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.menu.MenuResponse> addMenu(
         com.grpc.menu.MenuRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_ADD_MENU, getCallOptions()), request);
+          getChannel().newCall(getAddMenuMethod(), getCallOptions()), request);
     }
 
     /**
@@ -384,7 +473,7 @@ public final class MenuServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.menu.MenuResponse> removeMenu(
         com.grpc.menu.MenuRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_REMOVE_MENU, getCallOptions()), request);
+          getChannel().newCall(getRemoveMenuMethod(), getCallOptions()), request);
     }
 
     /**
@@ -392,7 +481,7 @@ public final class MenuServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.menu.MenuResponse> modifyMenu(
         com.grpc.menu.MenuRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_MODIFY_MENU, getCallOptions()), request);
+          getChannel().newCall(getModifyMenuMethod(), getCallOptions()), request);
     }
 
     /**
@@ -400,7 +489,7 @@ public final class MenuServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.menu.MenuResponse> getRoute(
         com.grpc.menu.MenuRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_ROUTE, getCallOptions()), request);
+          getChannel().newCall(getGetRouteMethod(), getCallOptions()), request);
     }
 
     /**
@@ -408,7 +497,7 @@ public final class MenuServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.menu.MenuResponse> getMenu(
         com.grpc.menu.MenuRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_GET_MENU, getCallOptions()), request);
+          getChannel().newCall(getGetMenuMethod(), getCallOptions()), request);
     }
   }
 
@@ -476,10 +565,38 @@ public final class MenuServiceGrpc {
     }
   }
 
-  private static final class MenuServiceDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
+  private static abstract class MenuServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    MenuServiceBaseDescriptorSupplier() {}
+
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.grpc.menu.MenuOuterClass.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("MenuService");
+    }
+  }
+
+  private static final class MenuServiceFileDescriptorSupplier
+      extends MenuServiceBaseDescriptorSupplier {
+    MenuServiceFileDescriptorSupplier() {}
+  }
+
+  private static final class MenuServiceMethodDescriptorSupplier
+      extends MenuServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    MenuServiceMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
     }
   }
 
@@ -492,13 +609,13 @@ public final class MenuServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new MenuServiceDescriptorSupplier())
-              .addMethod(METHOD_LIST_MENU)
-              .addMethod(METHOD_ADD_MENU)
-              .addMethod(METHOD_REMOVE_MENU)
-              .addMethod(METHOD_MODIFY_MENU)
-              .addMethod(METHOD_GET_ROUTE)
-              .addMethod(METHOD_GET_MENU)
+              .setSchemaDescriptor(new MenuServiceFileDescriptorSupplier())
+              .addMethod(getListMenuMethod())
+              .addMethod(getAddMenuMethod())
+              .addMethod(getRemoveMenuMethod())
+              .addMethod(getModifyMenuMethod())
+              .addMethod(getGetRouteMethod())
+              .addMethod(getGetMenuMethod())
               .build();
         }
       }
