@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.loword.java.kernel.mybatis.mapper.UserAreaMapper">
+  <sql id="Base_Column_List">
+	  id, user_id,
+	  area_type,
+	  province_code,
+	  city_code,
+	  county_code,
+	  county,
+	  town_code,
+	  town,
+	  village_code,
+	  village,
+	  zip_code,
+	  telphone_code,
+	  detail_name,
+	  short_name,
+	  merger_name,
+	  pinyin,
+	  lng,
+	  lat,
+	  is_default,
+	  status,
+	  remark,
+	  create_time,
+	  create_user,
+	  update_time,
+	  update_user
+  </sql>
+ 
+  <select id="selectById" resultType="com.loword.java.kernel.entity.user_area">
+    select 
+    <include refid="Base_Column_List" />
+    from im_user_area where user_id = #{id}
+  </select>
+
+  <insert id="insert" parameterType="com.loword.java.kernel.entity.user_area">
+    insert into im_user_area
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+		<if test="userId != null">
+		   user_id,
+		</if>
+		<if test="areaType != null">
+				area_type,
+		</if>
+		<if test="provinceCode != null and provinceCode != ''">
+				province_code,
+		</if>
+		<if test="cityCode != null and cityCode != ''">
+				city_code,
+		</if>
+		<if test="countyCode != null and countyCode != ''">
+				county_code,
+		</if>
+		<if test="county != null and county != ''">
+				county,
+		</if>
+		<if test="townCode != null and townCode != ''">
+				town_code,
+		</if>
+		<if test="town != null and town != ''">
+				town,
+		</if>
+		<if test="villageCode != null and villageCode != ''">
+				village_code,
+		</if>
+		<if test="village != null and village != ''">
+				village,
+		</if>
+		<if test="zipCode != null and zipCode != ''">
+				zip_code,
+		</if>
+		<if test="telphoneCode != null and telphoneCode != ''">
+				telphone_code,
+		</if>
+		<if test="detailName != null and detailName != ''">
+				detail_name,
+		</if>
+		<if test="shortName != null and shortName != ''">
+				short_name,
+		</if>
+		<if test="mergerName != null and mergerName != ''">
+				merger_name,
+		</if><if test="pinyin != null and pinyin != ''">
+				pinyin,
+		</if>
+		<if test="lng != null and lng != 0">
+				lng,
+		</if>
+		<if test="lat != null and lat != 0">
+				lat,
+		</if>
+		<if test="status != null">
+				status,
+		</if>
+		<if test="remark != null and remark != ''">
+				remark,
+		</if>
+		<if test="createTime != null">
+				create_time,
+		</if>
+		<if test="createUser != null">
+				create_user,
+		</if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+	    #{userId,jdbcType=INTEGER},
+	  </if>
+		<if test="areaType != null">
+			#{areaType,jdbcType=INTEGER},
+		</if>
+	  <if test="provinceCode != null and provinceCode != ''">
+	    #{provinceCode,jdbcType=VARCHAR},
+	  </if>
+		<if test="cityCode != null and cityCode != ''">
+			#{cityCode,jdbcType=VARCHAR},
+		</if>
+		<if test="countyCode != null and countyCode != ''">
+			#{countyCode,jdbcType=VARCHAR},
+		</if>
+		<if test="county != null and county != ''">
+			#{county,jdbcType=VARCHAR},
+		</if>
+		<if test="townCode != null and townCode != ''">
+			#{townCode,jdbcType=VARCHAR},
+		</if>
+		<if test="town != null and town != ''">
+			#{town,jdbcType=VARCHAR},
+		</if>
+		<if test="villageCode != null and villageCode != ''">
+			#{villageCode,jdbcType=VARCHAR},
+		</if>
+		<if test="village != null and village != ''">
+			#{village,jdbcType=VARCHAR},
+		</if>
+	  <if test="zipCode != null and zipCode != ''">
+	    #{zipCode,jdbcType=VARCHAR},
+	  </if>
+	  <if test="telphoneCode != null and telphoneCode != ''">
+	    #{telphoneCode,jdbcType=VARCHAR},
+	  </if>
+	  <if test="detailName != null and detailName != ''">
+	    #{detailName,jdbcType=VARCHAR},
+	  </if>
+	  <if test="shortName != null and shortName != ''">
+	    #{shortName,jdbcType=VARCHAR},
+	  </if>
+	  <if test="mergerName != null and mergerName != ''">
+	    #{mergerName,jdbcType=VARCHAR},
+	  </if>
+	  <if test="pinyin != null and pinyin != ''">
+	    #{pinyin,jdbcType=VARCHAR},
+	  </if>
+	  <if test="lng != null and lng != 0">
+	    #{lng,jdbcType=DECIMAL},
+	  </if>
+	  <if test="lat != null and lat != 0">
+	    #{lat,jdbcType=DECIMAL},
+	  </if>
+	<if test="isDefault != null">
+		#{isDefault,jdbcType=INTEGER},
+	</if>
+	<if test="status != null">
+	#{status,jdbcType=INTEGER},
+	</if>
+	<if test="remark != null and remark != ''">
+	#{remark,jdbcType=VARCHAR},
+	</if>
+	<if test="createTime != null">
+	  FROM_UNIXTIME(#{createTime,jdbcType=TIMESTAMP}),
+	</if>
+	<if test="createUser != null">
+	#{createUser,jdbcType=INTEGER},
+	</if>
+	</trim>
+  </insert>
+
+  <update id="updateById" parameterType="com.loword.java.kernel.entity.sys_area">
+    update im_user_area
+    <set>
+			<if test="et.userId != null">
+				user_id= #{et.userId},
+			</if>
+			<if test="et.areaType != null">
+				area_type= #{et.areaType},
+			</if>
+			<if test="et.provinceCode != null and et.provinceCode != ''">
+				province_code= #{et.provinceCode},
+			</if>
+			<if test="et.cityCode != null and et.cityCode != ''">
+				city_code= #{et.cityCode},
+			</if>
+			<if test="et.countyCode != null and et.countyCode != ''">
+				county_code= #{et.countyCode},
+			</if>
+			<if test="et.county != null and et.county != ''">
+				county= #{et.county},
+			</if>
+			<if test="et.townCode != null and et.townCode != ''">
+				town_code= #{et.townCode},
+			</if>
+			<if test="et.town != null and et.town != ''">
+				town= #{et.town},
+			</if>
+			<if test="et.villageCode != null and et.villageCode != ''">
+				village_code= #{et.villageCode},
+			</if>
+			<if test="et.village != null and et.village != ''">
+				village = #{et.village},
+			</if>
+			<if test="et.zipCode != null and et.zipCode != ''">
+				zip_code = #{et.zipCode},
+			</if>
+			<if test="et.telphoneCode != null and et.telphoneCode != ''">
+				telphone_code = #{et.telphoneCode},
+			</if>
+			<if test="et.detailName != null and et.detailName != ''">
+				detail_name = #{et.detailName},
+			</if>
+			<if test="et.shortName != null and et.shortName != ''">
+				short_name = #{et.shortName},
+			</if>
+			<if test="et.mergerName != null and et.mergerName != ''">
+				merger_name = #{et.mergerName},
+			</if>
+			<if test="et.pinyin != null and et.pinyin != ''">
+				pinyin = #{et.pinyin},
+			</if>
+			<if test="et.lng != null and et.lng != 0">
+				lng = #{et.lng},
+			</if>
+			<if test="et.lat != null and et.lat != 0">
+				lat = #{et.lat},
+			</if>
+			<if test="et.status != null">
+				status = #{et.status},
+			</if>
+			<if test="et.remark != null and et.remark != ''">
+				remark = #{et.remark},
+			</if>
+			<if test="et.updateTime != null">
+				update_time =  FROM_UNIXTIME(#{et.updateTime}),
+			</if>
+			<if test="et.updateUser != null">
+				update_user = #{et.updateUser},
+			</if>
+    </set>
+    where id = #{id}
+  </update>
+
+</mapper>

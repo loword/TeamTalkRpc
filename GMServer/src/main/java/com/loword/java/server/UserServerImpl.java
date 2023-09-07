@@ -1,15 +1,22 @@
 package com.loword.java.server;
 
-import java.util.List;
-
+import com.google.gson.Gson;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.util.JsonFormat;
 import com.grpc.user.User;
 import com.grpc.user.UserRequest;
 import com.grpc.user.UserResponse;
 import com.grpc.user.UserServiceGrpc;
 import com.loword.java.kernel.entity.IMUser;
+import com.loword.java.kernel.entity.user_area;
 import com.loword.java.service.IUserService;
-
+import com.loword.java.service.UserAreaService;
 import io.grpc.stub.StreamObserver;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by wx on 2017/11/9.
@@ -23,9 +30,9 @@ public class UserServerImpl extends UserServiceGrpc.UserServiceImplBase {
 
     @Override
     public void addUser(UserRequest request, StreamObserver<UserResponse> responseStreamObserver){
-
         String name=request.getName();
         IMUser user=new IMUser();
+        user_area uarea=new user_area();
 
         IMUser existUser =this.userService.getUserByName(name);
         if(existUser !=null){
@@ -34,9 +41,8 @@ public class UserServerImpl extends UserServiceGrpc.UserServiceImplBase {
                     .setStatusId(1)
                     .build();
             responseStreamObserver.onNext(response);
-        }
-        else{
-            user.setName(name);
+        }  else {
+            /*user.setName(name);
             user.setSex((byte)request.getSex());
             user.setNick(request.getNick());
             user.setPassword(request.getPassword());
@@ -44,8 +50,25 @@ public class UserServerImpl extends UserServiceGrpc.UserServiceImplBase {
             user.setPhone(request.getPhone());
             user.setEmail(request.getEmail());
             user.setdepartid(request.getDepartid());
-
-            this.userService.addUser(user);
+            uarea.setAreaType(request.getAreaType());
+            uarea.setProvinceCode(request.getProvinceCode());
+            uarea.setCityCode(request.getCityCode());
+            uarea.setCountyCode(request.getCountyCode());
+            uarea.setCounty(request.getCounty());
+            uarea.setTownCode(request.getTownCode());
+            uarea.setTown(request.getTown());
+            uarea.setVillageCode(request.getVillageCode());
+            uarea.setVillage(request.getVillage());*/
+            String strData= null;
+            try {
+                strData = JsonFormat.printer().preservingProtoFieldNames().print(request);
+            } catch (InvalidProtocolBufferException e) {
+                throw new RuntimeException(e);
+            }
+            Gson gson=new Gson();
+            user=gson.fromJson(strData,IMUser.class);
+            uarea=gson.fromJson(strData,user_area.class);
+            this.userService.addUser(user,uarea);
             System.out.println("添加成功");
             UserResponse response = UserResponse.newBuilder()
                     .setStatusId(0)
@@ -70,7 +93,15 @@ public class UserServerImpl extends UserServiceGrpc.UserServiceImplBase {
             existUser.setEmail(request.getEmail());
             existUser.setdepartid(request.getDepartid());
 
-            this.userService.updateUser(existUser);
+            String strData= null;
+            try {
+                strData = JsonFormat.printer().preservingProtoFieldNames().print(request);
+            } catch (InvalidProtocolBufferException e) {
+                throw new RuntimeException(e);
+            }
+            Gson gson=new Gson();
+            user_area uarea=gson.fromJson(strData,user_area.class);
+            this.userService.updateUser(existUser,uarea);
             System.out.println("修改成功");
             UserResponse response = UserResponse.newBuilder()
                     .setStatusId(1)
@@ -92,11 +123,15 @@ public class UserServerImpl extends UserServiceGrpc.UserServiceImplBase {
 
     @Override
     public void listUser(UserRequest request, StreamObserver<UserResponse> responseStreamObserver){
-
+        int currentPage = request.getCurPage();
+        int pageSize = request.getPageSize();
         UserResponse.Builder builder = UserResponse.newBuilder();
+        Map<String,Object> paraMap = new HashMap<String,Object>();
+        paraMap.put("curPage",(currentPage-1)*pageSize);
+        paraMap.put("pageSize",pageSize);
 
-        java.util.List<IMUser> data  =this.userService.getAllUser();
-
+        Integer sumNum  =this.userService.getCountUser();
+        java.util.List<IMUser> data  =this.userService.getAllUser(paraMap);
         if(data.size()>0){
             for(int i=0;i<data.size();i++){
                 User.Builder bu=User.newBuilder();
@@ -114,7 +149,9 @@ public class UserServerImpl extends UserServiceGrpc.UserServiceImplBase {
                 User ab = bu.build();
                 builder.addUser(ab);
             }
-            UserResponse response = builder.setStatusId(1).build();
+            UserResponse response = builder.setStatusId(1)
+                    .setTotal(sumNum)
+                    .build();
 
             responseStreamObserver.onNext(response);
         }else

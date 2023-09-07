@@ -2,6 +2,7 @@ package com.loword.java.kernel.mybatis.mapper;
 
 import java.util.List;
 
+import com.loword.java.model.vo.AreaTreeVo;
 import com.loword.java.model.vo.AreaVo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -19,7 +20,7 @@ public interface SysAreaMapper {
 
     List<sys_area> selectByPosition(@Param("lng") Float lng,@Param("lat") Float lat);
 
-    List<sys_area> selectAll(sys_area record);
+    List<AreaTreeVo> selectAll(sys_area record);
 
     List<AreaVo> selectAreaTree(sys_area record);
 

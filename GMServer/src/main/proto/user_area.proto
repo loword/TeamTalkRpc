@@ -1,0 +1,126 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package com.grpc.user_area;
+
+message UserArea{
+  int32 id=1;
+
+  int32 userId=2;
+
+  int32 areaType=3;
+
+  string provinceCode = 4;
+
+  string cityCode = 5;
+
+  string countyCode = 6;
+
+  string county = 7;
+
+  string townCode = 8;
+
+  string town = 9;
+
+  string villageCode = 10;
+
+  string village = 11;
+
+  string zipCode=12;
+
+  string telephoneCode=13;
+
+  string detailName=14;
+
+  string shortName=15;
+
+  string merger_name=16;
+
+  string pinyin=17;
+
+  float lng=18;
+
+  float lat=19;
+
+  string isDefault=20;
+
+  int32 create_time=21;
+
+  int32 create_user=22;
+
+  int32 update_time=23;
+
+  int32 update_user=24;
+}
+
+message UserAreaRequest {
+  int32 id=1;
+
+  int32 userId=2;
+
+  repeated UserArea userArea= 5;
+}
+
+message UserAreaResponse {
+  int32 id=1;
+
+  int32 userId=2;
+
+  int32 areaType=3;
+
+  string provinceCode = 4;
+
+  string cityCode = 5;
+
+  string countyCode = 6;
+
+  string county = 7;
+
+  string townCode = 8;
+
+  string town = 9;
+
+  string villageCode = 10;
+
+  string village = 11;
+
+  string zipCode=12;
+
+  string telphoneCode=13;
+
+  string detailName=14;
+
+  string shortName=15;
+
+  string mergerName=16;
+
+  string pinyin=17;
+
+  float lng=18;
+
+  float lat=19;
+
+  string isDefault=20;
+
+  int32 status=21;
+
+  int32 remark=22;
+
+  int32 statusId=23;
+
+  int32 createTime=24;
+
+  int32 createUser=25;
+
+  int32 updateTime=26;
+
+  int32 updateUser=27;
+}
+
+service UserAreaService{
+  rpc listUserArea(UserAreaRequest) returns (UserAreaResponse);
+  rpc addUserArea(UserAreaRequest) returns (UserAreaResponse);
+  rpc removeUserArea(UserAreaRequest) returns (UserAreaResponse);
+  rpc modifyUserArea(UserAreaRequest) returns (UserAreaResponse);
+}

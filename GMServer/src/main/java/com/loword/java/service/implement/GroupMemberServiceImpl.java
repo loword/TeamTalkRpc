@@ -57,6 +57,9 @@ public class GroupMemberServiceImpl implements IGroupMemberService {
         return groupMemberMapper.updateByPrimaryKeySelective(user) > 0;
     }
 
-
+    @Override
+    public List<IMGroupMember> findGroupMember(IMGroupMember user) {
+        return groupMemberMapper.findGroupMember(user);
+    }
 
 }

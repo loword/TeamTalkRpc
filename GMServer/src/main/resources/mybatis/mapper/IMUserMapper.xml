@@ -39,10 +39,18 @@
     limit 1
   </select>
 
-  <select id="selectAllUser" resultMap="BaseResultMap">
+  <select id="getCountUser" resultType="Integer">
+    select count(*) from IMUser where status = 0
+  </select>
+
+  <select id="selectAllUser" parameterType="Map" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>
     from IMUser
+    where status = 0
+    <if test="cm != null and cm.curPage != null and cm.pageSize != null ">
+      limit #{cm.curPage},#{cm.pageSize}
+    </if>
   </select>
 
 
@@ -52,7 +60,7 @@
   </delete>
 
 
-  <insert id="insertSelective" parameterType="com.loword.java.kernel.entity.IMUser">
+  <insert id="insertSelective" parameterType="com.loword.java.kernel.entity.IMUser" useGeneratedKeys="true" keyProperty="id">
     insert into IMUser
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -217,6 +225,9 @@
       </if>
       <if test="salt != null">
         salt = #{salt,jdbcType=VARCHAR},
+      </if>
+      <if test="updated != null">
+        updated = #{updated,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}

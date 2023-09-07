@@ -46,7 +46,7 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
 
-  <insert id="insertSelective" parameterType="com.loword.java.kernel.entity.IMGroup">
+  <insert id="insertSelective" parameterType="com.loword.java.kernel.entity.IMGroup"  useGeneratedKeys="true" keyProperty="id">
     insert into IMGroup
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">

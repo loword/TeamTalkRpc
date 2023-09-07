@@ -628,11 +628,13 @@ CREATE TABLE `role_menu_info` (
 insert  into `role_menu_info`(`id`,`role_id`,`menu_id`) values (1,1,1),(2,1,2),(3,1,3),(4,1,4),(5,1,5),(6,1,6),(7,1,7),(8,1,8),(9,1,9),(10,1,10),(11,1,11),(12,1,12),(13,2,1),(14,3,2),(15,4,3),(16,4,8),(17,5,4),(18,5,9),(19,2,6),(20,3,7),(21,6,5),(22,6,10),(23,6,11),(24,6,12),(25,7,5),(26,7,10),(27,8,5),(28,8,11),(39,9,5),(40,9,12);
 
 
+DROP TABLE IF EXISTS `im_user_area`;
+
 
 CREATE TABLE `im_user_area`  (
   `id` bigint(0) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户id',
-  `level_code` tinyint(0) UNSIGNED COMMENT '层级',
+  `user_id` int(11) unsigned NOT NULL COMMENT '用户id',
+  `area_type` tinyint(0) UNSIGNED DEFAULT 0 COMMENT '地址类型：1籍贯,2工作地，3长住地,4暂住地',
   `province_code` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '省级行政代码',
   `city_code` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '市行政代码',
   `county_code` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '区县行政代码',
@@ -640,9 +642,10 @@ CREATE TABLE `im_user_area`  (
   `town_code` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '乡镇行政代码',
   `town` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '乡镇',
   `village_code` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '村行政代码',
+  `village` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '村行政代码',
   `zip_code` varchar(6) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0' COMMENT '邮政编码',
   `telphone_code` varchar(6) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '区号',
-  `name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '名称',
+  `detail_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '详细名称',
   `short_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '简称',
   `merger_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '组合名',
   `pinyin` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '拼音',
@@ -658,10 +661,10 @@ CREATE TABLE `im_user_area`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_uarea_user_id`(`user_id`) USING BTREE,
   INDEX `idx_uarea_short_name`(`short_name`) USING BTREE,
-  INDEX `idx_uarea_name`(`name`) USING BTREE,
+  INDEX `idx_uarea_village`(`village`) USING BTREE,
   INDEX `idx_uarea_village_code`(`village_code`) USING BTREE,
   INDEX `idx_uarea_pinyin`(`pinyin`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 783563 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '用户行政地区关联表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 0 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '用户行政地区关联表';
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

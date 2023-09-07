@@ -23,4 +23,6 @@ public interface IMGroupMemberMapper {
     int insertSelective(IMGroupMember record);
 
     int updateByPrimaryKeySelective(IMGroupMember record);
+
+    List<IMGroupMember> findGroupMember(IMGroupMember record);
 }

@@ -107,42 +107,102 @@ public interface UserRequestOrBuilder extends
       int index);
 
   /**
-   * <code>string cityCode = 11;</code>
+   * <code>int32 areaType = 11;</code>
+   */
+  int getAreaType();
+
+  /**
+   * <code>string provinceCode = 12;</code>
+   */
+  java.lang.String getProvinceCode();
+  /**
+   * <code>string provinceCode = 12;</code>
+   */
+  com.google.protobuf.ByteString
+      getProvinceCodeBytes();
+
+  /**
+   * <code>string cityCode = 13;</code>
    */
   java.lang.String getCityCode();
   /**
-   * <code>string cityCode = 11;</code>
+   * <code>string cityCode = 13;</code>
    */
   com.google.protobuf.ByteString
       getCityCodeBytes();
 
   /**
-   * <code>string countyCode = 12;</code>
+   * <code>string countyCode = 14;</code>
    */
   java.lang.String getCountyCode();
   /**
-   * <code>string countyCode = 12;</code>
+   * <code>string countyCode = 14;</code>
    */
   com.google.protobuf.ByteString
       getCountyCodeBytes();
 
   /**
-   * <code>string townCode = 13;</code>
+   * <code>string county = 15;</code>
+   */
+  java.lang.String getCounty();
+  /**
+   * <code>string county = 15;</code>
+   */
+  com.google.protobuf.ByteString
+      getCountyBytes();
+
+  /**
+   * <code>string townCode = 16;</code>
    */
   java.lang.String getTownCode();
   /**
-   * <code>string townCode = 13;</code>
+   * <code>string townCode = 16;</code>
    */
   com.google.protobuf.ByteString
       getTownCodeBytes();
 
   /**
-   * <code>string villageCode = 14;</code>
+   * <code>string town = 17;</code>
+   */
+  java.lang.String getTown();
+  /**
+   * <code>string town = 17;</code>
+   */
+  com.google.protobuf.ByteString
+      getTownBytes();
+
+  /**
+   * <code>string villageCode = 18;</code>
    */
   java.lang.String getVillageCode();
   /**
-   * <code>string villageCode = 14;</code>
+   * <code>string villageCode = 18;</code>
    */
   com.google.protobuf.ByteString
       getVillageCodeBytes();
+
+  /**
+   * <code>string village = 19;</code>
+   */
+  java.lang.String getVillage();
+  /**
+   * <code>string village = 19;</code>
+   */
+  com.google.protobuf.ByteString
+      getVillageBytes();
+
+  /**
+   * <code>int32 curPage = 20;</code>
+   */
+  int getCurPage();
+
+  /**
+   * <code>int32 pageSize = 21;</code>
+   */
+  int getPageSize();
+
+  /**
+   * <code>int32 updateUser = 22;</code>
+   */
+  int getUpdateUser();
 }

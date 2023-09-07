@@ -1,15 +1,24 @@
 package com.loword.java.service.implement;
 
 
+import com.loword.java.kernel.entity.IMGroup;
+import com.loword.java.kernel.entity.IMGroupMember;
 import com.loword.java.kernel.entity.IMUser;
+import com.loword.java.kernel.entity.user_area;
+import com.loword.java.kernel.mybatis.mapper.IMGroupMemberMapper;
 import com.loword.java.kernel.mybatis.mapper.IMUserMapper;
+import com.loword.java.service.IGroupService;
 import com.loword.java.service.IUserService;
+import com.loword.java.service.UserAreaService;
 import com.loword.java.utils.name.ChineseNameGenerator;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by wx on 2017/10/27.
@@ -18,6 +27,15 @@ import java.util.List;
 public class UserServiceImpl implements IUserService {
     @Resource
     private IMUserMapper userMapper;
+
+    @Resource
+    private UserAreaService userAreaService;
+
+    @Resource
+    private IGroupService groupService;
+
+    @Resource
+    private IMGroupMemberMapper groupMemberMapper;
 
     @Override
     public IMUser getUserById(Integer userId) {
@@ -30,15 +48,87 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public List<IMUser> getAllUser() {
-       return userMapper.selectAllUser();
+    public int getCountUser() {
+        return userMapper.getCountUser();
     }
 
     @Override
-    public Boolean addUser(IMUser user) {
+    public List<IMUser> getAllUser() {
+        return userMapper.selectAllUser(null);
+    }
+
+    @Override
+    public List<IMUser> getAllUser(Map<String, Object> columnMap) {
+        return userMapper.selectAllUser(columnMap);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public Boolean addUser(IMUser user, user_area uarea) {
 		ChineseNameGenerator instance = ChineseNameGenerator.getInstance();
 		user.setNick(instance.generate());
-        return userMapper.insertSelective(user) > 0;
+        int timeNow = (int) (System.currentTimeMillis()/1000);
+        user.setCreated(timeNow);
+        userMapper.insertSelective(user);
+        uarea.setUserId(user.getId());
+        userAreaService.addUserArea(uarea);
+
+        saveGroupMember(user,uarea,timeNow);
+        return true;
+    }
+
+    private void saveGroupMember(IMUser user,user_area uarea,int timeNow){
+        IMGroup countyGroup =this.groupService.getGroupByName(uarea.getCounty());
+        IMGroup townGroup =this.groupService.getGroupByName(uarea.getTown());
+        IMGroup villageGroup =this.groupService.getGroupByName(uarea.getVillage());
+
+        IMGroup imGroup = new IMGroup();
+        imGroup.setCreator(user.getId());
+        imGroup.setType((byte)1);
+        imGroup.setStatus((byte)0);
+        imGroup.setVersion(0);
+        imGroup.setCreated(timeNow);
+
+        IMGroupMember groupMember = new IMGroupMember();
+        groupMember.setUserid(user.getId());
+        groupMember.setStatus(0);
+        groupMember.setCreated(timeNow);
+        if(countyGroup == null) {
+            imGroup.setName(uarea.getCounty());
+            groupService.addGroup(imGroup);
+            groupMember.setGroupid(imGroup.getId());
+        } else {
+            groupMember.setGroupid(countyGroup.getId());
+        }
+        List<IMGroupMember> cGroupMemberList =groupMemberMapper.findGroupMember(groupMember);
+        if(cGroupMemberList.size() == 0) {
+            groupMemberMapper.insertSelective(groupMember);
+        }
+        if(townGroup == null) {
+            if (imGroup.getId() != null) { imGroup.setId(imGroup.getId()+1);}
+            imGroup.setName(uarea.getTown());
+            groupService.addGroup(imGroup);
+            groupMember.setGroupid(imGroup.getId());
+        } else {
+            groupMember.setGroupid(townGroup.getId());
+        }
+        List<IMGroupMember> tGroupMemberList =groupMemberMapper.findGroupMember(groupMember);
+        if(tGroupMemberList.size() == 0) {
+            groupMemberMapper.insertSelective(groupMember);
+        }
+
+        if(villageGroup == null) {
+            if (imGroup.getId() != null) { imGroup.setId(imGroup.getId()+1);}
+            imGroup.setName(uarea.getVillage());
+            groupService.addGroup(imGroup);
+            groupMember.setGroupid(imGroup.getId());
+        } else {
+            groupMember.setGroupid(villageGroup.getId());
+        }
+        List<IMGroupMember> vGroupMemberList =groupMemberMapper.findGroupMember(groupMember);
+        if(vGroupMemberList.size() == 0) {
+            groupMemberMapper.insertSelective(groupMember);
+        }
     }
 
     @Override
@@ -48,8 +138,19 @@ public class UserServiceImpl implements IUserService {
 
 
     @Override
-    public Boolean updateUser(IMUser user) {
-        return userMapper.updateByPrimaryKeySelective(user) > 0;
+    public Boolean updateUser(IMUser user, user_area uArea) {
+        userMapper.updateByPrimaryKeySelective(user);
+        user_area oldUserArea = userAreaService.getById(user.getId());
+        if(oldUserArea == null) {
+            uArea.setUserId(user.getId());
+            //todo 获取地区表新增更新逻辑未实现
+            //uArea.setShortName(user.get);
+            return userAreaService.addUserArea(uArea) > 0;
+        } else {
+            uArea.setId(oldUserArea.getId());
+            uArea.setUserId(user.getId());
+            return userAreaService.modifyUserArea(uArea) > 0;
+        }
     }
 
     @Override

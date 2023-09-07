@@ -112,9 +112,10 @@ public class AreaRestController {
     @RequestMapping(value = "/area/listChild",method = RequestMethod.POST)
     public void listAreaChild(HttpServletRequest request, HttpServletResponse response) throws InvalidProtocolBufferException, InvalidProtocolBufferException {
 
-        String strData =HttpUtils.getJsonBody(request);
+        /*String strData =HttpUtils.getJsonBody(request);
         Gson gson=new Gson();
-        SysArea area=gson.fromJson(strData,SysArea.class);
+        SysArea area=gson.fromJson(strData,SysArea.class);*/
+        String cityCode = request.getParameter("cityCode");
 
         ManagedChannel channel = ManagedChannelBuilder.forAddress(HOST, PORT)
                 .usePlaintext(true)
@@ -126,7 +127,7 @@ public class AreaRestController {
 
         // Create a request
         AreaRequest listAreaRequest = AreaRequest.newBuilder()
-                .setId(area.getId())
+                .setId(Integer.valueOf(cityCode))
                 .build();
 
         // Send the request using the stub

@@ -22,4 +22,6 @@ public interface IGroupMemberService {
     Boolean deleteGroupMember(Integer id);
 
     Boolean updateGroupMember(IMGroupMember user);
+
+    List<IMGroupMember> findGroupMember(IMGroupMember user);
 }

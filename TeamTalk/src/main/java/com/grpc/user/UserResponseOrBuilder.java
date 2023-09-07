@@ -38,16 +38,6 @@ public interface UserResponseOrBuilder extends
       getNickBytes();
 
   /**
-   * <code>string pwd = 4;</code>
-   */
-  java.lang.String getPwd();
-  /**
-   * <code>string pwd = 4;</code>
-   */
-  com.google.protobuf.ByteString
-      getPwdBytes();
-
-  /**
    * <code>string salt = 5;</code>
    */
   java.lang.String getSalt();
@@ -110,4 +100,109 @@ public interface UserResponseOrBuilder extends
    */
   com.grpc.user.UserOrBuilder getUserOrBuilder(
       int index);
+
+  /**
+   * <code>string areaType = 12;</code>
+   */
+  java.lang.String getAreaType();
+  /**
+   * <code>string areaType = 12;</code>
+   */
+  com.google.protobuf.ByteString
+      getAreaTypeBytes();
+
+  /**
+   * <code>string provinceCode = 13;</code>
+   */
+  java.lang.String getProvinceCode();
+  /**
+   * <code>string provinceCode = 13;</code>
+   */
+  com.google.protobuf.ByteString
+      getProvinceCodeBytes();
+
+  /**
+   * <code>string cityCode = 14;</code>
+   */
+  java.lang.String getCityCode();
+  /**
+   * <code>string cityCode = 14;</code>
+   */
+  com.google.protobuf.ByteString
+      getCityCodeBytes();
+
+  /**
+   * <code>string countyCode = 15;</code>
+   */
+  java.lang.String getCountyCode();
+  /**
+   * <code>string countyCode = 15;</code>
+   */
+  com.google.protobuf.ByteString
+      getCountyCodeBytes();
+
+  /**
+   * <code>string county = 16;</code>
+   */
+  java.lang.String getCounty();
+  /**
+   * <code>string county = 16;</code>
+   */
+  com.google.protobuf.ByteString
+      getCountyBytes();
+
+  /**
+   * <code>string townCode = 17;</code>
+   */
+  java.lang.String getTownCode();
+  /**
+   * <code>string townCode = 17;</code>
+   */
+  com.google.protobuf.ByteString
+      getTownCodeBytes();
+
+  /**
+   * <code>string town = 18;</code>
+   */
+  java.lang.String getTown();
+  /**
+   * <code>string town = 18;</code>
+   */
+  com.google.protobuf.ByteString
+      getTownBytes();
+
+  /**
+   * <code>string villageCode = 19;</code>
+   */
+  java.lang.String getVillageCode();
+  /**
+   * <code>string villageCode = 19;</code>
+   */
+  com.google.protobuf.ByteString
+      getVillageCodeBytes();
+
+  /**
+   * <code>string mergerName = 20;</code>
+   */
+  java.lang.String getMergerName();
+  /**
+   * <code>string mergerName = 20;</code>
+   */
+  com.google.protobuf.ByteString
+      getMergerNameBytes();
+
+  /**
+   * <code>string village = 21;</code>
+   */
+  java.lang.String getVillage();
+  /**
+   * <code>string village = 21;</code>
+   */
+  com.google.protobuf.ByteString
+      getVillageBytes();
+
+  /**
+   * <code>int32 total = 22;</code>
+   */
+  int getTotal();
 }

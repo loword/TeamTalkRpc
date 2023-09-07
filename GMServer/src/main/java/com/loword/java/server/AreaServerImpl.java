@@ -28,43 +28,62 @@ public class AreaServerImpl extends AreaServiceImplBase {
      * 行政区域列表
      */
     public void listArea(AreaRequest request, StreamObserver<AreaResponse> responseStreamObserver) {
- 
          String shortName = request.getName();
          String pinyin = request.getPinyin();
-         
-         List<sys_area> areaList = new ArrayList<sys_area>();
+
+         List<sys_area> areaList  = new ArrayList<sys_area>();
+         List<AreaTreeVo> AreaTreeList = new ArrayList<AreaTreeVo>();
          AreaResponse.Builder builder=AreaResponse.newBuilder();
          
          if(!StrUtil.isBlank(shortName)) {
-        	 areaList =this.areaService.getByShortName(shortName); 
+             areaList =this.areaService.getByShortName(shortName);
          } else if (!StrUtil.isBlank(pinyin)) {
-        	 areaList =this.areaService.getByPinyin(pinyin);
+             areaList =this.areaService.getByPinyin(pinyin);
          } else {
         	 sys_area area = new sys_area();
              area.setParentCode(request.getAreaCode());//根据上级code获取下级区域信息
              area.setLevelCode(request.getLevelCode());
-        	 areaList =this.areaService.listArea(area);
+             AreaTreeList =this.areaService.listArea(area);
          }
          
          
-         if(areaList.size()>0){
-             for(sys_area ri :areaList) {
+         if(AreaTreeList.size()>0){
+             for(AreaTreeVo ri :AreaTreeList) {
                  Area.Builder bu = Area.newBuilder();
                  bu.setId(ri.getId());
                  //bu.setLevelCode(ri.getLevelCode());
                  //bu.setParentCode(ri.getParentCode());
-                 bu.setAreaCode(ri.getAreaCode());
+                 bu.setAreaCode(ri.getCode());
                  //bu.setZipCode(ri.getZipCode());
                  //bu.setCityCode(ri.getCityCode());
                  bu.setName(ri.getName());
                  //bu.setShortName(ri.getShortName());
                  //bu.setMergerName(ri.getMergerName());
                  //bu.setPinyin(ri.getPinyin());
+                 /*bu.setLng(ri.getLng());
+                 bu.setLat(ri.getLat());*/
+                 Area area =bu.build();
+                 builder.addArea(area);
+             }
+         }else if(areaList.size() > 0) {
+             for(sys_area ri :areaList) {
+                 Area.Builder bu = Area.newBuilder();
+                 bu.setId(ri.getId());
+                 bu.setLevelCode(ri.getLevelCode());
+                 bu.setParentCode(ri.getParentCode());
+                 bu.setAreaCode(ri.getAreaCode());
+                 bu.setZipCode(ri.getZipCode());
+                 bu.setCityCode(ri.getCityCode());
+                 bu.setName(ri.getName());
+                 bu.setShortName(ri.getShortName());
+                 bu.setMergerName(ri.getMergerName());
+                 bu.setPinyin(ri.getPinyin());
                  bu.setLng(ri.getLng());
                  bu.setLat(ri.getLat());
                  Area area =bu.build();
                  builder.addArea(area);
              }
+
          }
 
          AreaResponse response=builder.build();
@@ -130,33 +149,33 @@ public class AreaServerImpl extends AreaServiceImplBase {
         List<AreaTreeVo> cityList = new ArrayList<AreaTreeVo>();
         for(int i=0; i<areaList.size(); i++){
             AreaVo ri = areaList.get(i);
-            villageVo.setCode(ri.getVillageCode());
+            villageVo.setId(Integer.valueOf(ri.getVillageCode()));
             villageVo.setName(ri.getVillage());
             villageList.add(villageVo);
-            if(townVo.getCode() == null || !ri.getTownCode().equals(townVo.getCode())) {
-                townVo.setCode(ri.getTownCode());
+            if(townVo.getId() == null || !ri.getTownCode().equals(String.valueOf(townVo.getId()))) {
+                townVo.setId(Integer.valueOf(ri.getTownCode()));
                 townVo.setName(ri.getTown());
                 townVo.setChildren(villageList);
                 townList.add(townVo);
                 if (i != 0) {villageList.clear();}
 
             }
-            if(countyVo.getCode() == null || !ri.getCountyCode().equals(countyVo.getCode())) {
-                countyVo.setCode(ri.getCountyCode());
+            if(countyVo.getId() == null || !ri.getCountyCode().equals(String.valueOf(countyVo.getId()))) {
+                countyVo.setId(Integer.valueOf(ri.getCountyCode()));
                 countyVo.setName(ri.getCounty());
                 countyVo.setChildren(townList);
                 countyList.add(countyVo);
                 if (i != 0) {townList.clear();}
             }
-            if(cityVo.getCode() == null || !ri.getCityCode().equals(cityVo.getCode())) {
-                cityVo.setCode(ri.getCityCode());
+            /*if(cityVo.getId() == null || !ri.getCityCode().equals(String.valueOf(cityVo.getId()))) {
+                cityVo.setId(Integer.valueOf(ri.getCityCode()));
                 cityVo.setName(ri.getCity());
                 cityVo.setChildren(countyList);
                 cityList.add(cityVo);
                 if (i != 0) {countyList.clear();}
-            }
+            }*/
         }
-        return cityList;
+        return countyList;
     }
 	/**
 	 * 根据父级行政代码获取下级行政区域信息
@@ -180,7 +199,7 @@ public class AreaServerImpl extends AreaServiceImplBase {
             List<AreaTreeVo> treelist = dataTree(areaList);
             for(AreaTreeVo treeVo:treelist){
                 AreaTree.Builder bu = AreaTree.newBuilder();
-                bu.setCode(treeVo.getCode());
+                bu.setId(treeVo.getId());
                 bu.setName(treeVo.getName());
                 AreaTree ar =bu.build();
                 builder.addTree(ar);

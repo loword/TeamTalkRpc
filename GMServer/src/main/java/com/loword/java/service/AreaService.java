@@ -3,6 +3,7 @@ package com.loword.java.service;
 import java.util.List;
 
 import com.loword.java.kernel.entity.sys_area;
+import com.loword.java.model.vo.AreaTreeVo;
 import com.loword.java.model.vo.AreaVo;
 
 public interface AreaService {
@@ -15,7 +16,7 @@ public interface AreaService {
 
 	int addArea(sys_area area);
 
-    List<sys_area> listArea(sys_area user);
+    List<AreaTreeVo> listArea(sys_area user);
 
 	List<AreaVo> listAreaTree(sys_area user);
 

@@ -50,8 +50,8 @@ const user = {
     // 用户名登录
     LoginByUsername({ commit }, userInfo) {
       const username = userInfo.username.trim()
-      return new Promise((resolve, reject) => {
-        loginByUsername(username, userInfo.password).then(response => {
+      return new Promise(async (resolve, reject) => {
+        await loginByUsername(username, userInfo.password).then(response => {
           let {data,msg,code} =response.data
           if(code==0){
             var jsondata =JSON.parse(data)

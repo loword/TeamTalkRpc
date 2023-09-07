@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AreaTreeVo extends BaseEntity {
+    private Integer id;
+
     private String code;
 
     /*省*/
@@ -13,6 +15,14 @@ public class AreaTreeVo extends BaseEntity {
 
     /*市代码*/
     private List children;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getCode() {
         return code;
@@ -37,4 +47,6 @@ public class AreaTreeVo extends BaseEntity {
     public void setChildren(List children) {
         this.children = children;
     }
+
+
 }

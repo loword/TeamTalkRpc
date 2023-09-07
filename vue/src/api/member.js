@@ -1,9 +1,10 @@
 import fetch from '@/utils/fetch'
 
-export function listUsersRequest() {
+export function listUsersRequest(data) {
   return fetch({
     url: '/user/list',
-    method: 'get'
+    method: 'post',
+    data
   })
 }
 

@@ -118,4 +118,10 @@
     </if>
   </update>
 
+  <select id="findGroupMember"  parameterType="com.loword.java.kernel.entity.IMGroupMember" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from IMGroupMember
+    where userId = #{userid} and groupId= #{groupid}
+  </select>
 </mapper>

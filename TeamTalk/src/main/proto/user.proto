@@ -59,6 +59,29 @@ message UserRequest {
 
     repeated User user=10;
 
+    int32 areaType = 11;
+
+    string provinceCode = 12;
+
+    string cityCode = 13;
+
+    string countyCode = 14;
+
+    string county = 15;
+
+    string townCode = 16;
+
+    string town = 17;
+
+    string villageCode = 18;
+
+    string village = 19;
+
+    int32 curPage = 20;
+
+    int32 pageSize = 21;
+
+    int32 updateUser = 22;
 
 }
 
@@ -70,8 +93,6 @@ message UserResponse {
     int32 sex=10;
 
     string nick=3;
-
-    string pwd=4;
 
     string salt=5;
 
@@ -85,6 +106,27 @@ message UserResponse {
 
     repeated User user=11;
 
+    string areaType = 12;
+
+    string provinceCode = 13;
+
+    string cityCode = 14;
+
+    string countyCode = 15;
+
+    string county = 16;
+
+    string townCode = 17;
+
+    string town = 18;
+
+    string villageCode = 19;
+
+    string mergerName = 20;
+
+    string village = 21;
+
+    int32 total=22;
 }
 
 service UserService{

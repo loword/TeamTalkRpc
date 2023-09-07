@@ -41,9 +41,8 @@
   </select>
 
 
-  <select id="selectAll" parameterType="com.loword.java.kernel.entity.sys_area" resultType="com.loword.java.kernel.entity.sys_area">
-    select
-    <include refid="Base_Column_List" />
+  <select id="selectAll" parameterType="com.loword.java.kernel.entity.sys_area" resultType="com.loword.java.model.vo.AreaTreeVo">
+    select id,area_code code,name
     from sys_area
     where status = 0
 	<if test="id != null">
@@ -210,7 +209,7 @@
 	    #{remark,jdbcType=VARCHAR},
 	  </if>
 	  <if test="createTime != null">
-		  #{createTime,jdbcType=TIMESTAMP},
+		  FROM_UNIXTIME(#{createTime,jdbcType=TIMESTAMP}),
 	  </if>
 	  <if test="createUser != null">
 	    #{createUser,jdbcType=INTEGER},
@@ -251,7 +250,7 @@
 	     remark = #{remark},
 	   </if>
 	   <if test="updateTime != null">
-	     update_time = #{updateTime},
+	     update_time = FROM_UNIXTIME(#{updateTime}),
 	   </if>
 	   <if test="updateUser != null">
 	     update_user = #{updateUser},

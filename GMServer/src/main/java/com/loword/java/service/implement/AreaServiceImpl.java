@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import com.loword.java.model.vo.AreaTreeVo;
 import com.loword.java.model.vo.AreaVo;
 import org.springframework.stereotype.Service;
 
@@ -47,7 +48,7 @@ public class AreaServiceImpl implements AreaService {
 	}
 
 	@Override
-	public List<sys_area> listArea(sys_area area) {
+	public List<AreaTreeVo> listArea(sys_area area) {
 		if(area.getLevelCode() == null) {
 			area.setLevelCode(0);
 		}

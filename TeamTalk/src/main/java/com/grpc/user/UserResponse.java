@@ -20,13 +20,23 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     sex_ = 0;
     nick_ = "";
-    pwd_ = "";
     salt_ = "";
     phone_ = "";
     email_ = "";
     departid_ = 0;
     statusId_ = 0;
     user_ = java.util.Collections.emptyList();
+    areaType_ = "";
+    provinceCode_ = "";
+    cityCode_ = "";
+    countyCode_ = "";
+    county_ = "";
+    townCode_ = "";
+    town_ = "";
+    villageCode_ = "";
+    mergerName_ = "";
+    village_ = "";
+    total_ = 0;
   }
 
   @java.lang.Override
@@ -70,12 +80,6 @@ private static final long serialVersionUID = 0L;
             nick_ = s;
             break;
           }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            pwd_ = s;
-            break;
-          }
           case 42: {
             java.lang.String s = input.readStringRequireUtf8();
 
@@ -110,12 +114,77 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 90: {
-            if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+            if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
               user_ = new java.util.ArrayList<com.grpc.user.User>();
-              mutable_bitField0_ |= 0x00000400;
+              mutable_bitField0_ |= 0x00000200;
             }
             user_.add(
                 input.readMessage(com.grpc.user.User.parser(), extensionRegistry));
+            break;
+          }
+          case 98: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            areaType_ = s;
+            break;
+          }
+          case 106: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            provinceCode_ = s;
+            break;
+          }
+          case 114: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            cityCode_ = s;
+            break;
+          }
+          case 122: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            countyCode_ = s;
+            break;
+          }
+          case 130: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            county_ = s;
+            break;
+          }
+          case 138: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            townCode_ = s;
+            break;
+          }
+          case 146: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            town_ = s;
+            break;
+          }
+          case 154: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            villageCode_ = s;
+            break;
+          }
+          case 162: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            mergerName_ = s;
+            break;
+          }
+          case 170: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            village_ = s;
+            break;
+          }
+          case 176: {
+
+            total_ = input.readInt32();
             break;
           }
           default: {
@@ -133,7 +202,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
         user_ = java.util.Collections.unmodifiableList(user_);
       }
       this.unknownFields = unknownFields.build();
@@ -234,40 +303,6 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       nick_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int PWD_FIELD_NUMBER = 4;
-  private volatile java.lang.Object pwd_;
-  /**
-   * <code>string pwd = 4;</code>
-   */
-  public java.lang.String getPwd() {
-    java.lang.Object ref = pwd_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      pwd_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string pwd = 4;</code>
-   */
-  public com.google.protobuf.ByteString
-      getPwdBytes() {
-    java.lang.Object ref = pwd_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      pwd_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -429,6 +464,355 @@ private static final long serialVersionUID = 0L;
     return user_.get(index);
   }
 
+  public static final int AREATYPE_FIELD_NUMBER = 12;
+  private volatile java.lang.Object areaType_;
+  /**
+   * <code>string areaType = 12;</code>
+   */
+  public java.lang.String getAreaType() {
+    java.lang.Object ref = areaType_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      areaType_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string areaType = 12;</code>
+   */
+  public com.google.protobuf.ByteString
+      getAreaTypeBytes() {
+    java.lang.Object ref = areaType_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      areaType_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int PROVINCECODE_FIELD_NUMBER = 13;
+  private volatile java.lang.Object provinceCode_;
+  /**
+   * <code>string provinceCode = 13;</code>
+   */
+  public java.lang.String getProvinceCode() {
+    java.lang.Object ref = provinceCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      provinceCode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string provinceCode = 13;</code>
+   */
+  public com.google.protobuf.ByteString
+      getProvinceCodeBytes() {
+    java.lang.Object ref = provinceCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      provinceCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CITYCODE_FIELD_NUMBER = 14;
+  private volatile java.lang.Object cityCode_;
+  /**
+   * <code>string cityCode = 14;</code>
+   */
+  public java.lang.String getCityCode() {
+    java.lang.Object ref = cityCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      cityCode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string cityCode = 14;</code>
+   */
+  public com.google.protobuf.ByteString
+      getCityCodeBytes() {
+    java.lang.Object ref = cityCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      cityCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int COUNTYCODE_FIELD_NUMBER = 15;
+  private volatile java.lang.Object countyCode_;
+  /**
+   * <code>string countyCode = 15;</code>
+   */
+  public java.lang.String getCountyCode() {
+    java.lang.Object ref = countyCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      countyCode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string countyCode = 15;</code>
+   */
+  public com.google.protobuf.ByteString
+      getCountyCodeBytes() {
+    java.lang.Object ref = countyCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      countyCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int COUNTY_FIELD_NUMBER = 16;
+  private volatile java.lang.Object county_;
+  /**
+   * <code>string county = 16;</code>
+   */
+  public java.lang.String getCounty() {
+    java.lang.Object ref = county_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      county_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string county = 16;</code>
+   */
+  public com.google.protobuf.ByteString
+      getCountyBytes() {
+    java.lang.Object ref = county_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      county_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TOWNCODE_FIELD_NUMBER = 17;
+  private volatile java.lang.Object townCode_;
+  /**
+   * <code>string townCode = 17;</code>
+   */
+  public java.lang.String getTownCode() {
+    java.lang.Object ref = townCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      townCode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string townCode = 17;</code>
+   */
+  public com.google.protobuf.ByteString
+      getTownCodeBytes() {
+    java.lang.Object ref = townCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      townCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TOWN_FIELD_NUMBER = 18;
+  private volatile java.lang.Object town_;
+  /**
+   * <code>string town = 18;</code>
+   */
+  public java.lang.String getTown() {
+    java.lang.Object ref = town_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      town_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string town = 18;</code>
+   */
+  public com.google.protobuf.ByteString
+      getTownBytes() {
+    java.lang.Object ref = town_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      town_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int VILLAGECODE_FIELD_NUMBER = 19;
+  private volatile java.lang.Object villageCode_;
+  /**
+   * <code>string villageCode = 19;</code>
+   */
+  public java.lang.String getVillageCode() {
+    java.lang.Object ref = villageCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      villageCode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string villageCode = 19;</code>
+   */
+  public com.google.protobuf.ByteString
+      getVillageCodeBytes() {
+    java.lang.Object ref = villageCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      villageCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int MERGERNAME_FIELD_NUMBER = 20;
+  private volatile java.lang.Object mergerName_;
+  /**
+   * <code>string mergerName = 20;</code>
+   */
+  public java.lang.String getMergerName() {
+    java.lang.Object ref = mergerName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      mergerName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string mergerName = 20;</code>
+   */
+  public com.google.protobuf.ByteString
+      getMergerNameBytes() {
+    java.lang.Object ref = mergerName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      mergerName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int VILLAGE_FIELD_NUMBER = 21;
+  private volatile java.lang.Object village_;
+  /**
+   * <code>string village = 21;</code>
+   */
+  public java.lang.String getVillage() {
+    java.lang.Object ref = village_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      village_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string village = 21;</code>
+   */
+  public com.google.protobuf.ByteString
+      getVillageBytes() {
+    java.lang.Object ref = village_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      village_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TOTAL_FIELD_NUMBER = 22;
+  private int total_;
+  /**
+   * <code>int32 total = 22;</code>
+   */
+  public int getTotal() {
+    return total_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -452,9 +836,6 @@ private static final long serialVersionUID = 0L;
     if (!getNickBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nick_);
     }
-    if (!getPwdBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pwd_);
-    }
     if (!getSaltBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, salt_);
     }
@@ -476,6 +857,39 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < user_.size(); i++) {
       output.writeMessage(11, user_.get(i));
     }
+    if (!getAreaTypeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, areaType_);
+    }
+    if (!getProvinceCodeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, provinceCode_);
+    }
+    if (!getCityCodeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, cityCode_);
+    }
+    if (!getCountyCodeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, countyCode_);
+    }
+    if (!getCountyBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, county_);
+    }
+    if (!getTownCodeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 17, townCode_);
+    }
+    if (!getTownBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 18, town_);
+    }
+    if (!getVillageCodeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 19, villageCode_);
+    }
+    if (!getMergerNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 20, mergerName_);
+    }
+    if (!getVillageBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 21, village_);
+    }
+    if (total_ != 0) {
+      output.writeInt32(22, total_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -494,9 +908,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!getNickBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nick_);
-    }
-    if (!getPwdBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pwd_);
     }
     if (!getSaltBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, salt_);
@@ -523,6 +934,40 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, user_.get(i));
     }
+    if (!getAreaTypeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, areaType_);
+    }
+    if (!getProvinceCodeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, provinceCode_);
+    }
+    if (!getCityCodeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, cityCode_);
+    }
+    if (!getCountyCodeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, countyCode_);
+    }
+    if (!getCountyBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, county_);
+    }
+    if (!getTownCodeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, townCode_);
+    }
+    if (!getTownBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, town_);
+    }
+    if (!getVillageCodeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, villageCode_);
+    }
+    if (!getMergerNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, mergerName_);
+    }
+    if (!getVillageBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, village_);
+    }
+    if (total_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(22, total_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -547,8 +992,6 @@ private static final long serialVersionUID = 0L;
         == other.getSex());
     result = result && getNick()
         .equals(other.getNick());
-    result = result && getPwd()
-        .equals(other.getPwd());
     result = result && getSalt()
         .equals(other.getSalt());
     result = result && getPhone()
@@ -561,6 +1004,28 @@ private static final long serialVersionUID = 0L;
         == other.getStatusId());
     result = result && getUserList()
         .equals(other.getUserList());
+    result = result && getAreaType()
+        .equals(other.getAreaType());
+    result = result && getProvinceCode()
+        .equals(other.getProvinceCode());
+    result = result && getCityCode()
+        .equals(other.getCityCode());
+    result = result && getCountyCode()
+        .equals(other.getCountyCode());
+    result = result && getCounty()
+        .equals(other.getCounty());
+    result = result && getTownCode()
+        .equals(other.getTownCode());
+    result = result && getTown()
+        .equals(other.getTown());
+    result = result && getVillageCode()
+        .equals(other.getVillageCode());
+    result = result && getMergerName()
+        .equals(other.getMergerName());
+    result = result && getVillage()
+        .equals(other.getVillage());
+    result = result && (getTotal()
+        == other.getTotal());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -580,8 +1045,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getSex();
     hash = (37 * hash) + NICK_FIELD_NUMBER;
     hash = (53 * hash) + getNick().hashCode();
-    hash = (37 * hash) + PWD_FIELD_NUMBER;
-    hash = (53 * hash) + getPwd().hashCode();
     hash = (37 * hash) + SALT_FIELD_NUMBER;
     hash = (53 * hash) + getSalt().hashCode();
     hash = (37 * hash) + PHONE_FIELD_NUMBER;
@@ -596,6 +1059,28 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + USER_FIELD_NUMBER;
       hash = (53 * hash) + getUserList().hashCode();
     }
+    hash = (37 * hash) + AREATYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getAreaType().hashCode();
+    hash = (37 * hash) + PROVINCECODE_FIELD_NUMBER;
+    hash = (53 * hash) + getProvinceCode().hashCode();
+    hash = (37 * hash) + CITYCODE_FIELD_NUMBER;
+    hash = (53 * hash) + getCityCode().hashCode();
+    hash = (37 * hash) + COUNTYCODE_FIELD_NUMBER;
+    hash = (53 * hash) + getCountyCode().hashCode();
+    hash = (37 * hash) + COUNTY_FIELD_NUMBER;
+    hash = (53 * hash) + getCounty().hashCode();
+    hash = (37 * hash) + TOWNCODE_FIELD_NUMBER;
+    hash = (53 * hash) + getTownCode().hashCode();
+    hash = (37 * hash) + TOWN_FIELD_NUMBER;
+    hash = (53 * hash) + getTown().hashCode();
+    hash = (37 * hash) + VILLAGECODE_FIELD_NUMBER;
+    hash = (53 * hash) + getVillageCode().hashCode();
+    hash = (37 * hash) + MERGERNAME_FIELD_NUMBER;
+    hash = (53 * hash) + getMergerName().hashCode();
+    hash = (37 * hash) + VILLAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getVillage().hashCode();
+    hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+    hash = (53 * hash) + getTotal();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -738,8 +1223,6 @@ private static final long serialVersionUID = 0L;
 
       nick_ = "";
 
-      pwd_ = "";
-
       salt_ = "";
 
       phone_ = "";
@@ -752,10 +1235,32 @@ private static final long serialVersionUID = 0L;
 
       if (userBuilder_ == null) {
         user_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000200);
       } else {
         userBuilder_.clear();
       }
+      areaType_ = "";
+
+      provinceCode_ = "";
+
+      cityCode_ = "";
+
+      countyCode_ = "";
+
+      county_ = "";
+
+      townCode_ = "";
+
+      town_ = "";
+
+      villageCode_ = "";
+
+      mergerName_ = "";
+
+      village_ = "";
+
+      total_ = 0;
+
       return this;
     }
 
@@ -788,21 +1293,31 @@ private static final long serialVersionUID = 0L;
       result.name_ = name_;
       result.sex_ = sex_;
       result.nick_ = nick_;
-      result.pwd_ = pwd_;
       result.salt_ = salt_;
       result.phone_ = phone_;
       result.email_ = email_;
       result.departid_ = departid_;
       result.statusId_ = statusId_;
       if (userBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((bitField0_ & 0x00000200) == 0x00000200)) {
           user_ = java.util.Collections.unmodifiableList(user_);
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000200);
         }
         result.user_ = user_;
       } else {
         result.user_ = userBuilder_.build();
       }
+      result.areaType_ = areaType_;
+      result.provinceCode_ = provinceCode_;
+      result.cityCode_ = cityCode_;
+      result.countyCode_ = countyCode_;
+      result.county_ = county_;
+      result.townCode_ = townCode_;
+      result.town_ = town_;
+      result.villageCode_ = villageCode_;
+      result.mergerName_ = mergerName_;
+      result.village_ = village_;
+      result.total_ = total_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -866,10 +1381,6 @@ private static final long serialVersionUID = 0L;
         nick_ = other.nick_;
         onChanged();
       }
-      if (!other.getPwd().isEmpty()) {
-        pwd_ = other.pwd_;
-        onChanged();
-      }
       if (!other.getSalt().isEmpty()) {
         salt_ = other.salt_;
         onChanged();
@@ -892,7 +1403,7 @@ private static final long serialVersionUID = 0L;
         if (!other.user_.isEmpty()) {
           if (user_.isEmpty()) {
             user_ = other.user_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000200);
           } else {
             ensureUserIsMutable();
             user_.addAll(other.user_);
@@ -905,7 +1416,7 @@ private static final long serialVersionUID = 0L;
             userBuilder_.dispose();
             userBuilder_ = null;
             user_ = other.user_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000200);
             userBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUserFieldBuilder() : null;
@@ -913,6 +1424,49 @@ private static final long serialVersionUID = 0L;
             userBuilder_.addAllMessages(other.user_);
           }
         }
+      }
+      if (!other.getAreaType().isEmpty()) {
+        areaType_ = other.areaType_;
+        onChanged();
+      }
+      if (!other.getProvinceCode().isEmpty()) {
+        provinceCode_ = other.provinceCode_;
+        onChanged();
+      }
+      if (!other.getCityCode().isEmpty()) {
+        cityCode_ = other.cityCode_;
+        onChanged();
+      }
+      if (!other.getCountyCode().isEmpty()) {
+        countyCode_ = other.countyCode_;
+        onChanged();
+      }
+      if (!other.getCounty().isEmpty()) {
+        county_ = other.county_;
+        onChanged();
+      }
+      if (!other.getTownCode().isEmpty()) {
+        townCode_ = other.townCode_;
+        onChanged();
+      }
+      if (!other.getTown().isEmpty()) {
+        town_ = other.town_;
+        onChanged();
+      }
+      if (!other.getVillageCode().isEmpty()) {
+        villageCode_ = other.villageCode_;
+        onChanged();
+      }
+      if (!other.getMergerName().isEmpty()) {
+        mergerName_ = other.mergerName_;
+        onChanged();
+      }
+      if (!other.getVillage().isEmpty()) {
+        village_ = other.village_;
+        onChanged();
+      }
+      if (other.getTotal() != 0) {
+        setTotal(other.getTotal());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1130,75 +1684,6 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       nick_ = value;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object pwd_ = "";
-    /**
-     * <code>string pwd = 4;</code>
-     */
-    public java.lang.String getPwd() {
-      java.lang.Object ref = pwd_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pwd_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string pwd = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPwdBytes() {
-      java.lang.Object ref = pwd_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pwd_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string pwd = 4;</code>
-     */
-    public Builder setPwd(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      pwd_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string pwd = 4;</code>
-     */
-    public Builder clearPwd() {
-      
-      pwd_ = getDefaultInstance().getPwd();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string pwd = 4;</code>
-     */
-    public Builder setPwdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      pwd_ = value;
       onChanged();
       return this;
     }
@@ -1465,9 +1950,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.grpc.user.User> user_ =
       java.util.Collections.emptyList();
     private void ensureUserIsMutable() {
-      if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (!((bitField0_ & 0x00000200) == 0x00000200)) {
         user_ = new java.util.ArrayList<com.grpc.user.User>(user_);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000200;
        }
     }
 
@@ -1617,7 +2102,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUser() {
       if (userBuilder_ == null) {
         user_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
       } else {
         userBuilder_.clear();
@@ -1694,12 +2179,728 @@ private static final long serialVersionUID = 0L;
         userBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.grpc.user.User, com.grpc.user.User.Builder, com.grpc.user.UserOrBuilder>(
                 user_,
-                ((bitField0_ & 0x00000400) == 0x00000400),
+                ((bitField0_ & 0x00000200) == 0x00000200),
                 getParentForChildren(),
                 isClean());
         user_ = null;
       }
       return userBuilder_;
+    }
+
+    private java.lang.Object areaType_ = "";
+    /**
+     * <code>string areaType = 12;</code>
+     */
+    public java.lang.String getAreaType() {
+      java.lang.Object ref = areaType_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        areaType_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string areaType = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAreaTypeBytes() {
+      java.lang.Object ref = areaType_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        areaType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string areaType = 12;</code>
+     */
+    public Builder setAreaType(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      areaType_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string areaType = 12;</code>
+     */
+    public Builder clearAreaType() {
+      
+      areaType_ = getDefaultInstance().getAreaType();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string areaType = 12;</code>
+     */
+    public Builder setAreaTypeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      areaType_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object provinceCode_ = "";
+    /**
+     * <code>string provinceCode = 13;</code>
+     */
+    public java.lang.String getProvinceCode() {
+      java.lang.Object ref = provinceCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        provinceCode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string provinceCode = 13;</code>
+     */
+    public com.google.protobuf.ByteString
+        getProvinceCodeBytes() {
+      java.lang.Object ref = provinceCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        provinceCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string provinceCode = 13;</code>
+     */
+    public Builder setProvinceCode(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      provinceCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string provinceCode = 13;</code>
+     */
+    public Builder clearProvinceCode() {
+      
+      provinceCode_ = getDefaultInstance().getProvinceCode();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string provinceCode = 13;</code>
+     */
+    public Builder setProvinceCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      provinceCode_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object cityCode_ = "";
+    /**
+     * <code>string cityCode = 14;</code>
+     */
+    public java.lang.String getCityCode() {
+      java.lang.Object ref = cityCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cityCode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string cityCode = 14;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCityCodeBytes() {
+      java.lang.Object ref = cityCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cityCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string cityCode = 14;</code>
+     */
+    public Builder setCityCode(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      cityCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string cityCode = 14;</code>
+     */
+    public Builder clearCityCode() {
+      
+      cityCode_ = getDefaultInstance().getCityCode();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string cityCode = 14;</code>
+     */
+    public Builder setCityCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      cityCode_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object countyCode_ = "";
+    /**
+     * <code>string countyCode = 15;</code>
+     */
+    public java.lang.String getCountyCode() {
+      java.lang.Object ref = countyCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        countyCode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string countyCode = 15;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCountyCodeBytes() {
+      java.lang.Object ref = countyCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        countyCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string countyCode = 15;</code>
+     */
+    public Builder setCountyCode(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      countyCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string countyCode = 15;</code>
+     */
+    public Builder clearCountyCode() {
+      
+      countyCode_ = getDefaultInstance().getCountyCode();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string countyCode = 15;</code>
+     */
+    public Builder setCountyCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      countyCode_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object county_ = "";
+    /**
+     * <code>string county = 16;</code>
+     */
+    public java.lang.String getCounty() {
+      java.lang.Object ref = county_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        county_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string county = 16;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCountyBytes() {
+      java.lang.Object ref = county_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        county_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string county = 16;</code>
+     */
+    public Builder setCounty(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      county_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string county = 16;</code>
+     */
+    public Builder clearCounty() {
+      
+      county_ = getDefaultInstance().getCounty();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string county = 16;</code>
+     */
+    public Builder setCountyBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      county_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object townCode_ = "";
+    /**
+     * <code>string townCode = 17;</code>
+     */
+    public java.lang.String getTownCode() {
+      java.lang.Object ref = townCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        townCode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string townCode = 17;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTownCodeBytes() {
+      java.lang.Object ref = townCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        townCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string townCode = 17;</code>
+     */
+    public Builder setTownCode(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      townCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string townCode = 17;</code>
+     */
+    public Builder clearTownCode() {
+      
+      townCode_ = getDefaultInstance().getTownCode();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string townCode = 17;</code>
+     */
+    public Builder setTownCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      townCode_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object town_ = "";
+    /**
+     * <code>string town = 18;</code>
+     */
+    public java.lang.String getTown() {
+      java.lang.Object ref = town_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        town_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string town = 18;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTownBytes() {
+      java.lang.Object ref = town_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        town_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string town = 18;</code>
+     */
+    public Builder setTown(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      town_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string town = 18;</code>
+     */
+    public Builder clearTown() {
+      
+      town_ = getDefaultInstance().getTown();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string town = 18;</code>
+     */
+    public Builder setTownBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      town_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object villageCode_ = "";
+    /**
+     * <code>string villageCode = 19;</code>
+     */
+    public java.lang.String getVillageCode() {
+      java.lang.Object ref = villageCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        villageCode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string villageCode = 19;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVillageCodeBytes() {
+      java.lang.Object ref = villageCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        villageCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string villageCode = 19;</code>
+     */
+    public Builder setVillageCode(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      villageCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string villageCode = 19;</code>
+     */
+    public Builder clearVillageCode() {
+      
+      villageCode_ = getDefaultInstance().getVillageCode();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string villageCode = 19;</code>
+     */
+    public Builder setVillageCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      villageCode_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object mergerName_ = "";
+    /**
+     * <code>string mergerName = 20;</code>
+     */
+    public java.lang.String getMergerName() {
+      java.lang.Object ref = mergerName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mergerName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string mergerName = 20;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMergerNameBytes() {
+      java.lang.Object ref = mergerName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mergerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string mergerName = 20;</code>
+     */
+    public Builder setMergerName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      mergerName_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string mergerName = 20;</code>
+     */
+    public Builder clearMergerName() {
+      
+      mergerName_ = getDefaultInstance().getMergerName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string mergerName = 20;</code>
+     */
+    public Builder setMergerNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      mergerName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object village_ = "";
+    /**
+     * <code>string village = 21;</code>
+     */
+    public java.lang.String getVillage() {
+      java.lang.Object ref = village_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        village_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string village = 21;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVillageBytes() {
+      java.lang.Object ref = village_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        village_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string village = 21;</code>
+     */
+    public Builder setVillage(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      village_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string village = 21;</code>
+     */
+    public Builder clearVillage() {
+      
+      village_ = getDefaultInstance().getVillage();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string village = 21;</code>
+     */
+    public Builder setVillageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      village_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int total_ ;
+    /**
+     * <code>int32 total = 22;</code>
+     */
+    public int getTotal() {
+      return total_;
+    }
+    /**
+     * <code>int32 total = 22;</code>
+     */
+    public Builder setTotal(int value) {
+      
+      total_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 total = 22;</code>
+     */
+    public Builder clearTotal() {
+      
+      total_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

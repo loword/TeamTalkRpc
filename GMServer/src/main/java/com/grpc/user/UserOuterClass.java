@@ -45,28 +45,36 @@ public final class UserOuterClass {
       "l\030\t \001(\t\022\020\n\010departid\030\n \001(\005\022\016\n\006avatar\030\013 \001(" +
       "\t\022\016\n\006status\030\014 \001(\005\022\017\n\007created\030\r \001(\005\022\017\n\007up" +
       "dated\030\016 \001(\005\022\032\n\022push_shield_status\030\017 \001(\005\022" +
-      "\021\n\tsign_info\030\020 \001(\t\"\202\002\n\013UserRequest\022\n\n\002id" +
+      "\021\n\tsign_info\030\020 \001(\t\"\220\003\n\013UserRequest\022\n\n\002id" +
       "\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\013\n\003sex\030\t \001(\005\022\014\n\004nic" +
       "k\030\003 \001(\t\022\020\n\010password\030\004 \001(\t\022\014\n\004salt\030\005 \001(\t\022" +
       "\r\n\005phone\030\006 \001(\t\022\r\n\005email\030\007 \001(\t\022\020\n\010departi" +
       "d\030\010 \001(\005\022!\n\004user\030\n \003(\0132\023.com.grpc.user.Us" +
-      "er\022\020\n\010cityCode\030\013 \001(\t\022\022\n\ncountyCode\030\014 \001(\t" +
-      "\022\020\n\010townCode\030\r \001(\t\022\023\n\013villageCode\030\016 \001(\t\"" +
-      "\304\001\n\014UserResponse\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001" +
-      "(\t\022\013\n\003sex\030\n \001(\005\022\014\n\004nick\030\003 \001(\t\022\013\n\003pwd\030\004 \001" +
-      "(\t\022\014\n\004salt\030\005 \001(\t\022\r\n\005phone\030\006 \001(\t\022\r\n\005email" +
-      "\030\007 \001(\t\022\020\n\010departid\030\010 \001(\005\022\021\n\tstatus_id\030\t " +
-      "\001(\005\022!\n\004user\030\013 \003(\0132\023.com.grpc.user.User2\357" +
-      "\002\n\013UserService\022C\n\010listUser\022\032.com.grpc.us" +
-      "er.UserRequest\032\033.com.grpc.user.UserRespo" +
-      "nse\022B\n\007addUser\022\032.com.grpc.user.UserReque" +
-      "st\032\033.com.grpc.user.UserResponse\022I\n\016modif" +
-      "yPassword\022\032.com.grpc.user.UserRequest\032\033." +
-      "com.grpc.user.UserResponse\022E\n\nremoveUser" +
-      "\022\032.com.grpc.user.UserRequest\032\033.com.grpc." +
-      "user.UserResponse\022E\n\nmodifyUser\022\032.com.gr" +
-      "pc.user.UserRequest\032\033.com.grpc.user.User" +
-      "ResponseB\002P\001b\006proto3"
+      "er\022\020\n\010areaType\030\013 \001(\005\022\024\n\014provinceCode\030\014 \001" +
+      "(\t\022\020\n\010cityCode\030\r \001(\t\022\022\n\ncountyCode\030\016 \001(\t" +
+      "\022\016\n\006county\030\017 \001(\t\022\020\n\010townCode\030\020 \001(\t\022\014\n\004to" +
+      "wn\030\021 \001(\t\022\023\n\013villageCode\030\022 \001(\t\022\017\n\007village" +
+      "\030\023 \001(\t\022\017\n\007curPage\030\024 \001(\005\022\020\n\010pageSize\030\025 \001(" +
+      "\005\022\022\n\nupdateUser\030\026 \001(\005\"\376\002\n\014UserResponse\022\n" +
+      "\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\013\n\003sex\030\n \001(\005\022\014\n" +
+      "\004nick\030\003 \001(\t\022\014\n\004salt\030\005 \001(\t\022\r\n\005phone\030\006 \001(\t" +
+      "\022\r\n\005email\030\007 \001(\t\022\020\n\010departid\030\010 \001(\005\022\021\n\tsta" +
+      "tus_id\030\t \001(\005\022!\n\004user\030\013 \003(\0132\023.com.grpc.us" +
+      "er.User\022\020\n\010areaType\030\014 \001(\t\022\024\n\014provinceCod" +
+      "e\030\r \001(\t\022\020\n\010cityCode\030\016 \001(\t\022\022\n\ncountyCode\030" +
+      "\017 \001(\t\022\016\n\006county\030\020 \001(\t\022\020\n\010townCode\030\021 \001(\t\022" +
+      "\014\n\004town\030\022 \001(\t\022\023\n\013villageCode\030\023 \001(\t\022\022\n\nme" +
+      "rgerName\030\024 \001(\t\022\017\n\007village\030\025 \001(\t\022\r\n\005total" +
+      "\030\026 \001(\0052\357\002\n\013UserService\022C\n\010listUser\022\032.com" +
+      ".grpc.user.UserRequest\032\033.com.grpc.user.U" +
+      "serResponse\022B\n\007addUser\022\032.com.grpc.user.U" +
+      "serRequest\032\033.com.grpc.user.UserResponse\022" +
+      "I\n\016modifyPassword\022\032.com.grpc.user.UserRe" +
+      "quest\032\033.com.grpc.user.UserResponse\022E\n\nre" +
+      "moveUser\022\032.com.grpc.user.UserRequest\032\033.c" +
+      "om.grpc.user.UserResponse\022E\n\nmodifyUser\022" +
+      "\032.com.grpc.user.UserRequest\032\033.com.grpc.u" +
+      "ser.UserResponseB\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -91,13 +99,13 @@ public final class UserOuterClass {
     internal_static_com_grpc_user_UserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_grpc_user_UserRequest_descriptor,
-        new java.lang.String[] { "Id", "Name", "Sex", "Nick", "Password", "Salt", "Phone", "Email", "Departid", "User", "CityCode", "CountyCode", "TownCode", "VillageCode", });
+        new java.lang.String[] { "Id", "Name", "Sex", "Nick", "Password", "Salt", "Phone", "Email", "Departid", "User", "AreaType", "ProvinceCode", "CityCode", "CountyCode", "County", "TownCode", "Town", "VillageCode", "Village", "CurPage", "PageSize", "UpdateUser", });
     internal_static_com_grpc_user_UserResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_grpc_user_UserResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_grpc_user_UserResponse_descriptor,
-        new java.lang.String[] { "Id", "Name", "Sex", "Nick", "Pwd", "Salt", "Phone", "Email", "Departid", "StatusId", "User", });
+        new java.lang.String[] { "Id", "Name", "Sex", "Nick", "Salt", "Phone", "Email", "Departid", "StatusId", "User", "AreaType", "ProvinceCode", "CityCode", "CountyCode", "County", "TownCode", "Town", "VillageCode", "MergerName", "Village", "Total", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

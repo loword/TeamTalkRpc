@@ -5,7 +5,7 @@
 			<el-form :inline="true" :model="filters">
 				<el-form-item>
 
-                <el-tooltip class="item" effect="dark" content="添加用户前请先创建部门" placement="right">
+                <el-tooltip class="item" effect="dark" content="添加用户前请先创建地址类型" placement="right">
                      <el-button type="primary" @click="handleAdd">新增</el-button>
                 </el-tooltip>
 
@@ -20,6 +20,9 @@
 			</el-table-column>
 
 			<el-table-column type="index" label="ID" width="60">
+			</el-table-column>
+
+			<el-table-column prop="id" v-if="false">
 			</el-table-column>
 
 			<el-table-column prop="name" label="姓名" width="100" sortable>
@@ -37,7 +40,7 @@
 			<el-table-column prop="email" label="邮箱" min-width="150" sortable>
 			</el-table-column>
 
-			<el-table-column prop="departid" label="部门" min-width="100" :formatter="formatName" sortable>
+			<el-table-column prop="areaType" v-if="false" label="地址类型" min-width="100" :formatter="formatName" sortable>
 			</el-table-column>
 			
 			<el-table-column label="操作" width="300">
@@ -57,7 +60,12 @@
 		<!--工具条-->
 		<el-col :span="24" class="toolbar_two">
 			<el-button type="danger" @click="batchRemove" :disabled="this.sels.length===0">批量删除</el-button>
-			<el-pagination layout="prev, pager, next" @current-change="handleCurrentChange" :page-size="20" :total="total" style="float:right;">
+			<el-pagination layout="total, sizes, prev, pager, next, jumper"
+			@current-change="handleCurrentChange" 
+			@size-change="handleSizeChange"
+			:page-size="limit"
+			:page-sizes="[5, 10, 15,25]"
+			:total="total" style="float:right;">
 			</el-pagination>
 		</el-col>
 
@@ -83,13 +91,29 @@
 					</el-radio-group>
 				</el-form-item>
 
-				<el-form-item label="部门">
-					<!-- <el-input v-model="editForm.departid"></el-input> -->
-					<el-select v-model="editForm.departid" placeholder="请选择部门">
-					 <el-option v-for="item in departList" :label="item.name" :value="item.id" :key="item.id" ></el-option>  
+				<el-form-item label="地址类型">
+					<!-- <el-input v-model="editForm.areaType"></el-input> -->
+					<el-select v-model="editForm.areaType" @change="initProvince()" placeholder="请选择地址类型">
+					 <el-option v-for="item in areaTypeList" :label="item.name" :value="item.id" :key="item.id" ></el-option>  
 					</el-select>
 				</el-form-item>
-
+				<el-form-item label="乡村" prop="villageCode">
+					<el-select v-model="editForm.provinceCode"  @change="changeProvince('e')" :disabled="provinceList.length == 0" clearable>
+						<el-option v-for="item in provinceList" :key="item.code" :label="item.name" :value="item.code"></el-option>
+					</el-select>
+					<el-select v-model="editForm.cityCode" @change="changeCity('e')" :disabled="cityList.length == 0" clearable>
+						<el-option v-for="item in cityList" :key="item.code" :label="item.name" :value="item.code"></el-option>
+					</el-select>
+					<el-select v-model="editForm.countyCode" ref="countyRef1" @change="changeCounty('e')" :disabled="countyList.length == 0" clearable>
+						<el-option v-for="item in countyList" :key="item.code" :label="item.name" :value="item.code"></el-option>
+					</el-select>
+					<el-select v-model="editForm.townCode" ref="townRef1" @change="changeTown('e')" :disabled="townList.length == 0" clearable>
+						<el-option v-for="item in townList" :key="item.code" :label="item.name" :value="item.code"></el-option>
+					</el-select>
+					<el-select v-model="editForm.villageCode" ref="villageRef1" @change="$forceUpdate()" :disabled="villageList.length == 0" clearable>
+						<el-option v-for="item in villageList" :key="item.code" :label="item.name" :value="item.code"></el-option>
+					</el-select>					
+				</el-form-item>
 				<el-form-item label="邮箱">
 					<el-input  v-model="editForm.email"></el-input>
 				</el-form-item>
@@ -127,26 +151,26 @@
 					</el-radio-group> 
 				</el-form-item>
 				
-				<el-form-item label="部门">
-					<!-- <el-input v-model="addForm.departid"></el-input> -->
-					<el-select v-model="addForm.departid" placeholder="请选择部门">
-					 <el-option v-for="item in departList" :label="item.name" :value="item.id" :key="item.id" ></el-option>   
+				<el-form-item label="地址类型" prop="areaType">
+					<!-- <el-input v-model="addForm.areaType"></el-input> -->
+					<el-select v-model="addForm.areaType" @change="initProvince()" placeholder="请选择地址类型">
+					 <el-option v-for="item in areaTypeList" :label="item.name" :value="item.id" :key="item.id" ></el-option>   
 					</el-select>
 				</el-form-item>
 				<el-form-item label="乡村" prop="villageCode">
-					<el-select v-model="addForm.provinceCode"  @change="changeProvince()" :disabled="provinceList.length == 0" clearable>
+					<el-select v-model="addForm.provinceCode"  @change="changeProvince('a')" :disabled="provinceList.length == 0" clearable>
 						<el-option v-for="item in provinceList" :key="item.code" :label="item.name" :value="item.code"></el-option>
 					</el-select>
-					<el-select v-model="addForm.cityCode"  @change="changeCity()" :disabled="cityList.length == 0" clearable>
+					<el-select v-model="addForm.cityCode" @change="changeCity('a')" :disabled="cityList.length == 0" clearable>
 						<el-option v-for="item in cityList" :key="item.code" :label="item.name" :value="item.code"></el-option>
 					</el-select>
-					<el-select v-model="addForm.countyCode" @change="changeCounty()" :disabled="countyList.length == 0" clearable>
+					<el-select v-model="addForm.countyCode" ref="countyRef" @change="changeCounty('a')" :disabled="countyList.length == 0" clearable>
 						<el-option v-for="item in countyList" :key="item.code" :label="item.name" :value="item.code"></el-option>
 					</el-select>
-					<el-select v-model="addForm.townCode" @change="changeTown()" :disabled="townList.length == 0" clearable>
+					<el-select v-model="addForm.townCode" ref="townRef" @change="changeTown('a')" :disabled="townList.length == 0" clearable>
 						<el-option v-for="item in townList" :key="item.code" :label="item.name" :value="item.code"></el-option>
 					</el-select>
-					<el-select v-model="addForm.villageCode" @change="$forceUpdate()" :disabled="villageList.length == 0" clearable>
+					<el-select v-model="addForm.villageCode" ref="villageRef" @change="$forceUpdate()" :disabled="villageList.length == 0" clearable>
 						<el-option v-for="item in villageList" :key="item.code" :label="item.name" :value="item.code"></el-option>
 					</el-select>					
 				</el-form-item>
@@ -154,7 +178,7 @@
 					<el-input  v-model="addForm.email"></el-input>
 				</el-form-item>
 
-				<el-form-item label="电话号码">
+				<el-form-item label="电话号码" prop="phone">
 					<el-input  v-model="addForm.phone"></el-input>
 				</el-form-item>
 
@@ -200,8 +224,8 @@
     //import md5 from 'js-md5';
 	//import NProgress from 'nprogress'
 	import {updatePasswordRequest,listUsersRequest, removeUserRequest, addUserRequest,updateUserRequest } from '@/api/member';
-    import {listDepartRequest} from '@/api/depart'
-    import {listAreaRequest} from '@/api/area'
+    //import {listDepartRequest} from '@/api/depart'
+    import {listAreaRequest,userAreaRequest} from '@/api/area'
 
 	export default {
 		data() {
@@ -212,10 +236,13 @@
 				users: [],
 				total: 0,
 				page: 1,
-
+				limit: 10,
 				departs :[],
 				num : 0,
-                departList  : [],
+                areaTypeList  : [
+                               {"id":1,"name":"籍贯"},
+                               {"id":2,"name":"工作地"},
+                               {"id":3,"name":"常住地"}],
 
 				listLoading: false,
 				sels: [],//列表选中列
@@ -234,9 +261,17 @@
 					nick:'',
 					//password:'',
 					sex: 0,
-				    departid:null,
+				    areaType:null,
 				    phone:'',
-					email: ''
+					email: '',
+					provinceCode: "",	//省
+					cityCode: "",  //市
+					countyCode: "",   //区县
+					county: "",   //区县
+					townCode: "",//乡
+					town: "",//乡
+					villageCode: "",//村的数据
+					village: "",//村的数据						
 				},
 
 				addFormVisible: false,//新增界面是否显示
@@ -248,6 +283,9 @@
 					password: [
 						{ required: true, message: '请输入密码', trigger: 'blur' }
 					],
+					areaType: [
+						{ required: true, message: '请输入地址类型'}
+					],					
 					provinceCode: [
 						{ required: true, message: '请输入省份', trigger: 'blur' }
 					],
@@ -262,6 +300,9 @@
 					],
 					villageCode: [
 						{ required: true, message: '村数据为空', trigger: 'blur' }
+					],
+					phone:[
+						{ required: true, message: '请输入电话号码'}
 					]
 				},
 				provinceList:  [],//省的数组
@@ -275,26 +316,49 @@
 					nick:'',
 					password:'',
 					sex: 0,
-				    departid: null,
+				    areaType: null,
 				    phone:'',
 					email: '',
 					provinceCode: "",	//省
 					cityCode: "",  //市
 					countyCode: "",   //区县
+					county: "",   //区县
 					townCode: "",//乡
-					villageCode: "",//村的数据				
+					town: "",//乡
+					villageCode: "",//村的数据
+					village: "",//村的数据			
 				},
 
 				editPasswordVisible: false,//改密界面是否显示
 				editPasswordLoading: false,//改密界面是否加载
-				editPasswordRules:{        //改密界面文本框填写规则
-					
+				editPasswordRules:{        //改密界面文本框填写规则					
 					password: [
 						{ required: true, message: '请输入新密码', trigger: 'blur' }
 					],
 					passwordagain: [
 						{ required: true, message: '请再次输入新密码', trigger: 'blur' }
-					]
+					],
+					areaType: [
+						{ required: true, message: '请输入地址类型'}
+					],					
+					provinceCode: [
+						{ required: true, message: '请输入省份', trigger: 'blur' }
+					],
+					cityCode: [
+						{ required: true, message: '请输入城市', trigger: 'blur' }
+					],
+					countyCode: [
+						{ required: true, message: '请输入区县', trigger: 'blur' }
+					],
+					townCode: [
+						{ required: true, message: '乡镇数据为空', trigger: 'blur' }
+					],
+					villageCode: [
+						{ required: true, message: '村数据为空', trigger: 'blur' }
+					],
+					phone:[
+						{ required: true, message: '请输入电话号码'}
+					]					
 				},
 				editPassword : {  //改密界面数据
 					id:'',
@@ -321,20 +385,20 @@
 			},
             formatName :function(row){
                      
-                 for(var j=0 ; j<this.departList.length ; j++){
+                 for(var j=0 ; j<this.areaTypeList.length ; j++){
                      var cp =
                      {  
                      	id:0,
                      	name:""
                      }
-                     cp=this.departList[j];
-                     if(row.departid==cp.id){
+                     cp=this.areaTypeList[j];
+                     if(row.areaType==cp.id){
                      	return cp.name;
                      }
                      else{}
                  }
-                 row.departid=0;
-                 return "无部门";
+                 row.areaType=0;
+                 return "未知";
 			},
 			//性别显示转换
 			formatSex: function (row, column) {
@@ -344,24 +408,29 @@
 				this.page = val;
 				this.getUsers();
 			},
+			handleSizeChange(val) {
+				this.limit  = val;
+				this.getUsers();
+			},			
 			//获取用户列表
-			getUsers() {
+			async getUsers() {
 				let para = {
-					page: this.page,
+					curPage: this.page,
+					pageSize: this.limit,
 					name: this.filters.name
 				};
 				this.listLoading = true;
 				//NProgress.start();
 				
-                listDepartRequest(para).then(res => {
+                /* listDepartRequest(para).then(res => {
                         this.departs =JSON.parse(res.data.data).depart;
                         this.num = this.departs.length;
-                        this.departList = [{id:0,name:"无部门"}];
+                        this.areaTypeList = [{id:0,name:"无地址类型"}];
                     for(var key in this.departs){
-                        this.departList.push({id:this.departs[key].id, name:this.departs[key].departname});
-                    }
+                        this.areaTypeList.push({id:this.departs[key].id, name:this.departs[key].departname});
+                    } */
               
-				listUsersRequest(para).then(data => {
+				await listUsersRequest(para).then(data => {
 					if(data.data.code==1){
 						this.users=[];
 						this.total=0;
@@ -370,7 +439,7 @@
 					else if (data.data.code==0)
 					{  
                        this.users = JSON.parse(data.data.data).user;
-					   this.total = this.users.length; 
+					   this.total = JSON.parse(data.data.data).total;
 					   this.listLoading = false;
 					}
 					else{
@@ -383,7 +452,7 @@
 					
 					//NProgress.done();
 				});
-			    });
+			    //});
 			},
 			//删除
 			handleDel: function (index, row) {
@@ -426,8 +495,9 @@
 			},
 			//显示编辑界面
 			handleEdit: function (index, row) {
+				var cp = {"id":0,"name":"未知"};
+				if (this.areaTypeList[0].name != "未知") { this.areaTypeList.unshift(cp); }
 				this.editFormVisible = true;
-
 				this.editForm = Object.assign({}, row);
 				/*this.editForm ={
                     name: '',
@@ -437,6 +507,7 @@
 					birth: '',
 					email: ''
 				};*/
+				this.editShowArea(row.id);
 			},
 			//显示改密界面
 			EditPassword: function (index, row) {
@@ -464,11 +535,19 @@
 					nick:'',
 					password:'',
 					sex: 0,
-				    departid:null,
+				    areaType:null,
 				    phone:'',
-					email: ''
+					email: '',
+					provinceCode:'',
+					cityCode: '',
+					countyCode: '',
+					county: '',
+					townCode: '',
+					town: '',
+					villageCode: '',
+					village:'',
 				};
-				this.initProvince();
+				if (this.areaTypeList[0].name == "未知") { this.areaTypeList.splice(0, 1); }
 			},
 			//编辑
 			editSubmit: function () {
@@ -478,6 +557,10 @@
 							this.editLoading = true;
 							//NProgress.start();
 							//this.editForm.password=this.md5(this.editForm.password);
+							this.editForm.county=this.$refs.countyRef1.selectedLabel;
+							this.editForm.town=this.$refs.townRef1.selectedLabel;
+							this.editForm.village=this.$refs.villageRef1.selectedLabel;
+							this.editForm.updateUser=this.$store.getters.manager_id;
 							let para = Object.assign({}, this.editForm);
 							//para.birth = (!para.birth || para.birth == '') ? '' : util.formatDate.format(new Date(para.birth), 'yyyy-MM-dd');
 							updateUserRequest(para).then(data => {
@@ -517,24 +600,32 @@
 							this.addLoading = true;
 							//NProgress.start();
 							this.addForm.password=this.md5(this.addForm.password);
+							/* let countyObj,townObj,villageObj = {};
+							countyObj = this.countyList.find(item => item.code = this.addForm.countyCode);
+							this.addForm.county=countyObj.name;
+							townObj = this.townList.find(item => item.code = this.addForm.townCode);
+							this.addForm.town=townObj.name;
+							villageObj = this.villageList.find(item => item.code = this.addForm.villageCode);
+							this.addForm.village=villageObj.name; */
+							
+							this.addForm.county=this.$refs.countyRef.selectedLabel;
+							this.addForm.town=this.$refs.townRef.selectedLabel;
+							this.addForm.village=this.$refs.villageRef.selectedLabel;
 							let para = Object.assign({}, this.addForm);
 							//para.birth = (!para.birth || para.birth == '') ? '' : util.formatDate.format(new Date(para.birth), 'yyyy-MM-dd');
 							addUserRequest(para).then(data => {
-                                
 								this.addLoading = false;
 								if(data.data.code==0){
                                    this.$message({
 									message: '提交成功',
 									type: 'success'
 								});
-								}
-								else if(data.data.code==1){
+								} else if(data.data.code==1){
 									this.$message({
 									message: '提交失败',
 									type: 'warning'
 								});
-								}
-								else {
+								} else {
 									this.$message({
 										message: '服务器或网络错误',
 										type: 'error'
@@ -557,7 +648,7 @@
 							this.editPasswordLoading = true;
 							
 						  
-							this.editPassword.password=this.md5(this.editPassword.password);  
+							this.editPassword.password=this.md5(this.editPassword.password);
                             //console.log(this.editPassword.id);
 					        
 					        let para ={id:this.editPassword.id,password:this.editPassword.password};
@@ -578,8 +669,7 @@
 									message: '提交失败',
 									type: 'warning'
 								});
-								}
-								else {
+								} else {
 									this.$message({
 										message: '服务器或网络错误',
 										type: 'error'
@@ -624,14 +714,12 @@
 								message: '删除成功',
 								type: 'success'
 							});
-							}
-							else if(data.data.code==1){
+							} else if(data.data.code==1){
 								this.$message({
 								message: '删除失败',
 								type: 'warning'
 							});
-							}
-							else {
+							} else {
 								this.$message({
 								message: '服务器或网络错误',
 								type: 'error'
@@ -643,20 +731,24 @@
 
 				});
 			},
-			initProvince() {
+			async initProvince() {
 				let _self = this;
-				_self.city = [];
-				_self.addForm.city = "";
-				_self.county = [];
-				_self.addForm.county = "";
-				_self.town = [];
-				_self.addForm.town = "";
-				_self.village = [];
-				_self.addForm.village = "";
-                listAreaRequest().then(data => {
+				_self.cityList = [];
+				_self.addForm.cityCode = "";
+				_self.editForm.cityCode = "";
+				_self.countyList = [];
+				_self.addForm.countyCode = "";
+				_self.editForm.countyCode = "";
+				_self.townList = [];
+				_self.addForm.townCode = "";
+				_self.editForm.townCode = "";
+				_self.villageList = [];
+				_self.addForm.villageCode = "";
+				_self.editForm.villageCode = "";
+                await listAreaRequest().then(data => {
 					if(data.data.code==1){
 						this.$message({
-							message:'无下级区域数据',
+							message:'无区域数据',
 							type:'warning'
 						});
 					} else if(data.data.code==0) {
@@ -675,21 +767,33 @@
 			    });
 			},
 			// 选择省的点击事件
-			changeProvince() {
+			async changeProvince(flag,provinceCode) {
 				let _self = this;
 				_self.cityList = [];
-				_self.addForm.cityCode = "";
 				_self.countyList = [];
-				_self.addForm.countyCode = "";
 				_self.townList = [];
-				_self.addForm.townCode = "";
 				_self.villageList = [];
-				_self.addForm.villageCode = "";
-				let para ={areaCode:this.addForm.provinceCode,levelCode:1, name:"",pinyin:""};
-				listAreaRequest(para).then(data => {
+				if(flag == "a") {
+					_self.addForm.cityCode = "";
+					_self.addForm.countyCode = "";
+					_self.addForm.townCode = "";
+					_self.addForm.villageCode = "";
+					provinceCode = this.addForm.provinceCode;
+				}else if(flag == "e"){
+					_self.editForm.cityCode = "";
+					_self.editForm.countyCode = "";
+					_self.editForm.townCode = "";
+					_self.editForm.villageCode = "";
+					if(provinceCode == undefined || provinceCode == "") {
+						provinceCode = this.editForm.provinceCode
+					}
+				}
+			
+				let para ={areaCode:provinceCode,levelCode:1, name:"",pinyin:""};
+				await listAreaRequest(para).then(data => {
 					if(data.data.code==1){
 						this.$message({
-							message:'无下级区域数据',
+							message:'无区域数据',
 							type:'warning'
 						});
 					} else if(data.data.code==0) {
@@ -707,19 +811,29 @@
 			    });
 			},
 			// 选择市的点击事件
-			changeCity() {
+			async changeCity(flag,cityCode) {
 				let _self = this;
 				_self.countyList = [];
-				_self.addForm.countyCode = "";
 				_self.townList = [];
-				_self.addForm.townCode = "";
 				_self.villageList = [];
-				_self.addForm.villageCode = "";
-				let para ={areaCode:this.addForm.cityCode,levelCode:2, name:"",pinyin:""};
-				listAreaRequest(para).then(data => {
+				if(flag == "a") {
+					_self.addForm.countyCode = "";
+					_self.addForm.townCode = "";
+					_self.addForm.villageCode = "";
+					cityCode = this.addForm.cityCode;
+				}else if(flag == "e"){
+					_self.editForm.countyCode = "";
+					_self.editForm.townCode = "";
+					_self.editForm.villageCode = "";
+					if(cityCode == undefined || cityCode == "") {
+						cityCode = this.editForm.cityCode;
+					}
+				}
+				let para ={areaCode:cityCode,levelCode:2, name:"",pinyin:""};
+				await listAreaRequest(para).then(data => {
 					if(data.data.code==1){
 						this.$message({
-							message:'无下级区域数据',
+							message:'无区域数据',
 							type:'warning'
 						});
 					} else if(data.data.code==0) {
@@ -737,17 +851,26 @@
 			    });
 			},
 			// 选择区县的点击事件
-			changeCounty() {
+			async changeCounty(flag,countyCode) {
 				let _self = this;
 				_self.townList = [];
-				_self.addForm.townCode = "";
 				_self.villageList = [];
-				_self.addForm.villageCode = "";
-				let para ={areaCode:this.addForm.countyCode,levelCode:3, name:"",pinyin:""};
-				listAreaRequest(para).then(data => {
+				if(flag == "a") {
+					_self.addForm.townCode = "";
+					_self.addForm.villageCode = "";
+					countyCode = this.addForm.countyCode;
+				}else if(flag == "e"){
+					_self.editForm.townCode = "";
+					_self.editForm.villageCode = "";
+					if(countyCode == undefined || countyCode == "") {
+						countyCode = this.editForm.countyCode;
+					}
+				}
+				let para ={areaCode:countyCode,levelCode:3, name:"",pinyin:""};
+				await listAreaRequest(para).then(data => {
 					if(data.data.code==1){
 						this.$message({
-							message:'无下级区域数据',
+							message:'无区域数据',
 							type:'warning'
 						});
 					} else if(data.data.code==0) {
@@ -765,15 +888,23 @@
 			    });
 			},
 			// 选择乡镇的点击事件
-			changeTown() {
+			async changeTown(flag,townCode) {
 				let _self = this;
 				_self.villageList = [];
-				_self.addForm.villageCode = "";
-				let para ={areaCode:this.addForm.townCode,levelCode:4, name:"",pinyin:""};
-				listAreaRequest(para).then(data => {
+				if(flag == "a") {
+					_self.addForm.villageCode = "";
+					townCode = this.addForm.townCode;
+				}else if(flag == "e"){
+					_self.editForm.villageCode = "";
+					if(townCode == undefined || townCode == "") {
+						townCode = this.editForm.townCode;
+					}
+				}
+				let para ={areaCode:townCode,levelCode:4, name:"",pinyin:""};
+				await listAreaRequest(para).then(data => {
 					if(data.data.code==1){
 						this.$message({
-							message:'无下级区域数据',
+							message:'无区域数据',
 							type:'warning'
 						});
 					} else if(data.data.code==0) {
@@ -790,6 +921,36 @@
 					}
 			    });
 			},
+			// 加载地区事件
+			editShowArea(id) {
+				let userId = id
+				userAreaRequest(userId).then(data => {
+					if(data.data.code==1){
+						this.$message({
+							message:'无区域数据',
+							type:'warning'
+						});
+					} else if(data.data.code==0) {
+                        let areaObj = JSON.parse(data.data.data);
+						this.editForm.areaType = areaObj.areaType;
+					    this.initProvince();
+					    this.editForm.provinceCode = areaObj.provinceCode;
+					    this.changeProvince("e",areaObj.provinceCode);
+						this.editForm.cityCode = areaObj.cityCode;
+						this.changeCity("e",areaObj.cityCode)
+						this.editForm.countyCode = areaObj.countyCode;
+						this.changeCounty("e",areaObj.countyCode);
+						this.editForm.townCode = areaObj.townCode;
+						this.changeTown("e",areaObj.townCode);
+						this.editForm.villageCode = areaObj.villageCode;
+					} else {
+						this.$message({
+							message:'获取区域数据失败',
+							type:'warning'
+						});
+					}
+			    });
+			},			
 		},	
 		mounted() {
 			this.getUsers();

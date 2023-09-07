@@ -2,18 +2,8 @@ package com.loword.java.server;
 
 import javax.annotation.Resource;
 
+import com.loword.java.service.*;
 import org.springframework.stereotype.Service;
-
-import com.loword.java.service.AreaService;
-import com.loword.java.service.IDepartService;
-import com.loword.java.service.IDiscoveryService;
-import com.loword.java.service.IGroupService;
-import com.loword.java.service.IUserService;
-import com.loword.java.service.ManagerService;
-import com.loword.java.service.Manager_RoleService;
-import com.loword.java.service.MenuService;
-import com.loword.java.service.RoleService;
-import com.loword.java.service.Role_MenuService;
 
 /**
  * Created by wx on 2017/11/8.
@@ -51,4 +41,6 @@ public class BeanContainer {
     @Resource
     public AreaService areaService;
 
+    @Resource
+    public UserAreaService userAreaService;
 }

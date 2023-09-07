@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.loword.java.kernel.entity.IMUser;
 
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public interface IMUserMapper {
@@ -14,7 +15,9 @@ public interface IMUserMapper {
 
     IMUser selectUserByName(@Param("name") String Name);
 
-    List<IMUser> selectAllUser();
+    int getCountUser();
+
+    List<IMUser> selectAllUser(@Param("cm") Map<String, Object> columnMap);
 
     int deleteByPrimaryKey(@Param("id") Integer id);
 
