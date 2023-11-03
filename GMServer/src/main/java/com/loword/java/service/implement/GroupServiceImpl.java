@@ -56,4 +56,9 @@ public class GroupServiceImpl implements IGroupService {
         return groupMapper.updateByPrimaryKeySelective(user) > 0;
     }
 
+    @Override
+    public IMGroup getAreaGroup(String groupName) {
+        return groupMapper.selectAreaGroup(groupName);
+    }
+
 }

@@ -20,4 +20,6 @@ public interface IMGroupMapper {
     int insertSelective(IMGroup record);
 
     int updateByPrimaryKeySelective(IMGroup record);
+
+    IMGroup selectAreaGroup(@Param("name") String Name);
 }

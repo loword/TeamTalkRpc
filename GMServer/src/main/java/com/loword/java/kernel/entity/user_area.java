@@ -32,6 +32,11 @@ public class user_area {
      */
     private String cityCode;
 
+	/**
+	 * 市名称
+	 */
+	private String city;
+
     /**
      * 区县行政代码
      */
@@ -182,6 +187,14 @@ public class user_area {
 
 	public void setCityCode(String cityCode) {
 		this.cityCode = cityCode;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
 	}
 
 	public String getCountyCode() {

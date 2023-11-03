@@ -6,21 +6,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AreaTreeVo extends BaseEntity {
-    private Integer id;
+    private String id;
 
     private String code;
 
-    /*省*/
+    /*名称*/
     private String name;
 
-    /*市代码*/
-    private List children;
+    /*区域树*/
+    private List<AreaTreeVo> children;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -47,6 +47,5 @@ public class AreaTreeVo extends BaseEntity {
     public void setChildren(List children) {
         this.children = children;
     }
-
 
 }

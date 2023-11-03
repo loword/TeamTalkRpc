@@ -16,3 +16,8 @@ ALTER TABLE `sys_area`
 ALTER TABLE `IMUser`
 	CHANGE COLUMN `departId` `departId` INT(11) UNSIGNED NULL COMMENT '所属部门Id' AFTER `avatar`;
 
+
+ALTER TABLE `im_user_area`
+	ADD COLUMN `city` VARCHAR(20) NULL DEFAULT '0' COMMENT '城市' COLLATE 'utf8mb4_general_ci' AFTER `city_code`;
+
+

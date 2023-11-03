@@ -21,6 +21,7 @@ public class UserAreaServiceImpl implements UserAreaService {
     @Override
     public int addUserArea(user_area uarea) {
         uarea.setStatus(0);
+        uarea.setAreaType(1);
         int timeNow = (int) (System.currentTimeMillis()/1000);
         uarea.setCreateTime(timeNow);
         return userAreaMapper.insert(uarea);

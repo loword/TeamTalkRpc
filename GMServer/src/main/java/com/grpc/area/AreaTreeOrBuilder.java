@@ -8,9 +8,14 @@ public interface AreaTreeOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 id = 1;</code>
+   * <code>string id = 1;</code>
    */
-  int getId();
+  java.lang.String getId();
+  /**
+   * <code>string id = 1;</code>
+   */
+  com.google.protobuf.ByteString
+      getIdBytes();
 
   /**
    * <code>string code = 2;</code>
@@ -33,26 +38,26 @@ public interface AreaTreeOrBuilder extends
       getNameBytes();
 
   /**
-   * <code>repeated .com.grpc.area.AreaTree tree = 5;</code>
+   * <code>repeated .com.grpc.area.AreaTree child = 5;</code>
    */
   java.util.List<com.grpc.area.AreaTree> 
-      getTreeList();
+      getChildList();
   /**
-   * <code>repeated .com.grpc.area.AreaTree tree = 5;</code>
+   * <code>repeated .com.grpc.area.AreaTree child = 5;</code>
    */
-  com.grpc.area.AreaTree getTree(int index);
+  com.grpc.area.AreaTree getChild(int index);
   /**
-   * <code>repeated .com.grpc.area.AreaTree tree = 5;</code>
+   * <code>repeated .com.grpc.area.AreaTree child = 5;</code>
    */
-  int getTreeCount();
+  int getChildCount();
   /**
-   * <code>repeated .com.grpc.area.AreaTree tree = 5;</code>
+   * <code>repeated .com.grpc.area.AreaTree child = 5;</code>
    */
   java.util.List<? extends com.grpc.area.AreaTreeOrBuilder> 
-      getTreeOrBuilderList();
+      getChildOrBuilderList();
   /**
-   * <code>repeated .com.grpc.area.AreaTree tree = 5;</code>
+   * <code>repeated .com.grpc.area.AreaTree child = 5;</code>
    */
-  com.grpc.area.AreaTreeOrBuilder getTreeOrBuilder(
+  com.grpc.area.AreaTreeOrBuilder getChildOrBuilder(
       int index);
 }

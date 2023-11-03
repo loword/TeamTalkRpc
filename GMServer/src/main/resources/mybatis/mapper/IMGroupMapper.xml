@@ -34,6 +34,13 @@
     limit 1
   </select>
 
+  <select id="selectAreaGroup" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from IMGroup where name= #{name} and type = 1
+    limit 1
+  </select>
+
   <select id="selectAllGroup" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>

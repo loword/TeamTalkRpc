@@ -43,19 +43,19 @@ message UserRequest {
 
     string name=2;
 
-    int32 sex=9;
+    int32 sex=3;
 
-    string nick=3;
+    string nick=4;
 
-    string password=4;
+    string password=5;
 
-    string salt=5;
+    string salt=6;
 
-    string phone=6;
+    string phone=7;
 
-    string email=7;
+    string email=8;
 
-    int32 departid=8;
+    int32 departid=9;
 
     repeated User user=10;
 
@@ -65,23 +65,25 @@ message UserRequest {
 
     string cityCode = 13;
 
-    string countyCode = 14;
+    string city = 14;
 
-    string county = 15;
+    string countyCode = 15;
 
-    string townCode = 16;
+    string county = 16;
 
-    string town = 17;
+    string townCode = 17;
 
-    string villageCode = 18;
+    string town = 18;
 
-    string village = 19;
+    string villageCode = 19;
 
-    int32 curPage = 20;
+    string village = 20;
 
-    int32 pageSize = 21;
+    int32 curPage = 21;
 
-    int32 updateUser = 22;
+    int32 pageSize = 22;
+
+    int32 updateUser = 23;
 
 }
 

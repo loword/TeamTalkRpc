@@ -23,4 +23,6 @@ public interface IGroupService {
 
     Boolean updateGroup(IMGroup user);
 
+    IMGroup getAreaGroup(String name);
+
 }

@@ -84,8 +84,8 @@
   </select>
 
   <select id="selectAreaTree" parameterType="com.loword.java.kernel.entity.sys_area" resultType="com.loword.java.model.vo.AreaVo">
-	SELECT a.area_code province_code, a.short_name province, b.area_code city_code, b.short_name city,
-	  c.area_code county_code, c.short_name county
+	SELECT a.area_code county_code, a.short_name county, b.area_code town_code, b.short_name town,
+	  c.area_code village_code, c.short_name village
 	FROM sys_area a
 	INNER JOIN sys_area b ON a.area_code=b.parent_code
 	INNER JOIN sys_area c ON b.area_code=c.parent_code
@@ -96,26 +96,26 @@
 	<if test="levelCode != null">
 	  and a.level_code = #{levelCode}
 	</if>
-  	<if test="parentCode != null and parentCode != ''">
+  	<!--<if test="parentCode != null and parentCode != ''">
   		and a.parent_code = #{parentCode}
-  	</if>
+  	</if>-->
   	<if test="areaCode != null and areaCode != ''">
-  		and e.area_code = #{areaCode}
+  		and a.parent_code = #{areaCode}
   	</if>
   	<if test="name != null and name != ''">
   		and a.name = #{name}
   	</if>
   	<if test="shortName != null and shortName != ''">
-  		and e.short_name = #{shortName}
+  		and a.short_name = #{shortName}
   	</if>
   	<if test="pinyin != null and pinyin != ''">
-  		and e.pinyin = #{pinyin}
+  		and a.pinyin = #{pinyin}
   	</if>
   	<if test="lng != null and lng != 0">
-  		and e.lng &gt; #{lng} -1 and e.lng &lt; #{lng}+1
+  		and a.lng &gt; #{lng} -1 and a.lng &lt; #{lng}+1
   	</if>
   	<if test="lat != null and lat != 0">
-  		and e.lat &gt; #{lat} -1 and e.lat &lt; #{lat}+1
+  		and a.lat &gt; #{lat} -1 and a.lat &lt; #{lat}+1
   	</if>
   </select>
 

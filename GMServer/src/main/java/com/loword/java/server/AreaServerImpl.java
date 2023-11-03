@@ -2,6 +2,7 @@ package com.loword.java.server;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.StrUtil;
+import com.google.protobuf.Descriptors;
 import com.grpc.area.Area;
 import com.grpc.area.AreaRequest;
 import com.grpc.area.AreaResponse;
@@ -50,7 +51,7 @@ public class AreaServerImpl extends AreaServiceImplBase {
          if(AreaTreeList.size()>0){
              for(AreaTreeVo ri :AreaTreeList) {
                  Area.Builder bu = Area.newBuilder();
-                 bu.setId(ri.getId());
+                 bu.setId(Integer.valueOf(ri.getId()));
                  //bu.setLevelCode(ri.getLevelCode());
                  //bu.setParentCode(ri.getParentCode());
                  bu.setAreaCode(ri.getCode());
@@ -138,79 +139,92 @@ public class AreaServerImpl extends AreaServiceImplBase {
         responseObserver.onCompleted();    
 	}
 
-    private List<AreaTreeVo> dataTree(List<AreaVo> areaList){
-        AreaTreeVo villageVo = new AreaTreeVo();
-        List<AreaTreeVo> villageList = new ArrayList<AreaTreeVo>();
-        AreaTreeVo townVo = new AreaTreeVo();
-        List<AreaTreeVo> townList = new ArrayList<AreaTreeVo>();
-        AreaTreeVo countyVo = new AreaTreeVo();
-        List<AreaTreeVo> countyList = new ArrayList<AreaTreeVo>();
-        AreaTreeVo cityVo = new AreaTreeVo();
-        List<AreaTreeVo> cityList = new ArrayList<AreaTreeVo>();
+    private void dataTree(List<AreaVo> areaList,AreaTree.Builder areaTree){
+        //AreaTreeVo villageVo = new AreaTreeVo();
+        //List<AreaTreeVo> villageList = new ArrayList<AreaTreeVo>();
+        AreaTree.Builder villageInfo =  AreaTree.newBuilder();
+        //AreaTreeVo townVo = new AreaTreeVo();
+        AreaTree.Builder townInfo =  AreaTree.newBuilder();
+        //AreaTreeVo countyVo = new AreaTreeVo();
+        AreaTree.Builder countyInfo =  AreaTree.newBuilder();
+        //List<AreaTreeVo> countyList = new ArrayList<AreaTreeVo>();
+        //AreaTreeVo cityVo = new AreaTreeVo();
+        //List<AreaTreeVo> cityList = new ArrayList<AreaTreeVo>();
         for(int i=0; i<areaList.size(); i++){
             AreaVo ri = areaList.get(i);
-            villageVo.setId(Integer.valueOf(ri.getVillageCode()));
-            villageVo.setName(ri.getVillage());
-            villageList.add(villageVo);
-            if(townVo.getId() == null || !ri.getTownCode().equals(String.valueOf(townVo.getId()))) {
-                townVo.setId(Integer.valueOf(ri.getTownCode()));
-                townVo.setName(ri.getTown());
-                townVo.setChildren(villageList);
-                townList.add(townVo);
-                if (i != 0) {villageList.clear();}
+            if(i==0) {
+                villageInfo.setId(ri.getVillageCode());
+                villageInfo.setName(ri.getVillage());
+                townInfo.addChild(villageInfo);
+                townInfo.setId(ri.getTownCode());
+                townInfo.setName(ri.getTown());
+                countyInfo.setId(ri.getCountyCode());
+                countyInfo.setName(ri.getCounty());
+            }else if(ri.getTownCode().equals(String.valueOf(townInfo.getId()))) {
+                villageInfo.setId(ri.getVillageCode());
+                villageInfo.setName(ri.getVillage());
+                townInfo.addChild(villageInfo);
+            }else if(!ri.getTownCode().equals(String.valueOf(townInfo.getId()))){
+                countyInfo.addChild(townInfo);
+                townInfo.clearChild();
+                villageInfo.setId(ri.getVillageCode());
+                villageInfo.setName(ri.getVillage());
+                townInfo.addChild(villageInfo);
+                townInfo.setId(ri.getTownCode());
+                townInfo.setName(ri.getTown());
+            }
 
+            if(!ri.getCountyCode().equals(String.valueOf(countyInfo.getId()))) {
+                areaTree.addChild(countyInfo);
+                countyInfo.clearChild();
+                countyInfo.setId(ri.getCountyCode());
+                countyInfo.setName(ri.getCounty());
+            } else if(i==areaList.size()-1) {
+                countyInfo.addChild(townInfo);
+                countyInfo.setId(ri.getCountyCode());
+                countyInfo.setName(ri.getCounty());
+                areaTree.addChild(countyInfo);
+                countyInfo.clearChild();
             }
-            if(countyVo.getId() == null || !ri.getCountyCode().equals(String.valueOf(countyVo.getId()))) {
-                countyVo.setId(Integer.valueOf(ri.getCountyCode()));
-                countyVo.setName(ri.getCounty());
-                countyVo.setChildren(townList);
-                countyList.add(countyVo);
-                if (i != 0) {townList.clear();}
-            }
-            /*if(cityVo.getId() == null || !ri.getCityCode().equals(String.valueOf(cityVo.getId()))) {
-                cityVo.setId(Integer.valueOf(ri.getCityCode()));
-                cityVo.setName(ri.getCity());
-                cityVo.setChildren(countyList);
-                cityList.add(cityVo);
-                if (i != 0) {countyList.clear();}
-            }*/
         }
-        return countyList;
     }
 	/**
 	 * 根据父级行政代码获取下级行政区域信息
 	 */
-	public void getAreaTree(AreaRequest request,StreamObserver<AreaResponse> responseObserver) {
-        List<AreaVo> areaList = new ArrayList<AreaVo>();
-        AreaResponse.Builder builder=AreaResponse.newBuilder();
+	public void getAreaTree(AreaRequest request,StreamObserver<AreaTree> responseObserver) {
+        List<AreaVo> areaList;
+        AreaTree.Builder bu = AreaTree.newBuilder();
 
        	sys_area area = new sys_area();
-        area.setId(request.getId());
-       	area.setParentCode(request.getParentCode());
+        //area.setId(request.getId());
+       	//area.setParentCode(request.getParentCode());
         area.setAreaCode(request.getAreaCode());
-        area.setName(request.getName());
-        area.setShortName(request.getShortName());
-        area.setPinyin(request.getPinyin());
+        //area.setName(request.getName());
+        //area.setShortName(request.getShortName());
+        //area.setPinyin(request.getPinyin());
         area.setLat(request.getLat());
         area.setLng(request.getLng());
        	areaList =this.areaService.listAreaTree(area);
 
         if(areaList.size()>0){
-            List<AreaTreeVo> treelist = dataTree(areaList);
+
+            /*List<AreaTreeVo> treelist = dataTree(areaList,bu);
             for(AreaTreeVo treeVo:treelist){
-                AreaTree.Builder bu = AreaTree.newBuilder();
                 bu.setId(treeVo.getId());
                 bu.setName(treeVo.getName());
-                AreaTree ar =bu.build();
-                builder.addTree(ar);
-            }
-            AreaResponse response=builder.build();
-            responseObserver.onNext(response);
+                Gson gson=new Gson();
+                bu.setChildTree(gson.toJson(treeVo.getChildren()));
+            }*/
+            bu.setId(request.getAreaCode());
+            bu.setName(request.getShortName());
+            dataTree(areaList,bu);
+            AreaTree areaTree=bu.build();
+            responseObserver.onNext(areaTree);
         }else{
             System.out.println("内容不存在");
-            AreaResponse response = AreaResponse.newBuilder()
+            AreaTree areaResponse = AreaTree.newBuilder()
                     .build();
-            responseObserver.onNext(response);
+            responseObserver.onNext(areaResponse);
         }
 
         responseObserver.onCompleted();
@@ -231,7 +245,7 @@ public class AreaServerImpl extends AreaServiceImplBase {
 
         if(area != null) {
             Area.Builder bu = Area.newBuilder();
-            bu.setId(area.getId());
+            bu.setId(Integer.valueOf(area.getId()));
             bu.setLevelCode(area.getLevelCode());
             bu.setParentCode(area.getParentCode());
             bu.setAreaCode(area.getAreaCode());

@@ -62,6 +62,7 @@ public class UserServerImpl extends UserServiceGrpc.UserServiceImplBase {
             String strData= null;
             try {
                 strData = JsonFormat.printer().preservingProtoFieldNames().print(request);
+                //System.out.println(strData);
             } catch (InvalidProtocolBufferException e) {
                 throw new RuntimeException(e);
             }

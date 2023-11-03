@@ -1,3 +1,3 @@
 #!/bin/sh
 
-java -cp GMServer.jar com.grpc.java.Application
+java -cp GMServer.jar com.loword.java.Application

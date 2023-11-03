@@ -23,62 +23,62 @@ public interface UserRequestOrBuilder extends
       getNameBytes();
 
   /**
-   * <code>int32 sex = 9;</code>
+   * <code>int32 sex = 3;</code>
    */
   int getSex();
 
   /**
-   * <code>string nick = 3;</code>
+   * <code>string nick = 4;</code>
    */
   java.lang.String getNick();
   /**
-   * <code>string nick = 3;</code>
+   * <code>string nick = 4;</code>
    */
   com.google.protobuf.ByteString
       getNickBytes();
 
   /**
-   * <code>string password = 4;</code>
+   * <code>string password = 5;</code>
    */
   java.lang.String getPassword();
   /**
-   * <code>string password = 4;</code>
+   * <code>string password = 5;</code>
    */
   com.google.protobuf.ByteString
       getPasswordBytes();
 
   /**
-   * <code>string salt = 5;</code>
+   * <code>string salt = 6;</code>
    */
   java.lang.String getSalt();
   /**
-   * <code>string salt = 5;</code>
+   * <code>string salt = 6;</code>
    */
   com.google.protobuf.ByteString
       getSaltBytes();
 
   /**
-   * <code>string phone = 6;</code>
+   * <code>string phone = 7;</code>
    */
   java.lang.String getPhone();
   /**
-   * <code>string phone = 6;</code>
+   * <code>string phone = 7;</code>
    */
   com.google.protobuf.ByteString
       getPhoneBytes();
 
   /**
-   * <code>string email = 7;</code>
+   * <code>string email = 8;</code>
    */
   java.lang.String getEmail();
   /**
-   * <code>string email = 7;</code>
+   * <code>string email = 8;</code>
    */
   com.google.protobuf.ByteString
       getEmailBytes();
 
   /**
-   * <code>int32 departid = 8;</code>
+   * <code>int32 departid = 9;</code>
    */
   int getDepartid();
 
@@ -132,77 +132,87 @@ public interface UserRequestOrBuilder extends
       getCityCodeBytes();
 
   /**
-   * <code>string countyCode = 14;</code>
+   * <code>string city = 14;</code>
+   */
+  java.lang.String getCity();
+  /**
+   * <code>string city = 14;</code>
+   */
+  com.google.protobuf.ByteString
+      getCityBytes();
+
+  /**
+   * <code>string countyCode = 15;</code>
    */
   java.lang.String getCountyCode();
   /**
-   * <code>string countyCode = 14;</code>
+   * <code>string countyCode = 15;</code>
    */
   com.google.protobuf.ByteString
       getCountyCodeBytes();
 
   /**
-   * <code>string county = 15;</code>
+   * <code>string county = 16;</code>
    */
   java.lang.String getCounty();
   /**
-   * <code>string county = 15;</code>
+   * <code>string county = 16;</code>
    */
   com.google.protobuf.ByteString
       getCountyBytes();
 
   /**
-   * <code>string townCode = 16;</code>
+   * <code>string townCode = 17;</code>
    */
   java.lang.String getTownCode();
   /**
-   * <code>string townCode = 16;</code>
+   * <code>string townCode = 17;</code>
    */
   com.google.protobuf.ByteString
       getTownCodeBytes();
 
   /**
-   * <code>string town = 17;</code>
+   * <code>string town = 18;</code>
    */
   java.lang.String getTown();
   /**
-   * <code>string town = 17;</code>
+   * <code>string town = 18;</code>
    */
   com.google.protobuf.ByteString
       getTownBytes();
 
   /**
-   * <code>string villageCode = 18;</code>
+   * <code>string villageCode = 19;</code>
    */
   java.lang.String getVillageCode();
   /**
-   * <code>string villageCode = 18;</code>
+   * <code>string villageCode = 19;</code>
    */
   com.google.protobuf.ByteString
       getVillageCodeBytes();
 
   /**
-   * <code>string village = 19;</code>
+   * <code>string village = 20;</code>
    */
   java.lang.String getVillage();
   /**
-   * <code>string village = 19;</code>
+   * <code>string village = 20;</code>
    */
   com.google.protobuf.ByteString
       getVillageBytes();
 
   /**
-   * <code>int32 curPage = 20;</code>
+   * <code>int32 curPage = 21;</code>
    */
   int getCurPage();
 
   /**
-   * <code>int32 pageSize = 21;</code>
+   * <code>int32 pageSize = 22;</code>
    */
   int getPageSize();
 
   /**
-   * <code>int32 updateUser = 22;</code>
+   * <code>int32 updateUser = 23;</code>
    */
   int getUpdateUser();
 }

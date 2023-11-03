@@ -78,23 +78,40 @@ public class UserServiceImpl implements IUserService {
     }
 
     private void saveGroupMember(IMUser user,user_area uarea,int timeNow){
-        IMGroup countyGroup =this.groupService.getGroupByName(uarea.getCounty());
-        IMGroup townGroup =this.groupService.getGroupByName(uarea.getTown());
-        IMGroup villageGroup =this.groupService.getGroupByName(uarea.getVillage());
+        IMGroup cityGroup =this.groupService.getAreaGroup(uarea.getCity());
+        IMGroup countyGroup =this.groupService.getAreaGroup(uarea.getCounty());
+        IMGroup townGroup =this.groupService.getAreaGroup(uarea.getTown());
+        IMGroup villageGroup =this.groupService.getAreaGroup(uarea.getVillage());
 
         IMGroup imGroup = new IMGroup();
         imGroup.setCreator(user.getId());
         imGroup.setType((byte)1);
         imGroup.setStatus((byte)0);
-        imGroup.setVersion(0);
+        imGroup.setVersion(1);
         imGroup.setCreated(timeNow);
 
         IMGroupMember groupMember = new IMGroupMember();
         groupMember.setUserid(user.getId());
         groupMember.setStatus(0);
         groupMember.setCreated(timeNow);
+
+        if(cityGroup == null) {
+            imGroup.setName(uarea.getCity());
+            imGroup.setStatus((byte)1);
+            groupService.addGroup(imGroup);
+            groupMember.setGroupid(imGroup.getId());
+        } else {
+            groupMember.setGroupid(cityGroup.getId());
+        }
+        List<IMGroupMember> cityGroupMemberList =groupMemberMapper.findGroupMember(groupMember);
+        if(cityGroupMemberList.size() == 0) {
+            groupMemberMapper.insertSelective(groupMember);
+        }
+
         if(countyGroup == null) {
+            if (imGroup.getId() != null) { imGroup.setId(imGroup.getId()+1);}
             imGroup.setName(uarea.getCounty());
+            imGroup.setStatus((byte)1);
             groupService.addGroup(imGroup);
             groupMember.setGroupid(imGroup.getId());
         } else {
@@ -104,9 +121,11 @@ public class UserServiceImpl implements IUserService {
         if(cGroupMemberList.size() == 0) {
             groupMemberMapper.insertSelective(groupMember);
         }
+
         if(townGroup == null) {
             if (imGroup.getId() != null) { imGroup.setId(imGroup.getId()+1);}
             imGroup.setName(uarea.getTown());
+            imGroup.setStatus((byte)0);
             groupService.addGroup(imGroup);
             groupMember.setGroupid(imGroup.getId());
         } else {
@@ -120,6 +139,7 @@ public class UserServiceImpl implements IUserService {
         if(villageGroup == null) {
             if (imGroup.getId() != null) { imGroup.setId(imGroup.getId()+1);}
             imGroup.setName(uarea.getVillage());
+            imGroup.setStatus((byte)0);
             groupService.addGroup(imGroup);
             groupMember.setGroupid(imGroup.getId());
         } else {
