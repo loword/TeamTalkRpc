@@ -109,16 +109,16 @@ public final class AreaServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
-      com.grpc.area.AreaResponse> getGetAreaTreeMethod;
+      com.grpc.area.AreaTree> getGetAreaTreeMethod;
 
   public static io.grpc.MethodDescriptor<com.grpc.area.AreaRequest,
-      com.grpc.area.AreaResponse> getGetAreaTreeMethod() {
-    io.grpc.MethodDescriptor<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse> getGetAreaTreeMethod;
+      com.grpc.area.AreaTree> getGetAreaTreeMethod() {
+    io.grpc.MethodDescriptor<com.grpc.area.AreaRequest, com.grpc.area.AreaTree> getGetAreaTreeMethod;
     if ((getGetAreaTreeMethod = AreaServiceGrpc.getGetAreaTreeMethod) == null) {
       synchronized (AreaServiceGrpc.class) {
         if ((getGetAreaTreeMethod = AreaServiceGrpc.getGetAreaTreeMethod) == null) {
           AreaServiceGrpc.getGetAreaTreeMethod = getGetAreaTreeMethod = 
-              io.grpc.MethodDescriptor.<com.grpc.area.AreaRequest, com.grpc.area.AreaResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.grpc.area.AreaRequest, com.grpc.area.AreaTree>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "com.grpc.area.AreaService", "getAreaTree"))
@@ -126,7 +126,7 @@ public final class AreaServiceGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.grpc.area.AreaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.grpc.area.AreaResponse.getDefaultInstance()))
+                  com.grpc.area.AreaTree.getDefaultInstance()))
                   .setSchemaDescriptor(new AreaServiceMethodDescriptorSupplier("getAreaTree"))
                   .build();
           }
@@ -213,7 +213,7 @@ public final class AreaServiceGrpc {
     /**
      */
     public void getAreaTree(com.grpc.area.AreaRequest request,
-        io.grpc.stub.StreamObserver<com.grpc.area.AreaResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.grpc.area.AreaTree> responseObserver) {
       asyncUnimplementedUnaryCall(getGetAreaTreeMethod(), responseObserver);
     }
 
@@ -252,7 +252,7 @@ public final class AreaServiceGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.area.AreaRequest,
-                com.grpc.area.AreaResponse>(
+                com.grpc.area.AreaTree>(
                   this, METHODID_GET_AREA_TREE)))
           .addMethod(
             getGetAreaMethod(),
@@ -310,7 +310,7 @@ public final class AreaServiceGrpc {
     /**
      */
     public void getAreaTree(com.grpc.area.AreaRequest request,
-        io.grpc.stub.StreamObserver<com.grpc.area.AreaResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.grpc.area.AreaTree> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetAreaTreeMethod(), getCallOptions()), request, responseObserver);
     }
@@ -365,7 +365,7 @@ public final class AreaServiceGrpc {
 
     /**
      */
-    public com.grpc.area.AreaResponse getAreaTree(com.grpc.area.AreaRequest request) {
+    public com.grpc.area.AreaTree getAreaTree(com.grpc.area.AreaRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetAreaTreeMethod(), getCallOptions(), request);
     }
@@ -422,7 +422,7 @@ public final class AreaServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.grpc.area.AreaResponse> getAreaTree(
+    public com.google.common.util.concurrent.ListenableFuture<com.grpc.area.AreaTree> getAreaTree(
         com.grpc.area.AreaRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetAreaTreeMethod(), getCallOptions()), request);
@@ -474,7 +474,7 @@ public final class AreaServiceGrpc {
           break;
         case METHODID_GET_AREA_TREE:
           serviceImpl.getAreaTree((com.grpc.area.AreaRequest) request,
-              (io.grpc.stub.StreamObserver<com.grpc.area.AreaResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.grpc.area.AreaTree>) responseObserver);
           break;
         case METHODID_GET_AREA:
           serviceImpl.getArea((com.grpc.area.AreaRequest) request,

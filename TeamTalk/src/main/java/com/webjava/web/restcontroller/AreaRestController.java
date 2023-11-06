@@ -1,22 +1,30 @@
 package com.webjava.web.restcontroller;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.util.JsonFormat;
 import com.grpc.area.AreaRequest;
 import com.grpc.area.AreaResponse;
 import com.grpc.area.AreaServiceGrpc;
+import com.grpc.area.AreaTree;
 import com.webjava.kernel.entity.SysArea;
+import com.webjava.model.vo.CustomCityData;
+import com.webjava.service.AreaService;
+import com.webjava.utils.ApiResult;
 import com.webjava.utils.HttpUtils;
 import com.webjava.utils.ResponseInfo;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 import java.util.Random;
 
 
@@ -27,6 +35,9 @@ public class AreaRestController {
 
     private static final String HOST = "localhost";
     private static final int PORT = 50051;
+
+    @Resource
+    private AreaService areaService;
 
     @RequestMapping(value = "/area/list",method = RequestMethod.POST)
     public void listArea(HttpServletRequest request, HttpServletResponse response) throws InvalidProtocolBufferException, InvalidProtocolBufferException {
@@ -110,12 +121,17 @@ public class AreaRestController {
     }
 
     @RequestMapping(value = "/area/listChild",method = RequestMethod.POST)
-    public void listAreaChild(HttpServletRequest request, HttpServletResponse response) throws InvalidProtocolBufferException, InvalidProtocolBufferException {
+    public ApiResult<List<CustomCityData>> listAreaChild(@RequestBody SysArea dto) throws InvalidProtocolBufferException, InvalidProtocolBufferException {
+        List<CustomCityData> cityDataList=areaService.listAreaTree(dto);
+        return ApiResult.success(cityDataList);
+    }
 
-        /*String strData =HttpUtils.getJsonBody(request);
-        Gson gson=new Gson();
-        SysArea area=gson.fromJson(strData,SysArea.class);*/
-        String cityCode = request.getParameter("cityCode");
+    public void listAreaChildGrpc(HttpServletRequest request, HttpServletResponse response) throws InvalidProtocolBufferException, InvalidProtocolBufferException {
+
+        String strData = HttpUtils.getJsonBody(request);
+        Gson gson= new GsonBuilder().create();
+        SysArea area=gson.fromJson(strData,SysArea.class);
+        //String areaCode = request.getParameter("areaCode");
 
         ManagedChannel channel = ManagedChannelBuilder.forAddress(HOST, PORT)
                 .usePlaintext(true)
@@ -127,23 +143,30 @@ public class AreaRestController {
 
         // Create a request
         AreaRequest listAreaRequest = AreaRequest.newBuilder()
-                .setId(Integer.valueOf(cityCode))
+//                .setId(area.getId())
+//                .setParentCode(area.getParentCode())
+                .setAreaCode(area.getAreaCode())
+//                .setName(area.getName())
+                .setShortName(area.getShortName())
+//                .setPinyin(area.getPinyin())
+//                .setLat(area.getLat())
+//                .setLng(area.getLng())
                 .build();
 
         // Send the request using the stub
-        System.out.println("Client sending request");
-        AreaResponse areaResponse = stub.getAreaTree(listAreaRequest);
+        System.out.println("Client sending request listAreaChild" + area);
+        AreaTree areaTree = stub.getAreaTree(listAreaRequest);
 
 
-        if(areaResponse.getAreaList().size() > 0){
+        if(areaTree.getChildList().size() > 0){
 
-            String data= JsonFormat.printer().includingDefaultValueFields().preservingProtoFieldNames().print(areaResponse);
+            String data= JsonFormat.printer().includingDefaultValueFields().preservingProtoFieldNames().print(areaTree);
 
-            HttpUtils.setJsonBody(response,new ResponseInfo(0,"显示所有省份",data));
+            HttpUtils.setJsonBody(response,new ResponseInfo(200,"显示城市所辖区域",data));
         }else
         {
             System.out.println("nothing");
-            HttpUtils.setJsonBody(response,new ResponseInfo(1,"无内容"));
+            HttpUtils.setJsonBody(response,new ResponseInfo(404,"无内容"));
         }
 
     }

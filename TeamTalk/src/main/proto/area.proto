@@ -41,13 +41,13 @@ message Area{
 }
 
 message AreaTree{
-    int32 id=1;
+    string id=1;
 
     string code=2;
 
     string name=3;
 
-    repeated AreaTree tree=5;
+    repeated AreaTree child = 5;
 }
 
 message AreaRequest{
@@ -122,6 +122,6 @@ service AreaService{
     rpc listArea(AreaRequest) returns (AreaResponse);
     rpc addArea(AreaRequest) returns (AreaResponse);
     rpc modifyArea(AreaRequest) returns (AreaResponse);
-    rpc getAreaTree(AreaRequest) returns (AreaResponse);
+    rpc getAreaTree(AreaRequest) returns (AreaTree);
     rpc getArea(AreaRequest) returns (AreaResponse);
 }

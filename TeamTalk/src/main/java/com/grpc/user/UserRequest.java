@@ -29,6 +29,7 @@ private static final long serialVersionUID = 0L;
     areaType_ = 0;
     provinceCode_ = "";
     cityCode_ = "";
+    city_ = "";
     countyCode_ = "";
     county_ = "";
     townCode_ = "";
@@ -75,44 +76,44 @@ private static final long serialVersionUID = 0L;
             name_ = s;
             break;
           }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 24: {
 
-            nick_ = s;
+            sex_ = input.readInt32();
             break;
           }
           case 34: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            password_ = s;
+            nick_ = s;
             break;
           }
           case 42: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            salt_ = s;
+            password_ = s;
             break;
           }
           case 50: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            phone_ = s;
+            salt_ = s;
             break;
           }
           case 58: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            email_ = s;
+            phone_ = s;
             break;
           }
-          case 64: {
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            departid_ = input.readInt32();
+            email_ = s;
             break;
           }
           case 72: {
 
-            sex_ = input.readInt32();
+            departid_ = input.readInt32();
             break;
           }
           case 82: {
@@ -144,50 +145,56 @@ private static final long serialVersionUID = 0L;
           case 114: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            countyCode_ = s;
+            city_ = s;
             break;
           }
           case 122: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            county_ = s;
+            countyCode_ = s;
             break;
           }
           case 130: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            townCode_ = s;
+            county_ = s;
             break;
           }
           case 138: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            town_ = s;
+            townCode_ = s;
             break;
           }
           case 146: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            villageCode_ = s;
+            town_ = s;
             break;
           }
           case 154: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            village_ = s;
+            villageCode_ = s;
             break;
           }
-          case 160: {
+          case 162: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            curPage_ = input.readInt32();
+            village_ = s;
             break;
           }
           case 168: {
 
-            pageSize_ = input.readInt32();
+            curPage_ = input.readInt32();
             break;
           }
           case 176: {
+
+            pageSize_ = input.readInt32();
+            break;
+          }
+          case 184: {
 
             updateUser_ = input.readInt32();
             break;
@@ -271,19 +278,19 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int SEX_FIELD_NUMBER = 9;
+  public static final int SEX_FIELD_NUMBER = 3;
   private int sex_;
   /**
-   * <code>int32 sex = 9;</code>
+   * <code>int32 sex = 3;</code>
    */
   public int getSex() {
     return sex_;
   }
 
-  public static final int NICK_FIELD_NUMBER = 3;
+  public static final int NICK_FIELD_NUMBER = 4;
   private volatile java.lang.Object nick_;
   /**
-   * <code>string nick = 3;</code>
+   * <code>string nick = 4;</code>
    */
   public java.lang.String getNick() {
     java.lang.Object ref = nick_;
@@ -298,7 +305,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string nick = 3;</code>
+   * <code>string nick = 4;</code>
    */
   public com.google.protobuf.ByteString
       getNickBytes() {
@@ -314,10 +321,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PASSWORD_FIELD_NUMBER = 4;
+  public static final int PASSWORD_FIELD_NUMBER = 5;
   private volatile java.lang.Object password_;
   /**
-   * <code>string password = 4;</code>
+   * <code>string password = 5;</code>
    */
   public java.lang.String getPassword() {
     java.lang.Object ref = password_;
@@ -332,7 +339,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string password = 4;</code>
+   * <code>string password = 5;</code>
    */
   public com.google.protobuf.ByteString
       getPasswordBytes() {
@@ -348,10 +355,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int SALT_FIELD_NUMBER = 5;
+  public static final int SALT_FIELD_NUMBER = 6;
   private volatile java.lang.Object salt_;
   /**
-   * <code>string salt = 5;</code>
+   * <code>string salt = 6;</code>
    */
   public java.lang.String getSalt() {
     java.lang.Object ref = salt_;
@@ -366,7 +373,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string salt = 5;</code>
+   * <code>string salt = 6;</code>
    */
   public com.google.protobuf.ByteString
       getSaltBytes() {
@@ -382,10 +389,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PHONE_FIELD_NUMBER = 6;
+  public static final int PHONE_FIELD_NUMBER = 7;
   private volatile java.lang.Object phone_;
   /**
-   * <code>string phone = 6;</code>
+   * <code>string phone = 7;</code>
    */
   public java.lang.String getPhone() {
     java.lang.Object ref = phone_;
@@ -400,7 +407,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string phone = 6;</code>
+   * <code>string phone = 7;</code>
    */
   public com.google.protobuf.ByteString
       getPhoneBytes() {
@@ -416,10 +423,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int EMAIL_FIELD_NUMBER = 7;
+  public static final int EMAIL_FIELD_NUMBER = 8;
   private volatile java.lang.Object email_;
   /**
-   * <code>string email = 7;</code>
+   * <code>string email = 8;</code>
    */
   public java.lang.String getEmail() {
     java.lang.Object ref = email_;
@@ -434,7 +441,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string email = 7;</code>
+   * <code>string email = 8;</code>
    */
   public com.google.protobuf.ByteString
       getEmailBytes() {
@@ -450,10 +457,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int DEPARTID_FIELD_NUMBER = 8;
+  public static final int DEPARTID_FIELD_NUMBER = 9;
   private int departid_;
   /**
-   * <code>int32 departid = 8;</code>
+   * <code>int32 departid = 9;</code>
    */
   public int getDepartid() {
     return departid_;
@@ -571,10 +578,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int COUNTYCODE_FIELD_NUMBER = 14;
+  public static final int CITY_FIELD_NUMBER = 14;
+  private volatile java.lang.Object city_;
+  /**
+   * <code>string city = 14;</code>
+   */
+  public java.lang.String getCity() {
+    java.lang.Object ref = city_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      city_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string city = 14;</code>
+   */
+  public com.google.protobuf.ByteString
+      getCityBytes() {
+    java.lang.Object ref = city_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      city_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int COUNTYCODE_FIELD_NUMBER = 15;
   private volatile java.lang.Object countyCode_;
   /**
-   * <code>string countyCode = 14;</code>
+   * <code>string countyCode = 15;</code>
    */
   public java.lang.String getCountyCode() {
     java.lang.Object ref = countyCode_;
@@ -589,7 +630,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string countyCode = 14;</code>
+   * <code>string countyCode = 15;</code>
    */
   public com.google.protobuf.ByteString
       getCountyCodeBytes() {
@@ -605,10 +646,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int COUNTY_FIELD_NUMBER = 15;
+  public static final int COUNTY_FIELD_NUMBER = 16;
   private volatile java.lang.Object county_;
   /**
-   * <code>string county = 15;</code>
+   * <code>string county = 16;</code>
    */
   public java.lang.String getCounty() {
     java.lang.Object ref = county_;
@@ -623,7 +664,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string county = 15;</code>
+   * <code>string county = 16;</code>
    */
   public com.google.protobuf.ByteString
       getCountyBytes() {
@@ -639,10 +680,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TOWNCODE_FIELD_NUMBER = 16;
+  public static final int TOWNCODE_FIELD_NUMBER = 17;
   private volatile java.lang.Object townCode_;
   /**
-   * <code>string townCode = 16;</code>
+   * <code>string townCode = 17;</code>
    */
   public java.lang.String getTownCode() {
     java.lang.Object ref = townCode_;
@@ -657,7 +698,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string townCode = 16;</code>
+   * <code>string townCode = 17;</code>
    */
   public com.google.protobuf.ByteString
       getTownCodeBytes() {
@@ -673,10 +714,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TOWN_FIELD_NUMBER = 17;
+  public static final int TOWN_FIELD_NUMBER = 18;
   private volatile java.lang.Object town_;
   /**
-   * <code>string town = 17;</code>
+   * <code>string town = 18;</code>
    */
   public java.lang.String getTown() {
     java.lang.Object ref = town_;
@@ -691,7 +732,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string town = 17;</code>
+   * <code>string town = 18;</code>
    */
   public com.google.protobuf.ByteString
       getTownBytes() {
@@ -707,10 +748,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int VILLAGECODE_FIELD_NUMBER = 18;
+  public static final int VILLAGECODE_FIELD_NUMBER = 19;
   private volatile java.lang.Object villageCode_;
   /**
-   * <code>string villageCode = 18;</code>
+   * <code>string villageCode = 19;</code>
    */
   public java.lang.String getVillageCode() {
     java.lang.Object ref = villageCode_;
@@ -725,7 +766,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string villageCode = 18;</code>
+   * <code>string villageCode = 19;</code>
    */
   public com.google.protobuf.ByteString
       getVillageCodeBytes() {
@@ -741,10 +782,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int VILLAGE_FIELD_NUMBER = 19;
+  public static final int VILLAGE_FIELD_NUMBER = 20;
   private volatile java.lang.Object village_;
   /**
-   * <code>string village = 19;</code>
+   * <code>string village = 20;</code>
    */
   public java.lang.String getVillage() {
     java.lang.Object ref = village_;
@@ -759,7 +800,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string village = 19;</code>
+   * <code>string village = 20;</code>
    */
   public com.google.protobuf.ByteString
       getVillageBytes() {
@@ -775,28 +816,28 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CURPAGE_FIELD_NUMBER = 20;
+  public static final int CURPAGE_FIELD_NUMBER = 21;
   private int curPage_;
   /**
-   * <code>int32 curPage = 20;</code>
+   * <code>int32 curPage = 21;</code>
    */
   public int getCurPage() {
     return curPage_;
   }
 
-  public static final int PAGESIZE_FIELD_NUMBER = 21;
+  public static final int PAGESIZE_FIELD_NUMBER = 22;
   private int pageSize_;
   /**
-   * <code>int32 pageSize = 21;</code>
+   * <code>int32 pageSize = 22;</code>
    */
   public int getPageSize() {
     return pageSize_;
   }
 
-  public static final int UPDATEUSER_FIELD_NUMBER = 22;
+  public static final int UPDATEUSER_FIELD_NUMBER = 23;
   private int updateUser_;
   /**
-   * <code>int32 updateUser = 22;</code>
+   * <code>int32 updateUser = 23;</code>
    */
   public int getUpdateUser() {
     return updateUser_;
@@ -822,26 +863,26 @@ private static final long serialVersionUID = 0L;
     if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
+    if (sex_ != 0) {
+      output.writeInt32(3, sex_);
+    }
     if (!getNickBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nick_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, nick_);
     }
     if (!getPasswordBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, password_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, password_);
     }
     if (!getSaltBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, salt_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, salt_);
     }
     if (!getPhoneBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, phone_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, phone_);
     }
     if (!getEmailBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, email_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, email_);
     }
     if (departid_ != 0) {
-      output.writeInt32(8, departid_);
-    }
-    if (sex_ != 0) {
-      output.writeInt32(9, sex_);
+      output.writeInt32(9, departid_);
     }
     for (int i = 0; i < user_.size(); i++) {
       output.writeMessage(10, user_.get(i));
@@ -855,32 +896,35 @@ private static final long serialVersionUID = 0L;
     if (!getCityCodeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, cityCode_);
     }
+    if (!getCityBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, city_);
+    }
     if (!getCountyCodeBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, countyCode_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, countyCode_);
     }
     if (!getCountyBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, county_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, county_);
     }
     if (!getTownCodeBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, townCode_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 17, townCode_);
     }
     if (!getTownBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 17, town_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 18, town_);
     }
     if (!getVillageCodeBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 18, villageCode_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 19, villageCode_);
     }
     if (!getVillageBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 19, village_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 20, village_);
     }
     if (curPage_ != 0) {
-      output.writeInt32(20, curPage_);
+      output.writeInt32(21, curPage_);
     }
     if (pageSize_ != 0) {
-      output.writeInt32(21, pageSize_);
+      output.writeInt32(22, pageSize_);
     }
     if (updateUser_ != 0) {
-      output.writeInt32(22, updateUser_);
+      output.writeInt32(23, updateUser_);
     }
     unknownFields.writeTo(output);
   }
@@ -898,28 +942,28 @@ private static final long serialVersionUID = 0L;
     if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
+    if (sex_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(3, sex_);
+    }
     if (!getNickBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nick_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, nick_);
     }
     if (!getPasswordBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, password_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, password_);
     }
     if (!getSaltBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, salt_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, salt_);
     }
     if (!getPhoneBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, phone_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, phone_);
     }
     if (!getEmailBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, email_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, email_);
     }
     if (departid_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(8, departid_);
-    }
-    if (sex_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(9, sex_);
+        .computeInt32Size(9, departid_);
     }
     for (int i = 0; i < user_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -935,35 +979,38 @@ private static final long serialVersionUID = 0L;
     if (!getCityCodeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, cityCode_);
     }
+    if (!getCityBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, city_);
+    }
     if (!getCountyCodeBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, countyCode_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, countyCode_);
     }
     if (!getCountyBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, county_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, county_);
     }
     if (!getTownCodeBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, townCode_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, townCode_);
     }
     if (!getTownBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, town_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, town_);
     }
     if (!getVillageCodeBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, villageCode_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, villageCode_);
     }
     if (!getVillageBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, village_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, village_);
     }
     if (curPage_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(20, curPage_);
+        .computeInt32Size(21, curPage_);
     }
     if (pageSize_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(21, pageSize_);
+        .computeInt32Size(22, pageSize_);
     }
     if (updateUser_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(22, updateUser_);
+        .computeInt32Size(23, updateUser_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1007,6 +1054,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getProvinceCode());
     result = result && getCityCode()
         .equals(other.getCityCode());
+    result = result && getCity()
+        .equals(other.getCity());
     result = result && getCountyCode()
         .equals(other.getCountyCode());
     result = result && getCounty()
@@ -1064,6 +1113,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getProvinceCode().hashCode();
     hash = (37 * hash) + CITYCODE_FIELD_NUMBER;
     hash = (53 * hash) + getCityCode().hashCode();
+    hash = (37 * hash) + CITY_FIELD_NUMBER;
+    hash = (53 * hash) + getCity().hashCode();
     hash = (37 * hash) + COUNTYCODE_FIELD_NUMBER;
     hash = (53 * hash) + getCountyCode().hashCode();
     hash = (37 * hash) + COUNTY_FIELD_NUMBER;
@@ -1246,6 +1297,8 @@ private static final long serialVersionUID = 0L;
 
       cityCode_ = "";
 
+      city_ = "";
+
       countyCode_ = "";
 
       county_ = "";
@@ -1313,6 +1366,7 @@ private static final long serialVersionUID = 0L;
       result.areaType_ = areaType_;
       result.provinceCode_ = provinceCode_;
       result.cityCode_ = cityCode_;
+      result.city_ = city_;
       result.countyCode_ = countyCode_;
       result.county_ = county_;
       result.townCode_ = townCode_;
@@ -1439,6 +1493,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCityCode().isEmpty()) {
         cityCode_ = other.cityCode_;
+        onChanged();
+      }
+      if (!other.getCity().isEmpty()) {
+        city_ = other.city_;
         onChanged();
       }
       if (!other.getCountyCode().isEmpty()) {
@@ -1601,13 +1659,13 @@ private static final long serialVersionUID = 0L;
 
     private int sex_ ;
     /**
-     * <code>int32 sex = 9;</code>
+     * <code>int32 sex = 3;</code>
      */
     public int getSex() {
       return sex_;
     }
     /**
-     * <code>int32 sex = 9;</code>
+     * <code>int32 sex = 3;</code>
      */
     public Builder setSex(int value) {
       
@@ -1616,7 +1674,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 sex = 9;</code>
+     * <code>int32 sex = 3;</code>
      */
     public Builder clearSex() {
       
@@ -1627,7 +1685,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object nick_ = "";
     /**
-     * <code>string nick = 3;</code>
+     * <code>string nick = 4;</code>
      */
     public java.lang.String getNick() {
       java.lang.Object ref = nick_;
@@ -1642,7 +1700,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string nick = 3;</code>
+     * <code>string nick = 4;</code>
      */
     public com.google.protobuf.ByteString
         getNickBytes() {
@@ -1658,7 +1716,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string nick = 3;</code>
+     * <code>string nick = 4;</code>
      */
     public Builder setNick(
         java.lang.String value) {
@@ -1671,7 +1729,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string nick = 3;</code>
+     * <code>string nick = 4;</code>
      */
     public Builder clearNick() {
       
@@ -1680,7 +1738,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string nick = 3;</code>
+     * <code>string nick = 4;</code>
      */
     public Builder setNickBytes(
         com.google.protobuf.ByteString value) {
@@ -1696,7 +1754,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object password_ = "";
     /**
-     * <code>string password = 4;</code>
+     * <code>string password = 5;</code>
      */
     public java.lang.String getPassword() {
       java.lang.Object ref = password_;
@@ -1711,7 +1769,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string password = 4;</code>
+     * <code>string password = 5;</code>
      */
     public com.google.protobuf.ByteString
         getPasswordBytes() {
@@ -1727,7 +1785,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string password = 4;</code>
+     * <code>string password = 5;</code>
      */
     public Builder setPassword(
         java.lang.String value) {
@@ -1740,7 +1798,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string password = 4;</code>
+     * <code>string password = 5;</code>
      */
     public Builder clearPassword() {
       
@@ -1749,7 +1807,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string password = 4;</code>
+     * <code>string password = 5;</code>
      */
     public Builder setPasswordBytes(
         com.google.protobuf.ByteString value) {
@@ -1765,7 +1823,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object salt_ = "";
     /**
-     * <code>string salt = 5;</code>
+     * <code>string salt = 6;</code>
      */
     public java.lang.String getSalt() {
       java.lang.Object ref = salt_;
@@ -1780,7 +1838,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string salt = 5;</code>
+     * <code>string salt = 6;</code>
      */
     public com.google.protobuf.ByteString
         getSaltBytes() {
@@ -1796,7 +1854,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string salt = 5;</code>
+     * <code>string salt = 6;</code>
      */
     public Builder setSalt(
         java.lang.String value) {
@@ -1809,7 +1867,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string salt = 5;</code>
+     * <code>string salt = 6;</code>
      */
     public Builder clearSalt() {
       
@@ -1818,7 +1876,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string salt = 5;</code>
+     * <code>string salt = 6;</code>
      */
     public Builder setSaltBytes(
         com.google.protobuf.ByteString value) {
@@ -1834,7 +1892,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object phone_ = "";
     /**
-     * <code>string phone = 6;</code>
+     * <code>string phone = 7;</code>
      */
     public java.lang.String getPhone() {
       java.lang.Object ref = phone_;
@@ -1849,7 +1907,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string phone = 6;</code>
+     * <code>string phone = 7;</code>
      */
     public com.google.protobuf.ByteString
         getPhoneBytes() {
@@ -1865,7 +1923,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string phone = 6;</code>
+     * <code>string phone = 7;</code>
      */
     public Builder setPhone(
         java.lang.String value) {
@@ -1878,7 +1936,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string phone = 6;</code>
+     * <code>string phone = 7;</code>
      */
     public Builder clearPhone() {
       
@@ -1887,7 +1945,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string phone = 6;</code>
+     * <code>string phone = 7;</code>
      */
     public Builder setPhoneBytes(
         com.google.protobuf.ByteString value) {
@@ -1903,7 +1961,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object email_ = "";
     /**
-     * <code>string email = 7;</code>
+     * <code>string email = 8;</code>
      */
     public java.lang.String getEmail() {
       java.lang.Object ref = email_;
@@ -1918,7 +1976,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string email = 7;</code>
+     * <code>string email = 8;</code>
      */
     public com.google.protobuf.ByteString
         getEmailBytes() {
@@ -1934,7 +1992,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string email = 7;</code>
+     * <code>string email = 8;</code>
      */
     public Builder setEmail(
         java.lang.String value) {
@@ -1947,7 +2005,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string email = 7;</code>
+     * <code>string email = 8;</code>
      */
     public Builder clearEmail() {
       
@@ -1956,7 +2014,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string email = 7;</code>
+     * <code>string email = 8;</code>
      */
     public Builder setEmailBytes(
         com.google.protobuf.ByteString value) {
@@ -1972,13 +2030,13 @@ private static final long serialVersionUID = 0L;
 
     private int departid_ ;
     /**
-     * <code>int32 departid = 8;</code>
+     * <code>int32 departid = 9;</code>
      */
     public int getDepartid() {
       return departid_;
     }
     /**
-     * <code>int32 departid = 8;</code>
+     * <code>int32 departid = 9;</code>
      */
     public Builder setDepartid(int value) {
       
@@ -1987,7 +2045,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 departid = 8;</code>
+     * <code>int32 departid = 9;</code>
      */
     public Builder clearDepartid() {
       
@@ -2400,9 +2458,78 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object city_ = "";
+    /**
+     * <code>string city = 14;</code>
+     */
+    public java.lang.String getCity() {
+      java.lang.Object ref = city_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        city_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string city = 14;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCityBytes() {
+      java.lang.Object ref = city_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        city_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string city = 14;</code>
+     */
+    public Builder setCity(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      city_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string city = 14;</code>
+     */
+    public Builder clearCity() {
+      
+      city_ = getDefaultInstance().getCity();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string city = 14;</code>
+     */
+    public Builder setCityBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      city_ = value;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object countyCode_ = "";
     /**
-     * <code>string countyCode = 14;</code>
+     * <code>string countyCode = 15;</code>
      */
     public java.lang.String getCountyCode() {
       java.lang.Object ref = countyCode_;
@@ -2417,7 +2544,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string countyCode = 14;</code>
+     * <code>string countyCode = 15;</code>
      */
     public com.google.protobuf.ByteString
         getCountyCodeBytes() {
@@ -2433,7 +2560,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string countyCode = 14;</code>
+     * <code>string countyCode = 15;</code>
      */
     public Builder setCountyCode(
         java.lang.String value) {
@@ -2446,7 +2573,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string countyCode = 14;</code>
+     * <code>string countyCode = 15;</code>
      */
     public Builder clearCountyCode() {
       
@@ -2455,7 +2582,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string countyCode = 14;</code>
+     * <code>string countyCode = 15;</code>
      */
     public Builder setCountyCodeBytes(
         com.google.protobuf.ByteString value) {
@@ -2471,7 +2598,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object county_ = "";
     /**
-     * <code>string county = 15;</code>
+     * <code>string county = 16;</code>
      */
     public java.lang.String getCounty() {
       java.lang.Object ref = county_;
@@ -2486,7 +2613,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string county = 15;</code>
+     * <code>string county = 16;</code>
      */
     public com.google.protobuf.ByteString
         getCountyBytes() {
@@ -2502,7 +2629,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string county = 15;</code>
+     * <code>string county = 16;</code>
      */
     public Builder setCounty(
         java.lang.String value) {
@@ -2515,7 +2642,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string county = 15;</code>
+     * <code>string county = 16;</code>
      */
     public Builder clearCounty() {
       
@@ -2524,7 +2651,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string county = 15;</code>
+     * <code>string county = 16;</code>
      */
     public Builder setCountyBytes(
         com.google.protobuf.ByteString value) {
@@ -2540,7 +2667,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object townCode_ = "";
     /**
-     * <code>string townCode = 16;</code>
+     * <code>string townCode = 17;</code>
      */
     public java.lang.String getTownCode() {
       java.lang.Object ref = townCode_;
@@ -2555,7 +2682,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string townCode = 16;</code>
+     * <code>string townCode = 17;</code>
      */
     public com.google.protobuf.ByteString
         getTownCodeBytes() {
@@ -2571,7 +2698,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string townCode = 16;</code>
+     * <code>string townCode = 17;</code>
      */
     public Builder setTownCode(
         java.lang.String value) {
@@ -2584,7 +2711,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string townCode = 16;</code>
+     * <code>string townCode = 17;</code>
      */
     public Builder clearTownCode() {
       
@@ -2593,7 +2720,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string townCode = 16;</code>
+     * <code>string townCode = 17;</code>
      */
     public Builder setTownCodeBytes(
         com.google.protobuf.ByteString value) {
@@ -2609,7 +2736,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object town_ = "";
     /**
-     * <code>string town = 17;</code>
+     * <code>string town = 18;</code>
      */
     public java.lang.String getTown() {
       java.lang.Object ref = town_;
@@ -2624,7 +2751,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string town = 17;</code>
+     * <code>string town = 18;</code>
      */
     public com.google.protobuf.ByteString
         getTownBytes() {
@@ -2640,7 +2767,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string town = 17;</code>
+     * <code>string town = 18;</code>
      */
     public Builder setTown(
         java.lang.String value) {
@@ -2653,7 +2780,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string town = 17;</code>
+     * <code>string town = 18;</code>
      */
     public Builder clearTown() {
       
@@ -2662,7 +2789,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string town = 17;</code>
+     * <code>string town = 18;</code>
      */
     public Builder setTownBytes(
         com.google.protobuf.ByteString value) {
@@ -2678,7 +2805,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object villageCode_ = "";
     /**
-     * <code>string villageCode = 18;</code>
+     * <code>string villageCode = 19;</code>
      */
     public java.lang.String getVillageCode() {
       java.lang.Object ref = villageCode_;
@@ -2693,7 +2820,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string villageCode = 18;</code>
+     * <code>string villageCode = 19;</code>
      */
     public com.google.protobuf.ByteString
         getVillageCodeBytes() {
@@ -2709,7 +2836,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string villageCode = 18;</code>
+     * <code>string villageCode = 19;</code>
      */
     public Builder setVillageCode(
         java.lang.String value) {
@@ -2722,7 +2849,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string villageCode = 18;</code>
+     * <code>string villageCode = 19;</code>
      */
     public Builder clearVillageCode() {
       
@@ -2731,7 +2858,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string villageCode = 18;</code>
+     * <code>string villageCode = 19;</code>
      */
     public Builder setVillageCodeBytes(
         com.google.protobuf.ByteString value) {
@@ -2747,7 +2874,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object village_ = "";
     /**
-     * <code>string village = 19;</code>
+     * <code>string village = 20;</code>
      */
     public java.lang.String getVillage() {
       java.lang.Object ref = village_;
@@ -2762,7 +2889,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string village = 19;</code>
+     * <code>string village = 20;</code>
      */
     public com.google.protobuf.ByteString
         getVillageBytes() {
@@ -2778,7 +2905,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string village = 19;</code>
+     * <code>string village = 20;</code>
      */
     public Builder setVillage(
         java.lang.String value) {
@@ -2791,7 +2918,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string village = 19;</code>
+     * <code>string village = 20;</code>
      */
     public Builder clearVillage() {
       
@@ -2800,7 +2927,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string village = 19;</code>
+     * <code>string village = 20;</code>
      */
     public Builder setVillageBytes(
         com.google.protobuf.ByteString value) {
@@ -2816,13 +2943,13 @@ private static final long serialVersionUID = 0L;
 
     private int curPage_ ;
     /**
-     * <code>int32 curPage = 20;</code>
+     * <code>int32 curPage = 21;</code>
      */
     public int getCurPage() {
       return curPage_;
     }
     /**
-     * <code>int32 curPage = 20;</code>
+     * <code>int32 curPage = 21;</code>
      */
     public Builder setCurPage(int value) {
       
@@ -2831,7 +2958,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 curPage = 20;</code>
+     * <code>int32 curPage = 21;</code>
      */
     public Builder clearCurPage() {
       
@@ -2842,13 +2969,13 @@ private static final long serialVersionUID = 0L;
 
     private int pageSize_ ;
     /**
-     * <code>int32 pageSize = 21;</code>
+     * <code>int32 pageSize = 22;</code>
      */
     public int getPageSize() {
       return pageSize_;
     }
     /**
-     * <code>int32 pageSize = 21;</code>
+     * <code>int32 pageSize = 22;</code>
      */
     public Builder setPageSize(int value) {
       
@@ -2857,7 +2984,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 pageSize = 21;</code>
+     * <code>int32 pageSize = 22;</code>
      */
     public Builder clearPageSize() {
       
@@ -2868,13 +2995,13 @@ private static final long serialVersionUID = 0L;
 
     private int updateUser_ ;
     /**
-     * <code>int32 updateUser = 22;</code>
+     * <code>int32 updateUser = 23;</code>
      */
     public int getUpdateUser() {
       return updateUser_;
     }
     /**
-     * <code>int32 updateUser = 22;</code>
+     * <code>int32 updateUser = 23;</code>
      */
     public Builder setUpdateUser(int value) {
       
@@ -2883,7 +3010,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 updateUser = 22;</code>
+     * <code>int32 updateUser = 23;</code>
      */
     public Builder clearUpdateUser() {
       

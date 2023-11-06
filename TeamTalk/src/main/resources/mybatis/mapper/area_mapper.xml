@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.webjava.kernel.mybatis.mapper.SysAreaMapper">
+
+  <select id="selectAreaTree" parameterType="com.webjava.kernel.entity.SysArea" resultType="com.webjava.model.vo.AreaVo">
+	SELECT a.area_code county_code, a.short_name county, b.area_code town_code, b.short_name town,
+	  c.area_code village_code, c.short_name village
+	FROM sys_area a
+	INNER JOIN sys_area b ON a.area_code=b.parent_code
+	INNER JOIN sys_area c ON b.area_code=c.parent_code
+	WHERE a.status = 0
+	<if test="id != null">
+	  and a.id = #{id}
+	</if>
+	<if test="levelCode != null">
+	  and a.level_code = #{levelCode}
+	</if>
+  	<!--<if test="parentCode != null and parentCode != ''">
+  		and a.parent_code = #{parentCode}
+  	</if>-->
+  	<if test="areaCode != null and areaCode != ''">
+  		and a.parent_code = #{areaCode}
+  	</if>
+  	<if test="name != null and name != ''">
+  		and a.name = #{name}
+  	</if>
+  	<if test="shortName != null and shortName != ''">
+  		and a.short_name = #{shortName}
+  	</if>
+  	<if test="pinyin != null and pinyin != ''">
+  		and a.pinyin = #{pinyin}
+  	</if>
+  	<if test="lng != null and lng != 0">
+  		and a.lng &gt; #{lng} -1 and a.lng &lt; #{lng}+1
+  	</if>
+  	<if test="lat != null and lat != 0">
+  		and a.lat &gt; #{lat} -1 and a.lat &lt; #{lat}+1
+  	</if>
+  </select>
+
+</mapper>
